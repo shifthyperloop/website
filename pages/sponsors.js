@@ -12,7 +12,7 @@ const Sponsor = ({
   description,
 }) => {
   return (
-    <div class="sponsor-list">
+    <div className="sponsor-list">
       {type === 'Platinum' ? (
         <>
           <a href={url} className="sponsor platinum">
