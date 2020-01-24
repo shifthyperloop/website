@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
+import fetch from 'isomorphic-unfetch';
 import { useState, useEffect } from 'react';
 
 const Sponsor = ({
@@ -11,33 +12,34 @@ const Sponsor = ({
   description,
 }) => {
   return (
-    <div>
+    <div class="sponsor-list">
       {type === 'Platinum' ? (
         <>
-          <a href={url} className="sponsor-text">
-            <img src={CMS_BASE_URL + logoUrl} className="sponsor-2" />
+          <a href={url} className="sponsor platinum">
+            <img src={CMS_BASE_URL + logoUrl} />
           </a>
-          <h3>{title}</h3> <h4>{description}</h4>
+          <h3>{title}</h3>
+          <h4>{description}</h4>
         </>
       ) : null}
       {type === 'Gold' ? (
         <>
-          <a href={url} className="sponsor-3">
-            <img src={CMS_BASE_URL + logoUrl} className="sponsor-3" />
+          <a href={url} className="sponsor gold">
+            <img src={CMS_BASE_URL + logoUrl} />
           </a>
         </>
       ) : null}
       {type === 'Silver' ? (
         <>
-          <a href={url} className="sponsor-4">
-            <img src={CMS_BASE_URL + logoUrl} className="sponsor-4" />
+          <a href={url} className="sponsor silver">
+            <img src={CMS_BASE_URL + logoUrl} />
           </a>
         </>
       ) : null}
       {type === 'Bronze' ? (
         <>
-          <a href={url} className="sponsor-5">
-            <img src={CMS_BASE_URL + logoUrl} className="sponsor-5" />
+          <a href={url} className="sponsor bronze">
+            <img src={CMS_BASE_URL + logoUrl} />
           </a>
         </>
       ) : null}
@@ -45,26 +47,25 @@ const Sponsor = ({
         h3,
         h4 {
           width: 500px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
+          margin: auto;
         }
 
-        .sponsor-2 {
-          width: 500px;
-          padding: 50px;
+        .sponsor {
+          margin: 0 50px 25px;
+          display: blocK;
         }
-        .sponsor-3 {
-          width: 400px;
-          padding-left: 50px;
-        }
-        .sponsor-4 {
-          width: 200px;
-          padding: 50px;
-        }
-        .sponsor-5 {
+
+        img {
           width: 140px;
-          padding: 50px;
+        }
+        .platinum img {
+          width: 500px;
+        }
+        .gold img {
+          width: 400px;
+        }
+        .silver img {
+          width: 200px;
         }
       `}</style>
     </div>
@@ -85,41 +86,41 @@ const Page = ({ sponsors }) => {
         <h2 className="platinum sponsors">
           <span>PLATINUM</span>
         </h2>
-        <div className="sponsor-2">
+        <div className="sponsor-list">
           {sponsors
             .filter(sponsor => sponsor.type === 'Platinum')
             .map(sponsor => (
-              <Sponsor {...sponsor} />
+              <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
         <h2 className="gold sponsors">
           <span>GOLD</span>
         </h2>
-        <div className="sponsor-3">
+        <div className="sponsor-list">
           {sponsors
             .filter(sponsor => sponsor.type === 'Gold')
             .map(sponsor => (
-              <Sponsor {...sponsor} />
+              <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
         <h2 className="silver sponsors">
           <span>SILVER</span>
         </h2>
-        <div className="sponsor-4">
+        <div className="sponsor-list">
           {sponsors
             .filter(sponsor => sponsor.type === 'Silver')
             .map(sponsor => (
-              <Sponsor {...sponsor} />
+              <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
         <h2 className="bronze sponsors">
           <span>BRONZE</span>
         </h2>
-        <div className="sponsor-5">
+        <div className="sponsor-list">
           {sponsors
             .filter(sponsor => sponsor.type === 'Bronze')
             .map(sponsor => (
-              <Sponsor {...sponsor} />
+              <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
       </section>
@@ -142,31 +143,33 @@ const Page = ({ sponsors }) => {
         div {
           position: center;
         }
-        .sponsor-3,
-        .sponsor-4,
-        .sponsor-5 {
+        .sponsor-list {
           display: flex;
-          flex-direction: row;
+          flex-flow: row wrap;
+          justify-content: center;
         }
         .team-photo {
           max-width: 100%;
         }
-        .platinum.sponsors {
-          color: #e5e4e2;
+        .sponsors:not(:first-of-type) {
+          margin-top: 0;
+        }
+        .sponsors.platinum {
+          color: #ddd;
           font-size: 3.2rem;
         }
 
-        .gold.sponsors {
-          color: gold;
+        .sponsors.gold {
+          color: #da4;
           font-size: 3.2rem;
         }
 
-        .silver.sponsors {
+        .sponsors.silver {
           color: silver;
           font-size: 3.2rem;
         }
 
-        .bronze.sponsors {
+        .sponsors.bronze {
           color: #b08d57;
           font-size: 3.2rem;
         }
