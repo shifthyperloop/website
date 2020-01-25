@@ -54,7 +54,12 @@ const Post = ({ title, picture: { url = '' }, description }) => {
           flex-direction: column;
         }
         .post-title {
-          margin: 16px 0;
+          margin: 16px auto;
+          white-space: pre;
+          min-height: 2rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
         }
         .post-description {
           margin: 0;
