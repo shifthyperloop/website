@@ -22,6 +22,7 @@ class Layout extends Component {
             font-family: 'Roboto Condensed', sans-serif;
             line-height: 1.5;
             background-color: #01030c;
+            margin-top: 3.5rem;
           }
           a {
             color: #ddd;

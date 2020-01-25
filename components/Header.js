@@ -16,7 +16,7 @@ const Header = () => (
     <div className="menu-options">
       <a href="/about">About</a>
       <a href="/contact">Contact us</a>
-      <a href="/post">News</a>
+      <a href="/posts">Posts</a>
       <a href="/sponsors">Sponsors</a>
       <a href="/team">Team</a>
       <span className="menu">
@@ -51,6 +51,10 @@ const Header = () => (
         align-items: center;
         justify-content: center;
         box-shadow: 1px 0.3px 10px #888888;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
       }
       hr {
         width: 80%;
