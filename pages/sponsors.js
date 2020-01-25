@@ -77,12 +77,19 @@ const Page = ({ sponsors }) => {
 
   return (
     <Layout>
-      <section className="page-container">
+      <div className="image-container">
+        <img
+          className="sponsor-image"
+          src="https://image.shutterstock.com/image-vector/crowdfunding-vector-illustration-startup-investment-600w-1271931493.jpg"
+          style={{ objectPosition: 'top', objectFit: 'cover' }}
+        />
         <h1 className="title">Sponsors</h1>
         <h3 className="sponsor-description">
           Meet our amazing partners. Their support is what's making it possible
           to do what we love.
         </h3>
+      </div>
+      <section className="page-container">
         <h2 className="platinum sponsors">
           <span>PLATINUM</span>
         </h2>
@@ -139,6 +146,44 @@ const Page = ({ sponsors }) => {
         h3 {
           text-align: center;
         }
+        .image-container {
+          position: relative;
+          text-align: center;
+          color: white;
+          width: 100%;
+          height: 800px;
+          display: inline-flex;
+        }
+        .image-container::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+        .title {
+          position: absolute;
+          font: 5em Georgia, Serif;
+          bottom: calc(20% - 10px);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-shadow: 2px 2px #000;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .sponsor-description {
+          position: absolute;
+          font: 2em Georgia, Serif;
+          max-width: 100%;
+          bottom: calc(4% - 10px);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-shadow: 2px 2px #000;
+          overflow: hidden;
+          white-space: nowrap;
+        }
 
         div {
           position: center;
@@ -148,9 +193,7 @@ const Page = ({ sponsors }) => {
           flex-flow: row wrap;
           justify-content: center;
         }
-        .team-photo {
-          max-width: 100%;
-        }
+
         .sponsors:not(:first-of-type) {
           margin-top: 0;
         }
@@ -159,8 +202,13 @@ const Page = ({ sponsors }) => {
           font-size: 3.2rem;
         }
 
+        .sponsor-image {
+          width: 100%;
+        }
+
         .sponsors.gold {
           color: #da4;
+          margin-top: 50px;
           font-size: 3.2rem;
         }
 
