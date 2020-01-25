@@ -48,7 +48,7 @@ const Post = ({ title, picture: { url = '' }, description }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          transition: top 2s;
+          transition: top 0.2s;
           display: flex;
           justify-content: center;
           flex-direction: column;
