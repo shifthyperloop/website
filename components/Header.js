@@ -20,7 +20,7 @@ const Header = () => (
       <a href="/sponsors">Sponsors</a>
       <a href="/team">Team</a>
       <span className="menu">
-        <span>Other</span>
+        <span>Other </span>
         <div className="items">
           <a href="/pod">Our pod</a>
           <a href="/joinus">Join the team</a>
@@ -82,6 +82,10 @@ const Header = () => (
         display: none;
         white-space: nowrap;
         flex-direction: column;
+        width: 150px;
+        right: -50px;
+        top: 100%;
+        padding-top: 12px;
       }
 
       .head-side {
