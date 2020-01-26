@@ -5,7 +5,10 @@ const Page = () => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/about"
+      title="Shift Hyperloop | About"
+    >
       <h1>{router.query.title}</h1>
       <div className="about">
         <div className="col-lg-5">
@@ -36,9 +39,9 @@ const Page = () => {
             width="1100"
             height="620"
             src="https://www.youtube-nocookie.com/embed/AO0sPME3j2s"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; gyroscope; "
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </center>
         <br />
@@ -47,6 +50,7 @@ const Page = () => {
           {`
             body {
               text-align: center;
+              width: 100%;
             }
             .email {
               max-width: 65%;

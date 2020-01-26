@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
-import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 const Sponsor = ({
   title,
@@ -13,34 +13,13 @@ const Sponsor = ({
 }) => {
   return (
     <div className="sponsor-list">
+      <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
+        <img src={CMS_BASE_URL + logoUrl} />
+      </a>
       {type === 'Platinum' ? (
         <>
-          <a href={url} className="sponsor platinum">
-            <img src={CMS_BASE_URL + logoUrl} />
-          </a>
           <h3>{title}</h3>
           <h4>{description}</h4>
-        </>
-      ) : null}
-      {type === 'Gold' ? (
-        <>
-          <a href={url} className="sponsor gold">
-            <img src={CMS_BASE_URL + logoUrl} />
-          </a>
-        </>
-      ) : null}
-      {type === 'Silver' ? (
-        <>
-          <a href={url} className="sponsor silver">
-            <img src={CMS_BASE_URL + logoUrl} />
-          </a>
-        </>
-      ) : null}
-      {type === 'Bronze' ? (
-        <>
-          <a href={url} className="sponsor bronze">
-            <img src={CMS_BASE_URL + logoUrl} />
-          </a>
         </>
       ) : null}
       <style jsx>{`
@@ -76,7 +55,11 @@ const Page = ({ sponsors }) => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/sponsors"
+      title="Shift Hyperloop | Sponsors"
+      description="Meet our amazing partners. Their support is what's making it possible to do what we love."
+    >
       <div className="image-container">
         <img
           className="sponsor-image"

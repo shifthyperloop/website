@@ -12,7 +12,10 @@ const Page = () => <p>Contact us</p>;
 
 export default function About() {
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/contact"
+      title="Shift Hyperloop | Contact us"
+    >
       <div className="contact-us">
         <p>Contact us</p>
       </div>

@@ -91,7 +91,10 @@ const Page = ({ posts }) => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/posts"
+      title="Shift Hyperloop | Posts"
+    >
       <div className="posts page-container">
         {posts.map(post => (
           <Post key={post.title} {...post} />

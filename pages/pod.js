@@ -5,7 +5,10 @@ const Page = () => <p>This is the about page</p>;
 
 export default function About() {
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/pod"
+      title="Shift Hyperloop | Pod"
+    >
       <div className="image-container">
         <img className="woodwork" src="/woodshop.jpg" />
         <h1 className="headline">Pod version 0.8</h1>

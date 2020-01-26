@@ -107,7 +107,10 @@ const Page = ({ members = [] }) => {
   }, [members]);
 
   return (
-    <Layout>
+    <Layout
+      url="https://www.shifthyperloop.com/team"
+      title="Shift Hyperloop | Team"
+    >
       <div className="image-container">
         <img className="team-photo" src="/Shift-team-2020.jpg"></img>
         <h1 className="title">Meet our awesome team!</h1>
