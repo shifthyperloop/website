@@ -7,9 +7,12 @@
     "build": "next build",
     "preexport": "yarn build",
     "export": "next export",
+    "predeploy": "yarn export",
+    "deploy": "gh-pages -d out",
     "start": "next start"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.1",
     "react": "16.11.0",
