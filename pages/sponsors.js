@@ -63,7 +63,7 @@ const Page = ({ sponsors }) => {
       <div className="image-container">
         <img
           className="sponsor-image"
-          src="https://image.shutterstock.com/image-vector/crowdfunding-vector-illustration-startup-investment-600w-1271931493.jpg"
+          src="/signering_bw_logo.jpg"
           style={{ objectPosition: 'top', objectFit: 'cover' }}
         />
         <h1 className="title">Sponsors</h1>
@@ -145,13 +145,16 @@ const Page = ({ sponsors }) => {
           top: 0;
           bottom: 0;
         }
+        .sponsor-image {
+          filter: brightness(40%);
+        }
         .title {
           position: absolute;
           font: 5em Georgia, Serif;
           bottom: calc(20% - 10px);
           left: 50%;
           transform: translate(-50%, -50%);
-          text-shadow: 2px 2px #000;
+          text-shadow: 3px 3px #000;
           overflow: hidden;
           white-space: nowrap;
         }

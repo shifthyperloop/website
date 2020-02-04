@@ -1,23 +1,25 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
-import { useState, useEffect } from 'react';
 
-const Post = ({ title, picture: { url = '' }, description }) => {
+const Post = ({ title, pid, picture: { url = '' }, description }) => {
   return (
     <>
-      <div className="post">
-        <img className="post-image" src={CMS_BASE_URL + url} alt={title} />
-        <div className="post-text">
-          <h2 className="post-title">{title}</h2>
-          <p className="post-description">
-            {description}
-            <br />
-            <br />
-          </p>
-        </div>
-      </div>
+      <Link href="/post/[pid]" as={`/post/${pid}`}>
+        <a className="post">
+          <img className="post-image" src={CMS_BASE_URL + url} alt={title} />
+          <div className="post-text">
+            <h2 className="post-title">{title}</h2>
+            <p className="post-description">
+              {description}
+              <br />
+              <br />
+            </p>
+          </div>
+        </a>
+      </Link>
       <style jsx>{`
         .post {
           background-size: cover;
@@ -112,12 +114,15 @@ const Page = ({ posts }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('https://cms.shifthyperloop.com/posts');
+  const res = await fetch(
+    'https://cms.shifthyperloop.com/posts?_sort=published:desc'
+  );
   const data = await res.json();
 
   return {
     posts: data.map(post => {
       return {
+        pid: post.id,
         title: post.title,
         picture: post.picture,
         description: post.description,

@@ -41,18 +41,20 @@ const Footer = () => (
       </div>
     </footer>
     <style jsx>{`
-      .footer {
-        box-shadow: 1px 0.3px 10px #888888;
-      }
       .container {
+        box-sizing: border-box;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        height: 10rem;
+        height: 8rem;
         bottom: 0;
-        max-width: 1200px;
         margin: auto;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        box-shadow: 1px 0.3px 10px #888888;
+        background-color: black;
       }
       .ramboll {
         width: 316px;

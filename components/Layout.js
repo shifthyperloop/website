@@ -23,7 +23,7 @@ class Layout extends Component {
           <meta property="og:image" content={image} />
         </Head>
         <Header />
-        {children}
+        <div className="content">{children}</div>
         <Footer />
         <style jsx global>{`
           :root {
@@ -31,15 +31,23 @@ class Layout extends Component {
           }
           body {
             margin: 0px;
+            height: 100%;
             color: #ddd;
             font-family: 'Roboto Condensed', sans-serif;
             line-height: 1.5;
             background-color: #01030c;
             margin-top: 3.5rem;
-            margin-bottom: 7rem;
           }
           a {
             color: #ddd;
+          }
+          .content {
+            flex: 1;
+          }
+          .layout {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 3.5rem);
           }
           .title {
             text-align: center;
