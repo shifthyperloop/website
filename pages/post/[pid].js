@@ -91,11 +91,14 @@ Page.getInitialProps = async function(context) {
   return {
     pid: post.id,
     title: post.title,
-    picture: post.picture,
+    picture: post.picture || {},
     description: post.description,
     published: post.published,
     updated_at: post.updated_at,
-    content: post.content.replace('http://localhost:1337', CMS_BASE_URL),
+    content: (post.content || '').replace(
+      'http://localhost:1337',
+      CMS_BASE_URL
+    ),
   };
 };
 
