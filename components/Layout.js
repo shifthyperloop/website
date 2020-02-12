@@ -35,7 +35,7 @@ class Layout extends Component {
             color: #ddd;
             font-family: 'Roboto Condensed', sans-serif;
             line-height: 1.5;
-            background-color: #01030c;
+            background-color: #161616;
             margin-top: 3.5rem;
           }
           a {

@@ -1,0 +1,5 @@
+              <div className="member">
+                <IoMdPerson />
+              </div>
+              <div className="competition">
+                <GITrophy />

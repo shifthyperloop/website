@@ -6,6 +6,9 @@ import {
   FaGithub,
   FaSnapchat,
   FaLinkedin,
+  FaLeaf,
+  GITrophy,
+  IoMdPerson,
 } from 'react-icons/fa';
 
 const Page = () => <p>Contact us</p>;

@@ -14,7 +14,6 @@ const Header = () => (
       </Link>
     </div>
     <div className="menu-options">
-      <a href="/about">About</a>
       <a href="/contact">Contact us</a>
       <a href="/posts">Posts</a>
       <a href="/sponsors">Sponsors</a>

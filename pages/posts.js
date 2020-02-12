@@ -24,6 +24,7 @@ const Post = ({ title, pid, picture: { url = '' }, description }) => {
         .post {
           background-size: cover;
           background-position: center center;
+          border-radius: 5.5px;
           height: 300px;
           flex: 1 1 500px;
           margin: 16px;
@@ -35,6 +36,7 @@ const Post = ({ title, pid, picture: { url = '' }, description }) => {
         }
         .post:first-child {
           flex-basis: 100%;
+          height: 400px;
         }
         .post-image {
           width: 100%;
@@ -97,16 +99,35 @@ const Page = ({ posts }) => {
       url="https://www.shifthyperloop.com/posts"
       title="Shift Hyperloop | Posts"
     >
+      <div className="title">
+        <h1>Newsletters and blog posts</h1>
+        <hr />
+      </div>
       <div className="posts page-container">
         {posts.map(post => (
           <Post key={post.title} {...post} />
         ))}
       </div>
+      <div className="bottom-margin"></div>
       <style jsx>{`
+        .title {
+          margin-top: 50px;
+        }
         .posts {
           display: flex;
           flex-flow: row wrap;
           padding: 16px;
+        }
+        .bottom-margin {
+          height: 40px;
+        }
+        hr {
+          width: 80%;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 2.8px;
+          border-color: #0080c9;
+          margin-bottom: 40px;
         }
       `}</style>
     </Layout>
