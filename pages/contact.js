@@ -1,15 +1,7 @@
 import withLayout from '../components/Layout';
 import Layout from '../components/Layout';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaGithub,
-  FaSnapchat,
-  FaLinkedin,
-  FaLeaf,
-  GITrophy,
-  IoMdPerson,
-} from 'react-icons/fa';
+import { useRef } from 'react';
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 <script
   type="text/javascript"
@@ -19,6 +11,32 @@ import {
 const Page = () => <p>Contact us</p>;
 
 export default function About() {
+  const refName = useRef();
+  const refEmail = useRef();
+  const refMessage = useRef();
+  const submitHandler = () => {
+    const data = {
+      name: refName.current.value,
+      email: refEmail.current.value,
+      message: refMessage.current.value,
+    };
+    const dataURI = Object.entries(data)
+      .map(([key, val]) => key + '=' + encodeURIComponent(val))
+      .join('&');
+    fetch(
+      'https://script.google.com/macros/s/AKfycby7djTgeLHEyQVW4ruOEBXsHQoJ5jldANy8_efvayGaB8Acyve1/exec?' +
+        dataURI
+    )
+      .then(() => {
+        // Nullstill sjema og si det gikk bra
+        refName.current.value = '';
+        refEmail.current.value = '';
+        refMessage.current.value = '';
+      })
+      .catch(() => {
+        // Si ifra at den feilet
+      });
+  };
   return (
     <Layout
       url="https://www.shifthyperloop.com/contact"
@@ -51,7 +69,7 @@ export default function About() {
             </a>
           </p>
         </div>
-        <form className="contact-form">
+        <div className="contact-form">
           <div className="name">
             <input
               type="text"
@@ -59,6 +77,7 @@ export default function About() {
               autoFocus={true}
               placeholder="Name (optional)"
               className="name-field"
+              ref={refName}
             />
           </div>
 
@@ -68,6 +87,7 @@ export default function About() {
               name="email"
               placeholder="Email"
               className="email-field"
+              ref={refEmail}
             />
           </div>
 
@@ -77,15 +97,20 @@ export default function About() {
               name="message"
               placeholder="Message"
               className="message-field"
+              ref={refMessage}
             ></textarea>
           </div>
 
           <div className="submit">
-            <button type="submit" id="submit-form" className="submit-form">
+            <button
+              id="submit-form"
+              className="submit-form"
+              onClick={submitHandler}
+            >
               Submit
             </button>
           </div>
-        </form>
+        </div>
       </div>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
