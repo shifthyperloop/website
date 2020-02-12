@@ -66,7 +66,7 @@ const Page = ({ sponsors }) => {
           src="/signering_bw_logo.jpg"
           style={{ objectPosition: 'top', objectFit: 'cover' }}
         />
-        <h1 className="title">Sponsors</h1>
+        <h1 className="title">Partners</h1>
         <h3 className="sponsor-description">
           Meet our amazing partners. Their support is what's making it possible
           to do what we love.

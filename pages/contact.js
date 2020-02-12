@@ -11,6 +11,11 @@ import {
   IoMdPerson,
 } from 'react-icons/fa';
 
+<script
+  type="text/javascript"
+  src="C:\Users\hanne\OneDrive\Skrivebord\Proglab2\Shift-website\contacthelp.js"
+></script>;
+
 const Page = () => <p>Contact us</p>;
 
 export default function About() {

@@ -16,7 +16,7 @@ const Header = () => (
     <div className="menu-options">
       <a href="/contact">Contact us</a>
       <a href="/posts">Posts</a>
-      <a href="/sponsors">Sponsors</a>
+      <a href="/sponsors">Partners</a>
       <a href="/team">Team</a>
       <span className="menu">
         <span>Other </span>

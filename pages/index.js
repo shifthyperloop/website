@@ -1,12 +1,18 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { FaLeaf } from 'react-icons/fa';
+import { FaLeaf, FaAngleDown } from 'react-icons/fa';
+import { IoMdPerson } from 'react-icons/io';
+import { GiTrophy } from 'react-icons/gi';
 
 const Page = () => {
   return (
     <Layout>
       <div className="container">
-        <div className="parallax"></div>
+        <div className="parallax">
+          <div className="arrow">
+            <FaAngleDown size={35} />
+          </div>
+        </div>
         <div className="content">
           <div className="text">
             <h1>About Shift</h1>
@@ -26,20 +32,59 @@ const Page = () => {
         </div>
         <div className="goals">
           <div className="text">
-            <h1>Our Goals</h1>
+            <h1 className="our-goals">Our Goals</h1>
             <div className="separate">
-              <div className="enviorment">
-                <FaLeaf />
+              <div className="enviorment goal">
+                <FaLeaf size={35} className="icon" />
+                <h4>Enviorment</h4>
+              </div>
+              <div className="member goal">
+                <IoMdPerson size={35} className="icon" />
+                <h4>Personal Development</h4>
+              </div>
+              <div className="competition goal">
+                <GiTrophy size={35} className="icon" />
+                <h4>Competiton</h4>
               </div>
             </div>
           </div>
         </div>
+        <div className="hyperloop-container">
+          <h1> What is a hyperloop?</h1>
+        </div>
       </div>
       <style jsx>
         {`
+          .arrow {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-attachment: fixed;
+          }
+
+          .separate {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: auto;
+            justify-content: center;
+            margin-top: ;
+          }
+          .icon {
+            width: 50px;
+          }
+          h1 {
+            margin-bottom: 30px;
+            font-size: 40px;
+          }
           .container {
             display: flex;
             flex-direction: column;
+          }
+          .goal {
+            max-width: 400px;
+            width: 100%;
           }
           .parallax {
             background-image: url('/Shift1.png');
@@ -51,7 +96,7 @@ const Page = () => {
             background-size: cover;
           }
           .goals {
-            height: 900px;
+            height: 400px;
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;
@@ -63,7 +108,8 @@ const Page = () => {
             padding-bottom: 40px;
           }
 
-          .content {
+          .content,
+          .hyperloop-container {
             background-color: #202020;
             box-shadow: 1px 0.3px 10px #000;
             text-align: center;
@@ -72,6 +118,7 @@ const Page = () => {
           }
           .text {
             max-width: 1200px;
+            min-height: 120px;
             margin: auto;
           }
         `}
