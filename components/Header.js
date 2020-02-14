@@ -16,7 +16,7 @@ const Header = () => (
     <div className="menu-options">
       <a href="/contact">Contact us</a>
       <a href="/posts">Posts</a>
-      <a href="/sponsors">Partners</a>
+      <a href="/partners">Partners</a>
       <a href="/team">Team</a>
       <span className="menu">
         <span>Other </span>
@@ -49,7 +49,7 @@ const Header = () => (
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        box-shadow: 1px 0.3px 10px #888888;
+        box-shadow: 2px 2px 10px #1a1a1a;
         position: fixed;
         top: 0;
         left: 0;

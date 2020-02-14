@@ -35,6 +35,7 @@ export default function About() {
       })
       .catch(() => {
         // Si ifra at den feilet
+        console.error('Could not fetch');
       });
   };
   return (

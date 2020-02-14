@@ -52,9 +52,24 @@ const Page = () => {
         <div className="hyperloop-container">
           <h1> What is a hyperloop?</h1>
         </div>
+        <div className="competition-container">
+          <h1> Hyperloop competition</h1>
+        </div>
       </div>
       <style jsx>
         {`
+          .competition-container {
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #fff2;
+            box-shadow: 1px 0.3px 10px #000;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 40px;
+          }
           .arrow {
             position: absolute;
             bottom: 10px;

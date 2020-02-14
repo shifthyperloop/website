@@ -44,7 +44,7 @@ const Group = ({ members = [], title }) => {
       <hr />
       <div className="group-members">
         {members.map(member => (
-          <Member {...member} />
+          <Member key={member.name} {...member} />
         ))}
       </div>
       <style jsx>
@@ -117,7 +117,7 @@ const Page = ({ members = [] }) => {
       </div>
       <div className="page-container">
         {Object.values(groups).map(group => (
-          <Group {...group} />
+          <Group key={group.title} {...group} />
         ))}
       </div>
       <style jsx global>{`

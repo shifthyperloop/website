@@ -53,8 +53,8 @@ const Footer = () => (
         left: 0;
         bottom: 0;
         right: 0;
-        box-shadow: 1px 0.3px 10px #888888;
-        background-color: black;
+        box-shadow: 2px 2px 10px #1a1a1a;
+        background-color: #01020b;
       }
       .ramboll {
         width: 316px;

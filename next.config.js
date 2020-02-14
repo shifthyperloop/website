@@ -9,7 +9,7 @@ module.exports = {
       '/posts': { page: '/posts' },
       '/pod': { page: '/pod' },
       '/contact': { page: '/contact' },
-      '/sponsors': { page: '/sponsors' },
+      '/partners': { page: '/partners' },
       '/team': { page: '/team' },
     };
 
