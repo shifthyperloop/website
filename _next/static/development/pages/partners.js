@@ -13023,7 +13023,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!**********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpartners&absolutePagePath=C%3A%5CUsers%5Channe%5COneDrive%5CSkrivebord%5CProglab2%5CShift-website%5Cpages%5Cpartners.js ***!
   \**********************************************************************************************************************************************************************/
@@ -13046,5 +13046,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=partners.js.map
