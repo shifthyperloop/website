@@ -11,6 +11,7 @@ module.exports = {
       '/contact': { page: '/contact' },
       '/partners': { page: '/partners' },
       '/team': { page: '/team' },
+      '/joinus': { page: '/joinus' },
     };
 
     const res = await fetch('https://cms.shifthyperloop.com/posts');

@@ -61,16 +61,36 @@ const Page = ({ sponsors }) => {
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
       <div className="image-container">
-        <img
-          className="sponsor-image"
-          src="/signering_bw_logo.jpg"
-          style={{ objectPosition: 'top', objectFit: 'cover' }}
-        />
-        <h1 className="title">Partners</h1>
-        <h3 className="sponsor-description">
-          Meet our amazing partners. Their support is what's making it possible
-          to do what we love.
-        </h3>
+        <div className="sponsor-image">
+          <h1 className="title">Partners</h1>
+          <h3 className="sponsor-description">
+            Meet our amazing partners. Their support is what's making it
+            possible to do what we love.
+          </h3>
+        </div>
+      </div>
+      <div className="info-container">
+        <div className="sponsor-information">
+          <h3 className="quote">
+            "Thank you all contributors for your patience, and willingness to
+            help!"
+          </h3>
+          <hr />
+          <h4 className="partner-info">
+            Partners & contributors The sponsors are everything for us, that is
+            why we give them all this attention. If you are interested in being
+            a sponsor or partner, please contact us using the contact form at
+            the contact form, or send us an mail: contact@shift.no. Thank you to
+            all the professors and advisors that have guided us and helped us
+            stay on the right path. In addition to our sponsors, we would also
+            like to thank our fellow teams for providing support and answering
+            our questions, especially in the starting phases. Also, we would
+            like to extend our gratitude to the SpaceX team for hosting the
+            competition and inspiring young souls all around the world to extend
+            the grasp of technology. Thank you all contributors for your
+            patience, and willingness to help!
+          </h4>
+        </div>
       </div>
       <section className="page-container">
         <h2 className="platinum sponsors">
@@ -129,6 +149,50 @@ const Page = ({ sponsors }) => {
         h3 {
           text-align: center;
         }
+        .info-container {
+          background-color: #fff2;
+          box-shadow: 1px 0.3px 10px #000;
+          margin-top: -10px;
+        }
+        .sponsor-information {
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+        }
+        .sponsor-image {
+          background-image: url('/signering_bw_logo.jpg');
+          height: 900px;
+          background-attachment: fixed;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        .sponsor-image > * {
+          z-index: 1;
+        }
+        .sponsor-image::after {
+          content: '';
+          backdrop-filter: brightness(0.7);
+          z-index: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .quote {
+          width: 30%;
+          margin: 0 2.5%;
+          color: #0080c9;
+          text-align: center;
+          margin: auto;
+        }
+        .partner-info {
+          width: 60%;
+          margin: 30px 2.5% 30px;
+        }
         .image-container {
           position: relative;
           text-align: center;
@@ -145,9 +209,7 @@ const Page = ({ sponsors }) => {
           top: 0;
           bottom: 0;
         }
-        .sponsor-image {
-          filter: brightness(40%);
-        }
+
         .title {
           position: absolute;
           font: 5em Georgia, Serif;

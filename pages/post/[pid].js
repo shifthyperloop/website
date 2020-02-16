@@ -12,19 +12,27 @@ const Page = ({
   published,
   updated_at,
   content,
+  is_pdf,
+  files: { url: fileUrl = '' },
 }) => {
   const router = useRouter();
   return (
     <Layout>
       <div className="container">
-        <div className="news-container">
-          <img className="news-image" src={CMS_BASE_URL + url} />
-          <h1 className="title">{title}</h1>
-        </div>
-        <div className="text">
-          <h2>{description}</h2>
-          <ReactMarkdown source={content} />
-        </div>
+        {!is_pdf ? (
+          <>
+            <div className="news-container">
+              <img className="news-image" src={CMS_BASE_URL + url} />
+              <h1 className="title">{title}</h1>
+            </div>
+            <div className="text">
+              <h2>{description}</h2>
+              <ReactMarkdown source={content} />
+            </div>
+          </>
+        ) : (
+          <iframe id="iframepdf" src={CMS_BASE_URL + fileUrl}></iframe>
+        )}
         <style jsx global>{`
           .text {
             max-width: 1200px;
@@ -95,6 +103,8 @@ Page.getInitialProps = async function(context) {
     description: post.description,
     published: post.published,
     updated_at: post.updated_at,
+    files: post.files || {},
+    is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
       'http://localhost:1337',
       CMS_BASE_URL

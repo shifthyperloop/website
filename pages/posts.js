@@ -145,7 +145,7 @@ Page.getInitialProps = async function() {
       return {
         pid: post.id,
         title: post.title,
-        picture: post.picture,
+        picture: post.picture || {},
         description: post.description,
       };
     }),

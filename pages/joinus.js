@@ -6,10 +6,11 @@ const Page = () => {
 
   return (
     <Layout
-      url="https://www.shifthyperloop.com/about"
-      title="Shift Hyperloop | About"
+      url="https://www.shifthyperloop.com/joinus"
+      title="Shift Hyperloop | Join us"
     >
       <h1 className="join">Join Us</h1>
+      <hr />
       <div className="join-container">
         <div className="general-information"></div>
         <div className="groups">
@@ -27,8 +28,8 @@ const Page = () => {
                 encounter a lot of responsibility.
               </p>
               <div className="button-container">
-                <button></button>
-                <button></button>
+                <button>Learn more</button>
+                <button>Apply</button>
               </div>
             </div>
           </div>
@@ -43,8 +44,8 @@ const Page = () => {
                 team in making the brand new magnetic levitation engine!
               </p>
               <div className="button-container">
-                <button></button>
-                <button></button>
+                <button>Learn more</button>
+                <button>Apply</button>
               </div>
             </div>
             <div className="imagetest">
@@ -67,8 +68,8 @@ const Page = () => {
                 pictures, website and a lot more!
               </p>
               <div className="button-container">
-                <button></button>
-                <button></button>
+                <button>Learn more</button>
+                <button>Apply</button>
               </div>
             </div>
           </div>
@@ -85,8 +86,8 @@ const Page = () => {
                 engineering!
               </p>
               <div className="button-container">
-                <button></button>
-                <button></button>
+                <button>Learn more</button>
+                <button>Apply</button>
               </div>
             </div>
             <div className="imagetest">
@@ -110,12 +111,13 @@ const Page = () => {
                 power the pod!
               </p>
               <div className="button-container">
-                <button></button>
-                <button></button>
+                <button>Learn more</button>
+                <button>Apply</button>
               </div>
             </div>
           </div>
         </div>
+        <p></p>
       </div>
       <style jsx>
         {`
@@ -130,17 +132,34 @@ const Page = () => {
             max-width: 600px;
             text-align: center;
           }
+          hr {
+            width: 80%;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 2.8px;
+            border-color: #fff5;
+            margin-top: -10px;
+            margin-bottom: 40px;
+          }
+          button {
+            background-color: #fff5;
+            color: white;
+            border: 1px solid #008cba;
+            margin: 0 50px;
+          }
           .image {
             width: 80%;
             border-radius: 5.5px;
           }
           .left {
             padding: 20px 0px 20px;
-            background-color: #0003;
+            background-color: #202020;
+            box-shadow: 1px 0.3px 10px #000;
           }
           .right {
             padding: 20px 0px 20px;
-            background-color: #fff1;
+            background-color: #fff2;
+            box-shadow: 1px 0.3px 10px #000;
           }
           .join-container {
             max-width: 1200px;

@@ -3,11 +3,22 @@ import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
 import { CMS_BASE_URL } from '../common/constants';
+import { FaAngleDown } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 const Member = ({ name, picture: { url = '' }, title, email, group }) => {
   return (
     <div>
-      <img src={CMS_BASE_URL + url} />
+      <div className="image-container">
+        <img src={CMS_BASE_URL + url} />
+        <a
+          href={''}
+          className="email"
+          onMouseOver={e => (e.target.href = 'mailto:' + email)}
+        >
+          <FiMail size={35} className="mail-symbol" />
+        </a>
+      </div>
       <h3>{name}</h3>
       <h4>{title}</h4>
       <style jsx>
@@ -17,12 +28,39 @@ const Member = ({ name, picture: { url = '' }, title, email, group }) => {
             text-align: center;
           }
           img {
-            border-radius: 50%;
-            height: 200px;
-            width: 200px;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
             object-position: top;
           }
+          .image-container {
+            position: relative;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+          }
+          .email {
+            position: absolute;
+            background-color: #0080c980;
+            border-radius: 50%;
+            --r: 25%;
+            bottom: calc(0% - var(--r));
+            left: calc(50% - var(--r));
+            right: calc(50% - var(--r));
+            top: calc(100% - var(--r));
+            transition: all 1s;
+            text-align: center;
+          }
+          .image-container:hover .email {
+            --r: 100%;
+          }
+          :global(.mail-symbol) {
+            position: absolute;
+            top: 25%;
+            transform: translate(-50%, -50%);
+          }
+
           img,
           h3 {
             margin-bottom: -10px;
@@ -97,6 +135,31 @@ const Page = ({ members = [] }) => {
         description: '...',
         members: [],
       },
+      Mechanical: {
+        title: 'Mechanical Team',
+        description: '...',
+        members: [],
+      },
+      Magnetics: {
+        title: 'Magnetics Team',
+        description: '...',
+        members: [],
+      },
+      Software: {
+        title: 'Software Team',
+        description: '...',
+        members: [],
+      },
+      Relations: {
+        title: 'Relations Team',
+        description: '...',
+        members: [],
+      },
+      Mentor: {
+        title: 'Mentors',
+        description: '...',
+        members: [],
+      },
     };
     members.forEach(member => {
       if (member.group in newGroups) {
@@ -114,6 +177,9 @@ const Page = ({ members = [] }) => {
       <div className="image-container">
         <img className="team-photo" src="/Shift-team-2020.jpg"></img>
         <h1 className="title">Meet our awesome team!</h1>
+        <div className="arrow">
+          <FaAngleDown size={35} />
+        </div>
       </div>
       <div className="page-container">
         {Object.values(groups).map(group => (
@@ -143,25 +209,14 @@ const Page = ({ members = [] }) => {
           color: white;
           display: inline-flex;
         }
-        .image-container::before {
-          content: '';
+        .arrow {
           position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          background: linear-gradient(63deg, #fff1 23%, transparent 23%) 1px 0,
-            linear-gradient(63deg, transparent 74%, #fff1 78%),
-            linear-gradient(
-              63deg,
-              transparent 34%,
-              #fff1 38%,
-              #fff1 58%,
-              transparent 62%
-            ),
-            transparent;
-          background-size: 10px 48px;
+          bottom: 10px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-attachment: fixed;
         }
+
         .title {
           position: absolute;
           bottom: calc(40% - 10px);

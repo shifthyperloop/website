@@ -10,7 +10,7 @@ export default function About() {
       title="Shift Hyperloop | Pod"
     >
       <div className="image-container">
-        <img className="woodwork" src="/woodshop.jpg" />
+        <img className="woodwork" src="/pod-tube.jpg" />
         <h1 className="headline">Pod version 0.8</h1>
       </div>
       <div className="information">
