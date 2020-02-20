@@ -31,21 +31,18 @@ const Page = () => {
               course by giving students hands-on experience that is normally
               unavailable for engineering students. We also provide the
               university with bachelor- and master-theses for graduating
-              students to write about. Shift Hyperloop is primarily an
-              organisation meant to teach and educate NTNU students, however we
-              are also the youth that have to solve the massive challenges the
-              world is facing. As such you can expect to see Shift advocating
-              for green measures and further research on how we can combat
-              climate change. Shift is an independent non-profit organization
-              founded in Trondheim by students from the Norwegian University of
-              Science and Technology. The team currently consists of about 50
-              members from various programs.
-            </p>
-            <p>
-              Our goal is to drive the hyperloop technology forward and be in
-              the forefront of developing the transportation technologies of
-              tomorrow. To achieve our goal we design and build our own pods to
-              compete in The Hyperloop Pod Competition hosted by SpaceX.
+              students to write about.{' '}
+              <p>
+                Shift Hyperloop is primarily an organisation meant to teach and
+                educate NTNU students, however we are also the youth that have
+                to solve the massive challenges the world is facing. As such you
+                can expect to see Shift advocating for green measures and
+                further research on how we can combat climate change. Shift is
+                an independent non-profit organization founded in Trondheim by
+                students from the Norwegian University of Science and
+                Technology. The team currently consists of about 50 members from
+                various programs.
+              </p>
             </p>
           </div>
         </div>
@@ -57,27 +54,35 @@ const Page = () => {
                 <FaLeaf size={35} className="icon" />
                 <h4>Enviorment</h4>
                 <p>
-                  Hyperloops are one of the most enviormentaly friendly ways of
-                  transportation as of now. Because of this, we're working
-                  towards
+                  The world is facing massive challenges tied to climate change.
+                  Transportation is a big contributer to CO2 emissions, with
+                  hyperloop we can reduce those emissions while still respecting
+                  peoples time. A world that is only growing more interconnected
+                  as the years go by, transportation will only be more important
+                  with time. With hyperloop we can reduce transportation time,
+                  both for humans and goods.
                 </p>
               </div>
               <div className="member goal">
                 <IoMdPerson size={35} className="icon" />
                 <h4>Personal Development</h4>
                 <p>
-                  Hyperloops are one of the most enviormentaly friendly ways of
-                  transportation as of now. Because of this, we're working
-                  towards
+                  While lectures is a decent way to learn, all members at Shift
+                  can attest to that nothing beats proper working experience. At
+                  Shift we are big advocates for increasing the number of
+                  technical student organisations at all universities. Our
+                  mmembers learn leadership, efficiency, how to work in a team
+                  while also learning to be independend.
                 </p>
               </div>
               <div className="competition goal">
                 <GiTrophy size={35} className="icon" />
                 <h4>Competiton</h4>
                 <p>
-                  Hyperloops are one of the most enviormentaly friendly ways of
-                  transportation as of now. Because of this, we're working
-                  towards
+                  Every year starting from 2015 SpaceX has held a hyperloop
+                  competition in California. Shift is planning on competig this
+                  year and our goal is to become one of the best student teams
+                  in the world. As of now we are the only fully magnetic team.
                 </p>
               </div>
             </div>
@@ -107,17 +112,28 @@ const Page = () => {
         </div>
         <div className="competition-container">
           <h1> Hyperloop competition</h1>
-          <p>
-            The Hyperloop Pod Competition is an annual competition sponsored by
-            SpaceX from 2015–2019 in which a number of student and non-student
-            teams participate to design—and for some, build—a subscale prototype
-            transport vehicle in order to demonstrate technical feasibility of
-            various aspects of the Hyperloop concept. The competitions have been
-            open to participants globally, although all competitions and judging
-            has occurred in the United States. The 2020 competition is planned
-            on a much longer 10 km (6.2 mi) track, ten times as long as the 1 km
-            track used in the first several years of the annual competition
-          </p>
+          <div className="separate">
+            <div className="flex1">
+              <p>
+                The Hyperloop Pod Competition is an annual competition sponsored
+                by SpaceX from 2015–2019 in which a number of student and
+                non-student teams participate to design—and for some, build—a
+                subscale prototype transport vehicle in order to demonstrate
+                technical feasibility of various aspects of the Hyperloop
+                concept. The competitions have been open to participants
+                globally, although all competitions and judging has occurred in
+                the United States. The 2020 competition is planned on a much
+                longer 10 km (6.2 mi) track, ten times as long as the 1 km track
+                used in the first several years of the annual competition
+              </p>
+            </div>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/AO0sPME3j2s"
+              frameBorder="0"
+              allow="accelerometer; autoplay; gyroscope; "
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
       <style jsx>
@@ -155,6 +171,10 @@ const Page = () => {
             justify-content: center;
             margin-top: ;
           }
+          iframe {
+            width: 50%;
+          }
+
           .flex-container {
             display: flex;
             flex-direction: row;
@@ -185,8 +205,12 @@ const Page = () => {
             background-repeat: no-repeat;
             background-size: cover;
           }
+          .text-container {
+            max-width: 1200px;
+            margin: auto;
+          }
           .goals {
-            height: 400px;
+            min-height: 400px;
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;

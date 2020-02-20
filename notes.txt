@@ -24,3 +24,6 @@
             transparent;
           background-size: 10px 48px;
         }
+
+        src={`http://pdf-viewer-shift-hyperloop.s3-website.eu-north-1.amazonaws.com?pdf=${CMS_BASE_URL +
+                fileUrl}`}

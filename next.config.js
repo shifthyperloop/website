@@ -16,11 +16,9 @@ module.exports = {
 
     const res = await fetch('https://cms.shifthyperloop.com/posts');
     const data = await res.json();
-    data
-      .map(post => post.id)
-      .forEach(pid => {
-        paths['/post/' + pid] = { page: '/post/[pid]', query: { pid } };
-      });
+    data.forEach(({ id: pid }) => {
+      paths['/post/' + pid] = { page: '/post/[pid]', query: { pid } };
+    });
 
     return paths;
   },

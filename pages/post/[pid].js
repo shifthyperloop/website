@@ -31,13 +31,30 @@ const Page = ({
             </div>
           </>
         ) : (
-          <iframe id="iframepdf" src={CMS_BASE_URL + fileUrl}></iframe>
+          <div className="newsletter">
+            <h1>{title}</h1>
+            <iframe
+              id="iframepdf"
+              src={`http://pdf-viewer-shift-hyperloop.s3-website.eu-north-1.amazonaws.com?pdf=${CMS_BASE_URL +
+                fileUrl}`}
+            ></iframe>
+          </div>
         )}
         <style jsx global>{`
           .text {
             max-width: 1200px;
             margin: 0 auto;
           }
+          #iframepdf {
+            width: 1200px;
+            height: 800px;
+          }
+          .newsletter {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+          }
+
           .container {
             position: center;
             align-content: center;

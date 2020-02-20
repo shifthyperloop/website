@@ -116,6 +116,7 @@ const Page = ({ posts }) => {
         .posts {
           display: flex;
           flex-flow: row wrap;
+          box-sizing: border-box;
           padding: 16px;
         }
         .bottom-margin {

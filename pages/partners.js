@@ -56,7 +56,7 @@ const Page = ({ sponsors }) => {
 
   return (
     <Layout
-      url="https://www.shifthyperloop.com/sponsors"
+      url="https://www.shifthyperloop.com/partners"
       title="Shift Hyperloop | Sponsors"
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
@@ -152,6 +152,7 @@ const Page = ({ sponsors }) => {
         .info-container {
           background-color: #fff2;
           box-shadow: 1px 0.3px 10px #000;
+          box-shadow: 1px 0.5px 0px #000;
           margin-top: -10px;
         }
         .sponsor-information {
@@ -162,7 +163,6 @@ const Page = ({ sponsors }) => {
         }
         .sponsor-image {
           background-image: url('/signering_bw_logo.jpg');
-          height: 900px;
           background-attachment: fixed;
           background-position: center center;
           background-repeat: no-repeat;
@@ -198,7 +198,7 @@ const Page = ({ sponsors }) => {
           text-align: center;
           color: white;
           width: 100%;
-          height: 800px;
+          height: 900px;
           display: inline-flex;
         }
         .image-container::before {
@@ -298,6 +298,14 @@ const Page = ({ sponsors }) => {
           display: flex;
           align-items: center;
           width: 600px;
+        }
+        @media (max-width: 640px) {
+          .image-container {
+            height: 60vw;
+          }
+          .sponsor-image {
+            background-attachment: unset;
+          }
         }
       `}</style>
     </Layout>
