@@ -11,6 +11,7 @@ module.exports = {
       '/contact': { page: '/contact' },
       '/partners': { page: '/partners' },
       '/team': { page: '/team' },
+      '/team2019': { page: '/team2019' },
       '/joinus': { page: '/joinus' },
     };
 

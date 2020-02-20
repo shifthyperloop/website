@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdClose } from 'react-icons/md';
 
 const linkStyle = {
   marginRight: 15,
@@ -17,7 +19,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="menu-dropdown" onClick={() => setMenuOpen(!menuOpen)}>
-        Drop
+        {menuOpen ? <MdClose size={30} /> : <GiHamburgerMenu size={30} />}
       </div>
       <div className="menu-options">
         <a href="/contact">Contact us</a>
@@ -141,7 +143,6 @@ const Header = () => {
             width: 2em;
             height: 100%;
             cursor: pointer;
-            background: red;
           }
           .menu-options {
             flex-direction: column;

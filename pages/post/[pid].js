@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import ReactMarkdown from 'react-markdown';
+import { useWindowSize } from '../../common/hooks';
 
 const Page = ({
   pid,
@@ -12,10 +13,13 @@ const Page = ({
   published,
   updated_at,
   content,
+  front_page: { url: frontUrl = '' },
   is_pdf,
   files: { url: fileUrl = '' },
 }) => {
   const router = useRouter();
+  const windowSize = useWindowSize();
+
   return (
     <Layout>
       <div className="container">
@@ -33,11 +37,21 @@ const Page = ({
         ) : (
           <div className="newsletter">
             <h1>{title}</h1>
-            <iframe
-              id="iframepdf"
-              src={`http://pdf-viewer-shift-hyperloop.s3-website.eu-north-1.amazonaws.com?pdf=${CMS_BASE_URL +
-                fileUrl}`}
-            ></iframe>
+            {windowSize.width > 1000 ? (
+              <iframe
+                id="iframepdf"
+                src={`http://pdf-viewer-shift-hyperloop.s3-website.eu-north-1.amazonaws.com/?pdf=${CMS_BASE_URL +
+                  fileUrl}`}
+              ></iframe>
+            ) : (
+              <a
+                className="newsletter-download"
+                download
+                href={CMS_BASE_URL + fileUrl}
+              >
+                <img src={CMS_BASE_URL + frontUrl} />
+              </a>
+            )}
           </div>
         )}
         <style jsx global>{`
@@ -46,6 +60,7 @@ const Page = ({
             margin: 0 auto;
           }
           #iframepdf {
+            border: none;
             width: 1200px;
             height: 800px;
           }
@@ -120,6 +135,7 @@ Page.getInitialProps = async function(context) {
     description: post.description,
     published: post.published,
     updated_at: post.updated_at,
+    front_page: post.front_page || {},
     files: post.files || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(

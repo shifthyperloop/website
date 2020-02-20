@@ -130,6 +130,7 @@ const Page = () => {
             <iframe
               src="https://www.youtube-nocookie.com/embed/AO0sPME3j2s"
               frameBorder="0"
+              className="flex1"
               allow="accelerometer; autoplay; gyroscope; "
               allowFullScreen
             ></iframe>
@@ -139,7 +140,7 @@ const Page = () => {
       <style jsx>
         {`
           .competition-container {
-            height: 400px;
+            min-height: 400px;
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;
@@ -158,14 +159,14 @@ const Page = () => {
             background-attachment: fixed;
           }
           .flex1 {
-            width: 50%;
+            flex: 1 1 500px;
           }
           .hyperloop-image {
             width: 100%;
           }
           .separate {
             display: flex;
-            flex-direction: row;
+            flex-flow: row wrap;
             max-width: 1200px;
             margin: auto;
             justify-content: center;
@@ -177,7 +178,7 @@ const Page = () => {
 
           .flex-container {
             display: flex;
-            flex-direction: row;
+            flex-flow: row wrap;
           }
           .icon {
             width: 50px;
