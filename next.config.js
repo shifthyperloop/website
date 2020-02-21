@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-unfetch');
 
 module.exports = {
   exportTrailingSlash: true,

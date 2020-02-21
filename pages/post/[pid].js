@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-unfetch';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from '../../common/hooks';
 
@@ -40,7 +40,8 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
                 id="iframepdf"
-                src={`https://pdf-viewer.now.sh/?pdf=${CMS_BASE_URL + fileUrl}`}
+                src={`https://pdf-viewer.comw.sh/?pdf=${CMS_BASE_URL +
+                  fileUrl}`}
               ></iframe>
             ) : (
               <a

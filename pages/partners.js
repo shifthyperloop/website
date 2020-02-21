@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 
 const Sponsor = ({
@@ -323,7 +323,7 @@ const Page = ({ sponsors }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('https://cms.shifthyperloop.com/sponsors');
+  const res = await fetch('http://cms.shifthyperloop.com/sponsors');
   const data = await res.json();
 
   return {
