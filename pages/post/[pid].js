@@ -40,8 +40,7 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
                 id="iframepdf"
-                src={`http://pdf-viewer-shift-hyperloop.s3-website.eu-north-1.amazonaws.com/?pdf=${CMS_BASE_URL +
-                  fileUrl}`}
+                src={`https://pdf-viewer.now.sh/?pdf=${CMS_BASE_URL + fileUrl}`}
               ></iframe>
             ) : (
               <a
