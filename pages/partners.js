@@ -230,7 +230,6 @@ const Page = ({ sponsors }) => {
           overflow: hidden;
           white-space: nowrap;
         }
-
         .sponsor-description {
           position: absolute;
           font: 2em Georgia, Serif;
