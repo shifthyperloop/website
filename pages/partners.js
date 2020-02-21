@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 
 const Sponsor = ({
