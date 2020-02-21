@@ -53,32 +53,31 @@ const Page = () => {
               <div className="enviorment goal">
                 <FaLeaf size={35} className="icon" />
                 <h4>Enviorment</h4>
-                <p>
+                <p className="goal-text">
                   The world is facing massive challenges tied to climate change.
-                  Transportation is a big contributer to CO2 emissions, with
-                  hyperloop we can reduce those emissions while still respecting
-                  peoples time. A world that is only growing more interconnected
-                  as the years go by, transportation will only be more important
-                  with time. With hyperloop we can reduce transportation time,
-                  both for humans and goods.
+                  Transportation is a big contributer to CO2 emissions. With
+                  hyperloop we can reduce those emissions along with
+                  transportation time, both for humans and goods. One of our big
+                  long term goals is also to look at hyperloop solutions in
+                  Norway.
                 </p>
               </div>
               <div className="member goal">
                 <IoMdPerson size={35} className="icon" />
                 <h4>Personal Development</h4>
-                <p>
+                <p className="goal-text">
                   While lectures is a decent way to learn, all members at Shift
                   can attest to that nothing beats proper working experience. At
                   Shift we are big advocates for increasing the number of
                   technical student organisations at all universities. Our
-                  mmembers learn leadership, efficiency, how to work in a team
+                  members learn leadership, efficiency and how to work in a team
                   while also learning to be independend.
                 </p>
               </div>
               <div className="competition goal">
                 <GiTrophy size={35} className="icon" />
                 <h4>Competiton</h4>
-                <p>
+                <p className="goal-text">
                   Every year starting from 2015 SpaceX has held a hyperloop
                   competition in California. Shift is planning on competig this
                   year and our goal is to become one of the best student teams
@@ -194,10 +193,13 @@ const Page = () => {
             flex-direction: column;
           }
           .goal {
-            max-width: 390px;
+            max-width: 350px;
             width: 100%;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .goal-text {
+            text-align: justify;
           }
           .parallax {
             background-image: url('/Shift1.png');
