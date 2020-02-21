@@ -110,7 +110,7 @@ const Page = () => {
           </div>
         </div>
         <div className="competition-container">
-          <h1> Hyperloop competition</h1>
+          <h1> Hyperloop competition </h1>
           <div className="separate">
             <div className="flex1">
               <p>
