@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
-import fetch from 'isomorphic-unfetch';
+import fetch from 'node-fetch';
 
 const Post = ({ title, pid, picture: { url = '' }, description }) => {
   return (

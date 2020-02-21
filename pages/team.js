@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
-import fetch from 'isomorphic-unfetch';
+import fetch from 'node-fetch';
 import { CMS_BASE_URL } from '../common/constants';
 import { FaAngleDown } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
