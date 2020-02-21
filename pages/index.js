@@ -160,6 +160,8 @@ const Page = () => {
           }
           .flex1 {
             flex: 1 1 500px;
+            margin: 50px;
+            text-align: justify;
           }
           .hyperloop-image {
             width: 100%;
