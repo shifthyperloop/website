@@ -19,6 +19,7 @@ const Member = ({ name, picture: { url = '' }, title, email, group }) => {
           <FiMail size={35} className="mail-symbol" />
         </a>
       </div>
+
       <h3>{name}</h3>
       <h4>{title}</h4>
       <style jsx>
