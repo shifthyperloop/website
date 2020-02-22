@@ -1,10 +1,17 @@
 {
   "name": "shift-hyperloop-website",
   "version": "0.1.0",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "now-build": "next build",
     "preexport": "yarn build",
     "export": "next export",
     "predeploy": "yarn export",
