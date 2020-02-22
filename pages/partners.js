@@ -12,7 +12,7 @@ const Sponsor = ({
   description,
 }) => {
   return (
-    <div className="sponsor-list">
+    <div>
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
         <img src={CMS_BASE_URL + logoUrl} />
       </a>
@@ -249,6 +249,7 @@ const Page = ({ sponsors }) => {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
+          align-items: center;
         }
 
         .sponsors:not(:first-of-type) {

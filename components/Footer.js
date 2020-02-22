@@ -41,6 +41,10 @@ const Footer = () => (
       </div>
     </footer>
     <style jsx>{`
+      .footer {
+        background-color: #01020b;
+        box-shadow: 2px 2px 10px #1a1a1a;
+      }
       .container {
         box-sizing: border-box;
         display: flex;
@@ -53,8 +57,14 @@ const Footer = () => (
         left: 0;
         bottom: 0;
         right: 0;
-        box-shadow: 2px 2px 10px #1a1a1a;
-        background-color: #01020b;
+        padding: 16px 8px;
+        max-width: 1200px;
+      }
+      .container > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
       }
       .ramboll {
         width: 50%;
@@ -64,7 +74,7 @@ const Footer = () => (
       .main-sponsor,
       .copyright,
       .facebook {
-        width: 33%;
+        flex: 1 1 150px;
         text-align: center;
       }
     `}</style>
