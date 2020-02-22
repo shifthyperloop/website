@@ -322,7 +322,7 @@ const Page = ({ sponsors }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('http://cms.shifthyperloop.com/sponsors');
+  const res = await fetch(CMS_BASE_URL + '/sponsors');
   const data = await res.json();
 
   return {

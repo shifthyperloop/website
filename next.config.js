@@ -16,7 +16,7 @@ module.exports = {
       '/joinus': { page: '/joinus' },
     };
 
-    const res = await fetch('https://cms.shifthyperloop.com/posts');
+    const res = await fetch('https://cms.shifthyperloop.no/posts');
     const data = await res.json();
     data.forEach(({ id: pid }) => {
       paths['/post/' + pid] = { page: '/post/[pid]', query: { pid } };

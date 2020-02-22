@@ -237,7 +237,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('https://cms.shifthyperloop.com/teammember2020s');
+  const res = await fetch(CMS_BASE_URL + '/teammember2020s');
   const data = await res.json();
 
   return {

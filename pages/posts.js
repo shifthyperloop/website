@@ -136,9 +136,7 @@ const Page = ({ posts }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(
-    'https://cms.shifthyperloop.com/posts?_sort=published:desc'
-  );
+  const res = await fetch(CMS_BASE_URL + '/posts?_sort=published:desc');
   const data = await res.json();
 
   return {

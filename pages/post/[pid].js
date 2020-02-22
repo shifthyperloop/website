@@ -124,7 +124,7 @@ const Page = ({
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch(`https://cms.shifthyperloop.com/posts/${pid}`);
+  const res = await fetch(`${CMS_BASE_URL}/posts/${pid}`);
   const post = await res.json();
 
   return {
