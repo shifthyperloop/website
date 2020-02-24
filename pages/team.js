@@ -220,7 +220,7 @@ const Page = ({ members = [] }) => {
 
         .title {
           position: absolute;
-          bottom: calc(40% - 10px);
+          bottom: 40%
           left: 50%;
           transform: translate(-50%, -50%);
           text-shadow: 2px 2px #000;
@@ -230,6 +230,15 @@ const Page = ({ members = [] }) => {
 
         .group-titles {
           text-align: center;
+        }
+        @media (max-width: 640px) {
+          .title {
+            font-size: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          
+          }
         }
       `}</style>
     </Layout>

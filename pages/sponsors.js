@@ -12,7 +12,7 @@ const Sponsor = ({
   description,
 }) => {
   return (
-    <div>
+    <div className="sponsor-list">
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
         <img src={CMS_BASE_URL + logoUrl} />
       </a>
@@ -26,7 +26,6 @@ const Sponsor = ({
         h3,
         h4 {
           width: 500px;
-          max-width: 100%;
           margin: auto;
         }
 
@@ -35,28 +34,17 @@ const Sponsor = ({
           display: blocK;
         }
 
-        @media (max-width: 640px) {
-          .sponsor {
-            margin: 0;
-          }
-        }
-
         img {
           width: 140px;
-          object-fit: contain;
         }
         .platinum img {
           width: 500px;
-          height: 400px;
-          max-width: 100%;
         }
         .gold img {
           width: 400px;
-          max-width: 100%;
         }
         .silver img {
           width: 200px;
-          max-width: 100%;
         }
       `}</style>
     </div>
@@ -68,45 +56,21 @@ const Page = ({ sponsors }) => {
 
   return (
     <Layout
-      url="https://www.shifthyperloop.com/partners"
+      url="https://www.shifthyperloop.com/sponsors"
       title="Shift Hyperloop | Sponsors"
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
       <div className="image-container">
-        <div className="sponsor-image">
-          <h1 className="title">Partners</h1>
-          <h3 className="sponsor-description">
-            Meet our amazing partners. Their support is what's making it
-            possible to do what we love.
-          </h3>
-        </div>
-      </div>
-      <div className="info-container">
-        <div className="sponsor-information">
-          <h3 className="quote">
-            "Thank you all contributors for your patience, and willingness to
-            help!"
-          </h3>
-          <hr />
-          <h4 className="partner-info">
-            The partners are everything for us, that is why we give them all
-            this attention. If you are interested in being a sponsor or partner,
-            please{' '}
-            <a className="contact" href="/contact">
-              contact us
-            </a>
-            . Thank you to all the professors and advisors that have guided us
-            and helped us stay on the right path. In addition to our partners,
-            we would also like to thank our fellow teams for providing support
-            and answering our questions, especially in the starting phases.
-            <h4>
-              Also, we would like to extend our gratitude to the SpaceX team for
-              hosting the competition and inspiring young souls all around the
-              world to extend the grasp of technology. Thank you all
-              contributors for your patience, and willingness to help!
-            </h4>
-          </h4>
-        </div>
+        <img
+          className="sponsor-image"
+          src="/signering_bw_logo.jpg"
+          style={{ objectPosition: 'top', objectFit: 'cover' }}
+        />
+        <h1 className="title">Sponsors</h1>
+        <h3 className="sponsor-description">
+          Meet our amazing partners. Their support is what's making it possible
+          to do what we love.
+        </h3>
       </div>
       <section className="page-container">
         <h2 className="platinum sponsors">
@@ -165,60 +129,12 @@ const Page = ({ sponsors }) => {
         h3 {
           text-align: center;
         }
-        .contact {
-          color: #0080c9;
-          text-decoration: none;
-        }
-        .info-container {
-          background-color: #fff2;
-          box-shadow: 1px 0.3px 10px #000;
-          box-shadow: 1px 0.5px 0px #000;
-          margin-top: -10px;
-        }
-        .sponsor-information {
-          max-width: 1200px;
-          margin: auto;
-          display: flex;
-          flex-direction: row;
-        }
-        .sponsor-image {
-          background-image: url('/signering_bw_logo.jpg');
-          background-attachment: fixed;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          position: relative;
-        }
-        .sponsor-image > * {
-          z-index: 1;
-        }
-        .sponsor-image::after {
-          content: '';
-          backdrop-filter: brightness(0.7);
-          z-index: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .quote {
-          width: 30%;
-          margin: 0 2.5%;
-          color: #0080c9;
-          text-align: center;
-          margin: auto;
-        }
-        .partner-info {
-          width: 60%;
-          margin: 30px 2.5% 30px;
-        }
         .image-container {
           position: relative;
           text-align: center;
           color: white;
           width: 100%;
-          height: 900px;
+          height: 800px;
           display: inline-flex;
         }
         .image-container::before {
@@ -229,7 +145,9 @@ const Page = ({ sponsors }) => {
           top: 0;
           bottom: 0;
         }
-
+        .sponsor-image {
+          filter: brightness(40%);
+        }
         .title {
           position: absolute;
           font: 5em Georgia, Serif;
@@ -240,6 +158,7 @@ const Page = ({ sponsors }) => {
           overflow: hidden;
           white-space: nowrap;
         }
+
         .sponsor-description {
           position: absolute;
           font: 2em Georgia, Serif;
@@ -259,7 +178,6 @@ const Page = ({ sponsors }) => {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
-          align-items: center;
         }
 
         .sponsors:not(:first-of-type) {
@@ -317,15 +235,7 @@ const Page = ({ sponsors }) => {
         .platinum.sponsor + div {
           display: flex;
           align-items: center;
-          width: 50%;
-        }
-        @media (max-width: 640px) {
-          .image-container {
-            height: 60vw;
-          }
-          .sponsor-image {
-            background-attachment: unset;
-          }
+          width: 600px;
         }
       `}</style>
     </Layout>
@@ -333,7 +243,7 @@ const Page = ({ sponsors }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/sponsors');
+  const res = await fetch('https://cms.shifthyperloop.com/sponsors');
   const data = await res.json();
 
   return {

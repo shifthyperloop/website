@@ -79,7 +79,7 @@ const Page = () => {
                 <h4>Competiton</h4>
                 <p className="goal-text">
                   Every year starting from 2015 SpaceX has held a hyperloop
-                  competition in California. Shift is planning on competig this
+                  competition in California. Shift is planning on competing this
                   year and our goal is to become one of the best student teams
                   in the world. As of now we are the only fully magnetic team.
                 </p>
@@ -240,6 +240,12 @@ const Page = () => {
             max-width: 1200px;
             min-height: 120px;
             margin: auto;
+          }
+          @media (max-width: 640px) {
+            .parallax {
+              background-position: center;
+              max-width: 100%;
+            }
           }
         `}
       </style>

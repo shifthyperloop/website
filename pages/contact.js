@@ -146,7 +146,8 @@ export default function About() {
         .contact-info {
           border-right: #fff5 1px solid;
           width: 50%;
-          height: 30rem;
+          align-self: flex-start;
+          margin-top: 50px;
           text-align: center;
         }
 
@@ -211,6 +212,19 @@ export default function About() {
 
         p {
           flex: 0 0 120px;
+        }
+
+        @media (max-width: 640px) {
+          .contact-container {
+            flex-wrap: wrap;
+          }
+          .contact-info {
+            flex-basis: 400px;
+            margin-top: 0;
+          }
+          .contact-form {
+            flex-basis: 400px;
+          }
         }
       `}</style>
     </Layout>

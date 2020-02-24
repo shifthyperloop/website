@@ -22,6 +22,9 @@ const Footer = () => (
           <a href="https://no.ramboll.com" target="_blank">
             <img src="/ramboll_w.png" className="ramboll" alt="Ramboll" />
           </a>
+          <a href="https://alvaindustries.com" target="_blank">
+            <img src="/Alva-01.svg" className="alva" alt="Alva" />
+          </a>
         </div>
         <div className="copyright">
           <p>Copyright &copy; Shift 2020</p>
@@ -70,6 +73,9 @@ const Footer = () => (
         width: 50%;
         margin: auto;
         margin-left: 15px;
+      }
+      .alva {
+        width: 100%;
       }
       .main-sponsor,
       .copyright,
