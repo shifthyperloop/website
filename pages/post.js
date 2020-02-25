@@ -54,3 +54,5 @@ Page.getInitialProps = async function() {
     }),
   };
 };
+
+export default Page;
