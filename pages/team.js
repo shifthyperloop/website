@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
+import TopImage from '../components/TopImage';
 import fetch from 'isomorphic-unfetch';
 import { CMS_BASE_URL } from '../common/constants';
-import { FaAngleDown } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 const Member = ({ name, picture: { url = '' }, title, email, group }) => {
@@ -175,13 +175,11 @@ const Page = ({ members = [] }) => {
       url="https://www.shifthyperloop.com/team"
       title="Shift Hyperloop | Team"
     >
-      <div className="image-container">
-        <img className="team-photo" src="/Shift-team-2020.jpg"></img>
-        <h1 className="title">Meet our awesome team!</h1>
-        <div className="arrow">
-          <FaAngleDown size={35} />
-        </div>
-      </div>
+      <TopImage
+        image="/Shift-team-2020.jpg"
+        title="Team 2020"
+        brightness={0.8}
+      />
       <div className="page-container">
         {Object.values(groups).map(group => (
           <Group key={group.title} {...group} />

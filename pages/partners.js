@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
+import TopImage from '../components/TopImage';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
@@ -26,7 +27,7 @@ const Sponsor = ({
         h3,
         h4 {
           width: 500px;
-          max-width: 100%;
+          max-width: calc(100vw - 1.5em);
           margin: auto;
         }
 
@@ -48,15 +49,15 @@ const Sponsor = ({
         .platinum img {
           width: 500px;
           height: 400px;
-          max-width: 100%;
+          max-width: 100vw;
         }
         .gold img {
           width: 400px;
-          max-width: 100%;
+          max-width: 100vw;
         }
         .silver img {
           width: 200px;
-          max-width: 100%;
+          max-width: 100vw;
         }
       `}</style>
     </div>
@@ -72,15 +73,11 @@ const Page = ({ sponsors }) => {
       title="Shift Hyperloop | Sponsors"
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
-      <div className="image-container">
-        <div className="sponsor-image">
-          <h1 className="title">Partners</h1>
-          <h3 className="sponsor-description">
-            Meet our amazing partners. Their support is what's making it
-            possible to do what we love.
-          </h3>
-        </div>
-      </div>
+      <TopImage
+        image="/signering_bw_logo.jpg"
+        title="Partners"
+        text="Meet our amazing partners. Their support is what's making it possible to do what we love."
+      />
       <div className="info-container">
         <div className="sponsor-information">
           <h3 className="quote">
@@ -173,7 +170,6 @@ const Page = ({ sponsors }) => {
           background-color: #fff2;
           box-shadow: 1px 0.3px 10px #000;
           box-shadow: 1px 0.5px 0px #000;
-          margin-top: -10px;
         }
         .sponsor-information {
           max-width: 1200px;
@@ -212,44 +208,6 @@ const Page = ({ sponsors }) => {
         .partner-info {
           width: 60%;
           margin: 30px 2.5% 30px;
-        }
-        .image-container {
-          position: relative;
-          text-align: center;
-          color: white;
-          width: 100%;
-          height: 900px;
-          display: inline-flex;
-        }
-        .image-container::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-        }
-
-        .title {
-          position: absolute;
-          font: 5em Georgia, Serif;
-          bottom: calc(20% - 10px);
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-shadow: 3px 3px #000;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-        .sponsor-description {
-          position: absolute;
-          font: 2em Georgia, Serif;
-          max-width: 100%;
-          bottom: calc(4% - 10px);
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-shadow: 2px 2px #000;
-          overflow: hidden;
-          white-space: nowrap;
         }
 
         div {
@@ -320,11 +278,22 @@ const Page = ({ sponsors }) => {
           width: 50%;
         }
         @media (max-width: 640px) {
-          .image-container {
-            height: 60vw;
+          .sponsor-information {
+            flex-direction: column;
+            padding: 32px 1em 0;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: justify;
           }
-          .sponsor-image {
-            background-attachment: unset;
+          hr {
+            display: none;
+          }
+          .quote {
+            width: 100%;
+          }
+          .partner-info {
+            margin: 20px 0;
+            width: 100%;
           }
         }
       `}</style>

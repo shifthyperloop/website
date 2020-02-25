@@ -3,15 +3,30 @@ import Link from 'next/link';
 import { FaLeaf, FaAngleDown } from 'react-icons/fa';
 import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
+import TopImage from '../components/TopImage';
 
 const Page = () => {
   return (
     <Layout>
       <div className="container">
-        <div className="parallax">
-          <div className="arrow">
-            <FaAngleDown size={35} />
-          </div>
+        <div className="mobile">
+          <TopImage
+            image="/Shift1.png"
+            height="calc(100vh - 60px)"
+            maxHeight="40vw"
+            backgroundSize="contain"
+            backgroundPosition="center top"
+            brightness={1}
+            fixedOnMobile={true}
+          />
+        </div>
+        <div className="desktop">
+          <TopImage
+            image="/Shift1.png"
+            height="calc(100vh - 60px)"
+            brightness={1}
+            fixedOnMobile={true}
+          />
         </div>
         <div className="content">
           <div className="text">
@@ -32,17 +47,17 @@ const Page = () => {
               unavailable for engineering students. We also provide the
               university with bachelor- and master-theses for graduating
               students to write about.{' '}
-              <p>
-                Shift Hyperloop is primarily an organisation meant to teach and
-                educate NTNU students, however we are also the youth that have
-                to solve the massive challenges the world is facing. As such you
-                can expect to see Shift advocating for green measures and
-                further research on how we can combat climate change. Shift is
-                an independent non-profit organization founded in Trondheim by
-                students from the Norwegian University of Science and
-                Technology. The team currently consists of about 50 members from
-                various programs.
-              </p>
+            </p>
+            <p>
+              Shift Hyperloop is primarily an organisation meant to teach and
+              educate NTNU students, however we are also the youth that have to
+              solve the massive challenges the world is facing. As such you can
+              expect to see Shift advocating for green measures and further
+              research on how we can combat climate change. Shift is an
+              independent non-profit organization founded in Trondheim by
+              students from the Norwegian University of Science and Technology.
+              The team currently consists of about 50 members from various
+              programs.
             </p>
           </div>
         </div>
@@ -138,6 +153,17 @@ const Page = () => {
       </div>
       <style jsx>
         {`
+          .mobile {
+            display: none;
+          }
+          @media (max-width: 860px) {
+            .mobile {
+              display: unset;
+            }
+            .desktop {
+              display: none;
+            }
+          }
           .competition-container {
             min-height: 400px;
             background-attachment: fixed;
@@ -240,6 +266,8 @@ const Page = () => {
             max-width: 1200px;
             min-height: 120px;
             margin: auto;
+            padding: 1.5em;
+            box-sizing: border-box;
           }
           @media (max-width: 640px) {
             .parallax {
