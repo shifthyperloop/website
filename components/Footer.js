@@ -20,26 +20,30 @@ const Footer = () => (
       <div className="container">
         <div className="main-sponsor">
           <a href="https://no.ramboll.com" target="_blank">
-            <img src="/ramboll_w.png" className="ramboll" alt="Ramboll" />
+            <img src="/Ramboll.png" className="ramboll" alt="Ramboll" />
           </a>
+        </div>
+        <div className="flex-column">
+          <div className="facebook">
+            <div className="copyright">
+              <p>Copyright &copy; Shift 2020</p>
+            </div>
+            <div
+              className="fb-like"
+              data-href="https://www.facebook.com/ShiftHyperloop/"
+              data-width="100"
+              data-layout="standard"
+              data-action="like"
+              data-size="small"
+              data-share="true"
+              data-colorscheme="dark"
+            />
+          </div>
+        </div>
+        <div className="main-sponsor">
           <a href="https://alvaindustries.com" target="_blank">
             <img src="/Alva-01.svg" className="alva" alt="Alva" />
           </a>
-        </div>
-        <div className="copyright">
-          <p>Copyright &copy; Shift 2020</p>
-        </div>
-        <div className="facebook">
-          <div
-            className="fb-like"
-            data-href="https://www.facebook.com/ShiftHyperloop/"
-            data-width="100"
-            data-layout="standard"
-            data-action="like"
-            data-size="small"
-            data-share="true"
-            data-colorscheme="dark"
-          />
         </div>
       </div>
     </footer>
@@ -48,8 +52,12 @@ const Footer = () => (
         background-color: #01020b;
         box-shadow: 2px 2px 10px #1a1a1a;
       }
+      .copyright {
+        width: 100%;
+      }
       .container {
         box-sizing: border-box;
+        width: 100%;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -69,18 +77,21 @@ const Footer = () => (
         justify-content: center;
         align-items: center;
       }
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+      }
       .ramboll {
         width: 50%;
         margin: auto;
         margin-left: 15px;
       }
       .alva {
-        width: 100%;
+        width: 50%;
       }
       .main-sponsor,
-      .copyright,
-      .facebook {
-        flex: 1 1 150px;
+      .flex-column {
+        width: 33%;
         text-align: center;
       }
     `}</style>
