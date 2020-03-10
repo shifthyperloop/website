@@ -101,7 +101,7 @@ export default function TopImage({
             position: absolute;
             width: 100%;
             max-width: 1200px;
-            bottom: 100px;
+            bottom: 50px;
           }
 
           .join-buttons > a {
