@@ -87,8 +87,7 @@ const Page = ({ sponsors }) => {
           <hr />
           <h4 className="partner-info">
             The partners are everything for us, that is why we give them all
-            this attention. If you are interested in being a sponsor or partner,
-            please{' '}
+            this attention. If you are interested in being a partner, please{' '}
             <a className="contact" href="/contact">
               contact us
             </a>

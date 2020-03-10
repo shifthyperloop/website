@@ -11,11 +11,23 @@ export default function TopImage({
   backgroundPosition = 'center center',
   hasArrow = true,
   fixedOnMobile = false,
+  joinbutton = false,
+  after = true,
 }) {
   return (
     <div className="container">
       <h1>{title}</h1>
       <h4>{text}</h4>
+      {joinbutton ? (
+        <div className="join-buttons">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScP3_CnlIgZWEt8qmBzwTPcNOWNFXKxKBb1UwXYSGz0r9o9DQ/viewform">
+            Søk nå!
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdA5MGmc8Uqte2JKwJD9xfmESeyREq3V0HUo2kMoRBnMSsRA/viewform">
+            Apply!
+          </a>
+        </div>
+      ) : null}
       {hasArrow ? (
         <div className="arrow">
           <FaAngleDown size={35} />
@@ -78,9 +90,54 @@ export default function TopImage({
             transform: translate(-50%, -50%);
             background-attachment: fixed;
           }
+          .join-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            flex-flow: row wrap;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 100%;
+            max-width: 1200px;
+            bottom: 100px;
+          }
+
+          .join-buttons > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            margin: 16px 100px;
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            background-color: #3189c9;
+            padding: 0.25rem 0.25rem;
+            color: #fff;
+            border: #111;
+            text-decoration: none;
+            line-height: 1rem;
+            font-size: 15px;
+            font-weight: 600;
+          }
+
           @media (max-width: 640px) {
             .container {
               background-attachment: ${fixedOnMobile ? 'fixed' : 'unset'};
+            }
+
+            .join-buttons > a {
+              width: 50px;
+              height: 20px;
+              font-size: 10px;
+            }
+            .join-buttons {
+              bottom: 0;
+            }
+            .arrow {
+              bottom: 0;
             }
           }
         `}

@@ -25,13 +25,13 @@ const Header = () => {
         <a href="/contact">Contact us</a>
         <a href="/posts">Posts</a>
         <a href="/partners">Partners</a>
-        <a className="menu team-menu" href="/team">
-          <span href="/team">Team</span>
+        <span className="menu team-menu">
+          <a href="/team">Team</a>
           <div className="items">
             <a href="/team">Team 2020</a>
             <a href="/team2019">Team 2019</a>
           </div>
-        </a>
+        </span>
         <span className="menu other-menu">
           <span>Other </span>
           <div className="items">

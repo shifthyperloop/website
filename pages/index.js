@@ -11,21 +11,32 @@ const Page = () => {
       <div className="container">
         <div className="mobile">
           <TopImage
-            image="/Shift1.png"
+            image="/Styreverv.png"
             height="calc(100vh - 60px)"
             maxHeight="40vw"
             backgroundSize="contain"
-            backgroundPosition="center top"
+            backgroundPosition="center 40px"
             brightness={1}
             fixedOnMobile={true}
+            after={false}
           />
+          <div className="join-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScP3_CnlIgZWEt8qmBzwTPcNOWNFXKxKBb1UwXYSGz0r9o9DQ/viewform">
+              Søk nå!
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdA5MGmc8Uqte2JKwJD9xfmESeyREq3V0HUo2kMoRBnMSsRA/viewform">
+              Apply!
+            </a>
+          </div>
         </div>
         <div className="desktop">
           <TopImage
-            image="/Shift1.png"
+            image="/Styreverv.png"
             height="calc(100vh - 60px)"
             brightness={1}
             fixedOnMobile={true}
+            joinbutton={true}
+            after={false}
           />
         </div>
         <div className="content">
@@ -257,7 +268,8 @@ const Page = () => {
           .hyperloop-container {
             background-color: #202020;
 
-            box-shadow: 1px 0.3px 10px #000;
+            /**/
+            box-shadow: 1px 0.3px 10px #000; /**/
             text-align: center;
             padding-top: 30px;
             padding-bottom: 40px;
@@ -274,6 +286,34 @@ const Page = () => {
               background-position: center;
               max-width: 100%;
             }
+          }
+
+          .join-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 1200px;
+          }
+
+          .join-buttons > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 1 200px;
+            flex-direction: row;
+            margin: 16px 5%;
+            cursor: pointer;
+            height: 50px;
+            background-color: #3189c9;
+            padding: 0.25rem 0.25rem;
+            color: #bbb;
+            border: #111;
+            text-decoration: none;
+            line-height: 1rem;
+            font-size: 15px;
+            font-weight: 600;
           }
         `}
       </style>
