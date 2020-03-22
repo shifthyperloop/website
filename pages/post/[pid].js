@@ -40,7 +40,7 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
                 id="iframepdf"
-                src={`https://pdf-viewer.now.sh/?pdf=${CMS_BASE_URL + fileUrl}`}
+                src={`http://localhost:3333/?pdf=${CMS_BASE_URL + fileUrl}`}
               ></iframe>
             ) : (
               <a
@@ -61,7 +61,8 @@ const Page = ({
           #iframepdf {
             border: none;
             width: 1200px;
-            height: 800px;
+            height: 100vh;
+            margin-bottom: 30px;
           }
           .newsletter {
             max-width: 1200px;
