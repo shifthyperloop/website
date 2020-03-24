@@ -61,7 +61,7 @@ const Page = ({
           #iframepdf {
             border: none;
             width: 1200px;
-            height: 100vh;
+            height: 900px;
             margin-bottom: 30px;
           }
           .newsletter {
