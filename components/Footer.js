@@ -69,6 +69,7 @@ const Footer = () => (
         height: 8rem;
         bottom: 0;
         margin: auto;
+        margin-bottom: 30px;
         left: 0;
         bottom: 0;
         right: 0;
@@ -94,7 +95,7 @@ const Footer = () => (
         width: 50%;
       }
       .alva-logo {
-        width: 100%;
+        width: 80%;
       }
       .main-sponsor,
       .flex-column {
