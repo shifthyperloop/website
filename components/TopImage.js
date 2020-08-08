@@ -20,11 +20,11 @@ export default function TopImage({
       <h4>{text}</h4>
       {joinbutton ? (
         <div className="join-buttons">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScP3_CnlIgZWEt8qmBzwTPcNOWNFXKxKBb1UwXYSGz0r9o9DQ/viewform">
-            Søk nå!
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdA5MGmc8Uqte2JKwJD9xfmESeyREq3V0HUo2kMoRBnMSsRA/viewform">
+          <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="front-button">
             Apply!
+          </a>
+          <a href="/joinus" id="front-button">
+            Available positions
           </a>
         </div>
       ) : null}
@@ -54,6 +54,13 @@ export default function TopImage({
             h4 {
               font-size: 1.5em;
             }
+          }
+
+          #front-button {
+            border: 2px solid #3189c9;
+          }
+          #front-button:hover {
+            background-color: #3189c9;
           }
           .container {
             padding: 1em 16px 3em;
@@ -101,7 +108,7 @@ export default function TopImage({
             position: absolute;
             width: 100%;
             max-width: 1200px;
-            bottom: 50px;
+            bottom: 170px;
           }
 
           .join-buttons > a {
@@ -113,7 +120,7 @@ export default function TopImage({
             cursor: pointer;
             width: 200px;
             height: 50px;
-            background-color: #3189c9;
+            border: 2px solid #3189c9;
             padding: 0.25rem 0.25rem;
             color: #fff;
             border: #111;

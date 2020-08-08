@@ -11,7 +11,7 @@ const Page = () => {
       <div className="container">
         <div className="mobile">
           <TopImage
-            image="/Styreverv.png"
+            image="/Vervbanner.png"
             height="calc(100vh - 60px)"
             maxHeight="40vw"
             backgroundSize="contain"
@@ -21,17 +21,13 @@ const Page = () => {
             after={false}
           />
           <div className="join-buttons">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScP3_CnlIgZWEt8qmBzwTPcNOWNFXKxKBb1UwXYSGz0r9o9DQ/viewform">
-              Søk nå!
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdA5MGmc8Uqte2JKwJD9xfmESeyREq3V0HUo2kMoRBnMSsRA/viewform">
-              Apply!
-            </a>
+            <a href="https://forms.gle/jsvrWTu891MuJQSV7">Apply</a>
+            <a href="/joinus">Available positions</a>
           </div>
         </div>
         <div className="desktop">
           <TopImage
-            image="/Styreverv.png"
+            image="/Vervbanner.png"
             height="calc(100vh - 60px)"
             brightness={1}
             fixedOnMobile={true}

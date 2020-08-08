@@ -25,6 +25,9 @@ const Header = () => {
         <a href="/contact">Contact us</a>
         <a href="/posts">Posts</a>
         <a href="/partners">Partners</a>
+        <a href="/joinus" id="join">
+          Join
+        </a>
         <span className="menu team-menu">
           <a href="/team">Team</a>
           <div className="items">
@@ -78,6 +81,14 @@ const Header = () => {
           margin-bottom: 75px;
         }
 
+        #join {
+          text-shadow: 0.1px 0.1px #005e60;
+
+          border: 2px solid #005e80;
+          padding-right: 10px;
+          padding-left: 10px;
+          border-radius: 15px;
+        }
         .menu.team-menu {
           opacity: 1;
         }
