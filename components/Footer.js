@@ -41,7 +41,11 @@ const Footer = () => (
           </div>
         </div>
         <div className="main-sponsor">
-          <a href="https://alvaindustries.com" target="_blank">
+          <a
+            href="https://alvaindustries.com"
+            target="_blank"
+            className="alva-logo"
+          >
             <img src="/Alva-01.svg" className="alva" alt="Alva" />
           </a>
         </div>
@@ -88,6 +92,9 @@ const Footer = () => (
       }
       .alva {
         width: 50%;
+      }
+      .alva-logo {
+        width: 100%;
       }
       .main-sponsor,
       .flex-column {
