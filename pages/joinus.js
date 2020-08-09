@@ -116,10 +116,8 @@ const Page = () => {
                 mechanical structures of the pod. This group will build a frame,
                 the brakes and an aeroshell. They will also be responsible for
                 integrating systems designed by other groups to a finished pod.
-                designing, simulating, and producing the main structures and
-                brakes. The group will work closely with the mechanical
-                engineers in the other groups to assemble all the systems into a
-                finished pod.
+                The group will work closely with the mechanical engineers in the
+                other groups to assemble all the systems into a finished pod.
               </p>
               <div className="button-container">
                 <button

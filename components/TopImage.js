@@ -132,7 +132,10 @@ export default function TopImage({
 
           @media (max-width: 640px) {
             .container {
+              height: 500px;
+              background-repeat: no-repeat;
               background-attachment: ${fixedOnMobile ? 'fixed' : 'unset'};
+              padding: 9em 16px 3em;
             }
 
             .join-buttons > a {
