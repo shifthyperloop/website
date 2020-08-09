@@ -52,41 +52,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="concept group right">
-            <div className="group-info">
-              <h3>Concept</h3>
-              <p>
-                {' '}
-                What about Hyperloop in the real world? How will it work, and
-                how will the passengers get onboard? Concept is the group that
-                is focused more about the Hyperloop as a concept rather than the
-                prototype pod. In the Concept group you will work with the
-                future problems and solutions for the Hyperloop system, and as a
-                member you will have the freedom to experiment with different
-                ideas and sketches, far beyond imagination! The main tasks are:
-                Station Design, Architecture, User interface, Interior design,
-                Route Planning, Geology and City planning! Working in a concept
-                group will give you an unique experience no other technical
-                organization can offer, join us in visualizing what a greener,
-                safer and faster future can look like!
-              </p>
-              <div className="button-container">
-                <button
-                  id="myBtn"
-                  onClick={() => setModal({ title: 'Concept' })}
-                >
-                  <span>View available positions</span>
-                </button>
-              </div>
-            </div>
-            <div className="imagetest">
-              <img className="board image" src="/stock/concept.png" />
-            </div>
-          </div>
-          <div className="relations group left">
-            <div className="imagetest">
-              <img className="relations image" src="/stock/designer.jpg"></img>
-            </div>
+          <div className="relations group right">
             <div className="group-info">
               <h3>Relations</h3>
               <p>
@@ -106,30 +72,8 @@ const Page = () => {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="mechanical group right">
-            <div className="group-info">
-              <h3>Mechanical</h3>
-              <p>
-                {' '}
-                The mechanical group is responsible for some of the fundamental
-                mechanical structures of the pod. This group will build a frame,
-                the brakes and an aeroshell. They will also be responsible for
-                integrating systems designed by other groups to a finished pod.
-                The group will work closely with the mechanical engineers in the
-                other groups to assemble all the systems into a finished pod.
-              </p>
-              <div className="button-container">
-                <button
-                  id="myBtn"
-                  onClick={() => setModal({ title: 'Mechanical' })}
-                >
-                  <span>View available positions</span>
-                </button>
-              </div>
-            </div>
             <div className="imagetest">
-              <img className="mechanical image" src="/stock/engine.jpg"></img>
+              <img className="relations image" src="/stock/designer.jpg"></img>
             </div>
           </div>
           <div className="software group left">
@@ -157,7 +101,36 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="battery group right">
+          <div className="electronics group right">
+            <div className="group-info">
+              <h3>Electronics</h3>
+              <p>
+                {' '}
+                The electronics group is responsible for developing several of
+                the embedded systems on the pod, this includes data acquisition,
+                communication and control systems. Members of the group will
+                work a lot with PCB design and software development.
+              </p>
+              <div className="button-container">
+                <button
+                  id="myBtn"
+                  onClick={() => setModal({ title: 'Electronics' })}
+                >
+                  <span>View available positions</span>
+                </button>
+              </div>
+            </div>
+            <div className="imagetest">
+              <img
+                className="electronics image"
+                src="/stock/electronics.jpg"
+              ></img>
+            </div>
+          </div>
+          <div className="battery group left">
+            <div className="imagetest">
+              <img className="battery image" src="/stock/battery.jpg"></img>
+            </div>
             <div className="group-info">
               <h3>Battery</h3>
               <p>
@@ -173,36 +146,6 @@ const Page = () => {
                 <button
                   id="myBtn"
                   onClick={() => setModal({ title: 'Battery' })}
-                >
-                  <span>View available positions</span>
-                </button>
-              </div>
-            </div>
-            <div className="imagetest">
-              <img className="battery image" src="/stock/battery.jpg"></img>
-            </div>
-          </div>
-
-          <div className="electronics group left">
-            <div className="imagetest">
-              <img
-                className="electronics image"
-                src="/stock/electronics.jpg"
-              ></img>
-            </div>
-            <div className="group-info">
-              <h3>Electronics</h3>
-              <p>
-                {' '}
-                The electronics group is responsible for developing several of
-                the embedded systems on the pod, this includes data acquisition,
-                communication and control systems. Members of the group will
-                work a lot with PCB design and software development.
-              </p>
-              <div className="button-container">
-                <button
-                  id="myBtn"
-                  onClick={() => setModal({ title: 'Electronics' })}
                 >
                   <span>View available positions</span>
                 </button>
@@ -258,6 +201,62 @@ const Page = () => {
                 <button
                   id="myBtn"
                   onClick={() => setModal({ title: 'Levitation' })}
+                >
+                  <span>View available positions</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="mechanical group right">
+            <div className="group-info">
+              <h3>Mechanical</h3>
+              <p>
+                {' '}
+                The mechanical group is responsible for some of the fundamental
+                mechanical structures of the pod. This group will build a frame,
+                the brakes and an aeroshell. They will also be responsible for
+                integrating systems designed by other groups to a finished pod.
+                The group will work closely with the mechanical engineers in the
+                other groups to assemble all the systems into a finished pod.
+              </p>
+              <div className="button-container">
+                <button
+                  id="myBtn"
+                  onClick={() => setModal({ title: 'Mechanical' })}
+                >
+                  <span>View available positions</span>
+                </button>
+              </div>
+            </div>
+            <div className="imagetest">
+              <img className="mechanical image" src="/stock/engine.jpg"></img>
+            </div>
+          </div>
+          <div className="concept group left">
+            <div className="imagetest">
+              <img className="board image" src="/stock/concept.png" />
+            </div>
+            <div className="group-info">
+              <h3>Concept</h3>
+              <p>
+                {' '}
+                What about Hyperloop in the real world? How will it work, and
+                how will the passengers get onboard? Concept is the group that
+                is focused more about the Hyperloop as a concept rather than the
+                prototype pod. In the Concept group you will work with the
+                future problems and solutions for the Hyperloop system, and as a
+                member you will have the freedom to experiment with different
+                ideas and sketches, far beyond imagination! The main tasks are:
+                Station Design, Architecture, User interface, Interior design,
+                Route Planning, Geology and City planning! Working in a concept
+                group will give you an unique experience no other technical
+                organization can offer, join us in visualizing what a greener,
+                safer and faster future can look like!
+              </p>
+              <div className="button-container">
+                <button
+                  id="myBtn"
+                  onClick={() => setModal({ title: 'Concept' })}
                 >
                   <span>View available positions</span>
                 </button>
