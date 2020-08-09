@@ -58,6 +58,7 @@ export default function TopImage({
 
           #front-button {
             border: 2px solid #3189c9;
+            background: #fff2;
           }
           #front-button:hover {
             background-color: #3189c9;
@@ -74,6 +75,7 @@ export default function TopImage({
             height: ${height};
             max-height: ${maxHeight};
             background-image: url(${image});
+            background-repeat: no-repeat;
             background-size: ${backgroundSize};
             background-position: ${backgroundPosition};
             background-attachment: fixed;
@@ -108,7 +110,7 @@ export default function TopImage({
             position: absolute;
             width: 100%;
             max-width: 1200px;
-            bottom: 170px;
+            bottom: 18%;
           }
 
           .join-buttons > a {
@@ -118,7 +120,8 @@ export default function TopImage({
             flex-direction: row;
             margin: 16px 100px;
             cursor: pointer;
-            width: 200px;
+            min-width: 200px;
+            width: 20%;
             height: 50px;
             border: 2px solid #3189c9;
             padding: 0.25rem 0.25rem;
