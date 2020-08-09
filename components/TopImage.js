@@ -122,14 +122,15 @@ export default function TopImage({
             cursor: pointer;
             min-width: 200px;
             width: 20%;
-            height: 50px;
+            min-height: 50px;
+            height: 100%;
             border: 2px solid #3189c9;
             padding: 0.25rem 0.25rem;
             color: #fff;
             border: #111;
             text-decoration: none;
             line-height: 1rem;
-            font-size: 15px;
+            font-size: 1rem;
             font-weight: 600;
           }
 
