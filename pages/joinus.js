@@ -771,6 +771,7 @@ const Page = () => {
           }
           #apply-button {
             text-decoration: none;
+            min-width: 100px;
             max-width: 15%;
             margin: auto;
             display: flex;
