@@ -40,6 +40,7 @@ const Header = () => {
           <div className="items">
             {/*<a href="/pod">Our pod</a>*/}
             <a href="/joinus">Join the team</a>
+            <a href="/thesis">Thesis?</a>
           </div>
         </span>
       </div>
@@ -83,7 +84,7 @@ const Header = () => {
 
         #join {
           text-shadow: 0.1px 0.1px #005e60;
-
+          z-index: 2;
           border: 2px solid #005e80;
           padding-right: 10px;
           padding-left: 10px;
@@ -104,7 +105,7 @@ const Header = () => {
 
         .items {
           position: absolute;
-          z-index: 9999;
+          z-index: 1;
           background: #000;
           top: 100%;
           display: none;

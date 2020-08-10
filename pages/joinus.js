@@ -14,13 +14,26 @@ const Page = () => {
     >
       <h1 className="join">Join Us</h1>
       <hr />
-      <h3>
-        Primarily Shift enrolls new members to the team two times a year. In May
-        the team leader and board positions are filled. The rest of the team
-        positions are filled in august/september at the start of the semester.
-        However, any student feeling they have something to contribute to the
-        team should not hesitate to contact us any time of the year.
+      <h3 className="join-description">
+        On this page you will find our application from and a more detailed
+        description of the positions we are offering this year. We are
+        recruiting students from all fields of study regardless of year and
+        prior knowledge. Working with Shift will give you experience that makes
+        you attractive for your future employers. You will get a large network
+        of new friends in the technical community at NTNU. A year at Shift will
+        be educational and fun! Admission for the team 2021 is open and you
+        should check if something is for you! Don’t hesitate to contact us if
+        you have questions.
+        {/* Primarily Shift enrolls new members to the team two
+        times a year. In May the team leader and board positions are filled. The
+        rest of the team positions are filled in august/september at the start
+        of the semester. However, any student feeling they have something to
+        contribute to the team should not hesitate to contact us any time of the
+       year. */}
       </h3>
+      <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="apply-button">
+        <button>Apply now!</button>
+      </a>
       <br />
       <div className="join-container">
         <div className="general-information"></div>
@@ -30,13 +43,15 @@ const Page = () => {
               <img className="board image" src="/stock/boss.jpg" />
             </div>
             <div className="group-info">
-              <h3>Board</h3>
+              <h3>Management</h3>
               <p>
                 {' '}
-                The board, the bosses, the guys and gals at the top. These are
-                the people that look at the long term development of the team,
-                and are responsible for the completion of the project. You will
-                encounter a lot of responsibility.
+                Management carries responsibility for the progress and makes
+                sure that the organization follows the guidelines set by the
+                board. They also do the administrative work for the
+                organization. The most important task of the leaders is to
+                encourage and support Shifts members when needed. As a top
+                leader you will also be a part of the board.
               </p>
               <div className="button-container">
                 <button
@@ -229,12 +244,12 @@ const Page = () => {
               </div>
             </div>
             <div className="imagetest">
-              <img className="mechanical image" src="/stock/engine.jpg"></img>
+              <img className="mechanical image" src="/stock/aero.jpg"></img>
             </div>
           </div>
           <div className="concept group left">
             <div className="imagetest">
-              <img className="board image" src="/stock/concept.png" />
+              <img className="board image" src="/stock/concept.jpg" />
             </div>
             <div className="group-info">
               <h3>Concept</h3>
@@ -263,6 +278,38 @@ const Page = () => {
               </div>
             </div>
           </div>
+          <div className="research group right">
+            <div className="group-info">
+              <h3>Research & Development</h3>
+              <p>
+                {' '}
+                The mechanical group is responsible for some of the fundamental
+                mechanical structures of the pod. This group will build a frame,
+                the brakes and an aeroshell. They will also be responsible for
+                integrating systems designed by other groups to a finished pod.
+                The groupWorking with R&D, you will be able to research and
+                develop solutions too ambitious for this year's pod. The goal
+                for any R&D members is to give Shift valuable research that can
+                be implemented at a later stage, most likely the following year.
+                You will be allowed to research any subject relevant for the
+                project, so the possibilities are endless! will work closely
+                with the mechanical engineers in the other groups to assemble
+                all the systems into a finished pod.
+                <p className="bullet-point">•Levitation </p>
+                <p className="bullet-point">•Linear induction motor </p>
+                <p className="bullet-point">•Embedded systems</p>
+                <p className="bullet-point">•FPGA </p>
+                <p className="bullet-point">•Master thesis</p>
+                <p className="bullet-point">•Bachelor thesis </p>
+                <p className="bullet-point">•Do you have any other</p>
+                ideas?
+              </p>
+              <p>Contact us for more information</p>
+            </div>
+            <div className="imagetest">
+              <img className="research image" src="\stock\research.jpg"></img>
+            </div>
+          </div>
         </div>
         <p></p>
         <div className="modal-container">
@@ -286,6 +333,12 @@ const Page = () => {
                   group of mentors. Your main objective is to inspire the
                   organization and lead us to the SpaceX competition in
                   California.
+                </p>
+                <h2 id="undergroup-title">System Engineer</h2>
+                <hr id="blue-line-thin" />
+                <p id="undergroup-description">
+                  Studying to become a systems engineer? Get some experience at
+                  Shift!
                 </p>
               </>
             ) : null}
@@ -718,7 +771,10 @@ const Page = () => {
           }
           #apply-button {
             text-decoration: none;
-            max-width: 40%;
+            max-width: 15%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
           }
           .group-description {
             color: black;
@@ -780,6 +836,10 @@ const Page = () => {
             width: 80%; /* Could be more or less, depending on screen size */
           }
 
+          .bullet-point {
+            margin: 0px -10px;
+          }
+
           hr {
             width: 80%;
             border-width: 1px;
@@ -803,6 +863,9 @@ const Page = () => {
               #0092d9 0%,
               #005e95 100%
             );
+          }
+          .join-description {
+            margin-bottom: 20px;
           }
           .modal {
             display: none; /* Hidden by default */

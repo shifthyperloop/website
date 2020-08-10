@@ -1,5 +1,6 @@
 import withLayout from '../components/Layout';
 import Layout from '../components/Layout';
+import React, { Component } from 'react';
 import { useRef } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
