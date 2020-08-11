@@ -58,7 +58,7 @@ const Page = () => {
                   id="myBtn"
                   onClick={() =>
                     setModal({
-                      title: 'The Board',
+                      title: 'Management positions',
                     })
                   }
                 >
@@ -283,28 +283,23 @@ const Page = () => {
               <h3>Research & Development</h3>
               <p>
                 {' '}
-                The mechanical group is responsible for some of the fundamental
-                mechanical structures of the pod. This group will build a frame,
-                the brakes and an aeroshell. They will also be responsible for
-                integrating systems designed by other groups to a finished pod.
-                The groupWorking with R&D, you will be able to research and
-                develop solutions too ambitious for this year's pod. The goal
-                for any R&D members is to give Shift valuable research that can
-                be implemented at a later stage, most likely the following year.
+                Working with R&D, you will be able to research and develop
+                solutions too ambitious for this year's pod. The goal for any
+                R&D members is to give Shift valuable research that can be
+                implemented at a later stage, most likely the following year.
                 You will be allowed to research any subject relevant for the
                 project, so the possibilities are endless! will work closely
                 with the mechanical engineers in the other groups to assemble
                 all the systems into a finished pod.
-                <p className="bullet-point">•Levitation </p>
-                <p className="bullet-point">•Linear induction motor </p>
-                <p className="bullet-point">•Embedded systems</p>
-                <p className="bullet-point">•FPGA </p>
-                <p className="bullet-point">•Master thesis</p>
-                <p className="bullet-point">•Bachelor thesis </p>
-                <p className="bullet-point">•Do you have any other</p>
-                ideas?
               </p>
-              <p>Contact us for more information</p>
+              <div className="button-container">
+                <button
+                  id="myBtn"
+                  onClick={() => setModal({ title: 'Research & Development' })}
+                >
+                  <span>View available positions</span>
+                </button>
+              </div>
             </div>
             <div className="imagetest">
               <img className="research image" src="\stock\research.jpg"></img>
@@ -323,7 +318,7 @@ const Page = () => {
             </a>
             <h1 className="group-title">{modal.title}</h1>
             <hr id="blue-line-thick" />
-            {modal.title == 'The Board' ? (
+            {modal.title == 'Management positions' ? (
               <>
                 <h2 id="undergroup-title">Project Manager (CEO)</h2>
                 <hr id="blue-line-thin" />
@@ -340,6 +335,22 @@ const Page = () => {
                   Studying to become a systems engineer? Get some experience at
                   Shift!
                 </p>
+              </>
+            ) : null}
+            {modal.title == 'Research & Development' ? (
+              <>
+                <h2 id="undergroup-title">Some possible areas of research</h2>
+                <hr id="blue-line-thin" />
+                <div className="bullet-container">
+                  <p className="bullet-point">•Levitation </p>
+                  <p className="bullet-point">•Linear induction motor </p>
+                  <p className="bullet-point">•Embedded systems</p>
+                  <p className="bullet-point">•FPGA </p>
+                  <p className="bullet-point">•Master thesis</p>
+                  <p className="bullet-point">•Bachelor thesis </p>
+                  <p className="bullet-point">•Do you have any other ideas?</p>
+                </div>
+                <p>Contact us for more information</p>
               </>
             ) : null}
 
@@ -753,9 +764,11 @@ const Page = () => {
                 </p>
               </>
             ) : null}
-            <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="apply-button">
-              <button>Apply now!</button>
-            </a>
+            {modal.title != 'Research & Development' ? (
+              <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="apply-button">
+                <button>Apply now!</button>
+              </a>
+            ) : null}
           </div>
         </div>
       </div>
@@ -838,7 +851,7 @@ const Page = () => {
           }
 
           .bullet-point {
-            margin: 0px -10px;
+            margin: 10px 10px;
           }
 
           hr {
