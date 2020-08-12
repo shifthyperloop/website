@@ -288,7 +288,7 @@ const Page = () => {
                 R&D members is to give Shift valuable research that can be
                 implemented at a later stage, most likely the following year.
                 You will be allowed to research any subject relevant for the
-                project, so the possibilities are endless! .
+                project, so the possibilities are endless!
               </p>
               <div className="button-container">
                 <button
