@@ -71,9 +71,9 @@ const Page = () => {
           <div className="text">
             <h1 className="our-goals">Our Goals</h1>
             <div className="separate">
-              <div className="enviorment goal">
+              <div className="environment goal">
                 <FaLeaf size={35} className="icon" />
-                <h4>Enviorment</h4>
+                <h4>Environment</h4>
                 <p className="goal-text">
                   The world is facing massive challenges tied to climate change.
                   Transportation is a big contributer to CO2 emissions. With
