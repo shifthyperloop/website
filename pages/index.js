@@ -97,7 +97,7 @@ const Page = () => {
               </div>
               <div className="competition goal">
                 <GiTrophy size={35} className="icon" />
-                <h4>Competiton</h4>
+                <h4>Competition</h4>
                 <p className="goal-text">
                   Every year starting from 2015 SpaceX has held a hyperloop
                   competition in California. Shift aims to compete every year
