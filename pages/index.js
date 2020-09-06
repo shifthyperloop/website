@@ -11,7 +11,7 @@ const Page = () => {
       <div className="container">
         <div className="mobile">
           <TopImage
-            image="/Vervbanner.png"
+            image="./Shift1.png"
             height="calc(100vh - 60px)"
             maxHeight="40vw"
             backgroundSize="contain"
@@ -20,18 +20,13 @@ const Page = () => {
             fixedOnMobile={true}
             after={false}
           />
-          <div className="join-buttons">
-            <a href="https://forms.gle/jsvrWTu891MuJQSV7">Apply</a>
-            <a href="/joinus">Available positions</a>
-          </div>
         </div>
         <div className="desktop">
           <TopImage
-            image="/Vervbanner.png"
+            image="./Shift1.png"
             height="calc(100vh - 60px)"
             brightness={1}
             fixedOnMobile={true}
-            joinbutton={true}
             after={false}
           />
         </div>
@@ -225,7 +220,7 @@ const Page = () => {
             flex-direction: column;
           }
           .goal {
-            max-width: 350px;
+            max-width: 330px;
             width: 100%;
             margin-left: 20px;
             margin-right: 20px;
