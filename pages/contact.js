@@ -50,7 +50,7 @@ export default function About() {
       <div className="contact-container">
         <div className="contact-info">
           <h2>Getting in touch is easy!</h2>
-          <p>Andersens veg 5, c/o MTP, Valgrinda</p>
+          <p>Klæbuveien 153, 7037 Trondheim</p>
           <p>
             <a href="mailto:contact@shifthyperloop.com">
               contact@shifthyperloop.com
