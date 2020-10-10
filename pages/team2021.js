@@ -187,12 +187,12 @@ const Page = ({ members = [] }) => {
 
   return (
     <Layout
-      url="https://www.shifthyperloop.com/team2021"
+      url="https://www.shifthyperloop.com/team"
       title="Shift Hyperloop | Team 2021"
     >
       <TopImage
-        image="/Shift-team-2020.jpg"
-        title="Team 2020"
+        image="/Contact-hyperloop-dark-copy.png"
+        title="Team 2021"
         brightness={0.8}
       />
       <div className="page-container">
@@ -265,7 +265,7 @@ Page.getInitialProps = async function() {
   return {
     members: data.map(member => {
       let picture = {
-        url: '/uploads/8ac2288649f74d3b88a87126ebb489dc.jpg',
+        url: '/uploads/d7bbb8af6b1947629542010bb38942fb.jpg',
       };
       if (member.picture !== null) {
         picture = member.picture;
