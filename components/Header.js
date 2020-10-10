@@ -29,7 +29,7 @@ const Header = () => {
           Join
         </a>*/}
         <span className="menu team-menu">
-          <a href="/team">Team</a>
+          <a href="/team2021">Team</a>
           <div className="items">
             <a href="/team2021">Team 2021</a>
             <a href="/team">Team 2020</a>
