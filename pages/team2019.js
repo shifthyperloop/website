@@ -132,12 +132,12 @@ const Page = ({ members = [] }) => {
         members: [],
       },
       Tech: {
-        title: 'Electrical Team',
+        title: 'Electrical Group',
         description: '...',
         members: [],
       },
       Relations: {
-        title: 'Relations Team',
+        title: 'Relations Group',
         description: '...',
         members: [],
       },
