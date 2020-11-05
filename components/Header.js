@@ -24,7 +24,7 @@ const Header = () => {
       <div className="menu-options">
         <a href="/contact">Contact us</a>
         <a id = "newsltr" href="/posts">Posts</a>
-        <a href="/partners">Partners</a>
+        <a id = "spons" href="/partners">Partners</a>
         {/*<a href="/joinus" id="join">
           Join
         </a>*/}
@@ -93,6 +93,11 @@ const Header = () => {
         }*/
         .menu.team-menu {
           pointer-events: none;
+          opacity: 0.5;
+        }
+        
+        #spons {
+        pointer-events: none;
           opacity: 0.5;
         }
         
