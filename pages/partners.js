@@ -15,7 +15,7 @@ const Sponsor = ({
   return (
     <div>
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
-        <img src={CMS_BASE_URL + logoUrl} />
+        <img src={'http://shifthyperloop01.it.ntnu.no:1337' + logoUrl} />
       </a>
       {type === 'Platinum' ? (
         <>
@@ -301,7 +301,7 @@ const Page = ({ sponsors }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/sponsors');
+  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337' + '/sponsors');
   const data = await res.json();
 
   return {

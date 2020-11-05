@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className="menu-options">
         <a href="/contact">Contact us</a>
-        <a href="/posts">Posts</a>
+        <a id = "newsltr" href="/posts">Posts</a>
         <a href="/partners">Partners</a>
         {/*<a href="/joinus" id="join">
           Join
@@ -92,7 +92,13 @@ const Header = () => {
           border-radius: 15px;
         }*/
         .menu.team-menu {
-          opacity: 1;
+          pointer-events: none;
+          opacity: 0.5;
+        }
+        
+        #newsltr {
+        pointer-events: none;
+          opacity: 0.5;
         }
 
         .menu {
