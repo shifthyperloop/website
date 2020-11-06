@@ -96,10 +96,10 @@ const Header = () => {
           opacity: 0.5;
         }
         
-        #spons {
+        /*#spons {
         pointer-events: none;
           opacity: 0.5;
-        }
+        }*/
         
         #newsltr {
         pointer-events: none;

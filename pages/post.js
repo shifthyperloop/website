@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { useState, useEffect } from 'react';
 import POST_URL from './posts';
 
-const Post = ({ title, picture: { url = '' }, description }) => {
+const Post = ({ title, picture: { url = '', name: picSrc = '' }, description }) => {
   return (
     <div className="sponsor-list">
       {posts.map(post => (
@@ -40,7 +40,7 @@ const Page = ({ posts }) => {
 
 Page.getInitialProps = async function() {
   const res = await fetch(
-    'https://cms.shifthyperloop.com/posts?_sort=published:desc'
+    'http://shifthyperloop01.it.ntnu.no:1337/posts?_sort=published:desc'
   );
   const data = await res.json();
 

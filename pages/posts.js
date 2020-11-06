@@ -4,12 +4,12 @@ import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 
-const Post = ({ title, pid, picture: { url = '' }, description }) => {
+const Post = ({ title, pid, picture: { url = '', name: picSrc = '' }, description }) => {
   return (
     <>
       <Link href="/post/[pid]" as={`/post/${pid}`}>
         <a className="post">
-          <img className="post-image" src={CMS_BASE_URL + url} alt={title} />
+          <img className="post-image" src={'/' + picSrc} alt={title} />
           <div className="post-text">
             <h2 className="post-title">{title}</h2>
             <p className="post-description">
@@ -136,7 +136,7 @@ const Page = ({ posts }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/posts?_sort=published:desc');
+  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337' + '/posts?_sort=published:desc');
   const data = await res.json();
 
   return {

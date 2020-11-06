@@ -8,14 +8,14 @@ import { useWindowSize } from '../../common/hooks';
 const Page = ({
   pid,
   title,
-  picture: { url = '' },
+  picture: { url = '', name: picSrc = ''},
   description,
   published,
   updated_at,
   content,
-  front_page: { url: frontUrl = '' },
+  front_page: { url: frontUrl = '', name: frontSrc = '' },
   is_pdf,
-  files: { url: fileUrl = '' },
+  files: { url: fileUrl = '', name: pdfSrc = ''},
 }) => {
   const router = useRouter();
   const windowSize = useWindowSize();
@@ -26,7 +26,7 @@ const Page = ({
         {!is_pdf ? (
           <>
             <div className="news-container">
-              <img className="news-image" src={CMS_BASE_URL + url} />
+              <img className="news-image" src={'/' + picSrc} />
               <h1 className="title">{title}</h1>
             </div>
             <div className="text">
@@ -40,15 +40,15 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
                 id="iframepdf"
-                src={`https://pdf-viewer.now.sh/?pdf=${CMS_BASE_URL + fileUrl}`}
+                src={`https://pdf-viewer.now.sh/?pdf=${'/' + pdfSrc}`}
               ></iframe>
             ) : (
               <a
                 className="newsletter-download"
                 download
-                href={CMS_BASE_URL + fileUrl}
+                href={'/' + pdfSrc}
               >
-                <img src={CMS_BASE_URL + frontUrl} />
+                <img src={'/' + frontSrc} />
               </a>
             )}
           </div>
@@ -126,7 +126,7 @@ const Page = ({
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch(`${CMS_BASE_URL}/posts/${pid}`);
+  const res = await fetch(`http://shifthyperloop01.it.ntnu.no:1337/posts/${pid}`);
   const post = await res.json();
 
   return {
@@ -141,7 +141,7 @@ Page.getInitialProps = async function(context) {
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
       'http://localhost:1337',
-      CMS_BASE_URL
+      'http://shifthyperloop01.it.ntnu.no:1337'
     ),
   };
 };
