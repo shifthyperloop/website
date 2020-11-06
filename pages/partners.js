@@ -15,7 +15,7 @@ const Sponsor = ({
   return (
     <div>
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
-        <img src={'http://shifthyperloop01.it.ntnu.no:1337' + logoUrl} />
+        <img src={'..' + logoUrl} />
       </a>
       {type === 'Platinum' ? (
         <>
