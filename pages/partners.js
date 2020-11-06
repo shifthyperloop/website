@@ -308,7 +308,7 @@ Page.getInitialProps = async function() {
     sponsors: data.map(sponsor => {
       return {
         title: sponsor.Title,
-        logo: sponsor.Logo,
+        logo: sponsor.Logo.hash + sponsor.Logo.ext,
         type: sponsor.Type,
         url: sponsor.Link,
         description: sponsor.Description,
