@@ -40,17 +40,15 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
   id="iframepdf"
-  //src={'http://pdf-viewer.now.sh/?pdf=http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
-  src={'https://pdf-viewer.now.sh/?pdf=https://shifthyperloop.com/' + pdfSrc}
+  src={'/' + pdfSrc}
   />
             ) : (
               <a
                 className="newsletter-download"
                 download
-                //href={'http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
-                href={'https://shifthyperloop.com/' + pdfSrc}
+                href={'/' + pdfSrc}
               >
-                <img src={'https://shifthyperloop.com/' + frontSrc} />
+                <img src={'/' + frontSrc} />
               </a>
             )}
           </div>
@@ -143,7 +141,7 @@ Page.getInitialProps = async function(context) {
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
       'http://localhost:1337',
-      'http://shifthyperloop01.it.ntnu.no:1337'
+      'https://shifthyperloop.com'
     ),
   };
 };

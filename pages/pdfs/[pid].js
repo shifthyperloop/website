@@ -14,7 +14,7 @@ const Page = ({ pid, title, files: { url: fileUrl = '', name: pdfSrc = '' } }) =
         <div
           className="flip-book-container solid-container"
           //src={'http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
-           src={'https://shifthyperloop.com/' + pdfSrc}
+           src={'/' + pdfSrc}
         ></div>
       </div>
       {/*<script src="http://3dflipbook.net/js/jquery.min.js"></script>
