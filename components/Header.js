@@ -101,10 +101,10 @@ const Header = () => {
           opacity: 0.5;
         }*/
         
-        #newsltr {
+        /*#newsltr {
         pointer-events: none;
           opacity: 0.5;
-        }
+        }*/
 
         .menu {
           position: relative;
