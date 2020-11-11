@@ -7,7 +7,7 @@ import fetch from 'isomorphic-unfetch';
 const Post = ({ title, pid, picture: { url = '', name: picSrc = '' }, description }) => {
   return (
     <>
-      <Link href="/post/[pid]" as={'/post/' + pid}>
+      <Link href={"/post/" + pid}>
         <a className="post">
           <img className="post-image" src={'/' + picSrc} alt={title} />
           <div className="post-text">

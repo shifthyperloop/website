@@ -126,7 +126,7 @@ const Page = ({
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/posts/' + pid);
+  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/posts/' + pid).catch();
   const post = await res.json();
 
   return {
