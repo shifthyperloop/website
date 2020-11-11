@@ -41,16 +41,16 @@ const Page = ({
               <iframe
   id="iframepdf"
   //src={'http://pdf-viewer.now.sh/?pdf=http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
-  src={'https://pdf-viewer.now.sh/?pdf=/ + pdfSrc'}
+  src={'https://pdf-viewer.now.sh/?pdf=https://shifthyperloop.com/' + pdfSrc}
   />
             ) : (
               <a
                 className="newsletter-download"
                 download
                 //href={'http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
-                href={'/' + pdfSrc}
+                href={'https://shifthyperloop.com/' + pdfSrc}
               >
-                <img src={'/' + frontSrc} />
+                <img src={'https://shifthyperloop.com/' + frontSrc} />
               </a>
             )}
           </div>
