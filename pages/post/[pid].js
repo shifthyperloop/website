@@ -26,7 +26,7 @@ const Page = ({
         {!is_pdf ? (
           <>
             <div className="news-container">
-              <img className="news-image" src={'/' + picSrc} />
+              <img className="news-image" src={'https://shifthyperloop.com/' + picSrc} />
               <h1 className="title">{title}</h1>
             </div>
             <div className="text">
@@ -46,9 +46,9 @@ const Page = ({
               <a
                 className="newsletter-download"
                 download
-                href={'/' + pdfSrc}
+                href={'https://shifthyperloop.com/' + pdfSrc}
               >
-                <img src={'/' + frontSrc} />
+                <img src={'https://shifthyperloop.com/' + frontSrc} />
               </a>
             )}
           </div>
