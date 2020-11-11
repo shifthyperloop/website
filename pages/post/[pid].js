@@ -39,13 +39,15 @@ const Page = ({
             <h1>{title}</h1>
             {windowSize.width > 1000 ? (
               <iframe
-                id="iframepdf"
-                src={`https://pdf-viewer.now.sh/?pdf=${'/' + pdfSrc}`}
-              ></iframe>
+  id="iframepdf"
+  //src={'http://pdf-viewer.now.sh/?pdf=http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
+  src={'https://pdf-viewer.now.sh/?pdf=/ + pdfSrc'}
+  />
             ) : (
               <a
                 className="newsletter-download"
                 download
+                //href={'http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
                 href={'/' + pdfSrc}
               >
                 <img src={'/' + frontSrc} />
@@ -137,7 +139,7 @@ Page.getInitialProps = async function(context) {
     published: post.published,
     updated_at: post.updated_at,
     front_page: post.front_page || {},
-    files: post.files || {},
+    files: post.files[0] || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
       'http://localhost:1337',

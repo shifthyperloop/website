@@ -5,7 +5,7 @@ import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import ReactMarkdown from 'react-markdown';
 
-const Page = ({ pid, title, files: { url: fileUrl = '' } }) => {
+const Page = ({ pid, title, files: { url: fileUrl = '', name: pdfSrc = '' } }) => {
   const router = useRouter();
   return (
     <div>
@@ -13,7 +13,8 @@ const Page = ({ pid, title, files: { url: fileUrl = '' } }) => {
         <h1>{title}</h1>
         <div
           className="flip-book-container solid-container"
-          src={CMS_BASE_URL + fileUrl}
+          //src={'http://shifthyperloop01.it.ntnu.no:1337' + fileUrl}
+           src={'/' + pdfSrc}
         ></div>
       </div>
       {/*<script src="http://3dflipbook.net/js/jquery.min.js"></script>
@@ -27,13 +28,13 @@ const Page = ({ pid, title, files: { url: fileUrl = '' } }) => {
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch(`https://cms.shifthyperloop.com/posts/${pid}`);
+  const res = await fetch(`http://shifthyperloop01.it.ntnu.no:1337/posts/${pid}`);
   const post = await res.json();
 
   return {
     pid: post.id,
     title: post.title,
-    files: post.files || {},
+    files: post.files[0] || {},
   };
 };
 
