@@ -39,9 +39,9 @@ const Page = ({
             <h1>{title}</h1>
             {windowSize.width > 1000 ? (
               <iframe
-  id="iframepdf"
-  src={'/' + pdfSrc}
-  />
+                id="iframepdf"
+                src={'https://pdf-viewer.now.sh/?pdf=https://shifthyperloop.com/' + pdfSrc}
+              ></iframe>
             ) : (
               <a
                 className="newsletter-download"
@@ -140,7 +140,7 @@ Page.getInitialProps = async function(context) {
     files: post.files[0] || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
-      'http://localhost:1337',
+      'http://shifthyperloop01.it.ntnu.no:1337',
       'https://shifthyperloop.com'
     ),
   };
