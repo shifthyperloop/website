@@ -18,15 +18,10 @@ const Footer = () => (
     <div id="fb-root"></div>
     <footer className="footer">
       <div className="container">
-        <div className="main-sponsor">
-          <a href="https://no.ramboll.com" target="_blank">
-            <img src="/Ramboll.png" className="ramboll" alt="Ramboll" />
-          </a>
-        </div>
         <div className="flex-column">
           <div className="facebook">
             <div className="copyright">
-              <p>Copyright &copy; Shift 2020</p>
+              <p>Copyright &copy; Shift 2021</p>
             </div>
             <div
               className="fb-like"
@@ -39,6 +34,20 @@ const Footer = () => (
               data-colorscheme="dark"
             />
           </div>
+        </div>
+        <div className="main-sponsor">
+          <a
+            href="https://www.hevold.no/hevold-group/"
+            target="_blank"
+            className="hevold-logo"
+          >
+            <img src="/Logo_negativ_versjon_for_sort_bakgrunn_footer_web.png" className="hevold" alt="Hevold Group" />
+          </a>
+        </div>
+        <div className="main-sponsor">
+          <a href="https://no.ramboll.com" target="_blank">
+            <img src="/Ramboll.png" className="ramboll" alt="Ramboll" />
+          </a>
         </div>
         <div className="main-sponsor">
           <a
@@ -97,9 +106,15 @@ const Footer = () => (
       .alva-logo {
         width: 80%;
       }
+      .hevold {
+        width: 45%;
+      }
+      .hevold-logo {
+        width: 80%;
+      }
       .main-sponsor,
       .flex-column {
-        width: 33%;
+        width: 25%;
         text-align: center;
       }
     `}</style>
