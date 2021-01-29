@@ -50,6 +50,10 @@ const Sponsor = ({
           width: 500px;
           height: 400px;
           max-width: 100vw;
+          
+        }
+        .platinum img:nth-of-type(3) {
+          margin-top: 40px;
         }
         .gold img {
           width: 400px;
