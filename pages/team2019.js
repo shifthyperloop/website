@@ -211,7 +211,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337' + '/teammember2019s');
+  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/team-2019-s');
   const data = await res.json();
 
   return {
