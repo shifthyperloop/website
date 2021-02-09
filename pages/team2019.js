@@ -11,7 +11,7 @@ const Member = ({ name, picture: { url = '' }, title, email, group }) => {
   return (
     <div>
       <div className="image-container">
-        <img src={CMS_BASE_URL + url} />
+        <img src={'http://shifthyperloop01.it.ntnu.no:1337' + url} />
         <a
           href={''}
           className="email"
@@ -211,7 +211,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/teammember2019s');
+  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337' + '/teammember2019s');
   const data = await res.json();
 
   return {
