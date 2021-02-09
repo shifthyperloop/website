@@ -223,11 +223,11 @@ Page.getInitialProps = async function() {
         picture = member.picture;
       }
       return {
-        name: member.name,
+        name: member.Name,
         picture,
-        group: member.group,
-        title: member.title,
-        email: member.email,
+        group: member.Group,
+        title: member.Title,
+        email: member.Email,
       };
     }),
   };
