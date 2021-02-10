@@ -126,7 +126,7 @@ const Page = ({
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/posts/' + pid).catch();
+  const res = await fetch('https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid).catch();
   const post = await res.json();
 
   return {
@@ -140,7 +140,7 @@ Page.getInitialProps = async function(context) {
     files: post.files[0] || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
-      'http://shifthyperloop01.it.ntnu.no:1337',
+      'https://shifthyperloop01.it.ntnu.no/strapi',
       'https://shifthyperloop.com'
     ),
   };

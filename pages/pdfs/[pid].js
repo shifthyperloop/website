@@ -27,7 +27,7 @@ const Page = ({ pid, title, files: { url: fileUrl = '', name: pdfSrc = '' } }) =
 
 Page.getInitialProps = async function(context) {
   const { pid } = context.query;
-  const res = await fetch(`http://shifthyperloop01.it.ntnu.no:1337/posts/${pid}`);
+  const res = await fetch(`https://shifthyperloop01.it.ntnu.no/strapi/${pid}`);
   const post = await res.json();
 
   return {

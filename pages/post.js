@@ -40,7 +40,7 @@ const Page = ({ posts }) => {
 
 Page.getInitialProps = async function() {
   const res = await fetch(
-    'http://shifthyperloop01.it.ntnu.no:1337/posts?_sort=published:desc'
+    'https://shifthyperloop01.it.ntnu.no/strapi/posts?_sort=published:desc'
   );
   const data = await res.json();
 
