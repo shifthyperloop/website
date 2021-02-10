@@ -6,11 +6,11 @@ import fetch from 'isomorphic-unfetch';
 import { CMS_BASE_URL } from '../common/constants';
 import { FiMail } from 'react-icons/fi';
 
-const Member = ({ name, picture: { url = '' }, title, email, group }) => {
+const Member = ({ name, picture, title, email, group }) => {
   return (
     <div>
       <div className="image-container">
-        <img src={CMS_BASE_URL + url} />
+        <img src={CMS_BASE_URL + picture} />
         <a
           href={''}
           className="email"
@@ -259,7 +259,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/teammember2021s');
+  const res = await fetch(CMS_BASE_URL + '/team-2021-s');
   const data = await res.json();
 
   return {
@@ -267,15 +267,16 @@ Page.getInitialProps = async function() {
       let picture = {
         url: '/uploads/d7bbb8af6b1947629542010bb38942fb.jpg',
       };
-      if (member.picture !== null) {
-        picture = member.picture;
+      if (member.Picture !== null) {
+        picture = member.Picture.url;
       }
       return {
-        name: member.name,
+        name: member.Name,
         picture,
-        group: member.group,
-        title: member.title,
-        email: member.email,
+        group: member.Group,
+        title: member.Title,
+        email: member.Email,
+        
       };
     }),
   };

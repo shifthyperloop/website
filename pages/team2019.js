@@ -7,11 +7,11 @@ import { CMS_BASE_URL } from '../common/constants';
 import { FaAngleDown } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
-const Member = ({ name, picture: { url = '' }, title, email, group }) => {
+const Member = ({ name, url, title, email, group }) => {
   return (
     <div>
       <div className="image-container">
-        <img src={'http://shifthyperloop01.it.ntnu.no:1337' + url} />
+       <img src={CMS_BASE_URL + url} /> 
         <a
           href={''}
           className="email"
@@ -145,6 +145,7 @@ const Page = ({ members = [] }) => {
     members.forEach(member => {
       if (member.group in newGroups) {
         newGroups[member.group].members.push(member);
+        console.log(member.name);
       }
     });
     setGroups(newGroups);
@@ -211,7 +212,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/team-2019-s');
+  const res = await fetch(CMS_BASE_URL + '/team-2019-s');
   const data = await res.json();
 
   return {
@@ -222,12 +223,15 @@ Page.getInitialProps = async function() {
       if (member.picture !== null) {
         picture = member.picture;
       }
+      console.log(member.Picture.url);
+      
       return {
         name: member.Name,
         picture,
         group: member.Group,
         title: member.Title,
         email: member.Email,
+        url: member.Picture.url
       };
     }),
   };

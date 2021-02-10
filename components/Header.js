@@ -91,10 +91,7 @@ const Header = () => {
           padding-left: 10px;
           border-radius: 15px;
         }*/
-        .menu.team-menu {
-          pointer-events: none;
-          opacity: 0.5;
-        }
+      
         
         /*#spons {
         pointer-events: none;

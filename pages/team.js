@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 import { CMS_BASE_URL } from '../common/constants';
 import { FiMail } from 'react-icons/fi';
 
-const Member = ({ name, picture: { url = '' }, title, email, group }) => {
+const Member = ({ name, url, title, email, group }) => {
   return (
     <div>
       <div className="image-container">
@@ -244,7 +244,7 @@ const Page = ({ members = [] }) => {
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/teammember2020s');
+  const res = await fetch(CMS_BASE_URL + '/team-2020-s');
   const data = await res.json();
 
   return {
@@ -256,11 +256,12 @@ Page.getInitialProps = async function() {
         picture = member.picture;
       }
       return {
-        name: member.name,
+        name: member.Name,
         picture,
-        group: member.group,
-        title: member.title,
-        email: member.email,
+        group: member.Group,
+        title: member.Title,
+        email: member.Email,
+        url: member.Picture.url,
       };
     }),
   };

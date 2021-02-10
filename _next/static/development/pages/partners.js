@@ -10,7 +10,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CMS_BASE_URL", function() { return CMS_BASE_URL; });
-var CMS_BASE_URL = 'https://cms.shifthyperloop.com';
+var CMS_BASE_URL = 'http://shifthyperloop01.it.ntnu.no:1337';
 
 /***/ }),
 
