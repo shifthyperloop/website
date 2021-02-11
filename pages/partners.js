@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const Sponsor = ({
   title,
-  logo: { url: logoUrl = '', hash: name = '', ext: specifier = ''},
+  logo,
   type,
   url,
   description,
@@ -15,7 +15,7 @@ const Sponsor = ({
   return (
     <div>
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
-        <img src={'/' + name + specifier} />
+        <img src={CMS_BASE_URL + logo }/>
       </a>
       {type === 'Platinum' ? (
         <>
@@ -312,7 +312,7 @@ Page.getInitialProps = async function() {
     sponsors: data.map(sponsor => {
       return {
         title: sponsor.Title,
-        logo: sponsor.Logo,
+        logo: sponsor.Logo.url,
         type: sponsor.Type,
         url: sponsor.Link,
         description: sponsor.Description,
