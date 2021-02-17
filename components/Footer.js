@@ -37,7 +37,7 @@ const Footer = () => (
         </div>
         <div className="main-sponsor">
           <a
-            href="https://www.hevold.no/hevold-group/"
+            href="https://hevoldgroup.no/"
             target="_blank"
             className="hevold-logo"
           >
