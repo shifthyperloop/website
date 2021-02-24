@@ -84,7 +84,6 @@ const Footer = () => (
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        height: 8rem;
         bottom: 0;
         margin: auto;
         margin-bottom: 30px;
@@ -132,6 +131,15 @@ const Footer = () => (
       .flex-column {
         width: 20%;
         text-align: center;
+      }
+      @media (max-width: 1000px) {
+        .flex-column {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+        .main-sponsor {
+          width: 25%;
+        }
       }
     `}</style>
   </>
