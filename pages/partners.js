@@ -180,27 +180,6 @@ const Page = ({ sponsors }) => {
           display: flex;
           flex-direction: row;
         }
-        .sponsor-image {
-          background-image: url('/signering_bw_logo.jpg');
-          background-attachment: fixed;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          position: relative;
-        }
-        .sponsor-image > * {
-          z-index: 1;
-        }
-        .sponsor-image::after {
-          content: '';
-          backdrop-filter: brightness(0.7);
-          z-index: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
         .quote {
           width: 30%;
           margin: 0 2.5%;
