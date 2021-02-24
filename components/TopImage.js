@@ -83,7 +83,8 @@ export default function TopImage({
           }
           .container::after {
             content: '';
-            backdrop-filter: brightness(${brightness});
+            background-color: black;
+            opacity: ${1-brightness};
             z-index: 0;
             position: absolute;
             top: 0;
