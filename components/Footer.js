@@ -58,6 +58,15 @@ const Footer = () => (
             <img src="/Alva-01.svg" className="alva" alt="Alva" />
           </a>
         </div>
+        <div className="main-sponsor">
+          <a
+            href="https://www.hydro.com/no-NO/"
+            target="_blank"
+            className="hydro-logo"
+          >
+            <img src="/Hydro_logo.png" className="hydro" alt="Hydro" />
+          </a>
+        </div>
       </div>
     </footer>
     <style jsx>{`
@@ -112,9 +121,16 @@ const Footer = () => (
       .hevold-logo {
         width: 80%;
       }
+      .hydro {
+        width: 35%;
+        transform: translate(0, 10%);
+      }
+      .hydro-logo {
+        width: 80%;
+      }  
       .main-sponsor,
       .flex-column {
-        width: 25%;
+        width: 20%;
         text-align: center;
       }
     `}</style>
