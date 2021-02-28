@@ -12,7 +12,6 @@ const Page = () => {
         <div>
           <TopImage
             image="./homePage.png"
-            height="calc(100vh - 60px)"
             brightness={1}
             fixedOnMobile={false}
             after={false}

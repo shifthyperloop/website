@@ -8,7 +8,7 @@ export default function TopImage({
   text = '',
   brightness = 0.3,
   height = '100vw',
-  maxHeight = 'calc(100vh - 60px)',
+  maxHeight = 'calc(100vh - 56px)',
   backgroundSize = 'cover',
   backgroundPosition = 'center center',
   hasArrow = true,
