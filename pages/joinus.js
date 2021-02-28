@@ -67,9 +67,6 @@ const Page = () => {
               </div>
             </div>
           </div>
-         
-
-          
         </div>
         <p></p>
         <div className="modal-container">
@@ -671,7 +668,7 @@ const Page = () => {
 
           /* The Close Button */
           .close-button {
-            color: #000;
+            color: #FFFFFF;
             float: right;
             font-size: 28px;
           }
