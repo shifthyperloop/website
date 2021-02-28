@@ -1,214 +1,37 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import TopImage from '../components/TopImage';
 import fetch from 'isomorphic-unfetch';
 import { CMS_BASE_URL } from '../common/constants';
-import { FaAngleDown } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
-
-const Member = ({ name, url, title, email, group }) => {
-  return (
-    <div>
-      <div className="image-container">
-       <img src={CMS_BASE_URL + url} /> 
-        <a
-          href={''}
-          className="email"
-          onMouseOver={e => (e.target.href = 'mailto:' + email)}
-        >
-          <FiMail size={35} className="mail-symbol" />
-        </a>
-      </div>
-      <h3>{name}</h3>
-      <h4>{title}</h4>
-      <style jsx>
-        {`
-          div {
-            flex: 0 1 300px;
-            text-align: center;
-          }
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: top;
-          }
-          .image-container {
-            position: relative;
-            border-radius: 50%;
-            height: 200px;
-            width: 200px;
-            overflow: hidden;
-          }
-          .email {
-            position: absolute;
-            background-color: #0080c980;
-            border-radius: 50%;
-            --r: 25%;
-            bottom: calc(0% - var(--r));
-            left: calc(50% - var(--r));
-            right: calc(50% - var(--r));
-            top: calc(100% - var(--r));
-            transition: all 1s;
-            text-align: center;
-          }
-          .image-container:hover .email {
-            --r: 100%;
-          }
-          :global(.mail-symbol) {
-            position: absolute;
-            top: 25%;
-            transform: translate(-50%, -50%);
-          }
-
-          img,
-          h3 {
-            margin-bottom: -10px;
-          }
-          h4 {
-            color: #0080c9;
-            margin-bottom: 30px;
-          }
-        `}
-      </style>
-    </div>
-  );
-};
-
-const Group = ({ members = [], title }) => {
-  return (
-    <div className="group">
-      <h1 className="group-titles">{title}</h1>
-      <hr />
-      <div className="group-members">
-        {members.map(member => (
-          <Member key={member.name} {...member} />
-        ))}
-      </div>
-      <style jsx>
-        {`
-          hr {
-            width: 80%;
-            border-width: 2px;
-            border-style: solid;
-            border-radius: 2.5px;
-            border-color: #0080c9;
-            margin-bottom: 75px;
-          }
-          .group-titles {
-            margin-bottom: 2px;
-            margin-top: 10px;
-          }
-          .group {
-            margin: 100px auto;
-            display: flex;
-            flex-flow: column nowrap;
-            max-width: 1200px;
-          }
-          .group-members {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-          }
-          h1 {
-            text-align: center;
-          }
-        `}
-      </style>
-    </div>
-  );
-};
+import TeamPage from './team/TeamPage';
 
 const Page = ({ members = [] }) => {
   const router = useRouter();
-  const [groups, setGroups] = useState({});
 
-  useEffect(() => {
-    const newGroups = {
-      Board: {
-        title: 'The Board',
-        description: '...',
-        members: [],
-      },
-      Tech: {
-        title: 'Electrical Group',
-        description: '...',
-        members: [],
-      },
-      Relations: {
-        title: 'Relations Group',
-        description: '...',
-        members: [],
-      },
-    };
-    members.forEach(member => {
-      if (member.group in newGroups) {
-        newGroups[member.group].members.push(member);
-        console.log(member.name);
-      }
-    });
-    setGroups(newGroups);
-  }, [members]);
+  const groups = {
+    Board: {
+      title: 'The Board',
+      description: '...',
+      members: [],
+    },
+    Tech: {
+      title: 'Electrical Group',
+      description: '...',
+      members: [],
+    },
+    Relations: {
+      title: 'Relations Group',
+      description: '...',
+      members: [],
+    },
+  };
 
-  return (
-    <Layout
-      url="https://www.shifthyperloop.com/team"
-      title="Shift Hyperloop | Team"
-    >
-      <TopImage image="/team_summer.jpg" title="Team 2019" brightness={1} />
-      <div className="page-container">
-        {Object.values(groups).map(group => (
-          <Group key={group.title} {...group} />
-        ))}
-      </div>
-      <style jsx global>{`
-        body {
-          background-image: linear-gradient(45deg, #01020b, #020610);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-size: 9px 48px;
-        }
-        h1 {
-          font-size: 50px;
-        }
-
-        div {
-          position: center;
-        }
-        .team-photo {
-          max-width: 100%;
-        }
-        .image-container {
-          position: relative;
-          text-align: center;
-          color: white;
-          display: inline-flex;
-        }
-        .arrow {
-          position: absolute;
-          bottom: 10px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background-attachment: fixed;
-        }
-
-        .title {
-          position: absolute;
-          bottom: calc(40% - 10px);
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-shadow: 2px 2px #000;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-
-        .group-titles {
-          text-align: center;
-        }
-      `}</style>
-    </Layout>
-  );
+  return <TeamPage
+    members={members}
+    teamGroups={groups}
+    topImage={"/team_summer.jpg"}
+    title={"Team 2019"}
+    path={"/team2019"}
+    centerImages={false}
+  />
 };
 
 Page.getInitialProps = async function() {
@@ -224,7 +47,7 @@ Page.getInitialProps = async function() {
         picture = member.picture;
       }
       console.log(member.Picture.url);
-      
+
       return {
         name: member.Name,
         picture,
