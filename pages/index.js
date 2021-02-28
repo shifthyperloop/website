@@ -139,7 +139,7 @@ const Page = () => {
               <h2>SpaceX Hyperloop Pod Competition:</h2>
               <p>
                 The Hyperloop Pod Competition is an annual competition arranged
-                by SpaceX from since 2015 in which a number of student and
+                by SpaceX since 2015 in which a number of student and
                 non-student teams participate to design and for some to build a
                 subscale prototype transport vehicle in order to demonstrate
                 technical feasibility of various aspects of the Hyperloop
