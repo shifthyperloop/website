@@ -8,7 +8,7 @@ export default function TopImage({
   text = '',
   brightness = 0.3,
   height = '100vw',
-  maxHeight = 'calc(100vh - 60px)',
+  maxHeight = 'calc(100vh - 56px)',
   backgroundSize = 'cover',
   backgroundPosition = 'center center',
   hasArrow = true,
@@ -104,7 +104,7 @@ export default function TopImage({
             left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
-            width: 50%;
+            width: 70%;
             max-width: 1200px;
             bottom: 18%;
           }
@@ -117,12 +117,17 @@ export default function TopImage({
               padding: 9em 16px 3em;
             }
 
-            .join-buttons > a {
-              width: 50px;
-              height: 20px;
-              font-size: 10px;
+            .join-buttons {
+              width: 100%;
             }
             .arrow {
+              bottom: 0;
+            }
+          }
+          @media (max-width: 450px) {
+            .join-buttons {
+              width: 100%;
+              flex-direction: column;
               bottom: 0;
             }
           }

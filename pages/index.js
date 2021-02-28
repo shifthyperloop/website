@@ -9,25 +9,11 @@ const Page = () => {
   return (
     <Layout>
       <div className="container">
-        <div className="mobile">
+        <div>
           <TopImage
-            image="./Shift1.png"
-            height="calc(100vh - 60px)"
-            maxHeight="40vw"
-            backgroundSize="contain"
-            backgroundPosition="center 40px"
+            image="./homePage.png"
             brightness={1}
-            fixedOnMobile={true}
-            after={false}
-            joinbutton={true}
-          />
-        </div>
-        <div className="desktop">
-          <TopImage
-            image="./Shift1.png"
-            height="calc(100vh - 60px)"
-            brightness={1}
-            fixedOnMobile={true}
+            fixedOnMobile={false}
             after={false}
             joinbutton={true}
           />
@@ -157,17 +143,6 @@ const Page = () => {
       </div>
       <style jsx>
         {`
-          .mobile {
-            display: none;
-          }
-          @media (max-width: 860px) {
-            .mobile {
-              display: unset;
-            }
-            .desktop {
-              display: none;
-            }
-          }
           .competition-container {
             min-height: 400px;
             background-attachment: fixed;
@@ -288,25 +263,6 @@ const Page = () => {
             flex-flow: row nowrap;
             width: 100%;
             max-width: 1200px;
-          }
-
-          .join-buttons > a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 1 200px;
-            flex-direction: row;
-            margin: 16px 5%;
-            cursor: pointer;
-            height: 50px;
-            background-color: #3189c9;
-            padding: 0.25rem 0.25rem;
-            color: #bbb;
-            border: #111;
-            text-decoration: none;
-            line-height: 1rem;
-            font-size: 15px;
-            font-weight: 600;
           }
         `}
       </style>
