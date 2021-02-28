@@ -63,10 +63,10 @@ const Page = () => {
                 <h4>Environment</h4>
                 <p className="goal-text">
                   The world is facing massive challenges tied to climate change.
-                  Transportation is a big contributer to CO₂ emissions. With
+                  Transportation is a big contributor to CO₂ emissions. With
                   hyperloop we can reduce those emissions along with
                   transportation time, both for humans and goods. One of our big
-                  long term goals is to evaluate the implementation of hyperloop
+                  long-term goals is to evaluate the implementation of hyperloop
                   in Norway.
                 </p>
               </div>
