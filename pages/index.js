@@ -19,6 +19,7 @@ const Page = () => {
             brightness={1}
             fixedOnMobile={true}
             after={false}
+            joinbutton={true}
           />
         </div>
         <div className="desktop">
@@ -28,8 +29,10 @@ const Page = () => {
             brightness={1}
             fixedOnMobile={true}
             after={false}
+            joinbutton={true}
           />
         </div>
+
         <div className="content">
           <div className="text">
             <h1>About Shift</h1>
