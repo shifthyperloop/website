@@ -11,7 +11,7 @@ const Page = () => {
       <div className="container">
         <div className="mobile">
           <TopImage
-            image="./Shift1.png"
+            image="./homePage.png"
             height="calc(100vh - 60px)"
             maxHeight="40vw"
             backgroundSize="contain"
@@ -24,7 +24,7 @@ const Page = () => {
         </div>
         <div className="desktop">
           <TopImage
-            image="./Shift1.png"
+            image="./homePage.png"
             height="calc(100vh - 60px)"
             brightness={1}
             fixedOnMobile={true}
