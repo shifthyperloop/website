@@ -2,10 +2,34 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { IoMdClose } from 'react-icons/io';
+import { APPLY_URL } from "../common/constants";
+import { LinkButton, Button } from '../components/Button';
 
 const Page = () => {
   const router = useRouter();
   const [modal, setModal] = useState({ title: '' });
+
+  const PositionsButton = (props) => {
+    return <div className="button-container">
+      <Button
+        onClick={() =>
+          setModal({
+            title: props.modalTitle,
+          })
+        }
+      >
+        View available positions
+      </Button>
+      <style jsx>
+        {`
+        .button-container {
+          display: flex;
+          justify-content: center;
+        }
+      `}
+      </style>
+    </div>
+  }
 
   return (
     <Layout
@@ -15,15 +39,13 @@ const Page = () => {
       <h1 className="join">Join Us</h1>
       <hr />
       <h3 className="join-description">
-        On this page you will find our application from and a more detailed
-        description of the positions we are offering this year. We are
-        recruiting students from all fields of study regardless of year and
-        prior knowledge. Working with Shift will give you experience that makes
-        you attractive for your future employers. You will get a large network
-        of new friends in the technical community at NTNU. A year at Shift will
-        be educational and fun! Admission for the team 2021 is open and you
-        should check if something is for you! Don’t hesitate to contact us if
-        you have questions.
+        On this page you will find our application form and a more detailed description 
+        of the leader positions we are offering for the Team 2022. We are recruiting students 
+        from all fields of study regardless of year and prior knowledge. Working with Shift will 
+        give you experience that makes you attractive for your future employers. You will get a 
+        large network of new friends in the technical community at NTNU. A year at Shift will be 
+        educational and fun! Admission for the team 2022 is open and you should check if something 
+        is for you! Don’t hesitate to contact us if you have questions.
         {/* Primarily Shift enrolls new members to the team two
         times a year. In May the team leader and board positions are filled. The
         rest of the team positions are filled in august/september at the start
@@ -31,40 +53,44 @@ const Page = () => {
         contribute to the team should not hesitate to contact us any time of the
        year. */}
       </h3>
-      <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="apply-button">
-        <button>Apply now!</button>
-      </a>
+      <div className="apply-button">
+        <LinkButton href={APPLY_URL}>
+          Apply now!
+        </LinkButton>
+      </div>
       <br />
       <div className="join-container">
         <div className="general-information"></div>
         <div className="groups">
           <div className="board group left">
-            <div className="imagetest">
+            <div className="imagetest mirror">
               <img className="board image" src="/stock/boss.jpg" />
             </div>
             <div className="group-info">
               <h3>Management</h3>
               <p>
                 {' '}
-                Management carries responsibility for the progress and makes
-                sure that the organization follows the guidelines set by the
-                board. They also do the administrative work for the
-                organization. The most important task of the leaders is to
-                encourage and support Shifts members when needed. As a top
-                leader you will also be a part of the board.
+                Management is responsible for deciding strategy for the whole organization. 
+                You will hold a close contact with the group leaders to be sure that 
+                organisation will come to the goals that were set. 
               </p>
-              <div className="button-container">
-                <button
-                  id="myBtn"
-                  onClick={() =>
-                    setModal({
-                      title: 'Management positions',
-                    })
-                  }
-                >
-                  <span>View available positions</span>
-                </button>
-              </div>
+              <PositionsButton modalTitle="Management positions" />
+            </div>
+          </div>
+          <div className="board group right">
+            <div className="group-info">
+              <h3>Group Leaders</h3>
+              <p>
+                {' '}
+                Group Leaders carries responsibility for the progress and makes 
+                sure that the organization follows the guidelines set by the board. 
+                They also do the administrative work for the organization. 
+                The most important task of the leaders is to encourage and support Shifts members when needed. 
+              </p>
+              <PositionsButton modalTitle="Group Leaders" />
+            </div>
+            <div className="imagetest">
+              <img className="board image" src="/stock/boss.jpg" />
             </div>
           </div>
         </div>
@@ -73,7 +99,6 @@ const Page = () => {
           <div id="modal-content">
             <a
               className="close-button"
-              id="myBtn"
               onClick={() => setModal({ title: '', description: '' })}
             >
               <IoMdClose />
@@ -82,454 +107,130 @@ const Page = () => {
             <hr id="blue-line-thick" />
             {modal.title == 'Management positions' ? (
               <>
-                <h2 id="undergroup-title">Project Manager (CEO)</h2>
+                <h2 id="undergroup-title"> CEO - Chief Executive Officer</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As project manager you are the head of the organization’s
-                  administration, supported by four board members and a large
-                  group of mentors. Your main objective is to inspire the
-                  organization and lead us to the SpaceX competition in
-                  California.
+                As CEO you will be the project manager and head of the organization’s
+                administration, supported by four board members and a large
+                group of mentors. Your main objective is to inspire the
+                organization and lead us to the SpaceX competition in
+                California and European Hyperloop Week in Spain.
                 </p>
-                <h2 id="undergroup-title">System Engineer</h2>
+                <h2 id="undergroup-title"> CFO / Deputy Project Manager</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  Studying to become a systems engineer? Get some experience at
-                  Shift!
+                As CFO you will handle the finance within the organization. 
+                This includes budgeting and accounting. You will also 
+                be the deputy project manager and lead the organization 
+                together with the CEO and the rest of the board. 
+                Exactly what your role as deputy project manager will be, 
+                is something you and the rest of the leaders for 
+                Team 2022 will figure out together. 
+                </p>
+                <h2 id="undergroup-title"> CCO - Chief Creative Officer</h2>
+                <hr id="blue-line-thin" />
+                <p id="undergroup-description">
+                As CCO you will be developing a strategy for how
+                the Hyperloop concept could be implemented in Norway. 
+                You will work closely with the group leader of concept, 
+                and represent the group at the board. 
+                </p>
+                <h2 id="undergroup-title"> CMO - Chief Marketing Officer</h2>
+                <hr id="blue-line-thin" />
+                <p id="undergroup-description">
+                As CMO you are in charge of all marketing matters within the organization. 
+                You will be developing the marketing strategy for the whole organization 
+                along with the board. As CMO you will work closely with the 
+                relations group leader to make sure that the marketing 
+                strategy will be implemented as effectively as possible. 
+                </p>
+                <h2 id="undergroup-title"> CTO - Chief Technical Officer</h2>
+                <hr id="blue-line-thin" />
+                <p id="undergroup-description">
+                As CTO you will oversee all the technical groups in Shift. 
+                As either a mechanical or electronics CTO you will coordinate 
+                with the group leaders within your field, and help them overcome challenges. 
+                You will represent the technical part of Shift at the board 
+                and help develop the organization.
                 </p>
               </>
             ) : null}
-            {modal.title == 'Research & Development' ? (
+            {modal.title == 'Group Leaders' ? (
               <>
-                <h2 id="undergroup-title">Some possible areas of research</h2>
+                <h2 id="undergroup-title">Group Leader Concept</h2>
                 <hr id="blue-line-thin" />
-                <div className="bullet-container">
-                  <p className="bullet-point">•Levitation </p>
-                  <p className="bullet-point">•Linear induction motor </p>
-                  <p className="bullet-point">•Embedded systems</p>
-                  <p className="bullet-point">•FPGA </p>
-                  <p className="bullet-point">•Master thesis</p>
-                  <p className="bullet-point">•Bachelor thesis </p>
-                  <p className="bullet-point">•Do you have any other ideas?</p>
-                </div>
-                <p>Contact us for more information</p>
-              </>
-            ) : null}
+                <p id="undergroup-description">
+                  As head of the concept group you will administer and organize the 
+                  day to day business within the group. You will help the group members 
+                  with tasks regarding the implementation of Hyperloop, such as city 
+                  planning, design and station, and road planning.
+                </p>
 
-            {modal.title == 'Relations' ? (
-              <>
-                <h2 id="undergroup-title">Marketing Coordinator</h2>
+                <h2 id="undergroup-title">Relations Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  Marketing coordinator is the heart of the relations group. As
-                  a marketing coordinator you will get to experience how the
-                  world of marketing works. Working with people, changing
-                  tactics and strategy are three key points for this position.
-                  You will be working with our partners and inform them about
-                  the progress within our organisation. Apply for marketing
-                  coordinator and you will get an experience of a lifetime!
+                  You will be the head of the relations group which consists of marketing 
+                  coordinators, graphic designers, web developers and more. During the year 
+                  you will be contacting sponsors, host seminars and social events, promote 
+                  Shift to the world, as well as you will organize and administer the relations group.
                 </p>
-                <h2 id="undergroup-title">Graphic designer</h2>
+                
+                <h2 id="undergroup-title">Software Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As a graphic designer you will work with shapes, colours,
-                  layouts and fonts to present Shift to the world. You will be
-                  in charge of producing our newsletter by using Adobe Indesign.
-                  You will be working alongside a photo and video editor. You
-                  can create a portfolio of all the projects you have done in
-                  Shift throughout the year. This will be a great advantage for
-                  your future job interview in order to prove your competence!
+                  The software lead will manage the groups progress and accomplishments, 
+                  however the software lead is much more involved in the day to day 
+                  development work compared to the other groups.
                 </p>
-                <h2 id="undergroup-title">Web developer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  Are you into coding? As a web developer you will get to
-                  improve Shift’s website. You will get a chance to work with
-                  developing and designing our most important web platform.
-                  Hands-on experience will be useful for your practice and for
-                  your future job interview.
-                </p>
-                <h2 id="undergroup-title">PR coordinator</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  Do you like social media? If the answer is yes then you will
-                  be a perfect for this position! As a PR coordinator you will
-                  be responsible for Shift’s social media such as Facebook and
-                  Instagram. Share interesting stories from our workplace and
-                  post it on our platforms! Let your creativity flow and get to
-                  know new people with different backgrounds!
-                </p>
-                <h2 id="undergroup-title">Photo and video editor</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As photo and video editor your main task will be producing and
-                  editing photos and videos. This creative position allows you
-                  to experiment with different filming and editing skills in
-                  computer programs such as Photoshop and Adobe Premiere. You
-                  will get a chance to create and tell stories from Shift
-                  through visual media! You should also apply even if you are
-                  solely interested in photo or video editing. You can create a
-                  portfolio of all the projects you have done in Shift
-                  throughout the year. This will give you a great advantage for
-                  your future job interview in order to prove your competence.{' '}
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Mechanical' ? (
-              <>
-                <h2 id="undergroup-title">Mechanical Lead</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The mechanical lead will manage the groups progress and
-                  accomplishments. It is an unique opportunity to guide your
-                  members through the most crucial challenges. Relevant
-                  experience with for example CAD, simulations or with
-                  production is an advantage.
-                </p>
-                <h2 id="undergroup-title">Brake Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a brake engineer you will work on the brake system for the
-                  pod. To ensure maximum speed, we brake as late and efficiently
-                  as possible. This means you will design and simulate a brake
-                  system to stop the pod as close as possible to instantaneous,
-                  with forces close to 20G!
-                </p>
-                <h2 id="undergroup-title">Structural Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As structural engineer you are responsible for designing and
-                  producing the main frame of the pod. This is where everything
-                  is connected, and it is therefore important that it is
-                  structurally sound, keeping weight in mind.
-                </p>
-                <h2 id="undergroup-title">Structural Simulation Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As structural simulation engineer you are responsible for
-                  simulating and verifying the structural soundness of the
-                  frame. This is key to be able to document that the pod simply
-                  won’t collapse under the forces produced when running in the
-                  tube.
-                </p>
-                <h2 id="undergroup-title">Aeroshell Engineer </h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an aeroshell engineer you are responsible for designing,
-                  simulating and producing the capsule (aeroshell) that encloses
-                  the pod. Due to the reduced air pressure inside the hyperloop
-                  tube, you will be allowed to focus a bit more towards the
-                  esthetics, making our pod the best looking pod ever made!
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Concept' ? (
-              <>
-                <h2 id="undergroup-title">Station design</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  Would you like to design the station of the future? How would
-                  a station for Hyperloop look like? Are there going to be
-                  timetables for people to see departures or maybe another
-                  innovative solution you will come up with? Working with the
-                  station design you will work together on a case that will lead
-                  you to designing of a hyperloop station. This fits especially
-                  if you are studying: Architect students, Civil engineering
-                  students (bygg), Industrial designer or others!
-                </p>
-                <h2 id="undergroup-title">Pod Design</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  What will the future pod look like? What interior will it be?
-                  Is it going to be black, white or any other colour? You will
-                  get a chance to answer these questions if you will decide to
-                  work with pod design. What kind of material a pod should be
-                  made of is also a task you can work with. This fits especially
-                  if you are studying: Industrial design, mechanical
-                  engineering, material technology or other.
-                </p>
-                <h2 id="undergroup-title">
-                  Route planning / Wide sense implementation
-                </h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  Would you like to analyse possible routes for Hyperloop? You
-                  should join route planning! Will it be Stockholm-Oslo or maybe
-                  Trondheim-Bergen? It is all up to you! Your task will be to
-                  inspect possible routes relative to geographical position,
-                  geological possibilities, economical evaluation and
-                  popularity. This fits especially if you are studying:
-                  Logistics, Geology, Geography, Urban ecological planning /
-                  Real Estate and Facilities Management, Economy Analysis /
-                  Industrial economy or others!
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Software' ? (
-              <>
-                <h2 id="undergroup-title">Software Lead </h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The software lead will manage the groups progress and
-                  accomplishments, however the software lead is much more
-                  involved in the day to day development work compared to the
-                  other groups.
-                </p>
-                <h2 id="undergroup-title">Software Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a software engineer you will work together with other
-                  software developers to create our new tool. This includes
-                  design/data visualization, data processing and programming.{' '}
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Battery' ? (
-              <>
-                <h2 id="undergroup-title">Battery Lead</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The battery lead will manage the groups progress and
-                  accomplishments. The position is a unique opportunity to work
-                  with multiple systems and guide your members through the most
-                  crucial challenges.
-                </p>
-                <h2 id="undergroup-title">Battery Module Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a battery module engineer you will design the high voltage
-                  cell stackup, as well as acquiring the materials and
-                  components required for production. In short, you will be
-                  responsible for the energy storage.
-                </p>
-                <h2 id="undergroup-title">Battery CAD Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The battery CAD engineer is responsible for designing and
-                  producing the mechanical aspects of the battery pack. This is
-                  a great opportunity to get some experience with CAD software,
-                  production and safety. You will also learn about EMI and other
-                  challenges electrical systems add to mechanical design.
-                </p>
-                <h2 id="undergroup-title">
-                  Powertrain Circuit Protection Engineer
-                </h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a powertrain circuit protection engineer you are
-                  responsible for analog circuits critical to safe and reliable
-                  operation of the battery. This includes some high voltage
-                  sensors and fault-prevention circuits designed to protect both
-                  the battery and the inverters.
-                </p>
-                <h2 id="undergroup-title">BMS Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a BMS engineer you will be responsible for developing a
-                  battery management system. Lithium-ion batteries are extremely
-                  volatile. This advanced control system is critical for
-                  preventing the battery pack from acting outside its safe
-                  operating area, drastically reducing the hazard presented by
-                  the high density energy storage system.
-                </p>
-                <h2 id="undergroup-title">Low Voltage Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a low voltage battery engineer you are responsible for all
-                  the systems required to supply safe, stable and reliable power
-                  for the sensors and other low voltage electronics.
-                </p>
-                <h2 id="undergroup-title">Charging Module Engineer </h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a charging module engineer you are responsible for
-                  designing and assembling a high power, extremely reliable
-                  charger for the battery pack. This includes PCB-design, a
-                  sophisticated control system as well as some mechanical
-                  constructions.
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Powertrain' ? (
-              <>
-                <h2 id="undergroup-title">Powertrain Lead</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The powertrain lead will manage the groups progress and
-                  accomplishments. It is a unique opportunity to manage a group
-                  responsible for one of the most defining principles for the
-                  hyperloop concept; magnetic propulsion.
-                </p>
-                <h2 id="undergroup-title">Motor CAD Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a motor CAD engineer you will be responsible for
-                  3D-modelling the motor and all its components, including the
-                  frame mount.
-                </p>
-                <h2 id="undergroup-title">Motor Simulation Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a motor simulation engineer you will simulate and iterate
-                  the linear induction motor design for maximum thrust. If you
-                  are a fan of Prof. Eric “father of magnetic levitation”
-                  Laithwaite, this is a position for you.
-                </p>
-                <h2 id="undergroup-title">Verification Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a verification engineer you will be responsible for
-                  constructing and operating a large-scale experimental test
-                  setup for the linear induction motor. You will work mostly
-                  with the motor engineers, but also with the rest of the
-                  powertrain team.
-                </p>
-                <h2 id="undergroup-title">Inverter CAD Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an inverter CAD engineer you are responsible for
-                  3D-modeling the inverter and relevant components. This
-                  includes design of a cooling system, bus bars, EMI reduction
-                  and potentially a vacuum-proof casing.
-                </p>
-                <h2 id="undergroup-title">Inverter Simulation Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an inverter simulation engineer you will model 3-phase
-                  inverter output with a custom control algorithm and
-                  complicated inductive and resistive load. You will work
-                  closely with the inverter software engineer to help improve
-                  the control algorithm.
-                </p>
-                <h2 id="undergroup-title">Inverter Hardware Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an inverter hardware engineer you will be responsible for
-                  design of all inverter hardware. This includes designing the
-                  PCB monitoring the inverter and controlling the gate drivers.
-                  Verification of the inverter design is also a key element to
-                  the position.
-                </p>
-                <h2 id="undergroup-title">Inverter Software Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an inverter software engineer you will work together with
-                  the inverter simulation engineers to design and implement the
-                  control algorithm for the inverter.
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Levitation' ? (
-              <>
-                <h2 id="undergroup-title">Levitation Lead</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  The levitation lead will manage the groups progress and
-                  accomplishments. The levitation system involves magnets and is
-                  the reason why Hyperloop is unique. The position offers a
-                  unique opportunity to learn about maglev and how it can be
-                  used for hyperloop applications.
-                </p>
-                <h2 id="undergroup-title">Maglev engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a maglev engineer you will work on magnetic levitation for
-                  the pod. This is an exciting and important task involving
-                  theory, simulations and testing. If you are a fan of Prof.
-                  Eric “father of levitation” Laitwaite, this is a position for
-                  you.
-                </p>
-                <h2 id="undergroup-title">Low Speed Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As a low speed engineer you will work with the rest of the
-                  group to ensure the pod is not damaged at low speeds. You
-                  don’t need to reinvent the wheel, however a light and solid
-                  implementation is important.
-                </p>
-                <h2 id="undergroup-title">Suspension Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As suspension engineer you will be responsible for developing,
-                  simulating, designing and producing a suspension system for
-                  the pod. Ensuring the pod stays stable while moving is
-                  important not to damage other parts of the pod, or even worse:
-                  the SpaceX tube.{' '}
-                </p>
-              </>
-            ) : null}
-            {modal.title == 'Electronics' ? (
-              <>
+                
                 <h2 id="undergroup-title">Electronics Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  The electronics lead will manage the groups progress and
-                  accomplishments. It is a unique opportunity to work with
-                  multiple systems and guide your members through the most
-                  crucial challenges. Relevant experience with software
-                  development and PCB design is valued, but not a requirement.
+                  The electronics lead will manage the groups progress and accomplishments. 
+                  It is a unique opportunity to work with multiple systems and guide your members 
+                  through the most crucial challenges. Relevant experience with software development 
+                  and PCB design is valued, but not a requirement.
                 </p>
-                <h2 id="undergroup-title">Sensors Engineer</h2>
+
+                <h2 id="undergroup-title">Battery Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As a sensors engineer you will be responsible for developing
-                  all sensor systems needed to acquire the data used to operate
-                  the pod. Reliable and accurate data is important for maximum
-                  performance. One challenge you will work with is how to
-                  precisely determine the position of the pod inside the
-                  hyperloop tube.
+                  The battery lead will manage the groups progress and accomplishments. The position 
+                  is a unique opportunity to work with multiple systems and guide your members 
+                  through the most crucial challenges.
                 </p>
-                <h2 id="undergroup-title">Telemetry Engineer</h2>
+
+                <h2 id="undergroup-title">Powertrain Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As a telemetry engineer you will work on reliable wireless
-                  communication for the pod, a challenging task inside a metal
-                  tube. Working closely with the software group, you will
-                  develop a communication link between the pod and engineers
-                  outside the hyperloop tube.
+                  The powertrain lead will manage the groups progress and accomplishments. It is a unique 
+                  opportunity to manage a group responsible for one of the most defining principles for 
+                  the hyperloop concept; magnetic propulsion.
                 </p>
-                <h2 id="undergroup-title">Interface Engineer</h2>
+
+                <h2 id="undergroup-title">Levitation Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  Although the pod is controlled wirelessly from outside the
-                  tube, it still has an interface panel. This is important to
-                  ensure the safety of the crew working on the pod. As interface
-                  engineer you will be responsible for the electrical and
-                  mechanical aspects of the system.
+                  The levitation lead will manage the groups progress and accomplishments. The levitation 
+                  system involves magnets and is the reason why Hyperloop is unique. The position offers 
+                  a unique opportunity to learn about maglev and how it can be used for hyperloop applications.
                 </p>
-                <h2 id="undergroup-title">Control engineer</h2>
+
+                <h2 id="undergroup-title">Mechanical Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As a control engineer you will be responsible for developing
-                  the control unit, which through sensor data and telemetry
-                  communication controls the pods actions.{' '}
-                </p>
-                <h2 id="undergroup-title">Embedded Hardware Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an embedded hardware engineer you will be responsible for a
-                  framework to help other electrical engineers design PCBs.
-                  There are several circuits used by multiple systems included
-                  in the framework, including CAN, power supplies and more.
-                  Assisting other engineers in developing their systems is also
-                  a part of the position, giving you a unique opportunity to get
-                  familiar with several electrical systems.
-                </p>
-                <h2 id="undergroup-title">Embedded Software Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  As an embedded software engineer you will work closely with
-                  the different embedded systems to develop the software needed
-                  for the systems, giving you the opportunity to work with
-                  software for multiple systems. It is an advantage to be
-                  familiar with the C-programming language.
+                  The mechanical lead will manage the groups progress and accomplishments. It is an unique 
+                  opportunity to guide your members through the most crucial challenges. Relevant experience 
+                  with for example CAD, simulations or with production is an advantage.
                 </p>
               </>
             ) : null}
             {modal.title != 'Research & Development' ? (
-              <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="apply-button">
-                <button>Apply now!</button>
-              </a>
+              <div className="apply-button">
+                <LinkButton href={APPLY_URL}>
+                  Apply now!
+                </LinkButton>
+              </div>
             ) : null}
           </div>
         </div>
@@ -544,13 +245,9 @@ const Page = () => {
             color: #fff9;
             text-align: center;
           }
-          #apply-button {
-            text-decoration: none;
-            min-width: 100px;
-            max-width: 15%;
-            margin: auto;
+          .apply-button {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
           }
           .group-description {
             color: black;
@@ -575,6 +272,10 @@ const Page = () => {
             background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
           }
 
+          .mirror {
+            transform: scaleX(-1);
+          }
+
           #blue-line-thick {
             width: 80%;
             border-width: 2px;
@@ -590,6 +291,10 @@ const Page = () => {
             border-radius: 2.5px;
             border-color: #0080c9;
             margin-bottom: 10px;
+          }
+          
+          #undergroup-title {
+            margin-top: 40px;
           }
 
           #undergroup-title,

@@ -35,6 +35,7 @@ export const Button = styled.div`
   width: 20%;
   min-height: 50px;
   height: 100%;
+  cursor: pointer;
   padding: 0.25rem 0.25rem;
   color: #fff;
   text-decoration: none;
