@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { IoMdClose } from 'react-icons/io';
 import { APPLY_URL } from "../common/constants";
-import { LinkButton, Button } from '../components/Button';
+import { LinkButton, SmallButton } from '../components/Button';
 
 const Page = () => {
   const router = useRouter();
@@ -11,7 +11,7 @@ const Page = () => {
 
   const PositionsButton = (props) => {
     return <div className="button-container">
-      <Button
+      <SmallButton
         onClick={() =>
           setModal({
             title: props.modalTitle,
@@ -19,7 +19,7 @@ const Page = () => {
         }
       >
         View available positions
-      </Button>
+      </SmallButton>
       <style jsx>
         {`
         .button-container {
