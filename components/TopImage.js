@@ -20,7 +20,7 @@ export default function TopImage({
       <h4>{text}</h4>
       {joinbutton ? (
         <div className="join-buttons">
-          <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="front-button">
+          <a href="https://forms.gle/D2zTk4S2DHqWL5uC6" id="front-button">
             Apply!
           </a>
           <a href="/joinus" id="front-button">
