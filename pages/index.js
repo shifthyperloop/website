@@ -289,25 +289,6 @@ const Page = () => {
             width: 100%;
             max-width: 1200px;
           }
-
-          .join-buttons > a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 1 200px;
-            flex-direction: row;
-            margin: 16px 5%;
-            cursor: pointer;
-            height: 50px;
-            background-color: #3189c9;
-            padding: 0.25rem 0.25rem;
-            color: #bbb;
-            border: #111;
-            text-decoration: none;
-            line-height: 1rem;
-            font-size: 15px;
-            font-weight: 600;
-          }
         `}
       </style>
     </Layout>
