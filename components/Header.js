@@ -36,14 +36,8 @@ const Header = () => {
             <a href="/team2019">Team 2019</a>
           </div>
         </span>
-        <span className="menu other-menu">
-          <span>Other </span>
-          <div className="items">
-            {/*<a href="/pod">Our pod</a>*/}
-            <a href="/joinus">Join the team</a>
-            <a href="/thesis">Thesis?</a>
-          </div>
-        </span>
+        <a href="/joinus">Join the team</a>
+        <a href="/thesis">Thesis?</a>
       </div>
       {/*<div className="head-side">
       <Link href="/">
@@ -155,7 +149,7 @@ const Header = () => {
           display: none;
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 700px) {
           .head-side {
             flex-grow: 1;
           }
