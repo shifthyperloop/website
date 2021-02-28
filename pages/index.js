@@ -16,6 +16,7 @@ const Page = () => {
             fixedOnMobile={false}
             after={false}
             joinbutton={true}
+            backgroundPosition={"center 30%"}
           />
         </div>
 
@@ -90,7 +91,7 @@ const Page = () => {
                   time in Valencia, Spain. Shift will participate in EHW in
                   2021. In the future we hope to compete in the annual SpaceX
                   Hyperloop Pod Competition which has been hosted every year
-                  since 2015. Shifts goal is to become one of the best student
+                  since 2015. Shift's goal is to become one of the best student
                   teams in the world.
                 </p>
               </div>
