@@ -35,7 +35,7 @@ const Page = () => {
               a 1-year cycle where each year we enlist a completely new team
               that are tasked with designing and building a hyperloop pod. In
               2021 Shift Hyperloop will test out our pod for the first time in
-              the European Hyperloop Week in Spain, and we hope to test out our
+              the European Hyperloop Week in Spain, and we hope to test out the
               pod in SpaceX Hyperloop Pod Competition in the future.
             </p>
             <p>
@@ -88,11 +88,11 @@ const Page = () => {
                 <h4>Competition</h4>
                 <p className="goal-text">
                   In 2021 European Hyperloop Week will be hosted for the first
-                  time in Valencia, Spain. Shift will participate in EHW in
-                  2021. In the future we hope to compete in the annual SpaceX
-                  Hyperloop Pod Competition which has been hosted every year
-                  since 2015. Shift's goal is to become one of the best student
-                  teams in the world.
+                  time in Valencia, Spain where Shift will participate. In the
+                  future we hope to compete in the annual SpaceX Hyperloop Pod
+                  Competition which has been hosted every year since 2015.
+                  Shift's goal is to become one of the best student teams in the
+                  world.
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ const Page = () => {
                 magnetic levitation to elevate the pod from the tracks and run
                 the pod in a vacuum tube. Although many have estimated how fast
                 the pod can travel under such conditions, no one really knows.
-                In 2020 Virgin Hyperloop underwent the worlds first passenger
+                In 2020 Virgin Hyperloop underwent the world's first passenger
                 test using Hyperloop technology.
               </p>
             </div>
@@ -129,22 +129,21 @@ const Page = () => {
               <h2>European Hyperloop Week:</h2>
               <p>
                 In 2021 the European Hyperloop Week will be hosted for the very
-                first time. It is a competition in which several student and
-                non-student teams participate to design—and for some, build—a
-                subscale prototype transport vehicle to demonstrate technical
-                feasibility of various aspects of the Hyperloop concept. EHW is
-                an event that hopes to create a better Hyperloop ecosystem and
-                challenge the participating teams to more ambitious goals. The
-                track in EHW will be 160 meters long.
+                first time. European Hyperloop week aims to create a platform
+                where student organisations get together to change the idea of
+                Hyperloop to a more forward-looking approach. Teams get to
+                compete by presenting their pods and system designs and get
+                challenged to more ambitious goals. The track at EHW will be 160
+                meters long.
               </p>
               <h2>SpaceX Hyperloop Pod Competition:</h2>
               <p>
                 The Hyperloop Pod Competition is an annual competition arranged
                 by SpaceX from since 2015 in which a number of student and
-                non-student teams participate to design—and for some, build—a
+                non-student teams participate to design and for some to build a
                 subscale prototype transport vehicle in order to demonstrate
                 technical feasibility of various aspects of the Hyperloop
-                concept. The competition is open to participants globally;
+                concept. The competition is open to participants globally,
                 however it is always hosted in the United States.
               </p>
             </div>
