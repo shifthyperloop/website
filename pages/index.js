@@ -9,25 +9,12 @@ const Page = () => {
   return (
     <Layout>
       <div className="container">
-        <div className="mobile">
-          <TopImage
-            image="./homePage.png"
-            height="calc(100vh - 60px)"
-            maxHeight="40vw"
-            backgroundSize="contain"
-            backgroundPosition="center 40px"
-            brightness={1}
-            fixedOnMobile={true}
-            after={false}
-            joinbutton={true}
-          />
-        </div>
-        <div className="desktop">
+        <div>
           <TopImage
             image="./homePage.png"
             height="calc(100vh - 60px)"
             brightness={1}
-            fixedOnMobile={true}
+            fixedOnMobile={false}
             after={false}
             joinbutton={true}
           />
@@ -157,17 +144,6 @@ const Page = () => {
       </div>
       <style jsx>
         {`
-          .mobile {
-            display: none;
-          }
-          @media (max-width: 860px) {
-            .mobile {
-              display: unset;
-            }
-            .desktop {
-              display: none;
-            }
-          }
           .competition-container {
             min-height: 400px;
             background-attachment: fixed;
