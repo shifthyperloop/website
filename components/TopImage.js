@@ -24,7 +24,7 @@ export default function TopImage({
         <div className="join-buttons">
           <LinkButton href={APPLY_URL}>
           <h3>Apply now!</h3>
-          Deadline: 21. March 
+          Deadline is 21. March 
           </LinkButton>
           <LinkButton href="/joinus">
             Available positions

@@ -10,7 +10,7 @@ export const LinkButton = styled.a`
   flex-direction: column;
   width: 200px;
   height: 50px;
-  padding: 0.50rem 0.20rem;
+  padding: 0.51rem 0.21rem;
   color: #fff;
   text-decoration: none;
   line-height: 1rem;
