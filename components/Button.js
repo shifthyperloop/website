@@ -1,5 +1,28 @@
 import styled from "styled-components";
 
+export const LinkButton = styled.a`
+  border: 1px solid #3189c9;
+  background: #fff2;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 50px;
+  padding: 0.80rem 0.50rem;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #3189c9;
+  }
+`;
+
 const commonStyle = `
   border: 1px solid #3189c9;
   background: #fff2;
@@ -7,7 +30,7 @@ const commonStyle = `
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   min-width: 200px;
   min-height: 50px;
   cursor: pointer;
@@ -22,10 +45,6 @@ const commonStyle = `
     background-color: #3189c9;
   }
 `
-
-export const LinkButton = styled.a`
-  ${commonStyle}
-`;
 
 export const Button = styled.div`
   ${commonStyle}

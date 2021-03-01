@@ -55,7 +55,8 @@ const Page = () => {
       </h3>
       <div className="apply-button">
         <LinkButton href={APPLY_URL}>
-          Apply now!
+          <h3>Apply now!</h3> 
+        Deadline to apply: 21 March
         </LinkButton>
       </div>
       <br />
