@@ -16,6 +16,7 @@ class Layout extends Component {
       <div className="layout">
         <Head>
           <link rel="shortcut icon" type="image/png" href="/shift_icon.png" />
+          <title>{title}</title>
           <meta property="og:url" content={url} />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={title} />

@@ -32,7 +32,7 @@ const Header = () => {
           <a href="/team2021">Team</a>
           <div className="items">
             <a href="/team2021">Team 2021</a>
-            <a href="/team">Team 2020</a>
+            <a href="/team2020">Team 2020</a>
             <a href="/team2019">Team 2019</a>
           </div>
         </span>

@@ -107,7 +107,7 @@ export default function TopImage({
             position: absolute;
             width: 70%;
             max-width: 1200px;
-            bottom: 18%;
+            bottom: 10%;
           }
 
           @media (max-width: 640px) {
