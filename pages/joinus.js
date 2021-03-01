@@ -90,7 +90,7 @@ const Page = () => {
               <PositionsButton modalTitle="Group Leaders" />
             </div>
             <div className="imagetest">
-              <img className="board image" src="/stock/boss.jpg" />
+              <img className="board image" src="/groupLeader.jpeg" />
             </div>
           </div>
         </div>
@@ -258,6 +258,10 @@ const Page = () => {
           .imagetest {
             max-width: 600px;
             text-align: center;
+          }
+          .imagetest > img {
+            max-height: 200px;
+            object-fit: cover;
           }
           .modal-container {
             display: ${modal.title != '' ? 'block' : 'none'};
