@@ -157,7 +157,7 @@ const Page = () => {
             ) : null}
             {modal.title == 'Group Leaders' ? (
               <>
-                <h2 id="undergroup-title">Group Leader Concept</h2>
+                <h2 id="undergroup-title">Concept Lead</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
                   As head of the concept group you will administer and organize the
