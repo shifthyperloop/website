@@ -10,7 +10,7 @@ export const LinkButton = styled.a`
   flex-direction: column;
   width: 200px;
   height: 50px;
-  padding: 0.80rem 0.50rem;
+  padding: 0.51rem 0.21rem;
   color: #fff;
   text-decoration: none;
   line-height: 1rem;
@@ -22,6 +22,10 @@ export const LinkButton = styled.a`
     background-color: #3189c9;
   }
 `;
+
+export const ButtonTitle = styled.h3`
+  margin: auto;
+`
 
 const commonStyle = `
   border: 1px solid #3189c9;
