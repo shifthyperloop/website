@@ -7,10 +7,10 @@ export const LinkButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 200px;
   height: 50px;
-  padding: 0.25rem 0.25rem;
+  padding: 0.80rem 0.50rem;
   color: #fff;
   text-decoration: none;
   line-height: 1rem;
@@ -30,7 +30,7 @@ export const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   min-width: 200px;
   width: 20%;
   min-height: 50px;
