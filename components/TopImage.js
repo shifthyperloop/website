@@ -1,5 +1,5 @@
 import { FaAngleDown } from 'react-icons/fa';
-import { LinkButton } from './Button';
+import { ButtonTitle, LinkButton } from './Button';
 import { APPLY_URL } from '../common/constants';
 
 export default function TopImage({
@@ -23,8 +23,8 @@ export default function TopImage({
       {joinbutton ? (
         <div className="join-buttons">
           <LinkButton href={APPLY_URL}>
-          <h3>Apply now!</h3>
-          Deadline is 21. March 
+            <ButtonTitle>Apply now!</ButtonTitle>
+            Deadline is 21. March
           </LinkButton>
           <LinkButton href="/joinus">
             Available positions

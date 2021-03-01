@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { IoMdClose } from 'react-icons/io';
 import { APPLY_URL } from "../common/constants";
-import { LinkButton, SmallButton } from '../components/Button';
+import { ButtonTitle, LinkButton, SmallButton } from '../components/Button';
 
 const Page = () => {
   const router = useRouter();
@@ -55,8 +55,8 @@ const Page = () => {
       </h3>
       <div className="apply-button">
         <LinkButton href={APPLY_URL}>
-          <h3>Apply now!</h3> 
-        Deadline is 21. March
+          <ButtonTitle>Apply now!</ButtonTitle>
+          Deadline is 21. March
         </LinkButton>
       </div>
       <br />

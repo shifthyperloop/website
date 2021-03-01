@@ -23,6 +23,10 @@ export const LinkButton = styled.a`
   }
 `;
 
+export const ButtonTitle = styled.h3`
+  margin: auto;
+`
+
 const commonStyle = `
   border: 1px solid #3189c9;
   background: #fff2;
