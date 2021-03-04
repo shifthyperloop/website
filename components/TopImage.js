@@ -1,4 +1,6 @@
 import { FaAngleDown } from 'react-icons/fa';
+import { ButtonTitle, LinkButton } from './Button';
+import { APPLY_URL } from '../common/constants';
 
 export default function TopImage({
   image = '',
@@ -6,7 +8,7 @@ export default function TopImage({
   text = '',
   brightness = 0.3,
   height = '100vw',
-  maxHeight = 'calc(100vh - 60px)',
+  maxHeight = 'calc(100vh - 56px)',
   backgroundSize = 'cover',
   backgroundPosition = 'center center',
   hasArrow = true,
@@ -20,12 +22,13 @@ export default function TopImage({
       <h4>{text}</h4>
       {joinbutton ? (
         <div className="join-buttons">
-          <a href="https://forms.gle/jsvrWTu891MuJQSV7" id="front-button">
-            Apply!
-          </a>
-          <a href="/joinus" id="front-button">
+          <LinkButton href={APPLY_URL}>
+            <ButtonTitle>Apply now!</ButtonTitle>
+            Deadline is 21. March
+          </LinkButton>
+          <LinkButton href="/joinus">
             Available positions
-          </a>
+          </LinkButton>
         </div>
       ) : null}
       {hasArrow ? (
@@ -56,13 +59,6 @@ export default function TopImage({
             }
           }
 
-          #front-button {
-            border: 2px solid #3189c9;
-            background: #fff2;
-          }
-          #front-button:hover {
-            background-color: #3189c9;
-          }
           .container {
             padding: 1em 16px 3em;
             box-sizing: border-box;
@@ -83,7 +79,8 @@ export default function TopImage({
           }
           .container::after {
             content: '';
-            backdrop-filter: brightness(${brightness});
+            background-color: black;
+            opacity: ${1-brightness};
             z-index: 0;
             position: absolute;
             top: 0;
@@ -102,36 +99,15 @@ export default function TopImage({
           .join-buttons {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             z-index: 1;
             flex-flow: row wrap;
             left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
-            width: 100%;
+            width: 70%;
             max-width: 1200px;
-            bottom: 18%;
-          }
-
-          .join-buttons > a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            margin: 16px 100px;
-            cursor: pointer;
-            min-width: 200px;
-            width: 20%;
-            min-height: 50px;
-            height: 100%;
-            border: 2px solid #3189c9;
-            padding: 0.25rem 0.25rem;
-            color: #fff;
-            border: #111;
-            text-decoration: none;
-            line-height: 1rem;
-            font-size: 1rem;
-            font-weight: 600;
+            bottom: 10%;
           }
 
           @media (max-width: 640px) {
@@ -142,15 +118,17 @@ export default function TopImage({
               padding: 9em 16px 3em;
             }
 
-            .join-buttons > a {
-              width: 50px;
-              height: 20px;
-              font-size: 10px;
-            }
             .join-buttons {
-              bottom: 0;
+              width: 100%;
             }
             .arrow {
+              bottom: 0;
+            }
+          }
+          @media (max-width: 450px) {
+            .join-buttons {
+              width: 100%;
+              flex-direction: column;
               bottom: 0;
             }
           }

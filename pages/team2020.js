@@ -6,24 +6,14 @@ import TeamPage from './team/TeamPage';
 const Page = ({ members = [] }) => {
   const router = useRouter();
 
-  const groups = {
+  let groups = {
     Board: {
       title: 'The Board',
       description: '...',
       members: [],
     },
-    Electronics: {
-      title: 'Electronics Group',
-      description: '...',
-      members: [],
-    },
-    Battery: {
-      title: 'Battery Group',
-      description: '...',
-      members: [],
-    },
-    Powertrain: {
-      title: 'Powertrain Group',
+    Electrical: {
+      title: 'Electrical Group',
       description: '...',
       members: [],
     },
@@ -32,8 +22,8 @@ const Page = ({ members = [] }) => {
       description: '...',
       members: [],
     },
-    Levitation: {
-      title: 'Levitation Group',
+    Magnetics: {
+      title: 'Magnetics Group',
       description: '...',
       members: [],
     },
@@ -47,47 +37,42 @@ const Page = ({ members = [] }) => {
       description: '...',
       members: [],
     },
-    Concept: {
-      title: 'Concept Group',
-      description: '...',
-      members: [],
-    },
     Mentor: {
       title: 'Mentors',
       description: '...',
       members: [],
-    }
+    },
   };
 
-  return (
-    <TeamPage
-      members={members}
-      teamGroups={groups}
-      topImage={"/Contact-hyperloop-dark-copy.png"}
-      title={"Team 2021"}
-      path={"/team2021"}
-    />
-  );
+  return <TeamPage
+    members={members}
+    teamGroups={groups}
+    topImage={"/Shift-team-2020.jpg"}
+    title={"Team 2020"}
+    path={"/team2020"}
+    centerImages={false}
+  />
 };
 
 Page.getInitialProps = async function() {
-  const res = await fetch(CMS_BASE_URL + '/team-2021-s');
+  const res = await fetch(CMS_BASE_URL + '/team-2020-s');
   const data = await res.json();
 
   return {
     members: data.map(member => {
       let picture = {
-        url: '/uploads/d7bbb8af6b1947629542010bb38942fb.jpg',
+        url: '/uploads/8ac2288649f74d3b88a87126ebb489dc.jpg',
       };
-      if (member.Picture !== null) {
-        picture = member.Picture.url;
+      if (member.picture !== null) {
+        picture = member.picture;
       }
       return {
         name: member.Name,
-        url: picture,
+        picture,
         group: member.Group,
         title: member.Title,
         email: member.Email,
+        url: member.Picture.url,
       };
     }),
   };
