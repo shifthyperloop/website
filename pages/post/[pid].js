@@ -8,14 +8,14 @@ import { useWindowSize } from '../../common/hooks';
 const Page = ({
   pid,
   title,
-  picture: { url = '', name: picSrc = ''},
+  picture,
   description,
   published,
   updated_at,
   content,
-  front_page: { url: frontUrl = '', name: frontSrc = '' },
+  front_page,
   is_pdf,
-  files: { url: fileUrl = '', name: pdfSrc = ''},
+  files,
 }) => {
   const router = useRouter();
   const windowSize = useWindowSize();
@@ -26,7 +26,7 @@ const Page = ({
         {!is_pdf ? (
           <>
             <div className="news-container">
-              <img className="news-image" src={'https://shifthyperloop.com/' + picSrc} />
+              <img className="news-image" src={CMS_BASE_URL + picture} />
               <h1 className="title">{title}</h1>
             </div>
             <div className="text">
@@ -40,15 +40,15 @@ const Page = ({
             {windowSize.width > 1000 ? (
               <iframe
                 id="iframepdf"
-                src={'https://pdf-viewer.now.sh/?pdf=https://shifthyperloop.com/' + pdfSrc}
+                src={'https://pdf-viewer.now.sh/?pdf=' + CMS_BASE_URL + files}
               ></iframe>
             ) : (
               <a
                 className="newsletter-download"
                 download
-                href={'https://shifthyperloop.com/' + pdfSrc}
+                href={CMS_BASE_URL + files}
               >
-                <img src={'https://shifthyperloop.com/' + frontSrc} />
+                <img src={CMS_BASE_URL + front_page} />
               </a>
             )}
           </div>
@@ -132,12 +132,12 @@ Page.getInitialProps = async function(context) {
   return {
     pid: post.id,
     title: post.title,
-    picture: post.picture || {},
+    picture: post.picture.url || {},
     description: post.description,
     published: post.published,
     updated_at: post.updated_at,
-    front_page: post.front_page || {},
-    files: post.files[0] || {},
+    front_page: post.front_page.url || {},
+    files: post.files[0].url || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
       'https://shifthyperloop01.it.ntnu.no/strapi',

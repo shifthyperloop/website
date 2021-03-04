@@ -150,7 +150,6 @@ const Page = ({ sponsors }) => {
             ))}
         </div>
       </section>
-
       <style jsx>{`
         body {
           background-image: linear-gradient(45deg, #01020b, #020610);

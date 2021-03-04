@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { useState, useEffect } from 'react';
 import POST_URL from './posts';
 
-const Post = ({ title, picture: { url = '', name: picSrc = '' }, description }) => {
+const Post = ({ title, picture, description }) => {
   return (
     <div className="sponsor-list">
       {posts.map(post => (
@@ -48,7 +48,7 @@ Page.getInitialProps = async function() {
     posts: data.map(post => {
       return {
         title: post.title,
-        picture: post.picture,
+        picture: post.picture.url,
         description: post.description,
       };
     }),

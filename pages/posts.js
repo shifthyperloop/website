@@ -4,12 +4,12 @@ import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 
-const Post = ({ title, pid, picture: { url = '', name: picSrc = '' }, description }) => {
+const Post = ({ title, pid, picture , description }) => {
   return (
     <>
       <Link href={"/post/" + pid}>
         <a className="post">
-          <img className="post-image" src={'/' + picSrc} alt={title} />
+          <img className="post-image" src={CMS_BASE_URL + picture} alt={title} />
           <div className="post-text">
             <h2 className="post-title">{title}</h2>
             <p className="post-description">
@@ -144,7 +144,7 @@ Page.getInitialProps = async function() {
       return {
         pid: post.id,
         title: post.title,
-        picture: post.picture || {},
+        picture: post.picture.url || {},
         description: post.description,
       };
     }),
