@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Layout from '../../components/Layout';
-import TopImage from '../../components/TopImage';
+import Layout from '../Layout';
+import TopImage from '../TopImage';
 import Group from './Group';
 
 export default ({ members = [], teamGroups, topImage, title, path, centerImages = true }) => {
