@@ -122,7 +122,6 @@ const Footer = () => (
       }
       .hydro {
         width: 35%;
-        transform: translate(0, 10%);
       }
       .hydro-logo {
         width: 80%;
