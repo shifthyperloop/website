@@ -22,9 +22,9 @@ const Header = () => {
         {menuOpen ? <MdClose size={30} /> : <GiHamburgerMenu size={30} />}
       </div>
       <div className="menu-options">
-        <a href="/contact">Contact us</a>
-        <a id = "newsltr" href="/posts">Posts</a>
+        <a href="/joinus">Join the team</a>
         <a id = "spons" href="/partners">Partners</a>
+        <a id = "newsltr" href="/posts">Posts</a>
         <span className="menu team-menu">
           <a href="/team2021">Team</a>
           <div className="items">
@@ -33,7 +33,7 @@ const Header = () => {
             <a href="/team2019">Team 2019</a>
           </div>
         </span>
-        <a href="/joinus">Join the team</a>
+        <a href="/contact">Contact us</a>
         {/*
         <a href="/thesis">Thesis?</a>
         */}
