@@ -37,7 +37,9 @@ const Header = () => {
           </div>
         </span>
         <a href="/joinus">Join the team</a>
+        {/*
         <a href="/thesis">Thesis?</a>
+        */}
       </div>
       {/*<div className="head-side">
       <Link href="/">
