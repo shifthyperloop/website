@@ -13,7 +13,7 @@ export default function TopImage({
   backgroundPosition = 'center center',
   hasArrow = true,
   fixedOnMobile = false,
-  joinbutton = false,
+  joinButton = false,
   infoMeetingInfo = false,
   after = true,
 }) {
@@ -21,7 +21,7 @@ export default function TopImage({
     <div className="container">
       <h1>{title}</h1>
       <h4>{text}</h4>
-      {joinbutton ? (
+      {joinButton ? (
         <div className="join-buttons">
           <LinkButton href={APPLY_URL}>
             <ButtonTitle>Apply now!</ButtonTitle>
