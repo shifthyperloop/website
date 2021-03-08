@@ -33,7 +33,7 @@ export default function TopImage({
         </div>
       ) : null}
       {infoMeetingInfo ? (
-        <a className="info-meeting-info" href="https://fb.me/e/23CpPAGwY">Learn more at the digital info meeting 18th of March!</a>
+        <a className="info-meeting-info" href="https://fb.me/e/23CpPAGwY">Learn more at our info meeting 18th of March!</a>
       ) : null}
       {hasArrow ? (
         <div className="arrow">
