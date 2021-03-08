@@ -25,9 +25,6 @@ const Header = () => {
         <a href="/contact">Contact us</a>
         <a id = "newsltr" href="/posts">Posts</a>
         <a id = "spons" href="/partners">Partners</a>
-        {/*<a href="/joinus" id="join">
-          Join
-        </a>*/}
         <span className="menu team-menu">
           <a href="/team2021">Team</a>
           <div className="items">
