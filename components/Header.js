@@ -147,6 +147,10 @@ const Header = () => {
         .menu-dropdown {
           display: none;
         }
+        
+        .menu.team-menu {
+          margin: 0;
+        }
 
         @media (max-width: 700px) {
           .head-side {
