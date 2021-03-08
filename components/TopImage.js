@@ -14,6 +14,7 @@ export default function TopImage({
   hasArrow = true,
   fixedOnMobile = false,
   joinbutton = false,
+  infoMeetingInfo = false,
   after = true,
 }) {
   return (
@@ -30,6 +31,9 @@ export default function TopImage({
             Available positions
           </LinkButton>
         </div>
+      ) : null}
+      {infoMeetingInfo ? (
+        <a className="info-meeting-info" href="https://fb.me/e/23CpPAGwY">Learn more at the digital info meeting 18th of March!</a>
       ) : null}
       {hasArrow ? (
         <div className="arrow">
@@ -91,7 +95,7 @@ export default function TopImage({
           .arrow {
             position: absolute;
             z-index: 1;
-            bottom: 10px;
+            bottom: -10px;
             left: 50%;
             transform: translate(-50%, -50%);
             background-attachment: fixed;
@@ -107,12 +111,18 @@ export default function TopImage({
             position: absolute;
             width: 70%;
             max-width: 1200px;
+            bottom: 15%;
+          }
+          .info-meeting-info {
+            position: absolute;
+            font-size: 20px;
             bottom: 10%;
+            z-index: 1;
           }
 
           @media (max-width: 640px) {
             .container {
-              height: 500px;
+              height: 600px;
               background-repeat: no-repeat;
               background-attachment: ${fixedOnMobile ? 'fixed' : 'unset'};
               padding: 9em 16px 3em;
@@ -121,15 +131,18 @@ export default function TopImage({
             .join-buttons {
               width: 100%;
             }
-            .arrow {
-              bottom: 0;
-            }
           }
           @media (max-width: 450px) {
             .join-buttons {
               width: 100%;
               flex-direction: column;
-              bottom: 0;
+              bottom: 30px;
+            }
+            .info-meeting-info {
+              position: absolute;
+              font-size: 20px;
+              bottom: 40px;
+              z-index: 1;
             }
           }
         `}
