@@ -56,5 +56,11 @@ export const Button = styled.div`
 
 export const SmallButton = styled.div`
   ${commonStyle}
+  
   min-height: 30px;
+  
+  @media (max-width: 700px) {
+    min-width: 150px;
+    padding: 10px;
+  }
 `;
