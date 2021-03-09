@@ -265,7 +265,7 @@ const Page = () => {
             object-fit: cover;
           }
           .modal-container {
-            display: ${modal.title != '' ? 'block' : 'none'};
+            display: ${modal.title !== '' ? 'block' : 'none'};
             position: fixed; /* Stay in place */
             z-index: 1; /* Sit on top */
             left: 0;
@@ -316,7 +316,7 @@ const Page = () => {
           /* Modal Content/Box */
           #modal-content {
             background-color: #161616;
-            margin: 15% auto; /* 15% from the top and centered */
+            margin: 100px auto; /* 100px from the top and centered */
             padding: 20px;
             border: 1px solid #888;
             width: 80%; /* Could be more or less, depending on screen size */
@@ -351,7 +351,7 @@ const Page = () => {
             );
           }
           .join-description {
-            margin-bottom: 20px;
+            margin: 0 10px 20px 10px;
           }
           .modal {
             display: none; /* Hidden by default */
