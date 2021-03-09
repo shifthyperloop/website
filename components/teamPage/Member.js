@@ -1,11 +1,12 @@
 import { CMS_BASE_URL } from '../../common/constants';
 import { FiMail } from 'react-icons/fi';
+import Image from 'next/image';
 
 const Member = ({ name, url, title, email, group, center = true }) => {
   return (
     <div>
       <div className="image-container">
-        <img src={CMS_BASE_URL + url} />
+        <Image src={CMS_BASE_URL + url} alt={name} height="200" width="200" objectFit="cover" objectPosition={center ? "center" : "top"} />
         <a
           href={''}
           className="email"
@@ -22,12 +23,6 @@ const Member = ({ name, url, title, email, group, center = true }) => {
           div {
             flex: 0 1 300px;
             text-align: center;
-          }
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: ${center ? "center" : "top"};
           }
           .image-container {
             position: relative;

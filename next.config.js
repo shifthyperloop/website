@@ -26,4 +26,7 @@ module.exports = {
 
     return paths;
   },
+  images: {
+    domains: ['shifthyperloop01.it.ntnu.no'],
+  },
 };

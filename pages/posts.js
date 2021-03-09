@@ -3,13 +3,14 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
+import Image from 'next/image';
 
 const Post = ({ title, pid, picture , description }) => {
   return (
     <>
       <Link href={"/post/" + pid}>
         <a className="post">
-          <img className="post-image" src={CMS_BASE_URL + picture} alt={title} />
+          <Image src={CMS_BASE_URL + picture} alt={title} layout="fill" objectFit="cover" />
           <div className="post-text">
             <h2 className="post-title">{title}</h2>
             <p className="post-description">
@@ -37,12 +38,6 @@ const Post = ({ title, pid, picture , description }) => {
         .post:first-child {
           flex-basis: 100%;
           height: 400px;
-        }
-        .post-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
         }
         .post-text {
           background-color: #0009;
