@@ -3,7 +3,7 @@ import Layout from '../Layout';
 import TopImage from '../TopImage';
 import Group from './Group';
 
-export default ({ members = [], teamGroups, topImage, title, path, centerImages = true }) => {
+const TeamPage = ({ members = [], teamGroups, topImage, title, path, centerImages = true }) => {
   const [groups, setGroups] = useState({});
 
   useEffect(() => {
@@ -88,3 +88,5 @@ export default ({ members = [], teamGroups, topImage, title, path, centerImages 
     </Layout>
   );
 };
+
+export default TeamPage;

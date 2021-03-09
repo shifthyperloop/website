@@ -1,7 +1,7 @@
 import { CMS_BASE_URL } from '../../common/constants';
 import { FiMail } from 'react-icons/fi';
 
-export default ({ name, url, title, email, group, center = true }) => {
+const Member = ({ name, url, title, email, group, center = true }) => {
   return (
     <div>
       <div className="image-container">
@@ -70,3 +70,5 @@ export default ({ name, url, title, email, group, center = true }) => {
     </div>
   );
 };
+
+export default Member;

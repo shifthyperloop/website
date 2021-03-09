@@ -1,6 +1,6 @@
 import Member from './Member';
 
-export default ({ members = [], title, centerImages = true }) => {
+const Group = ({ members = [], title, centerImages = true }) => {
   return (
     <div className="group">
       <h1 className="group-titles">{title}</h1>
@@ -43,3 +43,5 @@ export default ({ members = [], title, centerImages = true }) => {
     </div>
   );
 };
+
+export default Group;
