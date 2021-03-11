@@ -351,7 +351,7 @@ const Page = () => {
             );
           }
           .join-description {
-            margin: 0 10px 20px 10px;
+            padding: 10px;
           }
           .modal {
             display: none; /* Hidden by default */
