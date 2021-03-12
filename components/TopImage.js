@@ -99,6 +99,10 @@ export default function TopImage({
             left: 50%;
             transform: translate(-50%, -50%);
             background-attachment: fixed;
+            animation-name: arrowJump;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
           }
           .join-buttons {
             display: flex;
@@ -144,6 +148,11 @@ export default function TopImage({
               bottom: 40px;
               z-index: 1;
             }
+          }
+          @keyframes arrowJump {
+            0% {bottom: -20px;}
+            50% {bottom: -10px;}
+            100% {bottom: -10px;}
           }
         `}
       </style>
