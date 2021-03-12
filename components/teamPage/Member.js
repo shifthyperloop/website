@@ -25,6 +25,8 @@ const Member = ({ name, url, title, email, group, center = true }) => {
             text-align: center;
           }
           .image-container {
+            background-image: url("/noMemberImage.svg");
+            color: #E8E8E8;
             position: relative;
             border-radius: 50%;
             height: 200px;
