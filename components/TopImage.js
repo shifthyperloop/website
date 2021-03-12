@@ -36,10 +36,11 @@ export default function TopImage({
         <a className="info-meeting-info" href="https://fb.me/e/23CpPAGwY">Learn more at our info meeting 18th of March!</a>
       ) : null}
       {hasArrow ? (
-        <div className="arrow">
+        <a className="arrow" href="#scroll-target">
           <FaAngleDown size={35} />
-        </div>
+        </a>
       ) : null}
+      <div id="scroll-target"></div>
       <style jsx>
         {`
           h1,
@@ -91,6 +92,10 @@ export default function TopImage({
             left: 0;
             width: 100%;
             height: 100%;
+          }
+          #scroll-target {
+            position: absolute;
+            bottom: 0;
           }
           .arrow {
             position: absolute;
