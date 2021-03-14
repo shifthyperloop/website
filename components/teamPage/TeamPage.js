@@ -27,9 +27,22 @@ const TeamPage = ({ members = [], teamGroups, topImage, title, path, centerImage
         brightness={0.8}
       />
       <div className="page-container">
-        {Object.values(groups).map(group => (
-          <Group key={group.title} {...group} centerImages={centerImages} />
-        ))}
+        {Object.values(groups)
+          .sort((a, b) => {
+            const first = "The Board";
+            const last = "Mentors";
+
+            if (a.title === first || b.title === last) {
+              return -1;
+            } if (b.title === first || a.title === last) {
+              return 1;
+            }
+            return a.title.localeCompare(b.title);
+          })
+          .map(group => (
+            <Group key={group.title} {...group} centerImages={centerImages} />
+          ))
+        }
       </div>
       <style jsx global>{`
         body {

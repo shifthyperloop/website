@@ -6,9 +6,21 @@ const Group = ({ members = [], title, centerImages = true }) => {
       <h1 className="group-titles">{title}</h1>
       <hr />
       <div className="group-members">
-        {members.map(member => (
-          <Member key={member.name} {...member} center={centerImages} />
-        ))}
+        {members
+          .sort((a,b) => {
+            const first = "Group Leader";
+
+            if (a.title === first || b.title == null) {
+              return -1;
+            } if (b.title === first || a.title == null) {
+              return 1;
+            }
+            return a.title.localeCompare(b.title);
+          })
+          .map(member => (
+            <Member key={member.name} {...member} center={centerImages} />
+          ))
+        }
       </div>
       <style jsx>
         {`

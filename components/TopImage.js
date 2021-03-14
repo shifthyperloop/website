@@ -36,10 +36,11 @@ export default function TopImage({
         <a className="info-meeting-info" href="https://fb.me/e/23CpPAGwY">Learn more at our info meeting 18th of March!</a>
       ) : null}
       {hasArrow ? (
-        <div className="arrow">
+        <a className="arrow" href="#scroll-target">
           <FaAngleDown size={35} />
-        </div>
+        </a>
       ) : null}
+      <div id="scroll-target"></div>
       <style jsx>
         {`
           h1,
@@ -92,6 +93,10 @@ export default function TopImage({
             width: 100%;
             height: 100%;
           }
+          #scroll-target {
+            position: absolute;
+            bottom: 0;
+          }
           .arrow {
             position: absolute;
             z-index: 1;
@@ -99,6 +104,10 @@ export default function TopImage({
             left: 50%;
             transform: translate(-50%, -50%);
             background-attachment: fixed;
+            animation-name: arrowJump;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
           }
           .join-buttons {
             display: flex;
@@ -144,6 +153,11 @@ export default function TopImage({
               bottom: 40px;
               z-index: 1;
             }
+          }
+          @keyframes arrowJump {
+            0% {bottom: -20px;}
+            50% {bottom: -10px;}
+            100% {bottom: -10px;}
           }
         `}
       </style>
