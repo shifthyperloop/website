@@ -24,7 +24,7 @@ const Header = () => {
       <div className="menu-options">
         <a href="/joinus">Join the team</a>
         <a id = "spons" href="/partners">Partners</a>
-        <a id = "newsltr" href="/posts">Posts</a>
+        <a id = "newsltr" href="/posts">Newsletters</a>
         <span className="menu team-menu">
           <a href="/team2021">Team</a>
           <div className="items">

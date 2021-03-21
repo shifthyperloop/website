@@ -92,10 +92,10 @@ const Page = ({ posts }) => {
   return (
     <Layout
       url="https://www.shifthyperloop.com/posts"
-      title="Shift Hyperloop | Posts"
+      title="Shift Hyperloop | Newsletters"
     >
       <div className="title">
-        <h1>Newsletters and blog posts</h1>
+        <h1>Newsletters</h1>
         <hr />
       </div>
       <div className="posts page-container">
