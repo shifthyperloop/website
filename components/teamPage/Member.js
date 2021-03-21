@@ -6,7 +6,18 @@ const Member = ({ name, url, title, email, group, center = true }) => {
   return (
     <div>
       <div className="image-container">
-        <Image src={CMS_BASE_URL + url} alt={name} height="200" width="200" objectFit="cover" objectPosition={center ? "center" : "top"} />
+        {
+          typeof(url) === "string" ?
+            <Image
+              src={CMS_BASE_URL + url}
+              alt={name}
+              height="200"
+              width="200"
+              objectFit="cover"
+              objectPosition={center ? "center" : "top"}
+              priority={true}
+            /> : null
+        }
         <a
           href={''}
           className="email"
