@@ -8,13 +8,24 @@ const Group = ({ members = [], title, centerImages = true }) => {
       <div className="group-members">
         {members
           .sort((a,b) => {
-            const first = "Group Leader";
+            const priority = { // bigger number gets sorted first
+              'Group Leader': 10,
+              'CEO': 10,
+              'CFO': 9,
+              'CMO': 8,
+              'CCO': 7,
+              undefined: -1,
+              null: -1,
+            };
 
-            if (a.title === first || b.title == null) {
-              return -1;
-            } if (b.title === first || a.title == null) {
-              return 1;
+            if (priority[a.title] !== priority[b.title]) {
+              return (priority[b.title] ?? 0) - (priority[a.title] ?? 0);
             }
+
+            if (a.title === b.title) {
+              return 0;
+            }
+
             return a.title.localeCompare(b.title);
           })
           .map(member => (
