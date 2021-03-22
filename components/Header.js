@@ -141,30 +141,24 @@ const Header = () => {
           .header.open > .menu-options {
             display: flex;
           }
-          .menu.team-menu > .items {
+          .menu.team-menu>a {
             display: none;
+          }
+          .menu.team-menu > .items {
+            display: flex;
+            position: relative;
+            right: 0;
+            padding: 0;
+            text-align: center;
           }
           .menu.team-menu > span::after {
             display: none;
-          }
-          .menu.other-menu {
-            position: static;
-            margin: 0;
-          }
-          .menu.other-menu > span {
-            display: none;
-          }
-          .menu.other-menu .items {
-            text-align: center;
-            position: static;
-            padding: 0;
-            display: flex;
           }
         }
 
         h1,
         a {
-          font-family: 'Arial';
+          font-family: 'Arial', sans-serif;
         }
 
         ul {
