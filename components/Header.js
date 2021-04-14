@@ -110,7 +110,7 @@ const Header = () => {
         a {
           text-decoration: none;
           color: inherit;
-          font-family: 'Roboto Condensed', sans-serif;
+          font-family: 'Roboto', sans-serif;
           padding: 10px;
           display: block;
         }
@@ -154,11 +154,6 @@ const Header = () => {
           .menu.team-menu > span::after {
             display: none;
           }
-        }
-
-        h1,
-        a {
-          font-family: 'Arial', sans-serif;
         }
 
         ul {
