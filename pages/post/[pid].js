@@ -48,7 +48,7 @@ const Page = ({
                 download
                 href={CMS_BASE_URL + files}
               >
-                <img src={CMS_BASE_URL + front_page} />
+                <img className={"mobile-newsletter-frontpage"} src={CMS_BASE_URL + front_page} />
               </a>
             )}
           </div>
@@ -112,7 +112,7 @@ const Page = ({
           p {
             text-align: center;
           }
-          img {
+          img.mobile-newsletter-frontpage, img.news-image {
             margin: 0 auto;
             text-align: center;
             display: block;
