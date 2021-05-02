@@ -63,7 +63,7 @@ const Page = ({ members = [] }) => {
     <TeamPage
       members={members}
       teamGroups={groups}
-      topImage={"/Contact-hyperloop-dark-copy.png"}
+      topImage={"/everyone.jpg"}
       title={"Team 2021"}
       path={"/team2021"}
     />
