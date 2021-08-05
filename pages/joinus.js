@@ -265,20 +265,9 @@ const Page = () => {
             <hr id="blue-line-thick" />
             {modal.title == 'Management positions' ? (
               <>
-                <h2 id="undergroup-title">Project Manager (CEO)</h2>
+                <h2 id="undergroup-title">CTO - Mechanical</h2>
                 <hr id="blue-line-thin" />
                 <p id="undergroup-description">
-                  As project manager you are the head of the organization’s
-                  administration, supported by four board members and a large
-                  group of mentors. Your main objective is to inspire the
-                  organization and lead us to the SpaceX competition in
-                  California.
-                </p>
-                <h2 id="undergroup-title">System Engineer</h2>
-                <hr id="blue-line-thin" />
-                <p id="undergroup-description">
-                  Studying to become a systems engineer? Get some experience at
-                  Shift!
                 </p>
               </>
             ) : null}
