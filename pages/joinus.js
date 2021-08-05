@@ -2,8 +2,8 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { IoMdClose } from 'react-icons/io';
-import { APPLY_URL } from "../common/constants";
-import { ButtonTitle, LinkButton, SmallButton } from '../components/Button';
+import { SmallButton } from '../components/Button';
+import ApplyButton from '../components/JoinButton';
 
 const Page = () => {
   const router = useRouter();
@@ -30,27 +30,6 @@ const Page = () => {
       </style>
     </div>
   }
-
-  const ApplyButton = () => {
-    return(
-      <>
-        <div className="apply-button">
-          <LinkButton>
-            <ButtonTitle>Apply!</ButtonTitle>
-            Application form coming soon
-          </LinkButton>
-        </div>
-        <style jsx>
-          {`
-            .apply-button {
-              display: flex;
-              justify-content: center;
-            }
-          `}
-        </style>
-      </>
-    )
-  };
 
   return (
     <Layout

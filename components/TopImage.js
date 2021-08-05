@@ -1,6 +1,6 @@
 import { FaAngleDown } from 'react-icons/fa';
-import { ButtonTitle, LinkButton } from './Button';
-import { APPLY_URL } from '../common/constants';
+import { LinkButton } from './Button';
+import ApplyButton from './JoinButton';
 
 export default function TopImage({
   image = '',
@@ -23,10 +23,7 @@ export default function TopImage({
       <h4>{text}</h4>
       {joinButton ? (
         <div className="join-buttons">
-          <LinkButton href={APPLY_URL}>
-            <ButtonTitle>Apply now!</ButtonTitle>
-            Deadline: 21. March
-          </LinkButton>
+          <ApplyButton />
           <LinkButton href="/joinus">
             Available positions
           </LinkButton>
@@ -40,7 +37,7 @@ export default function TopImage({
           <FaAngleDown size={35} />
         </a>
       ) : null}
-      <div id="scroll-target"></div>
+      <div id="scroll-target"/>
       <style jsx>
         {`
           h1,

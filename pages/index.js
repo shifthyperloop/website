@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import Link from 'next/link';
 import { FaLeaf } from 'react-icons/fa';
 import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
@@ -15,7 +14,7 @@ const Page = () => {
             brightness={1}
             fixedOnMobile={false}
             after={false}
-            joinButton={false}
+            joinButton={true}
             infoMeetingInfo={false}
             backgroundPosition={"center 30%"}
           />
