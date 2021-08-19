@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { IoMdClose } from 'react-icons/io';
-import { SmallButton } from '../../components/Button';
-import ApplyButton from '../../components/JoinButton';
-import groups from './groupPositions';
+import { SmallButton } from '../components/Button';
+import ApplyButton from '../components/JoinButton';
+import groups from '../common/groupPositions';
 
 const Page = () => {
   const router = useRouter();
