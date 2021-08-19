@@ -63,7 +63,7 @@ const Page = () => {
         <h2 className="center">Groups:</h2>
         <div className="groups">
           {
-            groups.map(group => (
+            groups.sort((a, b) => a.name.localeCompare(b.name)).map(group => (
               <div className="group">
                 <p className="group-name">{group.name}</p>
                 <PositionsButton group={group} />
