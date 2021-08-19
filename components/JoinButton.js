@@ -1,13 +1,14 @@
 import { ButtonTitle, LinkButton } from './Button';
 import React from 'react';
+import { APPLY_URL } from '../common/constants';
 
 const ApplyButton = () => {
   return(
     <>
       <div className="apply-button">
-        <LinkButton>
+        <LinkButton href={APPLY_URL}>
           <ButtonTitle>Apply!</ButtonTitle>
-          Application form coming soon
+          Deadline: September 3rd
         </LinkButton>
       </div>
       <style jsx>
