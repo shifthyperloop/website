@@ -30,7 +30,7 @@ export default function TopImage({
         </div>
       ) : null}
       {infoMeetingInfo ? (
-        <a className="info-meeting-info" href="https://fb.me/e/19LY89XOf">Learn more at our info meeting 2. September!</a>
+        <a className="info-meeting-info" href="https://fb.me/e/19LY89XOf">Learn more at our info meeting September 2nd!</a>
       ) : null}
       {hasArrow ? (
         <a className="arrow" href="#scroll-target">
