@@ -65,7 +65,7 @@ const Page = () => {
           {
             groups.sort((a, b) => a.name.localeCompare(b.name)).map(group => (
               <div className="group">
-                <img src={"/joinus/"+group.image} alt={group.name} />
+                <img src={"/images/joinus/"+group.image} alt={group.name} />
                 <p className="group-name">{group.name}</p>
                 <PositionsButton group={group} />
               </div>
