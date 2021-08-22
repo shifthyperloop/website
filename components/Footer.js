@@ -41,12 +41,12 @@ const Footer = () => (
             target="_blank"
             className="hevold-logo"
           >
-            <img src="/Logo_negativ_versjon_for_sort_bakgrunn_footer_web.png" className="hevold" alt="Hevold Group" />
+            <img src="/images/partners/footer/Hevold.png" className="hevold" alt="Hevold Group" />
           </a>
         </div>
         <div className="main-sponsor">
           <a href="https://no.ramboll.com" target="_blank">
-            <img src="/Ramboll.png" className="ramboll" alt="Ramboll" />
+            <img src="/images/partners/footer/Ramboll.png" className="ramboll" alt="Ramboll" />
           </a>
         </div>
         <div className="main-sponsor">
@@ -55,7 +55,7 @@ const Footer = () => (
             target="_blank"
             className="alva-logo"
           >
-            <img src="/Alva-01.svg" className="alva" alt="Alva" />
+            <img src="/images/partners/footer/Alva.svg" className="alva" alt="Alva" />
           </a>
         </div>
         <div className="main-sponsor">
@@ -64,7 +64,7 @@ const Footer = () => (
             target="_blank"
             className="hydro-logo"
           >
-            <img src="/Hydro_logo.png" className="hydro" alt="Hydro" />
+            <img src="/images/partners/footer/Hydro.png" className="hydro" alt="Hydro" />
           </a>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Page = () => {
       <div className="container">
         <div>
           <TopImage
-            image="./homePage.png"
+            image="/images/homePage/topImage.png"
             brightness={1}
             fixedOnMobile={false}
             after={false}
@@ -103,7 +103,7 @@ const Page = () => {
           <div className="separate">
             <div className="flex-container">
               <div className="flex1">
-                <img className="hyperloop-image" src="/hyperloopAlpha.jpg" alt="Hyperloop alpha sketch" />
+                <img className="hyperloop-image" src="/images/homePage/hyperloopAlpha.jpg" alt="Hyperloop alpha sketch" />
               </div>
               <p className="text flex1">
                 Hyperloop is a new transportation concept. The hyperloop was
@@ -220,15 +220,6 @@ const Page = () => {
           }
           .goal-text {
             text-align: justify;
-          }
-          .parallax {
-            background-image: url('/Shift1.png');
-
-            height: 900px;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
           }
           .text-container {
             max-width: 1200px;

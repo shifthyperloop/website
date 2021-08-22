@@ -111,7 +111,7 @@ export default function About() {
 
         body {
           background-image: linear-gradient(0deg, #0008, #0008),
-            url(/Contact-hyperloop-dark.png);
+            url("/images/contact/background.png");
         }
 
         .contact-us {

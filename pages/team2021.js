@@ -63,7 +63,7 @@ const Page = ({ members = [] }) => {
     <TeamPage
       members={members}
       teamGroups={groups}
-      topImage={"/everyone.jpg"}
+      topImage={"/images/team/2021.jpg"}
       title={"Team 2021"}
       path={"/team2021"}
     />
@@ -82,7 +82,7 @@ Page.getInitialProps = async function() {
       if (member.Picture !== null) {
         picture = member.Picture.url;
       }
-      
+
       return {
         name: member.Name,
         url: picture,

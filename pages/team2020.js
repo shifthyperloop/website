@@ -47,7 +47,7 @@ const Page = ({ members = [] }) => {
   return <TeamPage
     members={members}
     teamGroups={groups}
-    topImage={"/Shift-team-2020.jpg"}
+    topImage={"/images/team/2020.jpg"}
     title={"Team 2020"}
     path={"/team2020"}
     centerImages={false}

@@ -78,7 +78,7 @@ const Page = ({ sponsors }) => {
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
       <TopImage
-        image="/signering_bw_logo.jpg"
+        image="/images/partners/topImage.jpg"
         title="Partners"
         text="Meet our amazing partners. Their support is what's making it possible to do what we love."
       />
