@@ -1,15 +1,7 @@
-import withLayout from '../components/Layout';
 import Layout from '../components/Layout';
-import React, { Component } from 'react';
+import React from 'react';
 import { useRef } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-
-<script
-  type="text/javascript"
-  src="C:\Users\hanne\OneDrive\Skrivebord\Proglab2\Shift-website\contacthelp.js"
-></script>;
-
-const Page = () => <p>Contact us</p>;
 
 export default function About() {
   const refName = useRef();
@@ -159,7 +151,6 @@ export default function About() {
           padding-right: 10px;
           display: flex;
           flex-direction: column;
-          justify-content: top;
           align-items: center;
         }
 
