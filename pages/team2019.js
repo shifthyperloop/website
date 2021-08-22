@@ -24,22 +24,24 @@ const Page = ({ members = [] }) => {
     },
   };
 
-  return <TeamPage
-    members={members}
-    teamGroups={groups}
-    topImage={"/images/team/2019.jpg"}
-    title={"Team 2019"}
-    path={"/team2019"}
-    centerImages={false}
-  />
+  return (
+    <TeamPage
+      members={members}
+      teamGroups={groups}
+      topImage={'/images/team/2019.jpg'}
+      title={'Team 2019'}
+      path={'/team2019'}
+      centerImages={false}
+    />
+  );
 };
 
-Page.getInitialProps = async function() {
+Page.getInitialProps = async function () {
   const res = await fetch(CMS_BASE_URL + '/team-2019-s');
   const data = await res.json();
 
   return {
-    members: data.map(member => {
+    members: data.map((member) => {
       let picture = {
         url: undefined,
       };
@@ -53,7 +55,7 @@ Page.getInitialProps = async function() {
         group: member.Group,
         title: member.Title,
         email: member.Email,
-        url: member.Picture.url
+        url: member.Picture.url,
       };
     }),
   };

@@ -7,13 +7,14 @@ const Group = ({ members = [], title, centerImages = true }) => {
       <hr />
       <div className="group-members">
         {members
-          .sort((a,b) => {
-            const priority = { // bigger number gets sorted first
+          .sort((a, b) => {
+            const priority = {
+              // bigger number gets sorted first
               'Group Leader': 10,
-              'CEO': 10,
-              'CFO': 9,
-              'CMO': 8,
-              'CCO': 7,
+              CEO: 10,
+              CFO: 9,
+              CMO: 8,
+              CCO: 7,
               undefined: -1,
               null: -1,
             };
@@ -28,10 +29,9 @@ const Group = ({ members = [], title, centerImages = true }) => {
 
             return a.title.localeCompare(b.title);
           })
-          .map(member => (
+          .map((member) => (
             <Member key={member.name} {...member} center={centerImages} />
-          ))
-        }
+          ))}
       </div>
       <style jsx>
         {`

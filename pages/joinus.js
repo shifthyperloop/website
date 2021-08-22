@@ -11,27 +11,29 @@ const Page = () => {
   const [modal, setModal] = useState({ group: null });
 
   const PositionsButton = (props) => {
-    return <div className="button-container">
-      <SmallButton
-        onClick={() =>
-          setModal({
-            group: props.group,
-          })
-        }
-      >
-        View available positions
-      </SmallButton>
-      <style jsx>
-        {`
-        .button-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-      `}
-      </style>
-    </div>
-  }
+    return (
+      <div className="button-container">
+        <SmallButton
+          onClick={() =>
+            setModal({
+              group: props.group,
+            })
+          }
+        >
+          View available positions
+        </SmallButton>
+        <style jsx>
+          {`
+            .button-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          `}
+        </style>
+      </div>
+    );
+  };
 
   return (
     <Layout
@@ -62,43 +64,45 @@ const Page = () => {
       <div className="join-container">
         <h2 className="center">Groups:</h2>
         <div className="groups">
-          {
-            groups.sort((a, b) => a.name.localeCompare(b.name)).map(group => (
+          {groups
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((group) => (
               <div className="group">
-                <img src={"/images/joinus/"+group.image} alt={group.name} />
+                <img src={'/images/joinus/' + group.image} alt={group.name} />
                 <p className="group-name">{group.name}</p>
                 <PositionsButton group={group} />
               </div>
-            ))
-          }
+            ))}
         </div>
       </div>
-      {modal.group &&
-      <div className="modal-container">
-        <div className="modal-content">
-          <a
-            className="close-button"
-            onClick={() => setModal({ group: null })}
-          >
-            <IoMdClose />
-          </a>
-          <h1 className="modal-group-name">{modal.group.name}</h1>
-          <hr className="blue-line-thick" />
-          <div className="modal-image-wrapper"><img src={"/images/joinus/"+modal.group.image} alt={modal.group.name} /></div>
-          {
-            modal.group.positions.map(position => (
+      {modal.group && (
+        <div className="modal-container">
+          <div className="modal-content">
+            <a
+              className="close-button"
+              onClick={() => setModal({ group: null })}
+            >
+              <IoMdClose />
+            </a>
+            <h1 className="modal-group-name">{modal.group.name}</h1>
+            <hr className="blue-line-thick" />
+            <div className="modal-image-wrapper">
+              <img
+                src={'/images/joinus/' + modal.group.image}
+                alt={modal.group.name}
+              />
+            </div>
+            {modal.group.positions.map((position) => (
               <div className="position">
                 <h2 className="position-name">{position.name}</h2>
                 <hr className="blue-line-thin" />
                 <p className="position-description">{position.description}</p>
               </div>
-            ))
-          }
-          <ApplyButton/>
+            ))}
+            <ApplyButton />
+          </div>
         </div>
-      </div>
-      }
-
+      )}
 
       <style jsx>
         {`
@@ -142,25 +146,25 @@ const Page = () => {
             border-color: #0080c9;
             margin-bottom: 10px;
           }
-          
+
           .modal-group-name {
             text-align: center;
           }
-          
+
           .modal-image-wrapper {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
           }
-          
-          .modal-image-wrapper>img {
+
+          .modal-image-wrapper > img {
             width: 80%;
             max-width: 400px;
             height: 200px;
             object-fit: cover;
           }
-          
+
           .position-name {
             margin-top: 40px;
           }
@@ -207,7 +211,7 @@ const Page = () => {
 
           /* The Close Button */
           .close-button {
-            color: #FFFFFF;
+            color: #ffffff;
             float: right;
             font-size: 28px;
           }
@@ -241,14 +245,14 @@ const Page = () => {
             justify-content: space-between;
             box-shadow: 1px 0.3px 10px #000;
           }
-          .group>img {
+          .group > img {
             height: 140px;
             width: 100%;
             object-fit: cover;
           }
-          .group>p {
+          .group > p {
             text-align: center;
-          }  
+          }
           @media (max-width: 900px) {
             .groups {
               grid-template-columns: 1fr 1fr;

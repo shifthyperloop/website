@@ -24,20 +24,20 @@ export default function TopImage({
       {joinButton ? (
         <div className="join-buttons">
           <ApplyButton />
-          <LinkButton href="/joinus">
-            Available positions
-          </LinkButton>
+          <LinkButton href="/joinus">Available positions</LinkButton>
         </div>
       ) : null}
       {infoMeetingInfo ? (
-        <a className="info-meeting-info" href="https://fb.me/e/19LY89XOf">Learn more at our info meeting September 2nd!</a>
+        <a className="info-meeting-info" href="https://fb.me/e/19LY89XOf">
+          Learn more at our info meeting September 2nd!
+        </a>
       ) : null}
       {hasArrow ? (
         <a className="arrow" href="#scroll-target">
           <FaAngleDown size={35} />
         </a>
       ) : null}
-      <div id="scroll-target"/>
+      <div id="scroll-target" />
       <style jsx>
         {`
           h1,
@@ -82,7 +82,7 @@ export default function TopImage({
           .container::after {
             content: '';
             background-color: black;
-            opacity: ${1-brightness};
+            opacity: ${1 - brightness};
             z-index: 0;
             position: absolute;
             top: 0;
@@ -152,9 +152,15 @@ export default function TopImage({
             }
           }
           @keyframes arrowJump {
-            0% {bottom: -20px;}
-            50% {bottom: -10px;}
-            100% {bottom: -10px;}
+            0% {
+              bottom: -20px;
+            }
+            50% {
+              bottom: -10px;
+            }
+            100% {
+              bottom: -10px;
+            }
           }
         `}
       </style>

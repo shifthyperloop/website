@@ -19,8 +19,12 @@ const Header = () => {
       </div>
       <div className="menu-options">
         <a href="/joinus">Join the team</a>
-        <a id = "spons" href="/partners">Partners</a>
-        <a id = "newsltr" href="/posts">Newsletters</a>
+        <a id="spons" href="/partners">
+          Partners
+        </a>
+        <a id="newsltr" href="/posts">
+          Newsletters
+        </a>
         <span className="menu team-menu">
           <a href="/team2021">Team</a>
           <div className="items">
@@ -47,7 +51,7 @@ const Header = () => {
           height: 3.5rem;
           width: 100%;
           background: #01020b;
-          color: #FFFFFF;
+          color: #ffffff;
           font-size: 18px;
           display: flex;
           flex-direction: row;
@@ -59,18 +63,18 @@ const Header = () => {
           left: 0;
           z-index: 100;
         }
-        
+
         .head-side {
           flex: 0 1 130px;
         }
-        .head-side>a {
+        .head-side > a {
           display: flex;
           align-items: center;
         }
         .head-side img {
           height: 2.5rem;
         }
-        
+
         .menu-options {
           width: 100%;
           max-width: calc(1200px - 130px);
@@ -82,12 +86,12 @@ const Header = () => {
         .menu-dropdown {
           display: none;
         }
-        
+
         .menu {
           position: relative;
           margin: 10px;
         }
-        .menu>a:after {
+        .menu > a:after {
           margin-left: 3px;
           content: '▾';
         }
@@ -106,15 +110,15 @@ const Header = () => {
         .menu:hover .items {
           display: flex;
         }
-        
+
         a {
           text-decoration: none;
           color: inherit;
-          
+
           padding: 10px;
           display: block;
         }
-        
+
         .menu.team-menu {
           margin: 0;
         }
@@ -141,7 +145,7 @@ const Header = () => {
           .header.open > .menu-options {
             display: flex;
           }
-          .menu.team-menu>a {
+          .menu.team-menu > a {
             display: none;
           }
           .menu.team-menu > .items {

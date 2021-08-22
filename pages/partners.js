@@ -5,17 +5,11 @@ import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 
-const Sponsor = ({
-  title,
-  logo,
-  type,
-  url,
-  description,
-}) => {
+const Sponsor = ({ title, logo, type, url, description }) => {
   return (
     <div>
       <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
-        <img src={CMS_BASE_URL + logo }/>
+        <img src={CMS_BASE_URL + logo} />
       </a>
       {type === 'Platinum' ? (
         <>
@@ -53,7 +47,6 @@ const Sponsor = ({
           margin-top: 30px;
         }
         .platinum img:nth-of-type(3) {
-          
         }
         .gold img {
           width: 400px;
@@ -114,8 +107,8 @@ const Page = ({ sponsors }) => {
         </h2>
         <div className="sponsor-list">
           {sponsors
-            .filter(sponsor => sponsor.type === 'Platinum')
-            .map(sponsor => (
+            .filter((sponsor) => sponsor.type === 'Platinum')
+            .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
@@ -124,8 +117,8 @@ const Page = ({ sponsors }) => {
         </h2>
         <div className="sponsor-list">
           {sponsors
-            .filter(sponsor => sponsor.type === 'Gold')
-            .map(sponsor => (
+            .filter((sponsor) => sponsor.type === 'Gold')
+            .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
@@ -134,8 +127,8 @@ const Page = ({ sponsors }) => {
         </h2>
         <div className="sponsor-list">
           {sponsors
-            .filter(sponsor => sponsor.type === 'Silver')
-            .map(sponsor => (
+            .filter((sponsor) => sponsor.type === 'Silver')
+            .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
@@ -144,8 +137,8 @@ const Page = ({ sponsors }) => {
         </h2>
         <div className="sponsor-list">
           {sponsors
-            .filter(sponsor => sponsor.type === 'Bronze')
-            .map(sponsor => (
+            .filter((sponsor) => sponsor.type === 'Bronze')
+            .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
@@ -282,12 +275,12 @@ const Page = ({ sponsors }) => {
   );
 };
 
-Page.getInitialProps = async function() {
+Page.getInitialProps = async function () {
   const res = await fetch(CMS_BASE_URL + '/sponsors');
   const data = await res.json();
 
   return {
-    sponsors: data.map(sponsor => {
+    sponsors: data.map((sponsor) => {
       return {
         title: sponsor.Title,
         logo: sponsor.Logo.url,

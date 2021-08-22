@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LinkButton = styled.a`
   border: 1px solid #3189c9;
   background: #fff2;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@ export const LinkButton = styled.a`
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  
+
   &:hover {
     background-color: #3189c9;
   }
@@ -25,7 +25,7 @@ export const LinkButton = styled.a`
 
 export const ButtonTitle = styled.h3`
   margin: auto;
-`
+`;
 
 const commonStyle = `
   border: 1px solid #3189c9;
@@ -48,7 +48,7 @@ const commonStyle = `
   &:hover {
     background-color: #3189c9;
   }
-`
+`;
 
 export const Button = styled.div`
   ${commonStyle}
@@ -56,9 +56,9 @@ export const Button = styled.div`
 
 export const SmallButton = styled.div`
   ${commonStyle}
-  
+
   min-height: 30px;
-  
+
   @media (max-width: 700px) {
     min-width: 150px;
     padding: 10px;

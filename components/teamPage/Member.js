@@ -6,22 +6,21 @@ const Member = ({ name, url, title, email, group, center = true }) => {
   return (
     <div>
       <div className="image-container">
-        {
-          typeof(url) === "string" ?
-            <Image
-              src={CMS_BASE_URL + url}
-              alt={name}
-              height="200"
-              width="200"
-              objectFit="cover"
-              objectPosition={center ? "center" : "top"}
-              priority={true}
-            /> : null
-        }
+        {typeof url === 'string' ? (
+          <Image
+            src={CMS_BASE_URL + url}
+            alt={name}
+            height="200"
+            width="200"
+            objectFit="cover"
+            objectPosition={center ? 'center' : 'top'}
+            priority={true}
+          />
+        ) : null}
         <a
           href={''}
           className="email"
-          onMouseOver={e => (e.target.href = 'mailto:' + email)}
+          onMouseOver={(e) => (e.target.href = 'mailto:' + email)}
         >
           <FiMail size={35} className="mail-symbol" />
         </a>
@@ -36,8 +35,8 @@ const Member = ({ name, url, title, email, group, center = true }) => {
             text-align: center;
           }
           .image-container {
-            background-image: url("/images/team/noMemberImage.svg");
-            color: #E8E8E8;
+            background-image: url('/images/team/noMemberImage.svg');
+            color: #e8e8e8;
             position: relative;
             border-radius: 50%;
             height: 200px;

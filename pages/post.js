@@ -7,7 +7,7 @@ import POST_URL from './posts';
 const Post = ({ title, picture, description }) => {
   return (
     <div className="sponsor-list">
-      {posts.map(post => (
+      {posts.map((post) => (
         <Post key={post.title} {...post} />
       ))}
     </div>
@@ -23,7 +23,7 @@ const Page = ({ posts }) => {
       title="Shift Hyperloop | Posts"
     >
       <a className="posts page-container" onClick={(POST_URL = post.title)}>
-        {posts.map(post => (
+        {posts.map((post) => (
           <Post key={post.title} {...post} />
         ))}
       </a>
@@ -38,14 +38,14 @@ const Page = ({ posts }) => {
   );
 };
 
-Page.getInitialProps = async function() {
+Page.getInitialProps = async function () {
   const res = await fetch(
     'https://shifthyperloop01.it.ntnu.no/strapi/posts?_sort=published:desc'
   );
   const data = await res.json();
 
   return {
-    posts: data.map(post => {
+    posts: data.map((post) => {
       return {
         title: post.title,
         picture: post.picture.url,

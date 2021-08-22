@@ -5,12 +5,17 @@ import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Image from 'next/image';
 
-const Post = ({ title, pid, picture , description }) => {
+const Post = ({ title, pid, picture, description }) => {
   return (
     <>
-      <Link href={"/post/" + pid}>
+      <Link href={'/post/' + pid}>
         <a className="post">
-          <Image src={CMS_BASE_URL + picture} alt={title} layout="fill" objectFit="cover" />
+          <Image
+            src={CMS_BASE_URL + picture}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+          />
           <div className="post-text">
             <h2 className="post-title">{title}</h2>
             <p className="post-description">
@@ -99,7 +104,7 @@ const Page = ({ posts }) => {
         <hr />
       </div>
       <div className="posts page-container">
-        {posts.map(post => (
+        {posts.map((post) => (
           <Post key={post.title} {...post} />
         ))}
       </div>
@@ -130,12 +135,12 @@ const Page = ({ posts }) => {
   );
 };
 
-Page.getInitialProps = async function() {
+Page.getInitialProps = async function () {
   const res = await fetch(CMS_BASE_URL + '/posts?_sort=published:desc');
   const data = await res.json();
 
   return {
-    posts: data.map(post => {
+    posts: data.map((post) => {
       return {
         pid: post.id,
         title: post.title,

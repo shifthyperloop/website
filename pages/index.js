@@ -16,7 +16,7 @@ const Page = () => {
             after={false}
             joinButton={true}
             infoMeetingInfo={true}
-            backgroundPosition={"center 30%"}
+            backgroundPosition={'center 30%'}
           />
         </div>
 
@@ -103,7 +103,11 @@ const Page = () => {
           <div className="separate">
             <div className="flex-container">
               <div className="flex1">
-                <img className="hyperloop-image" src="/images/homePage/hyperloopAlpha.jpg" alt="Hyperloop alpha sketch" />
+                <img
+                  className="hyperloop-image"
+                  src="/images/homePage/hyperloopAlpha.jpg"
+                  alt="Hyperloop alpha sketch"
+                />
               </div>
               <p className="text flex1">
                 Hyperloop is a new transportation concept. The hyperloop was

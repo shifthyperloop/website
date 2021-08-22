@@ -48,7 +48,10 @@ const Page = ({
                 download
                 href={CMS_BASE_URL + files}
               >
-                <img className={"mobile-newsletter-frontpage"} src={CMS_BASE_URL + front_page} />
+                <img
+                  className={'mobile-newsletter-frontpage'}
+                  src={CMS_BASE_URL + front_page}
+                />
               </a>
             )}
           </div>
@@ -112,7 +115,8 @@ const Page = ({
           p {
             text-align: center;
           }
-          img.mobile-newsletter-frontpage, img.news-image {
+          img.mobile-newsletter-frontpage,
+          img.news-image {
             margin: 0 auto;
             text-align: center;
             display: block;
@@ -124,9 +128,11 @@ const Page = ({
   );
 };
 
-Page.getInitialProps = async function(context) {
+Page.getInitialProps = async function (context) {
   const { pid } = context.query;
-  const res = await fetch('https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid).catch();
+  const res = await fetch(
+    'https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid
+  ).catch();
   const post = await res.json();
 
   return {

@@ -111,7 +111,7 @@ export default function About() {
 
         body {
           background-image: linear-gradient(0deg, #0008, #0008),
-            url("/images/contact/background.png");
+            url('/images/contact/background.png');
         }
 
         .contact-us {

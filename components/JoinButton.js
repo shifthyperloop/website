@@ -3,7 +3,7 @@ import React from 'react';
 import { APPLY_URL } from '../common/constants';
 
 const ApplyButton = () => {
-  return(
+  return (
     <>
       <div className="apply-button">
         <LinkButton href={APPLY_URL}>
@@ -20,7 +20,7 @@ const ApplyButton = () => {
         `}
       </style>
     </>
-  )
+  );
 };
 
 export default ApplyButton;

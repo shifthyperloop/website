@@ -3,12 +3,19 @@ import Layout from '../Layout';
 import TopImage from '../TopImage';
 import Group from './Group';
 
-const TeamPage = ({ members = [], teamGroups, topImage, title, path, centerImages = true }) => {
+const TeamPage = ({
+  members = [],
+  teamGroups,
+  topImage,
+  title,
+  path,
+  centerImages = true,
+}) => {
   const [groups, setGroups] = useState({});
 
   useEffect(() => {
     const newGroups = teamGroups;
-    members.forEach(member => {
+    members.forEach((member) => {
       if (member.group in newGroups) {
         newGroups[member.group].members.push(member);
       }
@@ -18,31 +25,27 @@ const TeamPage = ({ members = [], teamGroups, topImage, title, path, centerImage
 
   return (
     <Layout
-      url={'https://www.shifthyperloop.com'+path}
-      title={'Shift Hyperloop | '+title}
+      url={'https://www.shifthyperloop.com' + path}
+      title={'Shift Hyperloop | ' + title}
     >
-      <TopImage
-        image={topImage}
-        title={title}
-        brightness={0.8}
-      />
+      <TopImage image={topImage} title={title} brightness={0.8} />
       <div className="page-container">
         {Object.values(groups)
           .sort((a, b) => {
-            const first = "The Board";
-            const last = "Mentors";
+            const first = 'The Board';
+            const last = 'Mentors';
 
             if (a.title === first || b.title === last) {
               return -1;
-            } if (b.title === first || a.title === last) {
+            }
+            if (b.title === first || a.title === last) {
               return 1;
             }
             return a.title.localeCompare(b.title);
           })
-          .map(group => (
+          .map((group) => (
             <Group key={group.title} {...group} centerImages={centerImages} />
-          ))
-        }
+          ))}
       </div>
       <style jsx global>{`
         body {
