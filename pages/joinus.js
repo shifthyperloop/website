@@ -65,6 +65,7 @@ const Page = () => {
           {
             groups.sort((a, b) => a.name.localeCompare(b.name)).map(group => (
               <div className="group">
+                <img src={"/joinus/"+group.image} alt={group.name} />
                 <p className="group-name">{group.name}</p>
                 <PositionsButton group={group} />
               </div>
@@ -213,19 +214,35 @@ const Page = () => {
             margin: auto;
           }
           .groups {
-            background: #202020;
             margin: 20px auto;
-            box-shadow: 1px 0.3px 10px #000;
-            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
           }
           .group {
+            margin: 15px;
             display: flex;
-            flex-direction: row;
-            padding: 0 10px;
+            background: #333;
+            flex-direction: column;
             justify-content: space-between;
+            box-shadow: 1px 0.3px 10px #000;
           }
-          .group:nth-child(even) {
-            background: #fff2;
+          .group>img {
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+          }
+          .group>p {
+            text-align: center;
+          }  
+          @media (max-width: 900px) {
+            .groups {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+          @media (max-width: 600px) {
+            .groups {
+              grid-template-columns: 1fr;
+            }
           }
         `}
       </style>

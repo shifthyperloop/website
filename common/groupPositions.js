@@ -3,7 +3,7 @@ const groups = [
   {
     name: "Administration/Management",
     description: "Management carries responsibility for the progress and makes sure that the organization follows the guidelines set by the board. They also do the administrative work for the organization. The most important task of the leaders is to encourage and support Shifts members when needed. As a top leader you will also be a part of the board.",
-    image: "/stock/boss.jpg",
+    image: "admin.jpg",
     positions: [
       {
         name: "Chief Technical Officer Mechanical",
@@ -14,7 +14,7 @@ const groups = [
   {
     name: "Misc. technical",
     description: "",
-    image: "",
+    image: "technical.jpg",
     positions: [
       {
         name: "Systems engineer",
@@ -25,7 +25,7 @@ const groups = [
   {
     name: "Levitation R&D",
     description: "The levitation group is responsible for the pod levitation and suspension systems. As a member of the levitation group you will work together with the mechanical group to stabilise the main frame, and thus the engines. Levitation is a key aspect of the hyperloop concept, and we are therefore eager to see this group exceed.",
-    image: "",
+    image: "levitation.jpg",
     positions: [
       {
         name: "Electromagnetic simulation engineer",
@@ -44,7 +44,7 @@ const groups = [
   {
     name: "Powertrain",
     description: "The powertrain group consists of the systems necessary for the pod to move. This group works closely with the battery group to maximize propulsive power. You will collaborate with members from various studies and backgrounds in order to complete the task.",
-    image: "",
+    image: "powertrain.jpg",
     positions: [
       {
         name: "Group leader",
@@ -67,7 +67,7 @@ const groups = [
   {
     name: "Embedded Electronics",
     description: "The electronics group is responsible for developing several of the embedded systems on the pod, this includes data acquisition, communication and control systems. Members of the group will work a lot with PCB design and software development.",
-    image: "",
+    image: "electronics.jpg",
     positions: [
       {
         name: "Sensors engineer",
@@ -94,7 +94,7 @@ const groups = [
   {
     name: "Software",
     description: "The software group will create a new analysis tool and pod control interface. This will be a computer program that can be used in competition as well as during testing. The program is our way of controlling the pod, although further development would be beneficial for real time data visualization of telemetry and sensor data.",
-    image: "",
+    image: "software.jpeg",
     positions: [
       {
         name: "Group leader",
@@ -113,7 +113,7 @@ const groups = [
   {
     name: "Structural",
     description: "",
-    image: "",
+    image: "suspension.jpg",
     positions: [
       {
         name: "Group leader",
@@ -136,7 +136,7 @@ const groups = [
   {
     name: "Casing and Housing",
     description: "",
-    image: "",
+    image: "casing.jpg",
     positions: [
       {
         name: "Aeroshell",
@@ -151,7 +151,7 @@ const groups = [
   {
     name: "Relations",
     description: "Shift Hyperloop is not only about building a pod, it is also about communicating with the outside world! The relations group is responsible for all things that are non-technical. This includes posting on social media, designing our website, editing videos, contacting partners and even organizing social events!",
-    image: "",
+    image: "relations.jpg",
     positions: [
       {
         name: "Group Leader Relations",
