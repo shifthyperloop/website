@@ -6,9 +6,7 @@ module.exports = {
   exportPathMap: async function() {
     const paths = {
       '/': { page: '/' },
-      '/about': { page: '/about' },
       '/posts': { page: '/posts' },
-      '/pod': { page: '/pod' },
       '/contact': { page: '/contact' },
       '/partners': { page: '/partners' },
       '/team': { page: '/team2021' },
