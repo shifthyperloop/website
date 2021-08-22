@@ -77,11 +77,12 @@ Page.getInitialProps = async function() {
   return {
     members: data.map(member => {
       let picture = {
-        url: '/uploads/d7bbb8af6b1947629542010bb38942fb.jpg',
+        url: undefined,
       };
       if (member.Picture !== null) {
         picture = member.Picture.url;
       }
+      
       return {
         name: member.Name,
         url: picture,
