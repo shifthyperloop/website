@@ -84,7 +84,7 @@ const Page = () => {
           </a>
           <h1 className="modal-group-name">{modal.group.name}</h1>
           <hr className="blue-line-thick" />
-          <div className="modal-image-wrapper"><img src={"/joinus/"+modal.group.image} alt={modal.group.name} /></div>
+          <div className="modal-image-wrapper"><img src={"/images/joinus/"+modal.group.image} alt={modal.group.name} /></div>
           {
             modal.group.positions.map(position => (
               <div className="position">

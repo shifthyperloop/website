@@ -10,7 +10,7 @@ const Header = () => {
       <div className="head-side">
         <Link href="/">
           <a>
-            <img src="/Logo(White_RightText).png" alt="Logo" />
+            <img src="/images/logo-header.png" alt="Shift Hyperloop logo" />
           </a>
         </Link>
       </div>
