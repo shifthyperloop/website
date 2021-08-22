@@ -84,6 +84,7 @@ const Page = () => {
           </a>
           <h1 className="modal-group-name">{modal.group.name}</h1>
           <hr className="blue-line-thick" />
+          <div className="modal-image-wrapper"><img src={"/joinus/"+modal.group.image} alt={modal.group.name} /></div>
           {
             modal.group.positions.map(position => (
               <div className="position">
@@ -131,7 +132,7 @@ const Page = () => {
             border-style: solid;
             border-radius: 2.5px;
             border-color: #0080c9;
-            margin-bottom: 75px;
+            margin-bottom: 10px;
           }
           .blue-line-thin {
             width: 100%;
@@ -144,6 +145,20 @@ const Page = () => {
           
           .modal-group-name {
             text-align: center;
+          }
+          
+          .modal-image-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .modal-image-wrapper>img {
+            width: 80%;
+            max-width: 400px;
+            height: 200px;
+            object-fit: cover;
           }
           
           .position-name {
