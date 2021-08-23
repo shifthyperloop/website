@@ -174,6 +174,7 @@ const Page = () => {
             display: flex;
             flex-flow: row wrap;
             margin-bottom: 20px;
+            white-space: pre-line;
           }
           hr {
             width: 80%;
