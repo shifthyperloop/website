@@ -22,6 +22,11 @@ const groups = [
         description:
           'The systems engineer understands the dependencies across different technical systems and ensures that systems are compatible with each other. One important aspect is to give feedback on the design of different subsystems, especially from a compatibility point of view. \n\nThe systems engineer is organized, has a broad technical understanding and has good communication skills. It is also important to be comfortable with working independently.',
       },
+      {
+        name: 'Production manager',
+        description:
+          'The production manager drives the production and assembly of the pod. During the design-phase, he/she will also follow up on subsystem designs to ensure that they are able to be produced and properly assembled.\n\nThe production manager is an organized person. Having practical experience is a huge advantage.',
+      },
     ],
   },
   {
