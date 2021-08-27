@@ -218,6 +218,28 @@ const groups = [
       },
     ],
   },
+  {
+    name: 'Concept',
+    description: '',
+    image: 'concept.png',
+    positions: [
+      {
+        name: 'Station design',
+        description:
+          'Would you like to design the station of the future? How would a station for Hyperloop look like? Are there going to be timetables for people to see departures or maybe another innovative solution you will come up with? Working with the station design you will work together on a case that will lead you to designing of a hyperloop station. This fits especially if you are studying: Architect students, Civil engineering students (bygg), Industrial designer or others!',
+      },
+      {
+        name: 'Pod Design',
+        description:
+          'What will the future pod look like? What interior will it be? Is it going to be black, white or any other colour? You will get a chance to answer these questions if you will decide to work with pod design. What kind of material a pod should be made of is also a task you can work with. This fits especially if you are studying: Industrial design, mechanical engineering, material technology or other.',
+      },
+      {
+        name: 'Route planning / Wide sense implementation',
+        description:
+          'Would you like to analyse possible routes for Hyperloop? You should join route planning! Will it be Stockholm-Oslo or maybe Trondheim-Bergen? It is all up to you! Your task will be to inspect possible routes relative to geographical position, geological possibilities, economical evaluation and popularity. This fits especially if you are studying: Logistics, Geology, Geography, Urban ecological planning / Real Estate and Facilities Management, Economy Analysis / Industrial economy or others!',
+      },
+    ],
+  },
 ];
 
 export default groups;
