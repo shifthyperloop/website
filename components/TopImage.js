@@ -124,6 +124,9 @@ export default function TopImage({
             font-size: 20px;
             bottom: 10%;
             z-index: 1;
+            width: 100%;
+            padding: 5px;
+            background: rgba(0,120,200,0.4);
           }
 
           @media (max-width: 640px) {

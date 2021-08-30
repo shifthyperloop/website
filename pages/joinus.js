@@ -114,6 +114,8 @@ const Page = () => {
             margin: 10px auto;
             text-align: center;
             font-size: 1.2em;
+            padding: 10px;
+            background: rgba(0,120,200,0.4);
           }
 
           body {
