@@ -113,7 +113,7 @@ const groups = [
     ],
   },
   {
-    name: 'Misc. technical',
+    name: 'Other technical positions',
     description: '',
     image: 'technical.jpg',
     positions: [
