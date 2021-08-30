@@ -65,7 +65,6 @@ const Page = () => {
         <h2 className="center">Groups:</h2>
         <div className="groups">
           {groups
-            .sort((a, b) => a.name.localeCompare(b.name))
             .map((group) => (
               <div className="group">
                 <img src={'/images/joinus/' + group.image} alt={group.name} />
