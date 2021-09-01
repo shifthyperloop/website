@@ -49,7 +49,7 @@ const Page = () => {
         prior knowledge. Working with Shift will give you experience that makes
         you attractive for your future employers. You will get a large network
         of new friends in the technical community at NTNU. A year at Shift will
-        be educational and fun! Admission for the team 2021 is open and you
+        be educational and fun! Admission for the team 2022 is open and you
         should check if something is for you! Don’t hesitate to contact us if
         you have questions.
         {/* Primarily Shift enrolls new members to the team two
