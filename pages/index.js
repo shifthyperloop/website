@@ -34,7 +34,7 @@ const Page = () => {
               student organisations at NTNU. As such Shift Hyperloop operates on
               a 1-year cycle where each year we enlist a completely new team
               that are tasked with designing and building a hyperloop pod. In
-              2021 Shift Hyperloop will test out our pod for the first time in
+              2022 Shift Hyperloop will test out our pod for the first time in
               the European Hyperloop Week in Spain, and we hope to test out the
               pod in SpaceX Hyperloop Pod Competition in the future.
             </p>
