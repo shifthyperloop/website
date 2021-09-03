@@ -15,7 +15,6 @@ const HomePage = () => {
             brightness={1}
             fixedOnMobile={false}
             joinButton={true}
-            infoMeetingInfo={true}
           />
         </div>
 

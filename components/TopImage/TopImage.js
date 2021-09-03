@@ -10,7 +10,6 @@ export default function TopImage({
   brightness = 0.3,
   hasArrow = true,
   joinButton = false,
-  infoMeetingInfo = false,
 }) {
   return (
     <div
@@ -27,11 +26,6 @@ export default function TopImage({
           <ApplyButton />
           <LinkButton href="/joinus">Available positions</LinkButton>
         </div>
-      ) : null}
-      {infoMeetingInfo ? (
-        <a className={styles.infoMeetingInfo} href="https://fb.me/e/19LY89XOf">
-          Learn more at our info meeting September 2nd!
-        </a>
       ) : null}
       {hasArrow ? (
         <a className={styles.arrow} href="#scroll-target">

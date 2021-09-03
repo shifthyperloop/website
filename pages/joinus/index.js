@@ -60,11 +60,6 @@ const JoinUsPage = () => {
         contribute to the team should not hesitate to contact us any time of the
        year. */}
       </p>
-      <div className={styles.infoMeetingInfo}>
-        <a className={styles.center} href="https://fb.me/e/19LY89XOf">
-          Learn more at our info meeting September 2nd!
-        </a>
-      </div>
       <ApplyButton />
       <br />
       <div className={styles.joinContainer}>

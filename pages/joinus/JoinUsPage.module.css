@@ -3,14 +3,6 @@
     margin-top: 100px;
 }
 
-.infoMeetingInfo {
-    margin: 10px auto;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 10px;
-    background: rgba(0,120,200,0.4);
-}
-
 .groupName {
     font-weight: bold;
     font-size: 1.1em;
