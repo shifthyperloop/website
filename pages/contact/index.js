@@ -2,9 +2,9 @@ import Layout from '../../components/Layout/Layout';
 import React from 'react';
 import { useRef } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-import styles from './Contact.module.css';
+import styles from './ContactUsPage.module.css';
 
-export default function Contact() {
+const ContactUsPage = () => {
   const refName = useRef();
   const refEmail = useRef();
   const refMessage = useRef();
@@ -112,3 +112,5 @@ export default function Contact() {
     </Layout>
   );
 }
+
+export default ContactUsPage;

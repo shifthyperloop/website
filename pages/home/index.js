@@ -3,9 +3,9 @@ import { FaLeaf } from 'react-icons/fa';
 import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
 import TopImage from '../../components/TopImage/TopImage';
-import styles from './Page.module.css';
+import styles from './HomePage.module.css';
 
-const Page = () => {
+const HomePage = () => {
   return (
     <Layout>
       <div className={styles.container}>
@@ -164,4 +164,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default HomePage;
