@@ -125,7 +125,7 @@ export default function TopImage({
             bottom: 10%;
             z-index: 1;
             width: 100%;
-            padding: 5px;
+            padding: 5px 0;
             background: rgba(0,120,200,0.4);
           }
 
