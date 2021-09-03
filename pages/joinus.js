@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout/Layout';
 import { IoMdClose } from 'react-icons/io';
 import { SmallButton } from '../components/Button';
-import ApplyButton from '../components/JoinButton';
+import ApplyButton from '../components/JoinButton/JoinButton';
 import groups from '../common/groupPositions';
 
 const Page = () => {

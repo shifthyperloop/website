@@ -1,6 +1,6 @@
 import { FaAngleDown } from 'react-icons/fa';
 import { LinkButton } from '../Button';
-import ApplyButton from '../JoinButton';
+import ApplyButton from '../JoinButton/JoinButton';
 import styles from './TopImage.module.css'
 
 export default function TopImage({
