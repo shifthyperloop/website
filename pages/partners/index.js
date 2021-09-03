@@ -3,64 +3,8 @@ import Layout from '../../components/Layout/Layout';
 import TopImage from '../../components/TopImage/TopImage';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
 import styles from './PartnersPage.module.css';
-
-const Sponsor = ({ title, logo, type, url, description }) => {
-  return (
-    <div>
-      <a href={url} target="_blank" className={`sponsor ${type.toLowerCase()}`}>
-        <img src={CMS_BASE_URL + logo} />
-      </a>
-      {type === 'Platinum' ? (
-        <>
-          <h3>{title}</h3>
-          <h4>{description}</h4>
-        </>
-      ) : null}
-      <style jsx>{`
-        h3,
-        h4 {
-          width: 500px;
-          max-width: calc(100vw - 1.5em);
-          margin: auto;
-        }
-
-        .sponsor {
-          margin: 0 50px 25px;
-          display: blocK;
-        }
-
-        @media (max-width: 640px) {
-          .sponsor {
-            margin: 0;
-          }
-        }
-
-        img {
-          width: 140px;
-          object-fit: contain;
-        }
-        .platinum img {
-          width: 500px;
-          height: 400px;
-          max-width: 100vw;
-          margin-top: 30px;
-        }
-        .platinum img:nth-of-type(3) {
-        }
-        .gold img {
-          width: 400px;
-          max-width: 100vw;
-        }
-        .silver img {
-          width: 200px;
-          max-width: 100vw;
-        }
-      `}</style>
-    </div>
-  );
-};
+import Sponsor from './components/Sponsor/Sponsor';
 
 const PartnersPage = ({ sponsors }) => {
   const router = useRouter();
