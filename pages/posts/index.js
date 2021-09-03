@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Layout from '../components/Layout/Layout';
-import { CMS_BASE_URL } from '../common/constants';
+import Layout from '../../components/Layout/Layout';
+import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Image from 'next/image';
+import styles from './PostPage.module.css';
 
 const Post = ({ title, pid, picture, description }) => {
   return (
@@ -91,7 +92,7 @@ const Post = ({ title, pid, picture, description }) => {
   );
 };
 
-const Page = ({ posts }) => {
+const PostsPage = ({ posts }) => {
   const router = useRouter();
 
   return (
@@ -99,43 +100,21 @@ const Page = ({ posts }) => {
       url="https://www.shifthyperloop.com/posts"
       title="Shift Hyperloop | Newsletters"
     >
-      <div className="title">
+      <div className={styles.title}>
         <h1>Newsletters</h1>
-        <hr />
+        <hr className={styles.blueLine} />
       </div>
-      <div className="posts page-container">
+      <div className={`${styles.posts}`}>
         {posts.map((post) => (
           <Post key={post.title} {...post} />
         ))}
       </div>
-      <div className="bottom-margin"></div>
-      <style jsx>{`
-        .title {
-          margin-top: 50px;
-        }
-        .posts {
-          display: flex;
-          flex-flow: row wrap;
-          box-sizing: border-box;
-          padding: 16px;
-        }
-        .bottom-margin {
-          height: 40px;
-        }
-        hr {
-          width: 80%;
-          border-width: 1px;
-          border-style: solid;
-          border-radius: 2.8px;
-          border-color: #0080c9;
-          margin-bottom: 40px;
-        }
-      `}</style>
+      <div className={styles.bottomMargin} />
     </Layout>
   );
 };
 
-Page.getInitialProps = async function () {
+PostsPage.getInitialProps = async function () {
   const res = await fetch(CMS_BASE_URL + '/posts?_sort=published:desc');
   const data = await res.json();
 
@@ -151,4 +130,4 @@ Page.getInitialProps = async function () {
   };
 };
 
-export default Page;
+export default PostsPage;
