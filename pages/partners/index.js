@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
-import Layout from '../components/Layout/Layout';
-import TopImage from '../components/TopImage/TopImage';
-import { CMS_BASE_URL } from '../common/constants';
+import Layout from '../../components/Layout/Layout';
+import TopImage from '../../components/TopImage/TopImage';
+import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
+import styles from './PartnersPage.module.css';
 
 const Sponsor = ({ title, logo, type, url, description }) => {
   return (
@@ -61,7 +62,7 @@ const Sponsor = ({ title, logo, type, url, description }) => {
   );
 };
 
-const Page = ({ sponsors }) => {
+const PartnersPage = ({ sponsors }) => {
   const router = useRouter();
 
   return (
@@ -75,17 +76,17 @@ const Page = ({ sponsors }) => {
         title="Partners"
         text="Meet our amazing partners. Their support is what's making it possible to do what we love."
       />
-      <div className="info-container">
-        <div className="sponsor-information">
-          <h3 className="quote">
+      <div className={styles.infoContainer}>
+        <div className={styles.sponsorInformation}>
+          <h3 className={styles.quote}>
             "Thank you all contributors for your patience, and willingness to
             help!"
           </h3>
           <hr />
-          <h4 className="partner-info">
+          <h4 className={styles.partnerInfo}>
             The partners are everything for us, that is why we give them all
             this attention. If you are interested in being a partner, please{' '}
-            <a className="contact" href="/contact">
+            <a className={styles.contact} href="/contact">
               contact us
             </a>
             . Thank you to all the professors and advisors that have guided us
@@ -101,41 +102,41 @@ const Page = ({ sponsors }) => {
           </h4>
         </div>
       </div>
-      <section className="page-container">
-        <h2 className="platinum sponsors">
+      <section className={styles.pageContainer} style={{'--width': '1200px'}}>
+        <h2 className={`${styles.platinum} ${styles.sponsors}`}>
           <span>PLATINUM</span>
         </h2>
-        <div className="sponsor-list">
+        <div className={styles.sponsorList}>
           {sponsors
             .filter((sponsor) => sponsor.type === 'Platinum')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
-        <h2 className="gold sponsors">
+        <h2 className={`${styles.gold} ${styles.sponsors}`}>
           <span>GOLD</span>
         </h2>
-        <div className="sponsor-list">
+        <div className={styles.sponsorList}>
           {sponsors
             .filter((sponsor) => sponsor.type === 'Gold')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
-        <h2 className="silver sponsors">
+        <h2 className={`${styles.silver} ${styles.sponsors}`}>
           <span>SILVER</span>
         </h2>
-        <div className="sponsor-list">
+        <div className={styles.sponsorList}>
           {sponsors
             .filter((sponsor) => sponsor.type === 'Silver')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
         </div>
-        <h2 className="bronze sponsors">
+        <h2 className={`${styles.bronze} ${styles.sponsors}`}>
           <span>BRONZE</span>
         </h2>
-        <div className="sponsor-list">
+        <div className={styles.sponsorList}>
           {sponsors
             .filter((sponsor) => sponsor.type === 'Bronze')
             .map((sponsor) => (
@@ -143,139 +144,11 @@ const Page = ({ sponsors }) => {
             ))}
         </div>
       </section>
-      <style jsx>{`
-        body {
-          background-image: linear-gradient(45deg, #01020b, #020610);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-size: 9px 48px;
-          text-align: center;
-        }
-        h1 {
-          font-size: 50px;
-        }
-        h3 {
-          text-align: center;
-        }
-        .contact {
-          color: #0080c9;
-          text-decoration: none;
-        }
-        .info-container {
-          background-color: #fff2;
-          box-shadow: 1px 0.3px 10px #000;
-          box-shadow: 1px 0.5px 0px #000;
-        }
-        .sponsor-information {
-          max-width: 1200px;
-          margin: auto;
-          display: flex;
-          flex-direction: row;
-        }
-        .quote {
-          width: 30%;
-          margin: 0 2.5%;
-          color: #0080c9;
-          text-align: center;
-          margin: auto;
-        }
-        .partner-info {
-          width: 60%;
-          margin: 30px 2.5% 30px;
-        }
-
-        div {
-          position: center;
-        }
-        .sponsor-list {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .sponsors:not(:first-of-type) {
-          margin-top: 0;
-        }
-        .sponsors.platinum {
-          color: #ddd;
-          font-size: 3.2rem;
-        }
-
-        .sponsor-image {
-          width: 100%;
-        }
-
-        .sponsors.gold {
-          color: #da4;
-          margin-top: 50px;
-          font-size: 3.2rem;
-        }
-
-        .sponsors.silver {
-          color: silver;
-          font-size: 3.2rem;
-        }
-
-        .sponsors.bronze {
-          color: #b08d57;
-          font-size: 3.2rem;
-        }
-
-        .sponsors {
-          line-height: 0.5;
-          text-align: center;
-          font: 1em Georgia, Serif;
-        }
-        .sponsors span {
-          display: inline-block;
-          display: flex;
-          align-items: center;
-        }
-        .sponsors span:before,
-        .sponsors span:after {
-          content: '';
-          flex: 1 0 auto;
-          height: 5px;
-          margin: 0 15px;
-          border-bottom: 1px solid white;
-          border-top: 1px solid white;
-        }
-        .sponsors span:before {
-        }
-        .sponsors span:after {
-        }
-
-        .platinum.sponsor + div {
-          display: flex;
-          align-items: center;
-          width: 50%;
-        }
-        @media (max-width: 640px) {
-          .sponsor-information {
-            flex-direction: column;
-            padding: 32px 1em 0;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: justify;
-          }
-          hr {
-            display: none;
-          }
-          .quote {
-            width: 100%;
-          }
-          .partner-info {
-            margin: 20px 0;
-            width: 100%;
-          }
-        }
-      `}</style>
     </Layout>
   );
 };
 
-Page.getInitialProps = async function () {
+PartnersPage.getInitialProps = async function () {
   const res = await fetch(CMS_BASE_URL + '/sponsors');
   const data = await res.json();
 
@@ -292,4 +165,4 @@ Page.getInitialProps = async function () {
   };
 };
 
-export default Page;
+export default PartnersPage;
