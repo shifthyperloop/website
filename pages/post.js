@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import { useState, useEffect } from 'react';

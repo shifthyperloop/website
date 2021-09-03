@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import { CMS_BASE_URL } from '../common/constants';
 import fetch from 'isomorphic-unfetch';
 import Image from 'next/image';

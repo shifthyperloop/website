@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import ReactMarkdown from 'react-markdown';

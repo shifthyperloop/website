@@ -1,0 +1,121 @@
+.header {
+    box-sizing: border-box;
+    height: 3.5rem;
+    width: 100%;
+    background: #01020b;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.headSide {
+    flex: 0 1 130px;
+}
+.headSide > a {
+    display: flex;
+    align-items: center;
+}
+.headSide img {
+    height: 2.5rem;
+}
+
+.menuOptions {
+    width: 100%;
+    max-width: calc(1200px - 130px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menuDropdown {
+    display: none;
+}
+
+.menu {
+    position: relative;
+    margin: 10px;
+}
+.menu > a:after {
+    margin-left: 3px;
+    content: '▾';
+}
+.items {
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    top: 100%;
+    display: none;
+    white-space: nowrap;
+    flex-direction: column;
+    width: 150px;
+    right: -50px;
+    padding-top: 12px;
+}
+.menu:hover .items {
+    display: flex;
+}
+
+.menuOptions a {
+    text-decoration: none;
+    color: inherit;
+
+    padding: 10px;
+    display: block;
+}
+
+.menuOptions a:hover {
+    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.teamMenu {
+    composes: menu;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .headSide {
+        flex-grow: 1;
+    }
+    .menuDropdown {
+        width: 3em;
+        height: 100%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .menuOptions {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        display: none;
+        background: inherit;
+    }
+    .header.open > .menuOptions {
+        display: flex;
+    }
+    .teamMenu > a {
+        display: none;
+    }
+    .teamMenu > .items {
+        display: flex;
+        position: relative;
+        right: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .teamMenu > span::after {
+        display: none;
+    }
+}

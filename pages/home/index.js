@@ -1,27 +1,26 @@
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import { FaLeaf } from 'react-icons/fa';
 import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
-import TopImage from '../components/TopImage';
+import TopImage from '../../components/TopImage/TopImage';
+import styles from './Page.module.css';
 
 const Page = () => {
   return (
     <Layout>
-      <div className="container">
+      <div className={styles.container}>
         <div>
           <TopImage
             image="/images/homePage/topImage.png"
             brightness={1}
             fixedOnMobile={false}
-            after={false}
             joinButton={true}
             infoMeetingInfo={true}
-            backgroundPosition={'center 30%'}
           />
         </div>
 
-        <div className="content">
-          <div className="text">
+        <div className={styles.content}>
+          <div className={styles.text}>
             <h1>About Shift</h1>
             <p>
               Shift Hyperloop is an independent non-profit organization founded
@@ -55,14 +54,14 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div className="goals">
-          <div className="text">
-            <h1 className="our-goals">Our Goals</h1>
-            <div className="separate">
-              <div className="environment goal">
-                <FaLeaf size={35} className="icon" />
+        <div className={styles.goals}>
+          <div className={styles.text}>
+            <h1>Our Goals</h1>
+            <div className={styles.separate}>
+              <div className={`${styles.goal}`}>
+                <FaLeaf size={35} className={styles.icon} />
                 <h4>Environment</h4>
-                <p className="goal-text">
+                <p className={styles.goalText}>
                   The world is facing massive challenges tied to climate change.
                   Transportation is a big contributor to CO₂ emissions. With
                   hyperloop we can reduce those emissions along with
@@ -71,10 +70,10 @@ const Page = () => {
                   in Norway.
                 </p>
               </div>
-              <div className="member goal">
-                <IoMdPerson size={35} className="icon" />
+              <div className={styles.goal}>
+                <IoMdPerson size={35} className={styles.icon} />
                 <h4>Personal Development</h4>
-                <p className="goal-text">
+                <p className={styles.goalText}>
                   While lectures are a decent way to learn, all members at Shift
                   can attest to that nothing beats proper working experience. At
                   Shift we are big advocates for increasing the number of
@@ -83,10 +82,10 @@ const Page = () => {
                   while also learning to be independent.
                 </p>
               </div>
-              <div className="competition goal">
-                <GiTrophy size={35} className="icon" />
+              <div className={styles.goal}>
+                <GiTrophy size={35} className={styles.icon} />
                 <h4>Competition</h4>
-                <p className="goal-text">
+                <p className={styles.goalText}>
                   In 2021 European Hyperloop Week will be hosted for the first
                   time in Valencia, Spain where Shift will participate. In the
                   future we hope to compete in the annual SpaceX Hyperloop Pod
@@ -98,18 +97,18 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="hyperloop-container">
+        <div className={styles.hyperloopContainer}>
           <h1> What is a hyperloop?</h1>
-          <div className="separate">
-            <div className="flex-container">
-              <div className="flex1">
+          <div className={styles.separate}>
+            <div className={styles.flexContainer}>
+              <div className={styles.flex1}>
                 <img
-                  className="hyperloop-image"
+                  className={styles.hyperloopImage}
                   src="/images/homePage/hyperloopAlpha.jpg"
                   alt="Hyperloop alpha sketch"
                 />
               </div>
-              <p className="text flex1">
+              <p className={`${styles.text} ${styles.flex1}`}>
                 Hyperloop is a new transportation concept. The hyperloop was
                 made popular by Elon Musk when he published his paper Hyperloop
                 Alpha, but the concept is heavily based on Robert Goddards
@@ -126,10 +125,10 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="competition-container">
+        <div className={styles.competitionContainer}>
           <h1> Hyperloop competition </h1>
-          <div className="separate">
-            <div className="flex1">
+          <div className={styles.separate}>
+            <div className={styles.flex1}>
               <h2>European Hyperloop Week:</h2>
               <p>
                 In 2021 the European Hyperloop Week will be hosted for the very
@@ -154,128 +153,13 @@ const Page = () => {
             <iframe
               src="https://www.youtube-nocookie.com/embed/AO0sPME3j2s"
               frameBorder="0"
-              className="flex1"
+              className={`${styles.flex1} ${styles.video}`}
               allow="accelerometer; autoplay; gyroscope; "
               allowFullScreen
             />
           </div>
         </div>
       </div>
-      <style jsx>
-        {`
-          .competition-container {
-            min-height: 400px;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #fff2;
-            box-shadow: 1px 0.3px 10px #000;
-            text-align: center;
-            padding-top: 30px;
-            padding-bottom: 40px;
-          }
-          .arrow {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-attachment: fixed;
-          }
-          .flex1 {
-            flex: 1 1 500px;
-            margin: 50px;
-            text-align: justify;
-          }
-          .hyperloop-image {
-            width: 100%;
-          }
-          .separate {
-            display: flex;
-            flex-flow: row wrap;
-            max-width: 1200px;
-            margin: auto;
-            justify-content: center;
-          }
-          iframe {
-            width: 50%;
-          }
-
-          .flex-container {
-            display: flex;
-            flex-flow: row wrap;
-          }
-          .icon {
-            width: 50px;
-          }
-          h1 {
-            margin-bottom: 30px;
-            font-size: 40px;
-          }
-          .container {
-            display: flex;
-            flex-direction: column;
-          }
-          .goal {
-            max-width: 330px;
-            width: 100%;
-            margin-left: 20px;
-            margin-right: 20px;
-          }
-          .goal-text {
-            text-align: justify;
-          }
-          .text-container {
-            max-width: 1200px;
-            margin: auto;
-          }
-          .goals {
-            min-height: 400px;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #fff2;
-            box-shadow: 1px 0.3px 10px #000;
-            text-align: center;
-            padding-top: 30px;
-            padding-bottom: 40px;
-          }
-
-          .content,
-          .hyperloop-container {
-            background-color: #202020;
-
-            /**/
-            box-shadow: 1px 0.3px 10px #000; /**/
-            text-align: center;
-            padding-top: 30px;
-            padding-bottom: 40px;
-          }
-          .text {
-            max-width: 1200px;
-            min-height: 120px;
-            margin: auto;
-            padding: 1.5em;
-            box-sizing: border-box;
-          }
-          @media (max-width: 640px) {
-            .parallax {
-              background-position: center;
-              max-width: 100%;
-            }
-          }
-
-          .join-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-flow: row nowrap;
-            width: 100%;
-            max-width: 1200px;
-          }
-        `}
-      </style>
     </Layout>
   );
 };

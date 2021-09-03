@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import { IoMdClose } from 'react-icons/io';
 import { SmallButton } from '../components/Button';
 import ApplyButton from '../components/JoinButton';

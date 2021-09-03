@@ -1,0 +1,17 @@
+.content {
+    flex: 1;
+}
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3.5rem);
+}
+.title {
+    text-align: center;
+}
+.page-container {
+    max-width: var(--width);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}

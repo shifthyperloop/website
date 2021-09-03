@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Head from 'next/head';
+import styles from './Layout.module.css'
 
 class Layout extends Component {
   render() {
@@ -13,7 +14,7 @@ class Layout extends Component {
       image = 'https://www.shifthyperloop.com/img/Logo(White_RightText).png',
     } = this.props;
     return (
-      <div className="layout">
+      <div className={styles.layout}>
         <Head>
           <link rel="shortcut icon" type="image/png" href="/shift_icon.png" />
           <title>{title}</title>
@@ -24,42 +25,8 @@ class Layout extends Component {
           <meta property="og:image" content={image} />
         </Head>
         <Header />
-        <div className="content">{children}</div>
+        <div className={styles.content}>{children}</div>
         <Footer />
-        <style jsx global>{`
-          :root {
-            --width: 1200px;
-          }
-          body {
-            margin: 0px;
-            height: 100%;
-            color: #ddd;
-            font-family: 'Roboto Condensed', sans-serif;
-            line-height: 1.5;
-            background-color: #161616;
-            margin-top: 3.5rem;
-          }
-          a {
-            color: #ddd;
-          }
-          .content {
-            flex: 1;
-          }
-          .layout {
-            display: flex;
-            flex-direction: column;
-            min-height: calc(100vh - 3.5rem);
-          }
-          .title {
-            text-align: center;
-          }
-          .page-container {
-            max-width: var(--width);
-            width: 100%;
-            margin: auto;
-            text-align: center;
-          }
-        `}</style>
       </div>
     );
   }

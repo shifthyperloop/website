@@ -5,7 +5,7 @@ module.exports = {
   target: 'serverless',
   exportPathMap: async function () {
     const paths = {
-      '/': { page: '/' },
+      '/': { page: '/home'},
       '/posts': { page: '/posts' },
       '/contact': { page: '/contact' },
       '/partners': { page: '/partners' },
