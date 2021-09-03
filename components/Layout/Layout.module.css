@@ -4,7 +4,7 @@
 .layout {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 3.5rem);
+    min-height: 100vh;
 }
 .title {
     text-align: center;
