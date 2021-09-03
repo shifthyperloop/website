@@ -1,29 +1,19 @@
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
-import { CMS_BASE_URL } from '../common/constants';
-import TeamPage from '../components/teamPage/TeamPage';
+import { CMS_BASE_URL } from '../../common/constants';
+import TeamPage from './components/TeamPage';
 
 const Page = ({ members = [] }) => {
   const router = useRouter();
 
-  const groups = {
+  let groups = {
     Board: {
       title: 'The Board',
       description: '...',
       members: [],
     },
-    Electronics: {
-      title: 'Electronics Group',
-      description: '...',
-      members: [],
-    },
-    Battery: {
-      title: 'Battery Group',
-      description: '...',
-      members: [],
-    },
-    Powertrain: {
-      title: 'Powertrain Group',
+    Electrical: {
+      title: 'Electrical Group',
       description: '...',
       members: [],
     },
@@ -32,8 +22,8 @@ const Page = ({ members = [] }) => {
       description: '...',
       members: [],
     },
-    Levitation: {
-      title: 'Levitation Group',
+    Magnetics: {
+      title: 'Magnetics Group',
       description: '...',
       members: [],
     },
@@ -44,11 +34,6 @@ const Page = ({ members = [] }) => {
     },
     Relations: {
       title: 'Relations Group',
-      description: '...',
-      members: [],
-    },
-    Concept: {
-      title: 'Concept Group',
       description: '...',
       members: [],
     },
@@ -63,15 +48,16 @@ const Page = ({ members = [] }) => {
     <TeamPage
       members={members}
       teamGroups={groups}
-      topImage={'/images/team/2021.jpg'}
-      title={'Team 2021'}
-      path={'/team2021'}
+      topImage={'/images/team/2020.jpg'}
+      title={'Team 2020'}
+      path={'/team2020'}
+      centerImages={false}
     />
   );
 };
 
 Page.getInitialProps = async function () {
-  const res = await fetch(CMS_BASE_URL + '/team-2021-s');
+  const res = await fetch(CMS_BASE_URL + '/team-2020-s');
   const data = await res.json();
 
   return {
@@ -79,16 +65,16 @@ Page.getInitialProps = async function () {
       let picture = {
         url: undefined,
       };
-      if (member.Picture !== null) {
-        picture = member.Picture.url;
+      if (member.picture !== null) {
+        picture = member.picture;
       }
-
       return {
         name: member.Name,
-        url: picture,
+        picture,
         group: member.Group,
         title: member.Title,
         email: member.Email,
+        url: member.Picture.url,
       };
     }),
   };

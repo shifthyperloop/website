@@ -9,10 +9,10 @@ module.exports = {
       '/posts': { page: '/posts' },
       '/contact': { page: '/contact' },
       '/partners': { page: '/partners' },
-      '/team': { page: '/team2021' },
-      '/team2021': { page: '/team2021' },
-      '/team2020': { page: '/team2020' },
-      '/team2019': { page: '/team2019' },
+      '/team': { page: '/team/2021' },
+      '/team2021': { page: '/team/2021' },
+      '/team2020': { page: '/team/2020' },
+      '/team2019': { page: '/team/2019' },
       '/joinus': { page: '/joinus' },
     };
 

@@ -1,4 +1,4 @@
-import { CMS_BASE_URL } from '../../common/constants';
+import { CMS_BASE_URL } from '../../../common/constants';
 import { FiMail } from 'react-icons/fi';
 import Image from 'next/image';
 

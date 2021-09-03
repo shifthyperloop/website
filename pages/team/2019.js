@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
-import { CMS_BASE_URL } from '../common/constants';
-import TeamPage from '../components/teamPage/TeamPage';
+import { CMS_BASE_URL } from '../../common/constants';
+import TeamPage from './components/TeamPage';
 
 const Page = ({ members = [] }) => {
   const router = useRouter();

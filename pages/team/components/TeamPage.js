@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Layout from '../Layout/Layout';
-import TopImage from '../TopImage/TopImage';
+import Layout from '../../../components/Layout/Layout';
+import TopImage from '../../../components/TopImage/TopImage';
 import Group from './Group';
 
 const TeamPage = ({
