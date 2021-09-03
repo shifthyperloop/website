@@ -3,19 +3,6 @@
     url('/images/contact/background.png');*/
 }
 
-.contactUs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 3rem;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-    margin-bottom: 50px;
-}
-
 .contactContainer {
     display: flex;
     flex-direction: row;

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
+html {
+    --header-height: 3.5rem;
+    --top-text-color: #ddd;
+}
+
 body {
     height: 100%;
     color: #ddd;
@@ -11,11 +16,11 @@ body {
 
 h1 {
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 3em;
     text-align: center;
 }
 
-h2, h3, h4 {
+h2, h3, h4, p {
     text-align: center;
 }
 

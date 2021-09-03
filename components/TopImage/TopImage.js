@@ -4,9 +4,8 @@ import ApplyButton from '../JoinButton/JoinButton';
 import styles from './TopImage.module.css'
 
 export default function TopImage({
+  children,
   image = '',
-  title = '',
-  text = '',
   brightness = 0.3,
   hasArrow = true,
   joinButton = false,
@@ -17,10 +16,10 @@ export default function TopImage({
       style={{
         '--top-image-src': `url(${image})`,
         '--top-image-brightness': 1 - brightness,
+        '--top-text-color': '#FFF',
       }}
     >
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.text}>{text}</p>
+      {children}
       {joinButton ? (
         <div className={styles.joinButtons}>
           <ApplyButton />

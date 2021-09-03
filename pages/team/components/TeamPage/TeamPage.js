@@ -3,6 +3,7 @@ import Layout from '../../../../components/Layout/Layout';
 import TopImage from '../../../../components/TopImage/TopImage';
 import Group from '../Group/Group';
 import styles from './TeamPage.module.css';
+import PageTop from '../../../../components/PageTop/PageTop';
 
 const TeamPage = ({
   members = [],
@@ -29,7 +30,15 @@ const TeamPage = ({
       url={'https://www.shifthyperloop.com' + path}
       title={'Shift Hyperloop | ' + title}
     >
-      <TopImage image={topImage} title={title} brightness={0.8} />
+      <TopImage
+        image={topImage}
+        brightness={0.8}
+      >
+        <PageTop
+          title={title}
+          description="Meet our amazing partners. Their support is what's making it possible to do what we love."
+        />
+      </TopImage>
       <div className={styles.container}>
         {Object.values(groups)
           .sort((a, b) => {

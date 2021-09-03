@@ -1,6 +1,3 @@
-.title {
-    margin-top: 50px;
-}
 .posts {
     display: flex;
     flex-flow: row wrap;

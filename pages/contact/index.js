@@ -3,6 +3,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import styles from './ContactUsPage.module.css';
+import PageTop from '../../components/PageTop/PageTop';
 
 const ContactUsPage = () => {
   const refName = useRef();
@@ -37,10 +38,10 @@ const ContactUsPage = () => {
       url="https://www.shifthyperloop.com/contact"
       title="Shift Hyperloop | Contact us"
     >
+      <PageTop
+        title="Contact Us"
+      />
       <div className={styles.container}>
-        <div className={styles.contactUs}>
-          <p>Contact us</p>
-        </div>
         <div className={styles.contactContainer}>
           <div className={styles.contactInfo}>
             <h2>Getting in touch is easy!</h2>

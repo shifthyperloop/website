@@ -6,6 +6,7 @@ import { SmallButton } from '../../components/Button';
 import ApplyButton from '../../components/JoinButton/JoinButton';
 import groups from '../../common/groupPositions';
 import styles from './JoinUsPage.module.css';
+import PageTop from '../../components/PageTop/PageTop';
 
 const JoinUsPage = () => {
   const router = useRouter();
@@ -41,25 +42,26 @@ const JoinUsPage = () => {
       url="https://www.shifthyperloop.com/joinus"
       title="Shift Hyperloop | Join us"
     >
-      <h1 className={styles.title}>Join Us</h1>
-      <hr className={styles.grayLine} />
-      <p className={styles.pageInfo}>
-        On this page you will find our application from and a more detailed
-        description of the positions we are offering this year. We are
-        recruiting students from all fields of study regardless of year and
-        prior knowledge. Working with Shift will give you experience that makes
-        you attractive for your future employers. You will get a large network
-        of new friends in the technical community at NTNU. A year at Shift will
-        be educational and fun! Admission for the team 2022 is open and you
-        should check if something is for you! Don’t hesitate to contact us if
-        you have questions.
-        {/* Primarily Shift enrolls new members to the team two
+      <PageTop
+        title="Join Us"
+        description="
+          On this page you will find our application from and a more detailed
+          description of the positions we are offering this year. We are
+          recruiting students from all fields of study regardless of year and
+          prior knowledge. Working with Shift will give you experience that makes
+          you attractive for your future employers. You will get a large network
+          of new friends in the technical community at NTNU. A year at Shift will
+          be educational and fun! Admission for the team 2022 is open and you
+          should check if something is for you! Don’t hesitate to contact us if
+          you have questions.
+        "
+        /* Primarily Shift enrolls new members to the team two
         times a year. In May the team leader and board positions are filled. The
         rest of the team positions are filled in august/september at the start
         of the semester. However, any student feeling they have something to
         contribute to the team should not hesitate to contact us any time of the
-       year. */}
-      </p>
+       year. */
+      />
       <ApplyButton />
       <br />
       <div className={styles.joinContainer}>

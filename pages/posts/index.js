@@ -4,6 +4,7 @@ import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import styles from './PostsPage.module.css';
 import Post from './components/Post/Post';
+import PageTop from '../../components/PageTop/PageTop';
 
 const PostsPage = ({ posts }) => {
   const router = useRouter();
@@ -13,10 +14,10 @@ const PostsPage = ({ posts }) => {
       url="https://www.shifthyperloop.com/posts"
       title="Shift Hyperloop | Newsletters"
     >
-      <div className={styles.title}>
-        <h1>Newsletters</h1>
-        <hr className={styles.blueLine} />
-      </div>
+      <PageTop
+        title="Newsletters"
+      />
+      <hr className={styles.blueLine} />
       <div className={`${styles.posts}`}>
         {posts.map((post) => (
           <Post key={post.title} {...post} />

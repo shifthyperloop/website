@@ -1,0 +1,15 @@
+.container {
+    margin-top: var(--header-height);
+    margin-bottom: 3rem;
+    color: var(--top-text-color)
+}
+
+.title {
+    padding-top: 30px;
+}
+
+.description {
+    font-size: 1.2em;
+    max-width: 1200px;
+    margin: auto;
+}

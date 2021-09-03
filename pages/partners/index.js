@@ -5,6 +5,7 @@ import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import styles from './PartnersPage.module.css';
 import Sponsor from './components/Sponsor/Sponsor';
+import PageTop from '../../components/PageTop/PageTop';
 
 const PartnersPage = ({ sponsors }) => {
   const router = useRouter();
@@ -15,11 +16,12 @@ const PartnersPage = ({ sponsors }) => {
       title="Shift Hyperloop | Sponsors"
       description="Meet our amazing partners. Their support is what's making it possible to do what we love."
     >
-      <TopImage
-        image="/images/partners/topImage.jpg"
-        title="Partners"
-        text="Meet our amazing partners. Their support is what's making it possible to do what we love."
-      />
+      <TopImage image="/images/partners/topImage.jpg">
+        <PageTop
+          title="Partners"
+          description="Meet our amazing partners. Their support is what's making it possible to do what we love."
+        />
+      </TopImage>
       <div className={styles.infoContainer}>
         <div className={styles.sponsorInformation}>
           <h3 className={styles.quote}>
