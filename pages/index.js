@@ -14,8 +14,8 @@ const Page = () => {
             brightness={1}
             fixedOnMobile={false}
             after={false}
-            joinButton={false}
-            infoMeetingInfo={false}
+            joinButton={true}
+            infoMeetingInfo={true}
             backgroundPosition={'center 30%'}
           />
         </div>
