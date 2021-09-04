@@ -8,7 +8,6 @@ const ApplyButton = () => {
       <div className="apply-button">
         <LinkButton href={APPLY_URL}>
           <ButtonTitle>Apply!</ButtonTitle>
-          Deadline: September 3rd
         </LinkButton>
       </div>
       <style jsx>
