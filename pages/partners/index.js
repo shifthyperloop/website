@@ -4,7 +4,7 @@ import TopImage from '../../components/TopImage/TopImage';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import styles from './PartnersPage.module.css';
-import Sponsor from './components/Sponsor/Sponsor';
+import Sponsor from '../../components/page/partners/Sponsor/Sponsor';
 import PageTop from '../../components/PageTop/PageTop';
 
 const PartnersPage = ({ sponsors }) => {

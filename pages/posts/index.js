@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
 import styles from './PostsPage.module.css';
-import Post from './components/Post/Post';
+import Post from '../../components/page/posts/Post/Post';
 import PageTop from '../../components/PageTop/PageTop';
 
 const PostsPage = ({ posts }) => {

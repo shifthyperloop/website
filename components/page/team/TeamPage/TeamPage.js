@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Layout from '../../../../components/Layout/Layout';
-import TopImage from '../../../../components/TopImage/TopImage';
+import Layout from '../../../Layout/Layout';
+import TopImage from '../../../TopImage/TopImage';
 import Group from '../Group/Group';
 import styles from './TeamPage.module.css';
-import PageTop from '../../../../components/PageTop/PageTop';
+import PageTop from '../../../PageTop/PageTop';
 
 const TeamPage = ({
   members = [],
