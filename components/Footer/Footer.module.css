@@ -3,67 +3,54 @@
     background-color: #01020b;
     box-shadow: 2px 2px 10px #1a1a1a;
 }
-.copyright {
-    width: 100%;
-}
 .container {
     box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    padding: 16px 8px;
     max-width: 1200px;
-}
-.container > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.flexColumn {
+    height: 100%;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 0 8px;
 }
-.ramboll {
-    width: 50%;
-    margin: auto;
-    margin-left: 15px;
+
+.sponsors {
+    height: 0;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
-.alva {
-    width: 50%;
+.sponsor {
+    flex: 1 1;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.alvaLogo {
-    width: 80%;
+.sponsor img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
-.hevold {
-    width: 45%;
+
+.socials > * {
+    padding: 10px;
+    font-size: 1.7em;
+    line-height: 0;
 }
-.hevoldLogo {
-    width: 80%;
+
+.copyright {
+    width: 100%;
+    margin: 5px 0;
 }
-.hydro {
-    width: 35%;
-}
-.hydroLogo {
-    width: 80%;
-}
-.mainSponsor,
-.flexColumn {
-    width: 20%;
-    text-align: center;
-}
+
 @media (max-width: 1000px) {
-    .flexColumn {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-    .mainSponsor {
-        width: 25%;
-    }
+
 }
