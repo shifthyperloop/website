@@ -38,10 +38,10 @@ const ContactUsPage = () => {
       url="https://www.shifthyperloop.com/contact"
       title="Shift Hyperloop | Contact us"
     >
-      <PageTop
-        title="Contact Us"
-      />
       <div className={styles.container}>
+        <PageTop
+          title="Contact Us"
+        />
         <div className={styles.contactContainer}>
           <div className={styles.contactInfo}>
             <h2>Getting in touch is easy!</h2>

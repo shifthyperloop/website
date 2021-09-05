@@ -2,6 +2,7 @@
 
 html {
     --header-height: 4rem;
+    --footer-height: 8rem;
     --top-text-color: #ddd;
 }
 
