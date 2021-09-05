@@ -9,7 +9,6 @@ const ApplyButton = () => {
       <div className={styles.applyButton}>
         <LinkButton href={APPLY_URL}>
           <ButtonTitle>Apply!</ButtonTitle>
-          Deadline: September 3rd
         </LinkButton>
       </div>
     </>
