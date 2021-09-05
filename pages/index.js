@@ -1,8 +1,8 @@
-import Layout from '../../components/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 import { FaLeaf } from 'react-icons/fa';
 import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
-import TopImage from '../../components/TopImage/TopImage';
+import TopImage from '../components/TopImage/TopImage';
 import styles from './HomePage.module.css';
 
 const HomePage = () => {
@@ -15,6 +15,7 @@ const HomePage = () => {
             brightness={1}
             fixedOnMobile={false}
             joinButton={true}
+
           />
         </div>
 
