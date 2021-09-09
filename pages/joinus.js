@@ -49,17 +49,19 @@ const Page = () => {
         prior knowledge. Working with Shift will give you experience that makes
         you attractive for your future employers. You will get a large network
         of new friends in the technical community at NTNU. A year at Shift will
-        be educational and fun! Admission for the team 2022 is open and you
-        should check if something is for you! Don’t hesitate to contact us if
-        you have questions.
-        {/* Primarily Shift enrolls new members to the team two
+        be educational and fun! { /* Admission for the team 2022 is open and you
+        should check if something is for you! */}
+        Don’t hesitate to contact us if you have questions.
+        <br />
+        <br />
+        Primarily Shift enrolls new members to the team two
         times a year. In May the team leader and board positions are filled. The
         rest of the team positions are filled in august/september at the start
         of the semester. However, any student feeling they have something to
         contribute to the team should not hesitate to contact us any time of the
-       year. */}
+       year.
       </h3>
-      <ApplyButton />
+      {/* <ApplyButton /> */}
       <br />
       <div className="join-container">
         <h2 className="center">Groups:</h2>
@@ -98,7 +100,7 @@ const Page = () => {
                 <p className="position-description">{position.description}</p>
               </div>
             ))}
-            <ApplyButton />
+            {/* <ApplyButton /> */}
           </div>
         </div>
       )}
