@@ -14,7 +14,7 @@ const JoinUsPage = () => {
 
   const PositionsButton = (props) => {
     return (
-      <div className="button-container">
+      <div className={styles.positionsButton}>
         <SmallButton
           onClick={() =>
             setModal({
@@ -24,15 +24,6 @@ const JoinUsPage = () => {
         >
           View available positions
         </SmallButton>
-        <style jsx>
-          {`
-            .button-container {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            }
-          `}
-        </style>
       </div>
     );
   };

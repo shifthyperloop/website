@@ -135,3 +135,9 @@
         grid-template-columns: 1fr;
     }
 }
+
+.positionsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
