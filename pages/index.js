@@ -14,7 +14,7 @@ const HomePage = () => {
             image="/images/homePage/topImage.png"
             brightness={1}
             fixedOnMobile={false}
-            joinButton={true}
+            joinButton={false}
 
           />
         </div>

@@ -14,7 +14,7 @@ const JoinUsPage = () => {
 
   const PositionsButton = (props) => {
     return (
-      <div className={styles.buttonContainer}>
+      <div className="button-container">
         <SmallButton
           onClick={() =>
             setModal({
@@ -44,25 +44,23 @@ const JoinUsPage = () => {
     >
       <PageTop
         title="Join Us"
-        description="
-          On this page you will find our application from and a more detailed
-          description of the positions we are offering this year. We are
-          recruiting students from all fields of study regardless of year and
-          prior knowledge. Working with Shift will give you experience that makes
-          you attractive for your future employers. You will get a large network
-          of new friends in the technical community at NTNU. A year at Shift will
-          be educational and fun! Admission for the team 2022 is open and you
-          should check if something is for you! Don’t hesitate to contact us if
-          you have questions.
-        "
-        /* Primarily Shift enrolls new members to the team two
-        times a year. In May the team leader and board positions are filled. The
-        rest of the team positions are filled in august/september at the start
-        of the semester. However, any student feeling they have something to
-        contribute to the team should not hesitate to contact us any time of the
-       year. */
+        description={
+        "On this page you will find our application from and a more detailed " +
+        "description of the positions we are offering this year. We are " +
+        "recruiting students from all fields of study regardless of year and " +
+        "prior knowledge. Working with Shift will give you experience that makes " +
+        "you attractive for your future employers. You will get a large network " +
+        "of new friends in the technical community at NTNU. A year at Shift will " +
+        "be educational and fun! Don’t hesitate to contact us if you have questions." +
+        "\n\n" +
+        "Primarily Shift enrolls new members to the team two " +
+        "times a year. In May the team leader and board positions are filled. The " +
+        "rest of the team positions are filled in august/september at the start " +
+        "of the semester. However, any student feeling they have something to " +
+        "contribute to the team should not hesitate to contact us any time of the " +
+        "year."}
       />
-      <ApplyButton />
+      {/* <ApplyButton /> */}
       <br />
       <div className={styles.joinContainer}>
         <h2 className={styles.center}>Groups:</h2>
@@ -101,7 +99,7 @@ const JoinUsPage = () => {
                 <p className={styles.positionDescription}>{position.description}</p>
               </div>
             ))}
-            <ApplyButton />
+            {/* <ApplyButton /> */}
           </div>
         </div>
       )}
