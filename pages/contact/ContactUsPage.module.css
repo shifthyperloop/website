@@ -1,0 +1,97 @@
+.container {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    box-sizing: border-box;
+    background-image: linear-gradient(0deg, #0008, #0008), url('/images/contact/background.png');
+    background-size: cover;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contactInfo {
+    width: 50%;
+    align-self: flex-start;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contactForm {
+    height: 30rem;
+    border-left: #fff5 1px solid;
+    width: 50%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email,
+.name,
+.message {
+    width: 80%;
+    margin: 2%;
+}
+
+.nameField,
+.emailField,
+.messageField {
+    border: none;
+    padding: 10px 5px;
+    color: #aaa;
+}
+
+.submitForm {
+    border: none;
+    margin-top: 20px;
+    padding: 5px 5px;
+    color: black;
+    background-color: white;
+}
+
+.name,
+.email {
+    /*height: 10%;*/
+}
+
+.message {
+    flex: 1;
+}
+
+.messageField {
+    height: 100%;
+}
+
+.some > a {
+    padding: 10px;
+    font-size: 1.7em;
+}
+
+.contactContainer input,
+.contactContainer textarea {
+    background: rgba(33, 37, 41, 0.9);
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.contactContainer p {
+    flex: 0 0 120px;
+}
+
+@media (max-width: 640px) {
+    .contactContainer {
+        flex-wrap: wrap;
+    }
+    .contactInfo {
+        flex-basis: 400px;
+        margin-top: 0;
+    }
+    .contactForm {
+        flex-basis: 400px;
+    }
+}

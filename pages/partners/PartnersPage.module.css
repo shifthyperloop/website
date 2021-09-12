@@ -1,0 +1,116 @@
+
+.contact {
+    color: #0080c9;
+    text-decoration: none;
+}
+.infoContainer {
+    text-align: center;
+    background-color: #fff2;
+    box-shadow: 1px 0.3px 10px #000;
+    box-shadow: 1px 0.5px 0px #000;
+}
+.sponsorInformation {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.quote {
+    width: 30%;
+    margin: 0 2.5%;
+    color: #0080c9;
+    text-align: center;
+    margin: auto;
+}
+.partnerInfo {
+    width: 60%;
+    margin: 30px 2.5% 30px;
+}
+
+.sponsorList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageContainer {
+    max-width: var(--width);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.sponsors:not(:firstOfType) {
+    margin-top: 0;
+}
+.sponsors.platinum {
+    color: #ddd;
+    font-size: 3.2rem;
+}
+
+.sponsorImage {
+    width: 100%;
+}
+
+.sponsors.gold {
+    color: #da4;
+    margin-top: 50px;
+    font-size: 3.2rem;
+}
+
+.sponsors.silver {
+    color: silver;
+    font-size: 3.2rem;
+}
+
+.sponsors.bronze {
+    color: #b08d57;
+    font-size: 3.2rem;
+}
+
+.sponsors {
+    line-height: 0.5;
+    text-align: center;
+    font: 1em Georgia, Serif;
+}
+.sponsors span {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.sponsors span:before,
+.sponsors span:after {
+    content: '';
+    flex: 1 0 auto;
+    height: 5px;
+    margin: 0 15px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+.sponsors span:before {
+}
+.sponsors span:after {
+}
+
+.platinum.sponsor + div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+@media (max-width: 640px) {
+    .sponsorInformation {
+        flex-direction: column;
+        padding: 32px 1em 0;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: justify;
+    }
+    .quote {
+        width: 100%;
+    }
+    .partnerInfo {
+        margin: 20px 0;
+        width: 100%;
+    }
+}

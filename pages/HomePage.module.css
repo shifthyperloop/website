@@ -1,0 +1,103 @@
+.competitionContainer {
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff2;
+    box-shadow: 1px 0.3px 10px #000;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-attachment: fixed;
+}
+.flex1 {
+    flex: 1 1 500px;
+    margin: 50px;
+    text-align: justify;
+}
+.hyperloopImage {
+    width: 100%;
+}
+.separate {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+.video {
+    width: 50%;
+}
+
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+.icon {
+    width: 50px;
+}
+.goal {
+    max-width: 330px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.goalText {
+    text-align: justify;
+}
+.textContainer {
+    max-width: 1200px;
+    margin: auto;
+}
+.goals {
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff2;
+    box-shadow: 1px 0.3px 10px #000;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.content,
+.hyperloopContainer {
+    background-color: #202020;
+
+    /**/
+    box-shadow: 1px 0.3px 10px #000; /**/
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.text {
+    max-width: 1200px;
+    min-height: 120px;
+    margin: auto;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+@media (max-width: 640px) {
+    .parallax {
+        background-position: center;
+        max-width: 100%;
+    }
+}
+
+.joinButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: 1200px;
+}
