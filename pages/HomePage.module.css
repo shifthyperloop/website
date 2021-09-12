@@ -43,10 +43,6 @@
 .icon {
     width: 50px;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-}
 .goal {
     max-width: 330px;
     width: 100%;
