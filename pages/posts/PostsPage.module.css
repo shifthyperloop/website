@@ -1,17 +1,11 @@
-.posts {
+.postsContainer {
     display: flex;
     flex-flow: row wrap;
     box-sizing: border-box;
     padding: 16px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 .bottomMargin {
     height: 40px;
-}
-.blueLine {
-    width: 80%;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 2.8px;
-    border-color: #0080c9;
-    margin-bottom: 40px;
 }

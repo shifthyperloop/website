@@ -17,8 +17,7 @@ const PostsPage = ({ posts }) => {
       <PageTop
         title="Newsletters"
       />
-      <hr className={styles.blueLine} />
-      <div className={`${styles.posts}`}>
+      <div className={styles.postsContainer}>
         {posts.map((post) => (
           <Post key={post.title} {...post} />
         ))}
