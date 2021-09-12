@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from '../../common/hooks';
 import styles from './PostPage.module.css';
+import PageTop from '../../components/PageTop/PageTop';
 
 const PostPage = ({
   pid,
@@ -23,39 +24,26 @@ const PostPage = ({
 
   return (
     <Layout>
+      <PageTop
+        title={title}
+      />
       <div className={styles.container}>
-        {!is_pdf ? (
-          <>
-            <div className={styles.newsContainer}>
-              <img className={styles.newsImage} src={CMS_BASE_URL + picture} />
-              <h1 className={styles.title}>{title}</h1>
-            </div>
-            <div className={styles.text}>
-              <h2>{description}</h2>
-              <ReactMarkdown source={content} />
-            </div>
-          </>
+        {windowSize.width > 1250 ? (
+          <iframe
+            className={styles.iframePdf}
+            src={'https://pdf-viewer.now.sh/?pdf=' + CMS_BASE_URL + files}
+          />
         ) : (
-          <div className={styles.newsletter}>
-            <h1>{title}</h1>
-            {windowSize.width > 1000 ? (
-              <iframe
-                className={styles.iframePdf}
-                src={'https://pdf-viewer.now.sh/?pdf=' + CMS_BASE_URL + files}
-              ></iframe>
-            ) : (
-              <a
-                className={styles.newsletterDownload}
-                download
-                href={CMS_BASE_URL + files}
-              >
-                <img
-                  className={styles.mobileNewsletterFrontpage}
-                  src={CMS_BASE_URL + front_page}
-                />
-              </a>
-            )}
-          </div>
+          <a
+            download
+            href={CMS_BASE_URL + files}
+          >
+            <img
+              className={styles.mobileNewsletterFrontpage}
+              src={CMS_BASE_URL + front_page}
+              alt={title + " frontpage"}
+            />
+          </a>
         )}
       </div>
     </Layout>
