@@ -22,7 +22,6 @@ const PostsPage = ({ posts }) => {
           <Post key={post.title} {...post} />
         ))}
       </div>
-      <div className={styles.bottomMargin} />
     </Layout>
   );
 };
