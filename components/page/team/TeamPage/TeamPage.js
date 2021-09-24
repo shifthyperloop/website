@@ -36,7 +36,6 @@ const TeamPage = ({
       >
         <PageTop
           title={title}
-          description="Meet our amazing partners. Their support is what's making it possible to do what we love."
         />
       </TopImage>
       <div className={styles.container}>
