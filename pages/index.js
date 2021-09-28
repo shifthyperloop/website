@@ -23,7 +23,7 @@ const HomePage = () => {
           <p>
             Shift Hyperloop is an independent non-profit organization founded
             in Trondheim by students from the Norwegian University of Science
-            and Technology (NTNU). The team currently consists of about 80
+            and Technology (NTNU). The team currently consists of about 60
             members from various fields of study. Shift was officially founded
             1. February 2019 by 10 students with the goal of developing a
             green and efficient transportation method, using the engineers of
