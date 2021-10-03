@@ -96,7 +96,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.hyperloopContainer}>
-        <h1> What is a hyperloop?</h1>
+        <h1> What is hyperloop?</h1>
         <div className={styles.separate}>
           <div className={styles.flexContainer}>
             <div className={styles.flex1}>
@@ -107,18 +107,13 @@ const HomePage = () => {
               />
             </div>
             <p className={`${styles.text} ${styles.flex1}`}>
-              Hyperloop is a new transportation concept. The hyperloop was
-              made popular by Elon Musk when he published his paper Hyperloop
-              Alpha, but the concept is heavily based on Robert Goddards
-              vactrain and has existed for a long time. The basis of the
-              hyperloop concept is to move a vehicle, often referred to as a
-              'pod', as fast and efficiently as possible along a track by
-              minimizing resistance to movement. This is achieved by using
-              magnetic levitation to elevate the pod from the tracks and run
-              the pod in a vacuum tube. Although many have estimated how fast
-              the pod can travel under such conditions, no one really knows.
-              In 2020 Virgin Hyperloop underwent the world's first passenger
-              test using Hyperloop technology.
+              Hyperloop is a technology where a vehicle, called a "pod", moves
+              through a tube with low air pressure by levitating over the
+              tracks. This minimizes the friction losses, something that makes
+              the technology very energy efficient. The technology will make it
+              possible to transport humans and cargo at speeds of about
+              1000 km/h. That makes it possible to travel a distance equal to
+              Oslo-Trondheim in under half an hour!
             </p>
           </div>
         </div>
