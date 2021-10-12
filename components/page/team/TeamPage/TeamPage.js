@@ -41,13 +41,13 @@ const TeamPage = ({
       <div className={styles.container}>
         {Object.values(groups)
           .sort((a, b) => {
-            const first = 'The Board';
+            const first = ['The Board', 'Management'];
             const last = 'Mentors';
 
-            if (a.title === first || b.title === last) {
+            if (first.includes(a.title) || b.title === last) {
               return -1;
             }
-            if (b.title === first || a.title === last) {
+            if (first.includes(b.title) || a.title === last) {
               return 1;
             }
             return a.title.localeCompare(b.title);
