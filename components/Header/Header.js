@@ -27,6 +27,7 @@ const Header = () => {
           <span className={styles.dropDownLink}>
           <a href="/team/2021">Team</a>
           <div className={styles.dropDownItems}>
+            <a href="/team/2022">Team 2022</a>
             <a href="/team/2021">Team 2021</a>
             <a href="/team/2020">Team 2020</a>
             <a href="/team/2019">Team 2019</a>
