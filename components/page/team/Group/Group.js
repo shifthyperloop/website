@@ -12,9 +12,13 @@ const Group = ({ members = [], title, centerImages = true }) => {
             const priority = {
               // bigger number gets sorted first
               'Group Leader': 10,
+              'Chief Executive Officer': 10,
               CEO: 10,
+              'Chief Financial Officer': 9,
               CFO: 9,
+              'Chief Marketing Officer': 8,
               CMO: 8,
+              'Chief Creative Officer': 7,
               CCO: 7,
               undefined: -1,
               null: -1,
