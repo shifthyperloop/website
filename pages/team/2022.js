@@ -63,7 +63,7 @@ const Page = ({ members = [] }) => {
     <TeamPage
       members={members}
       teamGroups={groups}
-      topImage={'/images/team/2021.jpg'}
+      topImage={'/images/team/2022.jpg'}
       title={'Team 2022'}
       path={'/team/2022'}
     />
