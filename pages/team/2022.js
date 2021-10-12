@@ -18,7 +18,7 @@ const Page = ({ members = [] }) => {
         members: [],
     },
     Concept: {
-        title: 'Concept R&D',
+        title: 'Concept',
         description: '...',
         members: [],
       },
@@ -38,7 +38,7 @@ const Page = ({ members = [] }) => {
       members: [],
     },
     Levitation: {
-      title: 'Levitation Group',
+      title: 'Levitation R&D',
       description: '...',
       members: [],
     },
