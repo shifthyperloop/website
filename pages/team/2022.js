@@ -18,7 +18,7 @@ const Page = ({ members = [] }) => {
         members: [],
     },
     Concept: {
-        title: 'Concept Group',
+        title: 'Concept R&D',
         description: '...',
         members: [],
       },
