@@ -10,11 +10,10 @@ const HomePage = () => {
     <Layout>
       <div>
         <TopImage
-          image="/images/homePage/topImage.png"
+          image="/images/homePage/PodTop.jpg"
           brightness={1}
           fixedOnMobile={false}
           joinButton={false}
-
         />
       </div>
       <div className={styles.content}>
