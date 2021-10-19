@@ -14,12 +14,12 @@ const PartnersPage = ({ sponsors }) => {
     <Layout
       url="http://www.shifthyperloop.com/partners"
       title="Shift Hyperloop | Sponsors"
-      description="Meet our amazing partners. Their support is what's making it possible to do what we love."
+      description="Meet our amazing sponsors. Their support is what's making it possible to do what we love."
     >
       <TopImage image="/images/partners/topImage.jpg">
         <PageTop
-          title="Partners"
-          description="Meet our amazing partners. Their support is what's making it possible to do what we love."
+          title="Sponsors"
+          description="Meet our amazing sponsors. Their support is what's making it possible to do what we love."
         />
       </TopImage>
       <div className={styles.infoContainer}>
@@ -30,13 +30,13 @@ const PartnersPage = ({ sponsors }) => {
           </h3>
           <hr />
           <h4 className={styles.partnerInfo}>
-            The partners are everything for us, that is why we give them all
+            The sponsors are everything for us, that is why we give them all
             this attention. If you are interested in being a partner, please{' '}
             <a className={styles.contact} href="/contact">
               contact us
             </a>
             . Thank you to all the professors and advisors that have guided us
-            and helped us stay on the right path. In addition to our partners,
+            and helped us stay on the right path. In addition to our sponsors,
             we would also like to thank our fellow teams for providing support
             and answering our questions, especially in the starting phases.
             <h4>

@@ -160,7 +160,7 @@ const groups = [
   {
     name: 'Relations',
     description:
-      'Shift Hyperloop is not only about building a pod, it is also about communicating with the outside world! The relations group is responsible for all things that are non-technical. This includes posting on social media, designing our website, editing videos, contacting partners and even organizing social events!',
+      'Shift Hyperloop is not only about building a pod, it is also about communicating with the outside world! The relations group is responsible for all things that are non-technical. This includes posting on social media, designing our website, editing videos, contacting sponsors and even organizing social events!',
     image: 'relations.jpg',
     positions: [
       {
