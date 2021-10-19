@@ -19,7 +19,7 @@ const Header = () => {
         <div className={styles.rightSide}>
           <a href="/joinus">Join the team</a>
           <a id="spons" href="/partners">
-            Partners
+            Sponsors
           </a>
           <a id="newsltr" href="/posts">
             Newsletters
