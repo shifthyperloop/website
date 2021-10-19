@@ -66,10 +66,9 @@
 
 @media (max-width: 640px) {
     .container {
-        height: 600px;
         background-repeat: no-repeat;
         background-attachment: unset;
-        padding: 9em 16px 3em;
+        height: 50vh;
     }
 
     .joinButtons {
