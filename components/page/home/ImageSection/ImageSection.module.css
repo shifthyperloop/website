@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageRight {
+  flex-direction: row-reverse;
+}
+
+.half {
+  width: 50%;
+}
+
+.half > img {
+  width: 100%;
+  height: 400px;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  
+  font-size: 20px;
+  line-height: 1.7em;
+}
+
+@media (max-width: 1400px) {
+  .content {
+    line-height: 1.4em;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .half > img {
+    max-height: 20em;
+    height: auto;
+    width: 100%;
+  }
+
+  .half {
+    width: auto;
+  }
+}
