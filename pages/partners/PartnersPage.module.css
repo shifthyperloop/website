@@ -1,14 +1,30 @@
+/* #239cd8 1670b8 1d1d1b*/
 
 .contact {
-    color: #0080c9;
-    text-decoration: none;
+    color: #1670b8;
 }
 .infoContainer {
-    text-align: center;
-    background-color: #fff2;
-    box-shadow: 1px 0.3px 10px #000;
-    box-shadow: 1px 0.5px 0px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.sponsorAd {
+    color: #1d1d1b;
+    border-left: #1670b8 3px solid;
+    background-color: rgb(235, 235, 235);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 200px;
+    margin: 15px 0;
+}
+
 .sponsorInformation {
     max-width: 1200px;
     margin: auto;
@@ -22,9 +38,10 @@
     text-align: center;
     margin: auto;
 }
+
 .partnerInfo {
-    width: 60%;
-    margin: 30px 2.5% 30px;
+    width: 75%;
+    margin: 0;
 }
 
 .sponsorList {
@@ -110,7 +127,10 @@
         width: 100%;
     }
     .partnerInfo {
-        margin: 20px 0;
-        width: 100%;
+        margin: 0;
+    }
+
+    .sponsorAd {
+        width: 90%;
     }
 }
