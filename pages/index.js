@@ -25,6 +25,7 @@ const HomePage = () => {
       >
         <TextSection
           title="About Shift"
+          moreUrl="/about"
           text={`
             Shift Hyperloop is an independent non-profit organization founded by
             students at the Norwegian University of Science and Technology (NTNU)
