@@ -18,7 +18,7 @@ const Sponsor = ({ title, logo, type, url, description }) => {
         </>
       ) : null}
       <style jsx>{`
-        h3,
+        h3, 
         h4 {
           width: 500px;
           max-width: calc(100vw - 1.5em);
