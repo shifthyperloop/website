@@ -1,7 +1,8 @@
 import { FaAngleDown } from 'react-icons/fa';
 import { LinkButton } from '../Button';
 import ApplyButton from '../JoinButton/JoinButton';
-import styles from './TopImage.module.css'
+import styles from './TopImage.module.css';
+import { animateScroll } from 'react-scroll';
 
 export default function TopImage({
   children,
@@ -27,11 +28,10 @@ export default function TopImage({
         </div>
       ) : null}
       {hasArrow ? (
-        <a className={styles.arrow} href="#scroll-target">
+        <a className={styles.arrow} onClick={() => animateScroll.scrollTo(window.innerHeight - 100, { duration: 500})}>
           <FaAngleDown size={35} />
         </a>
       ) : null}
-      <div id="scroll-target" />
     </div>
   );
 }
