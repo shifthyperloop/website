@@ -4,6 +4,8 @@ import { IoMdPerson } from 'react-icons/io';
 import { GiTrophy } from 'react-icons/gi';
 import TopImage from '../components/TopImage/TopImage';
 import styles from './HomePage.module.css';
+import ImageTextSection from '../components/page/home/ImageSection/ImageSection';
+import TextSection from '../components/page/home/TextSection/TextSection';
 
 const HomePage = () => {
   return (
@@ -16,41 +18,56 @@ const HomePage = () => {
           joinButton={false}
         />
       </div>
-      <div className={styles.content}>
-        <div className={styles.text}>
-          <h1>About Shift</h1>
-          <p>
-            Shift Hyperloop is an independent non-profit organization founded
-            in Trondheim by students from the Norwegian University of Science
-            and Technology (NTNU). The team currently consists of about 60
-            members from various fields of study. Shift was officially founded
-            1. February 2019 by 10 students with the goal of developing a
-            green and efficient transportation method, using the engineers of
-            tomorrow. Shift Hyperloop takes inspiration from many of the other
-            student organisations at NTNU. As such Shift Hyperloop operates on
-            a 1-year cycle where each year we enlist a completely new team
-            that are tasked with designing and building a hyperloop pod. In
-            2021 Shift Hyperloop will test out our pod for the first time in
-            the European Hyperloop Week in Spain, and we hope to test out the
-            pod in SpaceX Hyperloop Pod Competition in the future.
-          </p>
-          <p>
-            Shift Hyperloop enjoys a close and mutually beneficial
-            relationship with NTNU. Shift consists entirely of NTNU students
-            and gives them an opportunity to have a hands-on experience that
-            is normally unavailable for engineering students. We also provide
-            the university with potential bachelor- and master-theses for
-            graduating students.
-          </p>
-          <p>
-            Shift Hyperloop is primarily an organisation meant to teach and
-            educate NTNU students, however we are also students who seek to
-            help solve the massive challenges the world is facing. As such you
-            can expect to see Shift advocating for green measures and further
-            research on how we can combat climate change.
-          </p>
-        </div>
-      </div>
+      <ImageTextSection
+        src="/images/homePage/meili.jpg"
+        alt="Shift hyperloop pod Meili"
+        imageRight
+      >
+        <TextSection
+          title="About Shift"
+          moreUrl="/about"
+          text={`
+            Shift Hyperloop is an independent non-profit organization founded by
+            students at the Norwegian University of Science and Technology (NTNU)
+            in Trondheim. We operate on a 1-year cycle where each year we enlist 
+            a new team that are tasked with designing and building a hyperloop pod
+            that will compete in the European Hyperloop Week (EHW).
+          `}
+        />
+      </ImageTextSection>
+      <ImageTextSection
+        src="/images/homePage/Contact-hyperloop.png"
+        alt="Hyperloop"
+      >
+        <TextSection
+          title="What is hyperloop?"
+          text={`
+            Hyperloop is a technology where a vehicle, called a "pod", moves
+            through a tube with low air pressure by levitating over the tracks.
+            This minimizes the friction losses, something that makes the
+            technology very energy efficient. The technology will make it possible
+            to transport humans and cargo at speeds of about 1000 km/h. That makes
+            it possible to travel a distance equal to Oslo-Trondheim in under half
+            an hour!
+          `}
+        />
+      </ImageTextSection>
+      <ImageTextSection
+        src="/images/homePage/EHW.jpg"
+        alt="European Hyperloop Week"
+        imageRight
+      >
+        <TextSection
+          title="Hyperloop Competition"
+          text={`
+            European Hyperloop Week is the most important competition 
+            for Shift. In EHW we get to showcase our hyperloop prototype and 
+            prove ourselves in competition against other hyperloop teams. 
+            It’s hosted a different place in Europe every year, and in 2022 
+            it will be hosted in the Netherlands.
+          `}
+        />
+      </ImageTextSection>
       <div className={styles.goals}>
         <div className={styles.text}>
           <h1>Our Goals</h1>
@@ -74,9 +91,9 @@ const HomePage = () => {
                 While lectures are a decent way to learn, all members at Shift
                 can attest to that nothing beats proper working experience. At
                 Shift we are big advocates for increasing the number of
-                technical student organisations at all universities. Our
-                members learn leadership, efficiency and how to work in a team
-                while also learning to be independent.
+                technical student organisations at all universities. Our members
+                learn leadership, efficiency and how to work in a team while
+                also learning to be independent.
               </p>
             </div>
             <div className={styles.goal}>
@@ -86,69 +103,11 @@ const HomePage = () => {
                 In 2021 European Hyperloop Week will be hosted for the first
                 time in Valencia, Spain where Shift will participate. In the
                 future we hope to compete in the annual SpaceX Hyperloop Pod
-                Competition which has been hosted every year since 2015.
-                Shift's goal is to become one of the best student teams in the
-                world.
+                Competition which has been hosted every year since 2015. Shift's
+                goal is to become one of the best student teams in the world.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={styles.hyperloopContainer}>
-        <h1> What is hyperloop?</h1>
-        <div className={styles.separate}>
-          <div className={styles.flexContainer}>
-            <div className={styles.flex1}>
-              <img
-                className={styles.hyperloopImage}
-                src="/images/homePage/hyperloopAlpha.jpg"
-                alt="Hyperloop alpha sketch"
-              />
-            </div>
-            <p className={`${styles.text} ${styles.flex1}`}>
-              Hyperloop is a technology where a vehicle, called a "pod", moves
-              through a tube with low air pressure by levitating over the
-              tracks. This minimizes the friction losses, something that makes
-              the technology very energy efficient. The technology will make it
-              possible to transport humans and cargo at speeds of about
-              1000 km/h. That makes it possible to travel a distance equal to
-              Oslo-Trondheim in under half an hour!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className={styles.competitionContainer}>
-        <h1> Hyperloop competition </h1>
-        <div className={styles.separate}>
-          <div className={styles.flex1}>
-            <h2>European Hyperloop Week:</h2>
-            <p>
-              In 2021 the European Hyperloop Week will be hosted for the very
-              first time. European Hyperloop week aims to create a platform
-              where student organisations get together to change the idea of
-              Hyperloop to a more forward-looking approach. Teams get to
-              compete by presenting their pods and system designs and get
-              challenged to more ambitious goals. The track at EHW will be 160
-              meters long.
-            </p>
-            <h2>SpaceX Hyperloop Pod Competition:</h2>
-            <p>
-              The Hyperloop Pod Competition is an annual competition arranged
-              by SpaceX since 2015 in which a number of student and
-              non-student teams participate to design and for some to build a
-              subscale prototype transport vehicle in order to demonstrate
-              technical feasibility of various aspects of the Hyperloop
-              concept. The competition is open to participants globally,
-              however it is always hosted in the United States.
-            </p>
-          </div>
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/AO0sPME3j2s"
-            frameBorder="0"
-            className={`${styles.flex1} ${styles.video}`}
-            allow="accelerometer; autoplay; gyroscope; "
-            allowFullScreen
-          />
         </div>
       </div>
     </Layout>
