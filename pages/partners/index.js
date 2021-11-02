@@ -7,6 +7,7 @@ import styles from './PartnersPage.module.css';
 import Sponsor from '../../components/page/partners/Sponsor/Sponsor';
 import PageTop from '../../components/PageTop/PageTop';
 
+
 const PartnersPage = ({ sponsors }) => {
   const router = useRouter();
 
@@ -16,38 +17,12 @@ const PartnersPage = ({ sponsors }) => {
       title="Shift Hyperloop | Sponsors"
       description="Meet our amazing sponsors. Their support is what's making it possible to do what we love."
     >
-      <TopImage image="/images/partners/topImage.jpg">
+      <TopImage image="/images/wurth-deal.jpg">
         <PageTop
           title="Sponsors"
           description="Meet our amazing sponsors. Their support is what's making it possible to do what we love."
         />
       </TopImage>
-      <div className={styles.infoContainer}>
-        <div className={styles.sponsorInformation}>
-          <h3 className={styles.quote}>
-            "Thank you all contributors for your patience, and willingness to
-            help!"
-          </h3>
-          <hr />
-          <h4 className={styles.partnerInfo}>
-            The sponsors are everything for us, that is why we give them all
-            this attention. If you are interested in being a partner, please{' '}
-            <a className={styles.contact} href="/contact">
-              contact us
-            </a>
-            . Thank you to all the professors and advisors that have guided us
-            and helped us stay on the right path. In addition to our sponsors,
-            we would also like to thank our fellow teams for providing support
-            and answering our questions, especially in the starting phases.
-            <h4>
-              Also, we would like to extend our gratitude to the SpaceX team for
-              hosting the competition and inspiring young souls all around the
-              world to extend the grasp of technology. Thank you all
-              contributors for your patience, and willingness to help!
-            </h4>
-          </h4>
-        </div>
-      </div>
       <section className={styles.pageContainer} style={{'--width': '1200px'}}>
         <h2 className={`${styles.platinum} ${styles.sponsors}`}>
           <span>PLATINUM</span>
@@ -90,6 +65,25 @@ const PartnersPage = ({ sponsors }) => {
             ))}
         </div>
       </section>
+      <div className={styles.infoContainer}>
+        <div className={styles.sponsorAd}>
+          <h2 style={{color: "#1670b8"}}>Want to contribute to our work?</h2>
+          <h4 className={styles.partnerInfo}>
+              The sponsors are everything for us, that is why we give them all
+              this attention. If you are interested in being a sponsor, please{' '}
+              <a className={styles.contact} href="/contact">
+                contact us
+              </a>
+              . Thank you to all the professors and advisors that have guided us
+              and helped us stay on the right path. In addition to our sponsors,
+              we would also like to thank our fellow teams for providing support
+              and answering our questions, especially in the starting phases.
+          </h4>
+          <div className={styles.imageContainer}>
+            <img className={styles.image} src={"/images/logo-dark-text.png"}></img>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
