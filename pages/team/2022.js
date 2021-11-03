@@ -52,6 +52,11 @@ const Page = ({ members = [] }) => {
       description: '...',
       members: [],
     },
+    Board: {
+      title: 'The Board',
+      description: '...',
+      members: [],
+    },
     Mentors: {
       title: 'Mentors',
       description: '...',
@@ -66,6 +71,7 @@ const Page = ({ members = [] }) => {
       topImage={'/images/team/2022.jpg'}
       title={'Team 2022'}
       path={'/team/2022'}
+      groupPriorities={{'Management': 1, 'The Board': -1, 'Mentors': -2}}
     />
   );
 };
