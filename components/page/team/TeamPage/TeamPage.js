@@ -12,6 +12,7 @@ const TeamPage = ({
   title,
   path,
   centerImages = true,
+  groupPriorities,
 }) => {
   const [groups, setGroups] = useState({});
 
@@ -41,15 +42,17 @@ const TeamPage = ({
       <div className={styles.container}>
         {Object.values(groups)
           .sort((a, b) => {
-            const first = ['The Board', 'Management'];
-            const last = 'Mentors';
+            const priority = groupPriorities ?? {
+              // bigger number gets sorted first
+              'Management': 1,
+              'The Board': 1,
+              'Mentors': -1
+            };
 
-            if (first.includes(a.title) || b.title === last) {
-              return -1;
+            if (priority[a.title] !== priority[b.title]) {
+              return (priority[b.title] ?? 0) - (priority[a.title] ?? 0);
             }
-            if (first.includes(b.title) || a.title === last) {
-              return 1;
-            }
+            
             return a.title.localeCompare(b.title);
           })
           .map((group) => (
