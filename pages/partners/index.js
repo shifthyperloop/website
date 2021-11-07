@@ -29,7 +29,7 @@ const PartnersPage = ({ sponsors }) => {
         </h2>
         <div className={styles.sponsorList}>
           {sponsors
-            .filter((sponsor) => sponsor.type === 'Platinum')
+            .filter((sponsor) => sponsor.tier === 'Platinum')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
@@ -39,7 +39,7 @@ const PartnersPage = ({ sponsors }) => {
         </h2>
         <div className={styles.sponsorList}>
           {sponsors
-            .filter((sponsor) => sponsor.type === 'Gold')
+            .filter((sponsor) => sponsor.tier === 'Gold')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
@@ -49,7 +49,7 @@ const PartnersPage = ({ sponsors }) => {
         </h2>
         <div className={styles.sponsorList}>
           {sponsors
-            .filter((sponsor) => sponsor.type === 'Silver')
+            .filter((sponsor) => sponsor.tier === 'Silver')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
@@ -59,7 +59,7 @@ const PartnersPage = ({ sponsors }) => {
         </h2>
         <div className={styles.sponsorList}>
           {sponsors
-            .filter((sponsor) => sponsor.type === 'Bronze')
+            .filter((sponsor) => sponsor.tier === 'Bronze')
             .map((sponsor) => (
               <Sponsor key={sponsor.title} {...sponsor} />
             ))}
@@ -97,7 +97,7 @@ PartnersPage.getInitialProps = async function () {
       return {
         title: sponsor.Title,
         logo: sponsor.Logo.url,
-        type: sponsor.Type,
+        tier: sponsor.Tier,
         url: sponsor.Link,
         description: sponsor.Description,
       };
