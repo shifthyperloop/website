@@ -58,7 +58,7 @@ const JoinUsPage = () => {
         <div className={styles.groups}>
           {groups
             .map((group) => (
-              <div className={styles.group}>
+              <div className={styles.group} key={group.name}>
                 <img src={'/images/joinus/' + group.image} alt={group.name} />
                 <p className={styles.groupName}>{group.name}</p>
                 <PositionsButton group={group} />
