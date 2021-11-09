@@ -84,7 +84,7 @@ const JoinUsPage = () => {
               />
             </div>
             {modal.group.positions.map((position) => (
-              <div className={styles.position}>
+              <div className={styles.position} key={position.name}>
                 <h2 className={styles.positionName}>{position.name}</h2>
                 <hr className={styles.blueLineThin} />
                 <p className={styles.positionDescription}>{position.description}</p>
