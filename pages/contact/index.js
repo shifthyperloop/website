@@ -45,7 +45,7 @@ const ContactUsPage = () => {
         <div className={styles.contactContainer}>
           <div className={styles.contactInfo}>
             <h2>Getting in touch is easy!</h2>
-            <p>Klæbuveien 153, 7037 Trondheim</p>
+            <p>Klæbuveien 153, 7031 Trondheim</p>
             <p>
               <a href="mailto:contact@shifthyperloop.com">
                 contact@shifthyperloop.com
