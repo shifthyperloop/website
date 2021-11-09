@@ -22,7 +22,7 @@ const JoinUsPage = () => {
             })
           }
         >
-          View available positions
+          View positions
         </SmallButton>
       </div>
     );
