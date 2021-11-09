@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import { IoMdClose } from 'react-icons/io';
-import { SmallButton } from '../../components/Button';
+import Button from '../../components/Button/Button';
 import ApplyButton from '../../components/JoinButton/JoinButton';
 import groups from '../../common/groupPositions';
 import styles from './JoinUsPage.module.css';
@@ -15,7 +15,7 @@ const JoinUsPage = () => {
   const PositionsButton = (props) => {
     return (
       <div className={styles.positionsButton}>
-        <SmallButton
+        <Button
           onClick={() =>
             setModal({
               group: props.group,
@@ -23,7 +23,7 @@ const JoinUsPage = () => {
           }
         >
           View positions
-        </SmallButton>
+        </Button>
       </div>
     );
   };
@@ -58,7 +58,7 @@ const JoinUsPage = () => {
         <div className={styles.groups}>
           {groups
             .map((group) => (
-              <div className={styles.group}>
+              <div className={styles.group} key={group.name}>
                 <img src={'/images/joinus/' + group.image} alt={group.name} />
                 <p className={styles.groupName}>{group.name}</p>
                 <PositionsButton group={group} />
@@ -84,7 +84,7 @@ const JoinUsPage = () => {
               />
             </div>
             {modal.group.positions.map((position) => (
-              <div className={styles.position}>
+              <div className={styles.position} key={position.name}>
                 <h2 className={styles.positionName}>{position.name}</h2>
                 <hr className={styles.blueLineThin} />
                 <p className={styles.positionDescription}>{position.description}</p>

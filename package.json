@@ -15,30 +15,21 @@
     "preexport": "yarn build",
     "export": "next export",
     "predeploy": "yarn export",
-    "deploy": "gh-pages -b master -d out",
     "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
-    "components": "^0.1.0",
-    "emailjs-com": "^3.2.0",
-    "gh-pages": "^3.2.3",
     "isomorphic-unfetch": "^3.0.0",
-    "material-ui": "^0.20.2",
     "next": "12.0.3",
     "react": "^17.0.2",
     "react-burger-menu": "^3.0.6",
     "react-dom": "17.0.2",
     "react-icons": "4.3.1",
-    "react-mailto": "^0.4.0",
-    "react-markdown": "^7.1.0",
     "react-modal": "^3.14.3",
-    "react-scroll": "^1.8.4",
-    "styled-components": "5.3.3"
+    "react-scroll": "^1.8.4"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "1.13.3",
     "prettier": "^2.4.1"
   }
 }
