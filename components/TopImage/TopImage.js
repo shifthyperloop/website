@@ -1,5 +1,5 @@
 import { FaAngleDown } from 'react-icons/fa';
-import { LinkButton } from '../Button';
+import Button from '../Button/Button';
 import ApplyButton from '../JoinButton/JoinButton';
 import styles from './TopImage.module.css';
 import { animateScroll } from 'react-scroll';
@@ -24,7 +24,7 @@ export default function TopImage({
       {joinButton ? (
         <div className={styles.joinButtons}>
           <ApplyButton />
-          <LinkButton href="/joinus">Available positions</LinkButton>
+          <Button href="/joinus">Available positions</Button>
         </div>
       ) : null}
       {hasArrow ? (

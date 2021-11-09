@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import { IoMdClose } from 'react-icons/io';
-import { SmallButton } from '../../components/Button';
+import Button from '../../components/Button/Button';
 import ApplyButton from '../../components/JoinButton/JoinButton';
 import groups from '../../common/groupPositions';
 import styles from './JoinUsPage.module.css';
@@ -15,7 +15,7 @@ const JoinUsPage = () => {
   const PositionsButton = (props) => {
     return (
       <div className={styles.positionsButton}>
-        <SmallButton
+        <Button
           onClick={() =>
             setModal({
               group: props.group,
@@ -23,7 +23,7 @@ const JoinUsPage = () => {
           }
         >
           View positions
-        </SmallButton>
+        </Button>
       </div>
     );
   };
