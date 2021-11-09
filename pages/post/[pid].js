@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
-import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from '../../common/hooks';
 import styles from './PostPage.module.css';
 import PageTop from '../../components/PageTop/PageTop';
