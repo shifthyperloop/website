@@ -18,8 +18,6 @@ const Post = ({ title, pid, picture, description }) => {
             <h2 className={styles.postTitle}>{title}</h2>
             <p className={styles.postDescription}>
               {description}
-              <br />
-              <br />
             </p>
           </div>
         </a>

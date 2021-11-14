@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch';
 import { useWindowSize } from '../../common/hooks';
 import styles from './PostPage.module.css';
 import PageTop from '../../components/PageTop/PageTop';
+import Button from '../../components/Button/Button';
 
 const PostPage = ({
   pid,
@@ -21,6 +22,8 @@ const PostPage = ({
   const router = useRouter();
   const windowSize = useWindowSize();
 
+  const fileUrl = CMS_BASE_URL + files;
+
   return (
     <Layout>
       <PageTop
@@ -28,14 +31,17 @@ const PostPage = ({
       />
       <div className={styles.container}>
         {windowSize.width > 1250 ? (
-          <iframe
-            className={styles.iframePdf}
-            src={'https://pdf-viewer.now.sh/?pdf=' + CMS_BASE_URL + files}
-          />
+          <>
+            <Button small download href={fileUrl}>Download</Button>
+            <iframe
+              className={styles.iframePdf}
+              src={'https://pdf-viewer.now.sh/?pdf=' + fileUrl}
+            />
+          </>
         ) : (
           <a
             download
-            href={CMS_BASE_URL + files}
+            href={fileUrl}
           >
             <img
               className={styles.mobileNewsletterFrontpage}
