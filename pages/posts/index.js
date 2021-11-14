@@ -18,8 +18,16 @@ const PostsPage = ({ posts }) => {
         title="Newsletters"
       />
       <div className={styles.postsContainer}>
-        {posts.map((post) => (
-          <Post key={post.title} {...post} />
+        {posts.filter(post => post.is_newsletter).map((post) => (
+          <Post key={post.pid} {...post} />
+        ))}
+      </div>
+      <PageTop
+        title="Documents"
+      />
+      <div className={styles.postsContainer}>
+        {posts.filter(post => !post.is_newsletter).map((post) => (
+          <Post key={post.pid} {...post} />
         ))}
       </div>
     </Layout>
@@ -37,6 +45,7 @@ PostsPage.getInitialProps = async function () {
         title: post.title,
         picture: post.picture.url || {},
         description: post.description,
+        is_newsletter: post.is_newsletter || false,
       };
     }),
   };
