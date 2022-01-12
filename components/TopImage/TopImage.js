@@ -1,6 +1,6 @@
 import { FaAngleDown } from 'react-icons/fa';
 import Button from '../Button/Button';
-import ApplyButton from '../JoinButton/JoinButton';
+import ApplyButton from '../JoinButton/ApplyButton';
 import styles from './TopImage.module.css';
 import { animateScroll } from 'react-scroll';
 

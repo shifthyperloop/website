@@ -15,8 +15,10 @@ const HomePage = () => {
           image="/images/homePage/PodTop.jpg"
           brightness={1}
           fixedOnMobile={false}
-          joinButton={false}
-        />
+          joinButton={true}
+        >
+          <h1>Join the team!</h1>
+        </TopImage>
       </div>
       <ImageTextSection
         src="/images/homePage/meili.jpg"
