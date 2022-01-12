@@ -1,15 +1,13 @@
-import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import Layout from '../../components/Layout/Layout';
 import { IoMdClose } from 'react-icons/io';
-import Button from '../../components/Button/Button';
-import ApplyButton from '../../components/JoinButton/JoinButton';
-import groups from '../../common/groupPositions';
-import styles from './JoinUsPage.module.css';
-import PageTop from '../../components/PageTop/PageTop';
+import Layout from '/components/Layout/Layout';
+import Button from '/components/Button/Button';
+import ApplyButton from '/components/JoinButton/ApplyButton';
+import groupPositions from '/common/groupPositions';
+import styles from '/pages/joinus/JoinUsPage.module.css';
+import PageTop from '/components/PageTop/PageTop';
 
 const JoinUsPage = () => {
-  const router = useRouter();
   const [modal, setModal] = useState({ group: null });
 
   const PositionsButton = (props) => {
@@ -51,12 +49,12 @@ const JoinUsPage = () => {
         "contribute to the team should not hesitate to contact us any time of the " +
         "year."}
       />
-      {/* <ApplyButton /> */}
+      <ApplyButton />
       <br />
       <div className={styles.joinContainer}>
         <h2 className={styles.center}>Groups:</h2>
         <div className={styles.groups}>
-          {groups
+          {groupPositions
             .map((group) => (
               <div className={styles.group} key={group.name}>
                 <img src={'/images/joinus/' + group.image} alt={group.name} />
@@ -90,7 +88,7 @@ const JoinUsPage = () => {
                 <p className={styles.positionDescription}>{position.description}</p>
               </div>
             ))}
-            {/* <ApplyButton /> */}
+            <ApplyButton />
           </div>
         </div>
       )}
