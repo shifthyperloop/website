@@ -56,6 +56,11 @@ const groupPositions = [
         description:
           'As a graphic designer you will work to figure out how Shift should present itself to the world. As a graphical designer\n\nYou will also be in charge of how our monthly newsletter looks and will work with programs such as Adobe Indesign, Illustrator and Photoshop.',
       },
+      {
+        name: 'Web Developer',
+        description:
+          'Are you into coding? As a web developer you will get to improve Shift’s website. You will get a chance to work with developing and designing our most important web platform. Hands-on experience will be useful for your practice and for future job application.',
+      },
     ],
   },
   {
