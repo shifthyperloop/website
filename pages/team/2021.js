@@ -9,52 +9,42 @@ const Page = ({ members = [] }) => {
   const groups = {
     Board: {
       title: 'The Board',
-      description: '...',
       members: [],
     },
     Electronics: {
       title: 'Electronics Group',
-      description: '...',
       members: [],
     },
     Battery: {
       title: 'Battery Group',
-      description: '...',
       members: [],
     },
     Powertrain: {
       title: 'Powertrain Group',
-      description: '...',
       members: [],
     },
     Mechanical: {
       title: 'Mechanical Group',
-      description: '...',
       members: [],
     },
     Levitation: {
       title: 'Levitation Group',
-      description: '...',
       members: [],
     },
     Software: {
       title: 'Software Group',
-      description: '...',
       members: [],
     },
     Relations: {
       title: 'Relations Group',
-      description: '...',
       members: [],
     },
     Concept: {
       title: 'Concept Group',
-      description: '...',
       members: [],
     },
     Mentor: {
       title: 'Mentors',
-      description: '...',
       members: [],
     },
   };

@@ -1,10 +1,11 @@
 import Member from '../Member/Member';
 import styles from './Group.module.css';
 
-const Group = ({ members = [], title, centerImages = true }) => {
+const Group = ({ members = [], title, description, centerImages = true }) => {
   return (
     <div className={styles.group}>
       <h1 className={styles.title}>{title}</h1>
+      { description && <p className={styles.description}>{description}</p> }
       <hr className={styles.divider} />
       <div className={styles.members}>
         {members

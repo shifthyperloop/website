@@ -10,6 +10,9 @@
     margin-bottom: 2px;
     margin-top: 10px;
 }
+.description{
+    font-size: 18px;
+}
 .group {
     margin: 100px auto;
     display: flex;
