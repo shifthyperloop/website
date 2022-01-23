@@ -6,22 +6,22 @@ const Page = ({ members = [] }) => {
   const groups = {
     Structural: {
         title: 'Structural',
-        description: 'The Structural handles most of the mechanical system within the pod. This means systems like the brakes, suspension and chassis. Making sure that the mechanical parts are working properly is essential for any vehicle.',
+        description: 'The Structural group handles most of the mechanical system within the pod. This means systems like the brakes, suspension and chassis. Making sure that the mechanical parts are working properly is essential for any vehicle.',
         members: [],
       },
     Casing: {
         title: 'Casing & Housing',
-        description: 'Casing & housing makes all of the containers for the pod. This includes components like the aeroshell, which is the container for the whole pod, battery casings and inverter casing.',
+        description: 'The Casing & Housing group makes all of the containers for the pod. This includes components like the aeroshell, which is the container for the whole pod, battery casings and inverter casing.',
         members: [],
     },
     Concept: {
         title: 'Concept',
-        description: 'Concept works on how we can realise the hyperloop concept in Norway. They work on designing a hyperloop station, designing a pod for public use and a possible route between Oslo and Bergen.',
+        description: 'The Concept group works on how we can realise the Hyperloop concept in Norway. They work on designing a Hyperloop station, designing a pod for public use and a possible route between Oslo and Bergen.',
         members: [],
       },
     Management: {
       title: 'Management',
-      description: 'The management is responsible for managing the organization and maintaining continous progress of the project. The daily tasks include coordinating the group leaders and ensuring that the project is within its budgetary limits. The management is an interdisciplinary team with varied talents and abilities.',
+      description: 'The Management group is responsible for managing the organization and maintaining continous progress of the project. The daily tasks include coordinating the group leaders and ensuring that the project is within its budgetary limits. Management is an interdisciplinary team with varied talents and abilities.',
       members: [],
     },
     Electronics: {
@@ -31,7 +31,7 @@ const Page = ({ members = [] }) => {
     },
     Powertrain: {
       title: 'Powertrain',
-      description: 'Powertrain designs the electromagnetic propulsion system of the pod. This includes design and production of the linear induction motor, choosing the appropriate battery, as well as designing the power converting system which feeds the motor with AC-power. Making a cooling system for the motor is also crucial to produce as much thrust as possible without overheating.',
+      description: 'The Powertrain group designs the electromagnetic propulsion system of the pod. This includes design and production of the linear induction motor, choosing the appropriate battery, as well as designing the power converting system which feeds the motor with AC-power. Making a cooling system for the motor is also crucial to produce as much thrust as possible without overheating.',
       members: [],
     },
     Levitation: {
@@ -46,7 +46,7 @@ const Page = ({ members = [] }) => {
     },
     Relations: {
       title: 'Relations',
-      description: 'The relations group handles all things related to marketing and business within Shift. That includes tasks like making social media posts, contacting partners, writing the newsletter and developing the website.',
+      description: 'The Relations group handles all things related to marketing and business within Shift. That includes tasks like making social media posts, contacting partners, writing the newsletter and developing the website.',
       members: [],
     },
     Board: {
