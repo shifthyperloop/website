@@ -4,6 +4,10 @@ import { APPLY_URL, APPLY_DEADLINE } from '/common/constants';
 import styles from './ApplyButton.module.css';
 
 const ApplyButton = () => {
+
+  // TODO: remove this line to enable ApplyButton next application period
+  return (<></>);
+
   return (
     <>
       <div className={styles.applyButton}>
