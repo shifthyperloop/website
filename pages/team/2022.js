@@ -51,6 +51,7 @@ const Page = ({ members = [] }) => {
     },
     Board: {
       title: 'The Board',
+      description:'The board\'s responsibility is to oversee the long-term goals of the organization as well as hosting the general assembly. The board meets at least a few times each semester and makes sure to have a running dialogue with the management.',
       members: [],
     },
     Mentors: {
