@@ -40,6 +40,7 @@ const HomePage = () => {
       >
         <TextSection
           title="What is hyperloop?"
+          moreUrl="/abouthyperloop"
           text={`
             Hyperloop is a technology where a vehicle, called a "pod", moves
             through a tube with low air pressure by levitating over the tracks.
