@@ -21,16 +21,15 @@ const TimelineEventElement = ({ event, defaultExpanded }) => {
       onTimelineElementClick={() => setOpen(!open)}
       contentArrowStyle={{ borderRight: '7px solid #FFFFFF' }}
       date={event.date}
-      iconStyle={{ background: 'var(--shift-blue)' }}
-      /*icon={
+      iconStyle={{ background: 'white', boxShadow: '0 0 0 3px var(--shift-blue), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)', padding: 3}}
+      icon={
         <Image
-          src={}
-          className={styles.timelineIcon}
-          alt=""
+          src={"/logo.png"}
+          alt="Shift logo"
           height="100px"
           width="100px"
         />
-      }*/
+      }
     >
       <Accordion
         defaultExpanded={defaultExpanded}
