@@ -6,6 +6,8 @@ import TopImage from '../components/TopImage/TopImage';
 import styles from './HomePage.module.css';
 import ImageTextSection from '../components/page/home/ImageSection/ImageSection';
 import TextSection from '../components/page/home/TextSection/TextSection';
+import Timeline from '../components/Timeline/Timeline';
+import timelineEvents from '../common/timelineEvents';
 
 const HomePage = () => {
   return (
@@ -70,6 +72,8 @@ const HomePage = () => {
           `}
         />
       </ImageTextSection>
+      <h2 className={styles.timelineHeader}>What's coming up?</h2>
+      <Timeline events={timelineEvents} />
       <div className={styles.goals}>
         <div className={styles.text}>
           <h1>Our Goals</h1>
