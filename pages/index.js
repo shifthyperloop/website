@@ -1,11 +1,11 @@
 import Layout from '../components/Layout/Layout';
-import { FaLeaf } from 'react-icons/fa';
-import { IoMdPerson } from 'react-icons/io';
-import { GiTrophy } from 'react-icons/gi';
 import TopImage from '../components/TopImage/TopImage';
-import styles from './HomePage.module.css';
 import ImageTextSection from '../components/page/home/ImageSection/ImageSection';
 import TextSection from '../components/page/home/TextSection/TextSection';
+import Tabs from '../components/page/home/Tabs/Tabs';
+import Goals from '../components/page/home/Tabs/tab/Goals';
+import Values from '../components/page/home/Tabs/tab/Values';
+import UN from '../components/page/home/Tabs/tab/UN';
 
 const HomePage = () => {
   return (
@@ -68,48 +68,13 @@ const HomePage = () => {
           `}
         />
       </ImageTextSection>
-      <div className={styles.goals}>
-        <div className={styles.text}>
-          <h1>Our Goals</h1>
-          <div className={styles.separate}>
-            <div className={`${styles.goal}`}>
-              <FaLeaf size={35} className={styles.icon} />
-              <h4>Environment</h4>
-              <p className={styles.goalText}>
-                The world is facing massive challenges tied to climate change.
-                Transportation is a big contributor to CO₂ emissions. With
-                hyperloop we can reduce those emissions along with
-                transportation time, both for humans and goods. One of our big
-                long-term goals is to evaluate the implementation of hyperloop
-                in Norway.
-              </p>
-            </div>
-            <div className={styles.goal}>
-              <IoMdPerson size={35} className={styles.icon} />
-              <h4>Personal Development</h4>
-              <p className={styles.goalText}>
-                While lectures are a decent way to learn, all members at Shift
-                can attest to that nothing beats proper working experience. At
-                Shift we are big advocates for increasing the number of
-                technical student organisations at all universities. Our members
-                learn leadership, efficiency and how to work in a team while
-                also learning to be independent.
-              </p>
-            </div>
-            <div className={styles.goal}>
-              <GiTrophy size={35} className={styles.icon} />
-              <h4>Competition</h4>
-              <p className={styles.goalText}>
-                In 2021 European Hyperloop Week will be hosted for the first
-                time in Valencia, Spain where Shift will participate. In the
-                future we hope to compete in the annual SpaceX Hyperloop Pod
-                Competition which has been hosted every year since 2015. Shift's
-                goal is to become one of the best student teams in the world.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Tabs
+        tabs={[
+          { title: 'Goals', content: <Goals /> },
+          { title: 'Values', content: <Values /> },
+          { title: 'UN', content: <UN /> },
+        ]}
+      />
     </Layout>
   );
 };

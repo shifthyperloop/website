@@ -15,7 +15,8 @@
     "preexport": "yarn build",
     "export": "next export",
     "predeploy": "yarn export",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx,jsx,css,md,scss,html,json}\""
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
