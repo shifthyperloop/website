@@ -23,7 +23,7 @@ const HomePage = () => {
         imageRight
       >
         <TextSection
-          title="About Shift"
+          title="ABOUT SHIFT"
           moreUrl="/about"
           text={`
             Shift Hyperloop is an independent non-profit organization founded by
@@ -39,7 +39,7 @@ const HomePage = () => {
         alt="Hyperloop"
       >
         <TextSection
-          title="What is hyperloop?"
+          title="WHAT IS HYPERLOOP?"
           moreUrl="/abouthyperloop"
           text={`
             Hyperloop is a technology where a vehicle, called a "pod", moves
@@ -58,7 +58,7 @@ const HomePage = () => {
         imageRight
       >
         <TextSection
-          title="Hyperloop Competition"
+          title="HYPERLOOP COMPETITION"
           text={`
             European Hyperloop Week is the most important competition 
             for Shift. In EHW we get to showcase our hyperloop prototype and 
