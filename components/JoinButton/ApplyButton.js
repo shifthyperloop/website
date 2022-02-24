@@ -5,14 +5,11 @@ import styles from './ApplyButton.module.css';
 
 const ApplyButton = () => {
 
-  // TODO: remove this line to enable ApplyButton next application period
-  return (<></>);
-
   return (
     <>
       <div className={styles.applyButton}>
         <Button href={APPLY_URL}>
-          <h3>Apply!</h3>
+          <h3>Apply for leader positions!</h3>
           { APPLY_DEADLINE && `Deadline: ${APPLY_DEADLINE}` }
         </Button>
       </div>
