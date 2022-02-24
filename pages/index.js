@@ -15,6 +15,7 @@ const HomePage = () => {
           image="/images/homePage/PodTop.jpg"
           brightness={1}
           fixedOnMobile={false}
+          joinButton
         />
       </div>
       <ImageTextSection
@@ -37,6 +38,7 @@ const HomePage = () => {
       <ImageTextSection
         src="/images/homePage/Contact-hyperloop.png"
         alt="Hyperloop"
+        link = '/abouthyperloop'
       >
         <TextSection
           title="WHAT IS HYPERLOOP?"

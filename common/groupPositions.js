@@ -1,13 +1,12 @@
 const groupPositions = [
+  
   {
     name: 'Structural',
     description: '',
     image: 'suspension.jpg',
     positions: [
       {
-        name: 'Mechanical engineer, chassis',
-        description:
-          'The chassis engineers are responsible for designing a chassis, which will function as the back bone of the pod. He/she will also be responsible of assembling every sub-system onto the chassis to complete the pod, and will therefore naturally work closely with the engineers working on the related sub-systems.',
+        name: 'Group leader',
       },
     ],
   },
@@ -17,13 +16,8 @@ const groupPositions = [
     image: 'electronics.jpg',
     positions: [
       {
-        name: 'Electrical engineer, BMS & Power systems',
-        description:
-          'This position will take part in embedded design of the Battery Management System as well as working on power systems.\n' +
-          '\n' +
-          'Working on the Battery Management System, he/she will design a robust system monitoring the litium-ion battery pack together with two other members. The Li-Ion battery cells make up the most hazardous part of the pod. Some tasks include embedded circuit design and embedded software development.\n' +
-          '\n' +
-          'Working with power systems, he/she will do electrical design of both the high voltage and low voltage system of the pod. Power converters are needed to deliver power to the subsystems of the pod, and the high voltage system demands a high standard safety to reduce and elimininate safety hazards. Some of the tasks include design and implementation of converters, relays, fuses and cable management.',
+        name: 'Group leader',
+    
       },
     ],
   },
@@ -34,9 +28,8 @@ const groupPositions = [
     image: 'levitation.jpg',
     positions: [
       {
-        name: 'Mechanical engineer, levitation test rig',
-        description:
-          'The Levitation mechanical engineers are responsible for designing the mechanical test rig used to test electromagnetic levitations system, used to further increase the organizations knowledge of electromagnetic technology.',
+        name: 'Group leader',
+      
       },
     ],
   },
@@ -47,19 +40,7 @@ const groupPositions = [
     image: 'relations.jpg',
     positions: [
       {
-        name: 'Marketing Coordinator',
-        description:
-          'The marketing coordinator is the heart of the relations group.\n\nAs a marketing coordinator you will do what is necessary to support the technical groups. This means making sure Shift has enough money, making sure Shift get the proper exposure and arranging fun and exciting activities within the organization.  \n\nThis job will often involve contacting and maintaining contact with sponsors, as well as helping out other more general tasks that comes up throughout the year like arranging events etc.',
-      },
-      {
-        name: 'Graphical designer',
-        description:
-          'As a graphic designer you will work to figure out how Shift should present itself to the world. As a graphical designer\n\nYou will also be in charge of how our monthly newsletter looks and will work with programs such as Adobe Indesign, Illustrator and Photoshop.',
-      },
-      {
-        name: 'Web Developer',
-        description:
-          'Are you into coding? As a web developer you will get to improve Shift’s website. You will get a chance to work with developing and designing our most important web platform. Hands-on experience will be useful for your practice and for future job application.',
+        name: 'Group leader',
       },
     ],
   },
@@ -70,16 +51,47 @@ const groupPositions = [
     image: 'software.jpeg',
     positions: [
       {
-        name: 'Frontend developer',
-        description:
-          'The frontend developer works on the GUI of the software used to control the Hyperloop pod. The application displays critical information intuitively, and allows the operator to take action in case of an emergency. He/she works closely with the backend developers, ensuring a satisfying progress using agile software development.',
-      },
-      {
-        name: 'Data scientist',
-        description:
-          'The data scientist processes data-points generated from the pod-runs in order to exploit any anomolies. This allows proper testing of the performance of spesific subsystems and the pod as a whole during a run. He/she works closely with engineers from several other technical groups in Shift in order to collectively create the best possible post-run analysis tool.',
+        name: 'Group leader',
       },
     ],
+  },
+  {
+    name: 'Management',
+    description:
+      '',
+    image: 'management.jpg',
+    positions: [
+      {
+        name: 'CEO',
+         description:
+          ' ',
+      },
+      {
+        name: 'CFO',
+         description:
+          ' ',
+      },
+      {
+        name: 'CMO',
+         description:
+          'The Chief Marketing Officer is the one responsible for mantaining the image of the organisational as well as mantaining contact with the different businesspartners.',
+      },
+      {
+        name: 'CTO Mechanical',
+         description:
+          'CTO mechanical is responsible for the technical progress of the pod, with focus on the mechanical parts.',
+      },
+      {
+        name: 'CTO Electrical',
+         description:
+          'CTO electrical is responsible for the technical progress of the pod, with focus on the electrical solutions. ',
+      },
+      {
+        name: 'CCO',
+         description:
+          ' ',
+      },
+    ]
   },
 ];
 
