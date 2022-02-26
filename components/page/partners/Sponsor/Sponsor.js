@@ -4,7 +4,11 @@ import styles from './Sponsor.module.css';
 const Sponsor = ({ title, logo, tier, url, description }) => {
   return (
     <div>
-      <a href={url} target="_blank" className={`${styles.sponsor} ${styles[tier.toLowerCase()]}`}>
+      <a
+        href={url}
+        target="_blank"
+        className={`${styles.sponsor} ${styles[tier.toLowerCase()]}`}
+      >
         <img className={styles.image} src={CMS_BASE_URL + logo} />
       </a>
       {tier === 'Platinum' ? (

@@ -1,38 +1,38 @@
 .title,
 .description {
-    width: 500px;
-    max-width: calc(100vw - 1.5em);
-    margin: auto;
+  width: 500px;
+  max-width: calc(100vw - 1.5em);
+  margin: auto;
 }
 
 .sponsor {
-    margin: 0 50px 25px;
-    display: blocK;
+  margin: 0 50px 25px;
+  display: blocK;
 }
 
 @media (max-width: 640px) {
-    .sponsor {
-        margin: 0;
-    }
+  .sponsor {
+    margin: 0;
+  }
 }
 
 .image {
-    width: 140px;
-    object-fit: contain;
+  width: 140px;
+  object-fit: contain;
 }
 .platinum img {
-    width: 500px;
-    height: 400px;
-    max-width: 100vw;
-    margin-top: 30px;
+  width: 500px;
+  height: 400px;
+  max-width: 100vw;
+  margin-top: 30px;
 }
 .platinum img:nth-of-type(3) {
 }
 .gold img {
-    width: 400px;
-    max-width: 100vw;
+  width: 400px;
+  max-width: 100vw;
 }
 .silver img {
-    width: 200px;
-    max-width: 100vw;
+  width: 200px;
+  max-width: 100vw;
 }

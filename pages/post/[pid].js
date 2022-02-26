@@ -26,27 +26,24 @@ const PostPage = ({
 
   return (
     <Layout>
-      <PageTop
-        title={title}
-      />
+      <PageTop title={title} />
       <div className={styles.container}>
         {windowSize.width > 1250 ? (
           <>
-            <Button small download href={fileUrl}>Download</Button>
+            <Button small download href={fileUrl}>
+              Download
+            </Button>
             <iframe
               className={styles.iframePdf}
               src={'https://pdf-viewer.now.sh/?pdf=' + fileUrl}
             />
           </>
         ) : (
-          <a
-            download
-            href={fileUrl}
-          >
+          <a download href={fileUrl}>
             <img
               className={styles.mobileNewsletterFrontpage}
               src={CMS_BASE_URL + front_page}
-              alt={title + " frontpage"}
+              alt={title + ' frontpage'}
             />
           </a>
         )}

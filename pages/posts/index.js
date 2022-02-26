@@ -14,21 +14,21 @@ const PostsPage = ({ posts }) => {
       url="https://www.shifthyperloop.com/posts"
       title="Shift Hyperloop | Newsletters"
     >
-      <PageTop
-        title="Newsletters"
-      />
+      <PageTop title="Newsletters" />
       <div className={styles.postsContainer}>
-        {posts.filter(post => post.is_newsletter).map((post) => (
-          <Post key={post.pid} {...post} />
-        ))}
+        {posts
+          .filter((post) => post.is_newsletter)
+          .map((post) => (
+            <Post key={post.pid} {...post} />
+          ))}
       </div>
-      <PageTop
-        title="Documents"
-      />
+      <PageTop title="Documents" />
       <div className={styles.postsContainer}>
-        {posts.filter(post => !post.is_newsletter).map((post) => (
-          <Post key={post.pid} {...post} />
-        ))}
+        {posts
+          .filter((post) => !post.is_newsletter)
+          .map((post) => (
+            <Post key={post.pid} {...post} />
+          ))}
       </div>
     </Layout>
   );

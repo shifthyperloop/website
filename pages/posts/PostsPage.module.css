@@ -1,8 +1,8 @@
 .postsContainer {
-    display: flex;
-    flex-flow: row wrap;
-    box-sizing: border-box;
-    padding: 16px;
-    max-width: 1500px;
-    margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  padding: 16px;
+  max-width: 1500px;
+  margin: 0 auto;
 }

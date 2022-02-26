@@ -17,39 +17,28 @@ const Footer = () => (
             href="https://hevoldgroup.no/"
             target="_blank"
           >
-            <img
-              src="/images/partners/footer/Hevold.png"
-              alt="Hevold Group"
-            />
+            <img src="/images/partners/footer/Hevold.png" alt="Hevold Group" />
           </a>
           <a
             className={styles.sponsor}
             href="https://no.ramboll.com"
-            target="_blank">
-            <img
-              src="/images/partners/footer/Ramboll.png"
-              alt="Ramboll"
-            />
+            target="_blank"
+          >
+            <img src="/images/partners/footer/Ramboll.png" alt="Ramboll" />
           </a>
           <a
             className={styles.sponsor}
             href="https://alvaindustries.com"
             target="_blank"
           >
-            <img
-              src="/images/partners/footer/Alva.svg"
-              alt="Alva"
-            />
+            <img src="/images/partners/footer/Alva.svg" alt="Alva" />
           </a>
           <a
             className={styles.sponsor}
             href="https://www.hydro.com/no-NO/"
             target="_blank"
           >
-            <img
-              src="/images/partners/footer/Hydro.png"
-              alt="Hydro"
-            />
+            <img src="/images/partners/footer/Hydro.png" alt="Hydro" />
           </a>
         </div>
         <div className={styles.socials}>
@@ -66,9 +55,7 @@ const Footer = () => (
             <FaGithub />
           </a>
         </div>
-        <p className={styles.copyright}>
-          Copyright &copy; Shift 2021
-        </p>
+        <p className={styles.copyright}>Copyright &copy; Shift 2021</p>
       </div>
     </footer>
   </>

@@ -25,17 +25,20 @@ const Header = () => {
             Newsletters
           </a>
           <span className={styles.dropDownLink}>
-          <a href="/team/2022">Team</a>
-          <div className={styles.dropDownItems}>
-            <a href="/team/2022">Team 2022</a>
-            <a href="/team/2021">Team 2021</a>
-            <a href="/team/2020">Team 2020</a>
-            <a href="/team/2019">Team 2019</a>
-          </div>
-        </span>
+            <a href="/team/2022">Team</a>
+            <div className={styles.dropDownItems}>
+              <a href="/team/2022">Team 2022</a>
+              <a href="/team/2021">Team 2021</a>
+              <a href="/team/2020">Team 2020</a>
+              <a href="/team/2019">Team 2019</a>
+            </div>
+          </span>
           <a href="/contact">Contact us</a>
         </div>
-        <div className={styles.mobileMenuButton} onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className={styles.mobileMenuButton}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <MdClose size={30} /> : <GiHamburgerMenu size={30} />}
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Head from 'next/head';
-import styles from './Layout.module.css'
+import styles from './Layout.module.css';
 
 const Layout = ({
   children,
@@ -24,9 +24,7 @@ const Layout = ({
       </Head>
       <div className={styles.container}>
         <Header />
-        <div className={styles.content}>
-          {children}
-        </div>
+        <div className={styles.content}>{children}</div>
         <Footer />
       </div>
     </>

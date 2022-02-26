@@ -1,17 +1,17 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .iframePdf {
-    border: none;
-    width: 1200px;
-    height: 1050px;
+  border: none;
+  width: 1200px;
+  height: 1050px;
 }
 
 img.mobileNewsletterFrontpage {
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    max-width: calc(min(90%, 800px));
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  max-width: calc(min(90%, 800px));
 }

@@ -31,28 +31,23 @@ const TeamPage = ({
       url={'https://www.shifthyperloop.com' + path}
       title={'Shift Hyperloop | ' + title}
     >
-      <TopImage
-        image={topImage}
-        brightness={0.8}
-      >
-        <PageTop
-          title={title}
-        />
+      <TopImage image={topImage} brightness={0.8}>
+        <PageTop title={title} />
       </TopImage>
       <div className={styles.container}>
         {Object.values(groups)
           .sort((a, b) => {
             const priority = groupPriorities ?? {
               // bigger number gets sorted first
-              'Management': 1,
+              Management: 1,
               'The Board': 1,
-              'Mentors': -1
+              Mentors: -1,
             };
 
             if (priority[a.title] !== priority[b.title]) {
               return (priority[b.title] ?? 0) - (priority[a.title] ?? 0);
             }
-            
+
             return a.title.localeCompare(b.title);
           })
           .map((group) => (

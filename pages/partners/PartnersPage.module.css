@@ -1,109 +1,109 @@
 /* #239cd8 1670b8 1d1d1b*/
 
 .contact {
-    color: #1670b8;
+  color: #1670b8;
 }
 .infoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sponsorAd {
-    color: #1d1d1b;
-    border-left: #1670b8 3px solid;
-    background-color: rgb(235, 235, 235);
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  color: #1d1d1b;
+  border-left: #1670b8 3px solid;
+  background-color: rgb(235, 235, 235);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .image {
-    width: 200px;
-    margin: 15px 0;
+  width: 200px;
+  margin: 15px 0;
 }
 
 .sponsorInformation {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 .quote {
-    width: 30%;
-    margin: 0 2.5%;
-    color: #0080c9;
-    text-align: center;
-    margin: auto;
+  width: 30%;
+  margin: 0 2.5%;
+  color: #0080c9;
+  text-align: center;
+  margin: auto;
 }
 
 .partnerInfo {
-    width: 75%;
-    margin: 0;
+  width: 75%;
+  margin: 0;
 }
 
 .sponsorList {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .pageContainer {
-    max-width: var(--width);
-    width: 100%;
-    margin: auto;
-    text-align: center;
+  max-width: var(--width);
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
-.sponsors:not(:firstOfType) {
-    margin-top: 0;
+.sponsors:not(:firstoftype) {
+  margin-top: 0;
 }
 .sponsors.platinum {
-    color: #ddd;
-    font-size: 3.2rem;
+  color: #ddd;
+  font-size: 3.2rem;
 }
 
 .sponsorImage {
-    width: 100%;
+  width: 100%;
 }
 
 .sponsors.gold {
-    color: #da4;
-    margin-top: 50px;
-    font-size: 3.2rem;
+  color: #da4;
+  margin-top: 50px;
+  font-size: 3.2rem;
 }
 
 .sponsors.silver {
-    color: silver;
-    font-size: 3.2rem;
+  color: silver;
+  font-size: 3.2rem;
 }
 
 .sponsors.bronze {
-    color: #b08d57;
-    font-size: 3.2rem;
+  color: #b08d57;
+  font-size: 3.2rem;
 }
 
 .sponsors {
-    line-height: 0.5;
-    text-align: center;
-    font: 1em Georgia, Serif;
+  line-height: 0.5;
+  text-align: center;
+  font: 1em Georgia, Serif;
 }
 .sponsors span {
-    display: inline-block;
-    display: flex;
-    align-items: center;
+  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .sponsors span:before,
 .sponsors span:after {
-    content: '';
-    flex: 1 0 auto;
-    height: 5px;
-    margin: 0 15px;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
+  content: '';
+  flex: 1 0 auto;
+  height: 5px;
+  margin: 0 15px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
 .sponsors span:before {
 }
@@ -111,26 +111,26 @@
 }
 
 .platinum.sponsor + div {
-    display: flex;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  align-items: center;
+  width: 50%;
 }
 @media (max-width: 640px) {
-    .sponsorInformation {
-        flex-direction: column;
-        padding: 32px 1em 0;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: justify;
-    }
-    .quote {
-        width: 100%;
-    }
-    .partnerInfo {
-        margin: 0;
-    }
+  .sponsorInformation {
+    flex-direction: column;
+    padding: 32px 1em 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+  .quote {
+    width: 100%;
+  }
+  .partnerInfo {
+    margin: 0;
+  }
 
-    .sponsorAd {
-        width: 90%;
-    }
+  .sponsorAd {
+    width: 90%;
+  }
 }
