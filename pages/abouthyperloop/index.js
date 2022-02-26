@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout/Layout';
 import React from 'react';
 import styles from './AboutPage.module.css';
-
+import Image from 'next/image';
 const AboutPage = () => {
   return (
     <Layout
@@ -12,10 +12,14 @@ const AboutPage = () => {
         <div className={styles.title}>
           <h1>About Hyperloop</h1>
         </div>
-        <img
-          className={styles.image}
-          src="/images/homePage/Contact-hyperloop.png"
-        ></img>
+        <div className={styles.image}>
+          <Image
+            src="/images/homePage/Contact-hyperloop.png"
+            alt="hyperloop"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <p>
           We have travelled in the same way for well over a century. Our two
           ways of transportation: Airplanes and Trains, are either bad for the

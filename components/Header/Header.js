@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
@@ -12,28 +13,49 @@ const Header = () => {
         <div className={styles.leftSide}>
           <Link href="/">
             <a>
-              <img src="/images/logo-header.png" alt="Shift Hyperloop logo" />
+              <div className={styles.logo}>
+                <Image
+                  src="/images/logo-header.png"
+                  alt="Shift Hyperloop logo"
+                  height={58}
+                  width={224}
+                />
+              </div>
             </a>
           </Link>
         </div>
         <div className={styles.rightSide}>
-          <a href="/joinus">Join the team</a>
-          <a id="spons" href="/partners">
-            Sponsors
-          </a>
-          <a id="newsltr" href="/posts">
-            Newsletters
-          </a>
+          <Link href="/joinus">
+            <a>Join the team</a>
+          </Link>
+          <Link href="/partners">
+            <a>Sponsors</a>
+          </Link>
+          <Link href="/posts">
+            <a>Newsletters</a>
+          </Link>
           <span className={styles.dropDownLink}>
-            <a href="/team/2022">Team</a>
+            <Link href="/team/2022">
+              <a>Team</a>
+            </Link>
             <div className={styles.dropDownItems}>
-              <a href="/team/2022">Team 2022</a>
-              <a href="/team/2021">Team 2021</a>
-              <a href="/team/2020">Team 2020</a>
-              <a href="/team/2019">Team 2019</a>
+              <Link href="/team/2022">
+                <a>Team 2022</a>
+              </Link>
+              <Link href="/team/2021">
+                <a>Team 2021</a>
+              </Link>
+              <Link href="/team/2020">
+                <a>Team 2020</a>
+              </Link>
+              <Link href="/team/2019">
+                <a>Team 2019</a>
+              </Link>
             </div>
           </span>
-          <a href="/contact">Contact us</a>
+          <Link href="/contact">
+            <a>Contact us</a>
+          </Link>
         </div>
         <div
           className={styles.mobileMenuButton}

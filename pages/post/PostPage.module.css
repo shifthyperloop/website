@@ -9,9 +9,11 @@
   height: 1050px;
 }
 
-img.mobileNewsletterFrontpage {
+.mobileNewsletterFrontpage {
+  position: relative;
   margin: 0 auto;
   text-align: center;
   display: block;
-  max-width: calc(min(90%, 800px));
+  width: calc(min(90vw, 800px));
+  height: calc(min(128vw, 1142px));
 }

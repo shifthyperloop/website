@@ -6,6 +6,7 @@ import { useWindowSize } from '../../common/hooks';
 import styles from './PostPage.module.css';
 import PageTop from '../../components/PageTop/PageTop';
 import Button from '../../components/Button/Button';
+import Image from 'next/image';
 
 const PostPage = ({
   pid,
@@ -40,11 +41,15 @@ const PostPage = ({
           </>
         ) : (
           <a download href={fileUrl}>
-            <img
-              className={styles.mobileNewsletterFrontpage}
-              src={CMS_BASE_URL + front_page}
-              alt={title + ' frontpage'}
-            />
+            <div className={styles.mobileNewsletterFrontpage}>
+              <Image
+                src={CMS_BASE_URL + front_page}
+                alt={title + ' frontpage'}
+                layout="fill"
+                objectFit="contain"
+                objectPosition="top"
+              />
+            </div>
           </a>
         )}
       </div>
@@ -54,6 +59,7 @@ const PostPage = ({
 
 PostPage.getInitialProps = async function (context) {
   const { pid } = context.query;
+  console.log(pid);
   const res = await fetch(
     'https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid
   ).catch();

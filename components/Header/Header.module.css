@@ -37,8 +37,10 @@
   display: flex;
   align-items: center;
 }
-.leftSide img {
+.leftSide .logo {
+  position: relative;
   height: calc(var(--header-height) * 0.9);
+  width: calc(var(--header-height) * 4);
 }
 
 .rightSide {

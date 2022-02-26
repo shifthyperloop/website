@@ -24,7 +24,7 @@ const TeamPage = ({
       }
     });
     setGroups(newGroups);
-  }, [members]);
+  }, [members, teamGroups]);
 
   return (
     <Layout

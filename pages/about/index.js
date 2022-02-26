@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout/Layout';
 import React from 'react';
 import styles from './AboutPage.module.css';
+import Image from 'next/image';
 
 const AboutPage = () => {
   return (
@@ -12,7 +13,15 @@ const AboutPage = () => {
         <div className={styles.title}>
           <h1>About us</h1>
         </div>
-        <img className={styles.image} src="/images/team/2022.jpg"></img>
+
+        <div className={styles.image}>
+          <Image
+            src="/images/team/2022.jpg"
+            alt="hyperloop"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <p>
           Shift Hyperloop is an independent non-profit organization founded in
           Trondheim by students from the Norwegian University of Science and

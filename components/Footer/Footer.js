@@ -1,11 +1,7 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
-
-const linkStyle = {
-  marginRight: 15,
-};
 
 const Footer = () => (
   <>
@@ -16,29 +12,53 @@ const Footer = () => (
             className={styles.sponsor}
             href="https://hevoldgroup.no/"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/partners/footer/Hevold.png" alt="Hevold Group" />
+            <Image
+              src="/images/partners/footer/Hevold.png"
+              alt="Hevold Group"
+              layout="fill"
+              objectFit="contain"
+            />
           </a>
           <a
             className={styles.sponsor}
             href="https://no.ramboll.com"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/partners/footer/Ramboll.png" alt="Ramboll" />
+            <Image
+              src="/images/partners/footer/Ramboll.png"
+              alt="Ramboll"
+              layout="fill"
+              objectFit="contain"
+            />
           </a>
           <a
             className={styles.sponsor}
             href="https://alvaindustries.com"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/partners/footer/Alva.svg" alt="Alva" />
+            <Image
+              src="/images/partners/footer/Alva.svg"
+              alt="Alva"
+              layout="fill"
+              objectFit="contain"
+            />
           </a>
           <a
             className={styles.sponsor}
             href="https://www.hydro.com/no-NO/"
             target="_blank"
+            rel="noreferrer"
           >
-            <img src="/images/partners/footer/Hydro.png" alt="Hydro" />
+            <Image
+              src="/images/partners/footer/Hydro.png"
+              alt="Hydro"
+              layout="fill"
+              objectFit="contain"
+            />
           </a>
         </div>
         <div className={styles.socials}>

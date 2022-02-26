@@ -39,17 +39,9 @@
 }
 
 .modalImageWrapper {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modalImageWrapper > img {
-  width: 80%;
-  max-width: 400px;
   height: 200px;
-  object-fit: cover;
 }
 
 .positionName {
@@ -117,14 +109,17 @@
   justify-content: space-between;
   box-shadow: 1px 0.3px 10px #000;
 }
-.group > img {
-  height: 140px;
-  width: 100%;
-  object-fit: cover;
-}
+
 .group > p {
   text-align: center;
 }
+.groupImage {
+  position: relative;
+
+  height: 140px;
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .groups {
     grid-template-columns: 1fr 1fr;

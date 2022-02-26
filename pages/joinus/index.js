@@ -6,6 +6,7 @@ import ApplyButton from '/components/JoinButton/ApplyButton';
 import groupPositions from '/common/groupPositions';
 import styles from '/pages/joinus/JoinUsPage.module.css';
 import PageTop from '/components/PageTop/PageTop';
+import Image from 'next/image';
 
 const JoinUsPage = () => {
   const [modal, setModal] = useState({ group: null });
@@ -57,7 +58,14 @@ const JoinUsPage = () => {
         <div className={styles.groups}>
           {groupPositions.map((group) => (
             <div className={styles.group} key={group.name}>
-              <img src={'/images/joinus/' + group.image} alt={group.name} />
+              <div className={styles.groupImage}>
+                <Image
+                  src={'/images/joinus/' + group.image}
+                  alt={group.name}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
               <p className={styles.groupName}>{group.name}</p>
               <PositionsButton group={group} />
             </div>
@@ -76,9 +84,11 @@ const JoinUsPage = () => {
             <h1 className={styles.modalGroupName}>{modal.group.name}</h1>
             <hr className={styles.blueLineThick} />
             <div className={styles.modalImageWrapper}>
-              <img
+              <Image
                 src={'/images/joinus/' + modal.group.image}
                 alt={modal.group.name}
+                layout="fill"
+                objectFit="contain"
               />
             </div>
             {modal.group.positions.map((position) => (

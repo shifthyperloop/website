@@ -1,4 +1,5 @@
 import styles from './ImageSection.module.css';
+import Image from 'next/image';
 
 const ImageSection = (props) => {
   const { src, alt, imageRight } = props;
@@ -7,7 +8,7 @@ const ImageSection = (props) => {
       className={`${styles.container} ${imageRight ? styles.imageRight : ''}`}
     >
       <div className={styles.half}>
-        <img src={src} alt={alt} />
+        <Image src={src} alt={alt} layout="fill" objectFit="cover" />
       </div>
       <div className={styles.half}>
         <div className={styles.content}>{props.children}</div>
