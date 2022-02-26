@@ -5,7 +5,7 @@ const Group = ({ members = [], title, description, centerImages = true }) => {
   return (
     <div className={styles.group}>
       <h1 className={styles.title}>{title}</h1>
-      { description && <p className={styles.description}>{description}</p> }
+      {description && <p className={styles.description}>{description}</p>}
       <hr className={styles.divider} />
       <div className={styles.members}>
         {members
@@ -13,7 +13,7 @@ const Group = ({ members = [], title, description, centerImages = true }) => {
             const priority = {
               // bigger number gets sorted first
               'Group Leader': 10,
-              'Chairman': 10,
+              Chairman: 10,
               'Deputy Chairman': 9,
               'Chief Executive Officer': 10,
               CEO: 10,

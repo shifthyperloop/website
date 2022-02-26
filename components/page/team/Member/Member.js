@@ -3,7 +3,7 @@ import { FiMail } from 'react-icons/fi';
 import Image from 'next/image';
 import styles from './Member.module.css';
 
-const Member = ({ name, url, title, email, group, center = true }) => {
+const Member = ({ name, url, title, email, center = true }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>

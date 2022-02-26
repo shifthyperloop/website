@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
@@ -6,48 +5,42 @@ import { useWindowSize } from '../../common/hooks';
 import styles from './PostPage.module.css';
 import PageTop from '../../components/PageTop/PageTop';
 import Button from '../../components/Button/Button';
+import Image from 'next/image';
 
 const PostPage = ({
-  pid,
   title,
-  picture,
-  description,
-  published,
-  updated_at,
-  content,
   front_page,
-  is_pdf,
   files,
 }) => {
-  const router = useRouter();
   const windowSize = useWindowSize();
 
   const fileUrl = CMS_BASE_URL + files;
 
   return (
     <Layout>
-      <PageTop
-        title={title}
-      />
+      <PageTop title={title} />
       <div className={styles.container}>
         {windowSize.width > 1250 ? (
           <>
-            <Button small download href={fileUrl}>Download</Button>
+            <Button small download href={fileUrl}>
+              Download
+            </Button>
             <iframe
               className={styles.iframePdf}
               src={'https://pdf-viewer.now.sh/?pdf=' + fileUrl}
             />
           </>
         ) : (
-          <a
-            download
-            href={fileUrl}
-          >
-            <img
-              className={styles.mobileNewsletterFrontpage}
-              src={CMS_BASE_URL + front_page}
-              alt={title + " frontpage"}
-            />
+          <a download href={fileUrl}>
+            <div className={styles.mobileNewsletterFrontpage}>
+              <Image
+                src={CMS_BASE_URL + front_page}
+                alt={title + ' frontpage'}
+                layout="fill"
+                objectFit="contain"
+                objectPosition="top"
+              />
+            </div>
           </a>
         )}
       </div>
@@ -57,6 +50,7 @@ const PostPage = ({
 
 PostPage.getInitialProps = async function (context) {
   const { pid } = context.query;
+  console.log(pid);
   const res = await fetch(
     'https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid
   ).catch();

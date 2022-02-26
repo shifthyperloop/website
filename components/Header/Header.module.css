@@ -1,154 +1,155 @@
 .header {
-    width: 100%;
-    height: var(--header-height);
+  width: 100%;
+  height: var(--header-height);
 
-    padding: 0 10px;
-    box-sizing: border-box;
+  padding: 0 10px;
+  box-sizing: border-box;
 
-    background: rgba(1, 2, 11, 0.7);
-    backdrop-filter: blur(4px);
-    box-shadow: 2px 2px 10px #1a1a1a;
+  background: rgba(1, 2, 11, 0.7);
+  backdrop-filter: blur(4px);
+  box-shadow: 2px 2px 10px #1a1a1a;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .content {
-    margin: auto;
-    max-width: 1200px;
-    height: 100%;
+  margin: auto;
+  max-width: 1200px;
+  height: 100%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
 
-    font-size: 1.2em;
-    color: #ffffff;
+  font-size: 1.2em;
+  color: #ffffff;
 }
 
 .leftSide {
-    flex: 0 0;
+  flex: 0 0;
 }
 .leftSide > a {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.leftSide img {
-    height: calc(var(--header-height)*0.9);
+.leftSide .logo {
+  position: relative;
+  height: calc(var(--header-height) * 0.9);
+  width: calc(var(--header-height) * 4);
 }
 
 .rightSide {
-    flex: 1 1 100%;
+  flex: 1 1 100%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
 
-    text-align: center;
+  text-align: center;
 }
 
 .rightSide a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-    line-height: var(--header-height);
-    padding: 0 10px;
-    display: block;
+  line-height: var(--header-height);
+  padding: 0 10px;
+  display: block;
 }
 
 .rightSide a:hover {
-    color: rgb(120, 120, 120);
+  color: rgb(120, 120, 120);
 }
 
 .dropDownLink {
-    position: relative;
+  position: relative;
 }
 .dropDownLink > a {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 .dropDownLink > a:after {
-    margin-left: 3px;
-    content: '▾';
+  margin-left: 3px;
+  content: '▾';
 }
 .dropDownItems {
-    position: absolute;
-    top: 100%;
-    right: -50px;
-    z-index: 1;
+  position: absolute;
+  top: 100%;
+  right: -50px;
+  z-index: 1;
 
-    background: #222222;
-    backdrop-filter: blur(4px);
+  background: #222222;
+  backdrop-filter: blur(4px);
 
-    width: 150px;
-    white-space: nowrap;
-    flex-direction: column;
+  width: 150px;
+  white-space: nowrap;
+  flex-direction: column;
 
-    display: none;
+  display: none;
 }
 .dropDownLink:hover .dropDownItems {
-    display: flex;
+  display: flex;
 }
-
 
 .mobileMenuButton {
-    width: var(--header-height);
-    height: 100%;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
+  width: var(--header-height);
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
 
-    display: none;
+  display: none;
 }
 @media (max-width: 800px) {
-    .mobileMenuButton {
-        display: flex;
-    }
-    .leftSide {
-        flex-grow: 1;
-    }
-    .rightSide {
-        flex-direction: column;
-        justify-content: flex-start;
-        position: absolute;
-        top: 100%;
-        right: 0;
+  .mobileMenuButton {
+    display: flex;
+  }
+  .leftSide {
+    flex-grow: 1;
+  }
+  .rightSide {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
 
-        width: calc(max(50vw, 200px));
-        max-height: calc(100vh - var(--header-height));
+    width: calc(max(50vw, 200px));
+    max-height: calc(100vh - var(--header-height));
 
-        background: #333333;
+    background: #333333;
 
-        overflow: auto;
-        display: none;
-    }
-    .header.open .rightSide {
-        display: flex;
-    }
-    .rightSide > * {
-        flex: 0 0;
-    }
+    overflow: auto;
+    display: none;
+  }
+  .header.open .rightSide {
+    display: flex;
+  }
+  .rightSide > * {
+    flex: 0 0;
+  }
 
-    .dropDownLink > a {
-        display: none;
-    }
-    .dropDownLink > .dropDownItems {
-        display: flex;
-        position: initial;
-        background: none;
-        width: 100%;
-    }
-    .dropDownLink > span::after {
-        display: none;
-    }
+  .dropDownLink > a {
+    display: none;
+  }
+  .dropDownLink > .dropDownItems {
+    display: flex;
+    position: initial;
+    background: none;
+    width: 100%;
+  }
+  .dropDownLink > span::after {
+    display: none;
+  }
 }

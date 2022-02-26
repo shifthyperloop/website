@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
@@ -7,28 +6,26 @@ import Post from '../../components/page/posts/Post/Post';
 import PageTop from '../../components/PageTop/PageTop';
 
 const PostsPage = ({ posts }) => {
-  const router = useRouter();
-
   return (
     <Layout
       url="https://www.shifthyperloop.com/posts"
       title="Shift Hyperloop | Newsletters"
     >
-      <PageTop
-        title="Newsletters"
-      />
+      <PageTop title="Newsletters" />
       <div className={styles.postsContainer}>
-        {posts.filter(post => post.is_newsletter).map((post) => (
-          <Post key={post.pid} {...post} />
-        ))}
+        {posts
+          .filter((post) => post.is_newsletter)
+          .map((post) => (
+            <Post key={post.pid} {...post} />
+          ))}
       </div>
-      <PageTop
-        title="Documents"
-      />
+      <PageTop title="Documents" />
       <div className={styles.postsContainer}>
-        {posts.filter(post => !post.is_newsletter).map((post) => (
-          <Post key={post.pid} {...post} />
-        ))}
+        {posts
+          .filter((post) => !post.is_newsletter)
+          .map((post) => (
+            <Post key={post.pid} {...post} />
+          ))}
       </div>
     </Layout>
   );

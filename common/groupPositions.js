@@ -1,5 +1,4 @@
 const groupPositions = [
-  
   {
     name: 'Structural',
     description: '',
@@ -17,7 +16,6 @@ const groupPositions = [
     positions: [
       {
         name: 'Group leader',
-    
       },
     ],
   },
@@ -29,7 +27,6 @@ const groupPositions = [
     positions: [
       {
         name: 'Group leader',
-      
       },
     ],
   },
@@ -57,41 +54,37 @@ const groupPositions = [
   },
   {
     name: 'Management',
-    description:
-      '',
+    description: '',
     image: 'management.jpg',
     positions: [
       {
         name: 'Project Manager (Chief Executive Officer)',
-         description:
-          ' ',
+        description: ' ',
       },
       {
         name: 'Deputy Project Manager (Chief Financial Officer)',
-         description:
-          ' ',
+        description: ' ',
       },
       {
         name: 'Marketing Leader (Chief Marketing Officer)',
-         description:
+        description:
           'The Chief Marketing Officer is the one responsible for mantaining the image of the organisational as well as mantaining contact with the different businesspartners.',
       },
       {
         name: 'Technical Leader - Mechanical (Chief Technical Officer, Mechanical)',
-         description:
+        description:
           'CTO mechanical is responsible for the technical progress of the pod, with focus on the mechanical parts.',
       },
       {
         name: 'Technical Leader - Electrical (Chief Technical Officer, Electrical)',
-         description:
+        description:
           'CTO electrical is responsible for the technical progress of the pod, with focus on the electrical solutions. ',
       },
       {
         name: 'Technical Leader - Software (Chief Technical Officer, Software)',
-         description:
-          ' ',
+        description: ' ',
       },
-    ]
+    ],
   },
 ];
 

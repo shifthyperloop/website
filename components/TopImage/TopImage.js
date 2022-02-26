@@ -28,7 +28,12 @@ export default function TopImage({
         </div>
       ) : null}
       {hasArrow ? (
-        <a className={styles.arrow} onClick={() => animateScroll.scrollTo(window.innerHeight - 100, { duration: 500})}>
+        <a
+          className={styles.arrow}
+          onClick={() =>
+            animateScroll.scrollTo(window.innerHeight - 100, { duration: 500 })
+          }
+        >
           <FaAngleDown size={35} />
         </a>
       ) : null}
