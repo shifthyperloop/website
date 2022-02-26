@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
@@ -7,8 +6,6 @@ import Post from '../../components/page/posts/Post/Post';
 import PageTop from '../../components/PageTop/PageTop';
 
 const PostsPage = ({ posts }) => {
-  const router = useRouter();
-
   return (
     <Layout
       url="https://www.shifthyperloop.com/posts"

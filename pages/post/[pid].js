@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Layout from '../../components/Layout/Layout';
 import { CMS_BASE_URL } from '../../common/constants';
 import fetch from 'isomorphic-unfetch';
@@ -9,18 +8,10 @@ import Button from '../../components/Button/Button';
 import Image from 'next/image';
 
 const PostPage = ({
-  pid,
   title,
-  picture,
-  description,
-  published,
-  updated_at,
-  content,
   front_page,
-  is_pdf,
   files,
 }) => {
-  const router = useRouter();
   const windowSize = useWindowSize();
 
   const fileUrl = CMS_BASE_URL + files;
