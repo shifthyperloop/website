@@ -43,7 +43,7 @@ const JoinUsPage = () => {
         "be educational and fun! Don’t hesitate to contact us if you have questions." +
         "\n\n" +
         "Primarily Shift enrolls new members to the team two " +
-        "times a year. In May the team leader and board positions are filled. The " +
+        "times a year. During the spring, the management and group leader positions are filled. The " +
         "rest of the team positions are filled in august/september at the start " +
         "of the semester. However, any student feeling they have something to " +
         "contribute to the team should not hesitate to contact us any time of the " +
