@@ -23,19 +23,6 @@ const Footer = () => (
           </a>
           <a
             className={styles.sponsor}
-            href="https://no.ramboll.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/images/partners/footer/Ramboll.png"
-              alt="Ramboll"
-              layout="fill"
-              objectFit="contain"
-            />
-          </a>
-          <a
-            className={styles.sponsor}
             href="https://alvaindustries.com"
             target="_blank"
             rel="noreferrer"
