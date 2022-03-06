@@ -7,11 +7,7 @@ import PageTop from '../../components/PageTop/PageTop';
 import Button from '../../components/Button/Button';
 import Image from 'next/image';
 
-const PostPage = ({
-  title,
-  front_page,
-  files,
-}) => {
+const PostPage = ({ title, front_page, files }) => {
   const windowSize = useWindowSize();
 
   const fileUrl = CMS_BASE_URL + files;
