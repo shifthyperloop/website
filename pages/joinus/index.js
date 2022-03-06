@@ -54,7 +54,6 @@ const JoinUsPage = () => {
       <ApplyButton />
       <br />
       <div className={styles.joinContainer}>
-        <h2 className={styles.center}>Groups:</h2>
         <div className={styles.groups}>
           {groupPositions.map((group) => (
             <div className={styles.group} key={group.name}>
