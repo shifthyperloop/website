@@ -108,6 +108,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 1px 0.3px 10px #000;
+  border-radius: 10px;
 }
 
 .group > p {

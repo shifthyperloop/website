@@ -1,6 +1,8 @@
 .container {
-  border: 5px solid #3189c9;
+  border: 1px solid #333333;
   background: #fff;
+
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
