@@ -62,7 +62,7 @@ const Footer = () => (
             <FaGithub />
           </a>
         </div>
-        <p className={styles.copyright}>Copyright &copy; Shift 2021</p>
+        <p className={styles.copyright}>Copyright &copy; Shift 2022</p>
       </div>
     </footer>
   </>
