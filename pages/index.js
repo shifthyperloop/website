@@ -9,7 +9,7 @@ import TextSection from '../components/page/home/TextSection/TextSection';
 
 const HomePage = () => {
   return (
-    <Layout>
+    <Layout noBottomPadding>
       <div>
         <TopImage
           image="/images/homePage/PodTop.jpg"
