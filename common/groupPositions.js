@@ -48,7 +48,7 @@ const groupPositions = [
       {
         name: 'Group leader in Concept',
         description:
-          'As the head of the Concept group you are responsible to lead the R&D on large scale – Hyperloop. Your main tasks will be to make a project plan for the team, lead the workshops and follow the progress of the team. The group will produce a research document about the findings of this years team, this document will be submitted to the Full-scale award of the EHW-competition. as the group leader it is your responsible to oversee the quality of the documentation.  The position is a great opportunity to learn more about project management, and you will also get an insight of some of the great problems about hyperloop that needs to be overcome.\n' +
+          'As the head of the Concept group you are responsible to lead the R&D on large scale – Hyperloop. Your main tasks will be to make a project plan for the team, lead the workshops and follow the progress of the team. The group will produce a research document about the findings of this years team, this document will be submitted to the Full-scale award of the EHW-competition. as the group leader it is your responsibility to oversee the quality of the documentation.  The position is a great opportunity to learn more about project management, and you will also get an insight of some of the great problems about hyperloop that needs to be overcome.\n' +
           '\n',
       },
     ],
