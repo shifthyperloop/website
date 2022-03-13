@@ -30,6 +30,7 @@ const TeamPage = ({
     <Layout
       url={'https://www.shifthyperloop.com' + path}
       title={'Shift Hyperloop | ' + title}
+      contentBehindNavBar
     >
       <TopImage image={topImage} brightness={0.8}>
         <PageTop title={title} />

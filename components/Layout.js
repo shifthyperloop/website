@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Head from 'next/head';
 import { Box, Stack } from '@mui/material';
+import NavBar from './NavBar';
 
 const Layout = ({
   children,
@@ -11,6 +11,7 @@ const Layout = ({
   url = 'https://www.shifthyperloop.com',
   image = 'https://www.shifthyperloop.com/img/Logo(White_RightText).png',
   noBottomPadding = false,
+  contentBehindNavBar = false,
 }) => {
   return (
     <>
@@ -24,10 +25,10 @@ const Layout = ({
         <meta property="og:image" content={image} />
       </Head>
       <Stack>
-        <Header />
+        <NavBar allowContentBehind={contentBehindNavBar} />
         <Box flex={1}>
           {children}
-          {noBottomPadding || <Box height="40px" />}
+          <>{noBottomPadding || <Box height="40px" />}</>
         </Box>
         <Footer />
       </Stack>
