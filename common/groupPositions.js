@@ -40,7 +40,7 @@ const groupPositions = [
       {
         name: 'Group leader in Marketing',
         description:
-          'The Marketing lead will manage the day to day operations of the marketing group. They will be responsible for making sure that is working efficiantly, and that they are able to properly communicate with the rest of the team.\n' +
+          'The Marketing lead will manage the day to day operations of the marketing group. They will be responsible for making sure that the group is working efficiently, and that they are able to properly communicate with the rest of the team.\n' +
           '\n' +
           'This role is closely related to the CMO, and will work frequently with them.\n' +
           '\n',
