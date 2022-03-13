@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Layout from '../../../Layout/Layout';
+import Layout from '../../../Layout';
 import TopImage from '../../../TopImage/TopImage';
 import Group from '../Group/Group';
 import styles from './TeamPage.module.css';

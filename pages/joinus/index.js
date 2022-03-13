@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
-import Layout from '/components/Layout/Layout';
+import Layout from '/components/Layout';
 import Button from '/components/Button/Button';
 import ApplyButton from '/components/JoinButton/ApplyButton';
 import groupPositions from '/common/groupPositions';

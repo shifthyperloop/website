@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout/Layout';
+import Layout from '../../components/Layout';
 import React from 'react';
 import styles from './AboutPage.module.css';
 import Image from 'next/image';
