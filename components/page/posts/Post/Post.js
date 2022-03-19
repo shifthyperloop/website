@@ -16,9 +16,7 @@ const Post = ({ title, pid, picture, description }) => {
           />
           <div className={styles.postText}>
             <h2 className={styles.postTitle}>{title}</h2>
-            <p className={styles.postDescription}>
-              {description}
-            </p>
+            <p className={styles.postDescription}>{description}</p>
           </div>
         </a>
       </Link>

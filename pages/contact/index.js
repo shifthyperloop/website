@@ -39,9 +39,7 @@ const ContactUsPage = () => {
       title="Shift Hyperloop | Contact us"
     >
       <div className={styles.container}>
-        <PageTop
-          title="Contact Us"
-        />
+        <PageTop title="Contact Us" />
         <div className={styles.contactContainer}>
           <div className={styles.contactInfo}>
             <h2>Getting in touch is easy!</h2>
@@ -112,6 +110,6 @@ const ContactUsPage = () => {
       </div>
     </Layout>
   );
-}
+};
 
 export default ContactUsPage;

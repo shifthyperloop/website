@@ -1,11 +1,7 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
-
-const linkStyle = {
-  marginRight: 15,
-};
 
 const Footer = () => (
   <>
@@ -16,39 +12,39 @@ const Footer = () => (
             className={styles.sponsor}
             href="https://hevoldgroup.no/"
             target="_blank"
+            rel="noreferrer"
           >
-            <img
+            <Image
               src="/images/partners/footer/Hevold.png"
               alt="Hevold Group"
-            />
-          </a>
-          <a
-            className={styles.sponsor}
-            href="https://no.ramboll.com"
-            target="_blank">
-            <img
-              src="/images/partners/footer/Ramboll.png"
-              alt="Ramboll"
+              layout="fill"
+              objectFit="contain"
             />
           </a>
           <a
             className={styles.sponsor}
             href="https://alvaindustries.com"
             target="_blank"
+            rel="noreferrer"
           >
-            <img
+            <Image
               src="/images/partners/footer/Alva.svg"
               alt="Alva"
+              layout="fill"
+              objectFit="contain"
             />
           </a>
           <a
             className={styles.sponsor}
             href="https://www.hydro.com/no-NO/"
             target="_blank"
+            rel="noreferrer"
           >
-            <img
+            <Image
               src="/images/partners/footer/Hydro.png"
               alt="Hydro"
+              layout="fill"
+              objectFit="contain"
             />
           </a>
         </div>
@@ -66,9 +62,7 @@ const Footer = () => (
             <FaGithub />
           </a>
         </div>
-        <p className={styles.copyright}>
-          Copyright &copy; Shift 2021
-        </p>
+        <p className={styles.copyright}>Copyright &copy; Shift 2022</p>
       </div>
     </footer>
   </>

@@ -38,7 +38,7 @@ const HomePage = () => {
       <ImageTextSection
         src="/images/homePage/Contact-hyperloop.png"
         alt="Hyperloop"
-        link = '/abouthyperloop'
+        link="/abouthyperloop"
       >
         <TextSection
           title="WHAT IS HYPERLOOP?"
@@ -105,8 +105,9 @@ const HomePage = () => {
                 In 2021 European Hyperloop Week will be hosted for the first
                 time in Valencia, Spain where Shift will participate. In the
                 future we hope to compete in the annual SpaceX Hyperloop Pod
-                Competition which has been hosted every year since 2015. Shift's
-                goal is to become one of the best student teams in the world.
+                Competition which has been hosted every year since 2015.
+                Shift&apos;s goal is to become one of the best student teams in
+                the world.
               </p>
             </div>
           </div>

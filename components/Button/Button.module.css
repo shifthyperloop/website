@@ -1,21 +1,22 @@
 .container {
-  border: 1px solid #3189c9;
-  background: #fff2;
-  
+  border: 1px solid #333333;
+  background: #fff;
+
+  border-radius: 10px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-width: 200px;
-  min-height: 50px;
+  min-width: 300px;
+  min-height: 60px;
   cursor: pointer;
   padding: 0.25rem 0.25rem;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   line-height: 1rem;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .container:hover {

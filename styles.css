@@ -2,31 +2,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html {
-    --header-height: 4rem;
-    --footer-height: 12rem;
-    --top-text-color: #ddd;
-    --shift-blue: #239cd8;
-    --shift-deep-blue: #1670b8;
-    --dark: #1d1d1b;
-    --gray: #575756;
+  --header-height: 4rem;
+  --footer-height: 12rem;
+  --top-text-color: #ddd;
+  --shift-blue: #239cd8;
+  --shift-deep-blue: #1670b8;
+  --dark: #1d1d1b;
+  --gray: #575756;
 }
 
 body {
-    height: 100%;
-    color: #ddd;
-    font-family: 'Roboto Condensed', sans-serif;
-    line-height: 1.5;
-    background-color: var(--dark);
-    margin: 0;
+  height: 100%;
+  color: #ddd;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.5;
+  background-color: var(--dark);
+  margin: 0;
 }
 
 h1 {
-    margin-bottom: 30px;
-    margin-top: 0;
-    font-size: 3em;
-    text-align: center;
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 3em;
+  text-align: center;
 }
 
 a {
-    color: #ddd;
+  color: #ddd;
 }

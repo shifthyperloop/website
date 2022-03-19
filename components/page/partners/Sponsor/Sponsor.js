@@ -1,11 +1,24 @@
 import { CMS_BASE_URL } from '../../../../common/constants';
 import styles from './Sponsor.module.css';
+import Image from 'next/image';
 
 const Sponsor = ({ title, logo, tier, url, description }) => {
   return (
     <div>
-      <a href={url} target="_blank" className={`${styles.sponsor} ${styles[tier.toLowerCase()]}`}>
-        <img className={styles.image} src={CMS_BASE_URL + logo} />
+      <a
+        href={url}
+        target="_blank"
+        className={`${styles.sponsor} ${styles[tier.toLowerCase()]}`}
+        rel="noreferrer"
+      >
+        <div className={styles.image}>
+          <Image
+            src={CMS_BASE_URL + logo}
+            alt={`${title} logo`}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       </a>
       {tier === 'Platinum' ? (
         <>
