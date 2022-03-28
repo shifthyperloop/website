@@ -16,6 +16,10 @@ const Layout = ({
       <Head>
         <link rel="shortcut icon" type="image/png" href="/shift_icon.png" />
         <title>{title}</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
