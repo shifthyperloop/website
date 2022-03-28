@@ -6,6 +6,8 @@ import TopImage from '../components/TopImage/TopImage';
 import styles from './HomePage.module.css';
 import ImageTextSection from '../components/page/home/ImageSection/ImageSection';
 import TextSection from '../components/page/home/TextSection/TextSection';
+import Timeline from '../components/Timeline/Timeline';
+import timelineEvents from '../common/timelineEvents';
 
 const HomePage = () => {
   return (
@@ -113,6 +115,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <h1 className={styles.timelineHeader}>A year of Shift</h1>
+      <Timeline events={timelineEvents} />
     </Layout>
   );
 };

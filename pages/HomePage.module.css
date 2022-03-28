@@ -101,3 +101,9 @@
   width: 100%;
   max-width: 1200px;
 }
+
+.timelineHeader {
+    margin: auto;
+    text-align: center;
+    color: var(--shift-blue);
+}
