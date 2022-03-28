@@ -92,6 +92,9 @@
     max-width: 100%;
   }
 }
+.fadein {
+    transition: opacity 1s ease;
+}
 
 .joinButtons {
   display: flex;

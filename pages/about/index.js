@@ -11,7 +11,7 @@ const AboutPage = () => {
     >
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1>About us</h1>
+          <h1>About Us</h1>
         </div>
 
         <div className={styles.image}>

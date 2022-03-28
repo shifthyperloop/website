@@ -2,7 +2,7 @@ import styles from './ImageSection.module.css';
 import Image from 'next/image';
 
 const ImageSection = (props) => {
-  const { src, alt, imageRight } = props;
+  const { src, alt, imageRight, link } = props;
   return (
     <div
       className={`${styles.container} ${imageRight ? styles.imageRight : ''}`}
@@ -13,7 +13,7 @@ const ImageSection = (props) => {
       <div className={styles.half}>
         <div className={styles.content}>{props.children}</div>
       </div>
-    </div>
+    </a>
   );
 };
 
