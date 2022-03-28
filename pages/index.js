@@ -10,14 +10,12 @@ import TextSection from '../components/page/home/TextSection/TextSection';
 const HomePage = () => {
   return (
     <Layout noBottomPadding contentBehindNavBar>
-      <div>
-        <TopImage
-          image="/images/homePage/PodTop.jpg"
-          brightness={1}
-          fixedOnMobile={false}
-          joinButton
-        />
-      </div>
+      <TopImage
+        image="/images/homePage/PodTop.jpg"
+        brightness={1}
+        fixedOnMobile={false}
+        joinButton
+      />
       <ImageTextSection
         src="/images/homePage/meili.jpg"
         alt="Shift hyperloop pod Meili"

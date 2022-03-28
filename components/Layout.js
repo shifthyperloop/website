@@ -3,6 +3,7 @@ import Footer from './Footer/Footer';
 import Head from 'next/head';
 import { Box, Stack } from '@mui/material';
 import NavBar from './NavBar';
+import favicon from '../public/shift_icon.png';
 
 const Layout = ({
   children,
@@ -16,7 +17,7 @@ const Layout = ({
   return (
     <>
       <Head>
-        <link rel="shortcut icon" type="image/png" href="/shift_icon.png" />
+        <link rel="shortcut icon" type="image/png" href={favicon} />
         <title>{title}</title>
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
