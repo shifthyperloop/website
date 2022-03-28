@@ -72,8 +72,6 @@ const HomePage = () => {
           `}
         />
       </ImageTextSection>
-      <h2 className={styles.timelineHeader}>What's coming up?</h2>
-      <Timeline events={timelineEvents} />
       <div className={styles.goals}>
         <div className={styles.text}>
           <h1>Our Goals</h1>
@@ -117,6 +115,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <h1 className={styles.timelineHeader}>A year of Shift</h1>
+      <Timeline events={timelineEvents} />
     </Layout>
   );
 };

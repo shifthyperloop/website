@@ -4,6 +4,7 @@ div.accordion {
   box-shadow: none;
   color: black;
   padding: 0;
+  white-space: pre-line;
 }
 
 div.accordion::before {
