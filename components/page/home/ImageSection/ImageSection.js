@@ -13,7 +13,7 @@ const ImageSection = (props) => {
       <div className={styles.half}>
         <div className={styles.content}>{props.children}</div>
       </div>
-    </a>
+    </div>
   );
 };
 
