@@ -4,7 +4,7 @@ import styles from './pods.module.css';
 import Button from '../../components/Button/Button';
 import { Stack } from '@mui/material';
 
-const pods = () => {
+const Pods = () => {
   const[pod_number, setpod_number] = useState(0);
 
 
@@ -19,7 +19,7 @@ const pods = () => {
   const pod2_text = (< ><img className={styles.image} src="/images/homePage/comingsoon.jpg"></img>
   <p>
   The 2022 pod is our second attempt at making a functioning hyperloop prototype. The pod has shrunk down to 2.2 meters legth, and has a weight of 160 kg. The pod is divided into 15 sub-systems
-  that are all connected and work together in order for the pod to function properly. It's glass
+  that are all connected and work together in order for the pod to function properly. It&apos;s glass
   fiber aeroshell has a pointy design that we hope will draw attention to the hyperloop technology.
 
   The pod is built on a U-shaped chassis in carbon fiber. It has pneumatic caliper brakes, bell crank suspension
@@ -37,7 +37,7 @@ const pods = () => {
     >
       <div className={styles.buttom}>
         <div className={styles.title}>
-          <h1>The pods</h1>
+          <h1>The Pods</h1>
         </div>
         <Stack direction = "row" spacing={2} sx={{mb:3}}>
           <Button onClick={ () => setpod_number(0)}> Meili 2021 </Button>
@@ -51,4 +51,4 @@ const pods = () => {
   );
 };
 
-export default pods;
+export default Pods;

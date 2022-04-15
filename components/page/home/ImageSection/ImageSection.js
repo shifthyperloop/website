@@ -2,7 +2,7 @@ import styles from './ImageSection.module.css';
 import Image from 'next/image';
 
 const ImageSection = (props) => {
-  const { src, alt, imageRight, link } = props;
+  const { src, alt, imageRight } = props;
   return (
     <div
       className={`${styles.container} ${imageRight ? styles.imageRight : ''}`}
