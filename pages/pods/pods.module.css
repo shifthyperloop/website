@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container p {
+  width: 80%;
+}
+
+.image {
+  width: 70%;
+  margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.title {
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+.buttom {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+@media (max-width: 500px) {
+  .image {
+    width: 85%;
+  }
+}

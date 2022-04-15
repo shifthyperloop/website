@@ -74,7 +74,7 @@ const HomePage = () => {
       </ImageTextSection>
       <div className={styles.goals}>
         <div className={styles.text}>
-          <h1>Our Goals</h1>
+          <h1 className={styles.fadein}>Our Goals</h1>
           <div className={styles.separate}>
             <div className={`${styles.goal}`}>
               <FaLeaf size={35} className={styles.icon} />

@@ -31,6 +31,9 @@ const Header = () => {
           <Link href="/partners">
             <a>Sponsors</a>
           </Link>
+          <Link href="/pods">
+            <a>The Pods</a>
+          </Link>
           <Link href="/posts">
             <a>Newsletters</a>
           </Link>
