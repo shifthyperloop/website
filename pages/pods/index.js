@@ -9,7 +9,11 @@ const Pods = () => {
 
   const meili_text = (
     <>
-      <img className={styles.image} src="/images/homePage/PodTop.jpg"></img>
+      <img
+        className={styles.image}
+        src="/images/homePage/PodTop.jpg"
+        alt="Meili hyperloop pod"
+      />
       <p>
         Say hello to Meili, our first attempt at making a Hyperloop pod. Meili
         consist of a inhouse co-developed linear induction motor (LIM). The
@@ -29,7 +33,11 @@ const Pods = () => {
 
   const pod2_text = (
     <>
-      <img className={styles.image} src="/images/homePage/comingsoon.jpg"></img>
+      <img
+        className={styles.image}
+        src="/images/homePage/valkyrje.png"
+        alt="Valkyrje hyperloop pod"
+      />
       <p>
         The 2022 pod is our second attempt at making a functioning hyperloop
         prototype. The pod has shrunk down to 2.2 meters legth, and has a weight
