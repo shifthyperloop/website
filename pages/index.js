@@ -21,7 +21,7 @@ const HomePage = () => {
         />
       </div>
       <ImageTextSection
-        src="/images/homePage/meili.jpg"
+        src="/images/homePage/valkyrje.png"
         alt="Shift hyperloop pod Meili"
         imageRight
       >
