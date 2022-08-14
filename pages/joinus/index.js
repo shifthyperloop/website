@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import Layout from '/components/Layout/Layout';
-import Button from '/components/Button/Button';
 import ApplyButton from '/components/JoinButton/ApplyButton';
 import groupPositions from '/common/groupPositions';
 import styles from '/pages/joinus/JoinUsPage.module.css';
@@ -11,21 +10,21 @@ import Image from 'next/image';
 const JoinUsPage = () => {
   const [modal, setModal] = useState({ group: null });
 
-  const PositionsButton = (props) => {
-    return (
-      <div className={styles.positionsButton}>
-        <Button
-          onClick={() =>
-            setModal({
-              group: props.group,
-            })
-          }
-        >
-          View positions
-        </Button>
-      </div>
-    );
-  };
+  // const PositionsButton = (props) => {
+  //   return (
+  //     <div className={styles.positionsButton}>
+  //       <Button
+  //         onClick={() =>
+  //           setModal({
+  //             group: props.group,
+  //           })
+  //         }
+  //       >
+  //         View positions
+  //       </Button>
+  //     </div>
+  //   );
+  // };
 
   return (
     <Layout
@@ -66,7 +65,9 @@ const JoinUsPage = () => {
                 />
               </div>
               <p className={styles.groupName}>{group.name}</p>
-              <PositionsButton group={group} />
+              <p className={styles.positionDescription}>{group.description}</p>
+              <ApplyButton hideDeadline />
+              {/* <PositionsButton group={group} /> */}
             </div>
           ))}
         </div>
@@ -90,6 +91,9 @@ const JoinUsPage = () => {
                 objectFit="contain"
               />
             </div>
+            <p className={styles.positionDescription}>
+              {modal.group.description}
+            </p>
             {modal.group.positions.map((position) => (
               <div className={styles.position} key={position.name}>
                 <h2 className={styles.positionName}>{position.name}</h2>
