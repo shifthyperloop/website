@@ -38,7 +38,7 @@ const HomePage = () => {
         />
       </ImageTextSection>
       <ImageTextSection
-        src="/images/homePage/hyperloopAlpha.jpg"
+        src="/images/homePage/Pod.jpg"
         alt="Hyperloop"
         link="/abouthyperloop"
       >
