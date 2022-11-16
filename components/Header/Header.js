@@ -38,10 +38,13 @@ const Header = () => {
             <a>Newsletters</a>
           </Link>
           <span className={styles.dropDownLink}>
-            <Link href="/team/2022">
+            <Link href="/team/2023">
               <a>Team</a>
             </Link>
             <div className={styles.dropDownItems}>
+            <Link href="/team/2023">
+                <a>Team 2023</a>
+              </Link>
               <Link href="/team/2022">
                 <a>Team 2022</a>
               </Link>

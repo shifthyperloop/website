@@ -46,7 +46,6 @@ const PostPage = ({ title, front_page, files }) => {
 
 PostPage.getInitialProps = async function (context) {
   const { pid } = context.query;
-  console.log(pid);
   const res = await fetch(
     'https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid
   ).catch();
