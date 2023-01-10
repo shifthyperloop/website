@@ -10,22 +10,6 @@ import Image from 'next/image';
 const JoinUsPage = () => {
   const [modal, setModal] = useState({ group: null });
 
-  // const PositionsButton = (props) => {
-  //   return (
-  //     <div className={styles.positionsButton}>
-  //       <Button
-  //         onClick={() =>
-  //           setModal({
-  //             group: props.group,
-  //           })
-  //         }
-  //       >
-  //         View positions
-  //       </Button>
-  //     </div>
-  //   );
-  // };
-
   return (
     <Layout
       url="https://www.shifthyperloop.com/joinus"
@@ -56,7 +40,7 @@ const JoinUsPage = () => {
         <div className={styles.groups}>
           {groupPositions.map((group) => (
             <div className={styles.group} key={group.name}>
-              <div className={styles.groupImage}>
+           x   <div className={styles.groupImage}>
                 <Image
                   src={'/images/joinus/' + group.image}
                   alt={group.name}
@@ -112,3 +96,20 @@ const JoinUsPage = () => {
 };
 
 export default JoinUsPage;
+
+
+  // const PositionsButton = (props) => {
+  //   return (
+  //     <div className={styles.positionsButton}>
+  //       <Button
+  //         onClick={() =>
+  //           setModal({
+  //             group: props.group,
+  //           })
+  //         }
+  //       >
+  //         View positions
+  //       </Button>
+  //     </div>
+  //   );
+  // };
