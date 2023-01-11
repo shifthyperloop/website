@@ -98,18 +98,3 @@ const JoinUsPage = () => {
 export default JoinUsPage;
 
 
-  // const PositionsButton = (props) => {
-  //   return (
-  //     <div className={styles.positionsButton}>
-  //       <Button
-  //         onClick={() =>
-  //           setModal({
-  //             group: props.group,
-  //           })
-  //         }
-  //       >
-  //         View positions
-  //       </Button>
-  //     </div>
-  //   );
-  // };
