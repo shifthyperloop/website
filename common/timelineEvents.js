@@ -97,7 +97,7 @@ const timelineEvents = [
     title: 'COMPETITION!',
     description:
       'It is finally time to prove that we are the greatest hyperloop team in the entire world! (or at the very least that our pod actually works.) \n' +
-      'In the summer, every member that wants to may travel to the European Hyperloop Week (EHW) which is hosted in a different location in Europe each year! In 2021, EHW was held in Spain and in 2022 it was held in the Netherlands. \n' +
+      'In the summer, every member that wants to may travel to the European Hyperloop Week (EHW) which is hosted in a different location in Europe each year! In 2021, EHW was held in Spain and in 2022 it was held in the Netherlands. This year, the year 2023 we will be in Edinburgh, Scotland.\n' +
       'Here we will compete in a myriad of different competitions, where our technical groups as well as our concept group will get to show off their work on a global scale. The traveling members will also be able to enjoy the city which hosts the competition and will get a much needed break! ',
     date: 'Summer',
   },
