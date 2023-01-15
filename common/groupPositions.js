@@ -19,7 +19,7 @@ const groupPositions = [
     name: 'Management',
     image: 'management.jpg',
     description:
-      'The Management group is responsible for managing the organization and maintaining continous progress of the project. The daily tasks include coordinating the group leaders and ensuring that the project is within its budgetary limits. Future CEO, CFO, CMO, CCO and group leaders, apply now!',
+      'The Management group is responsible for managing the organization and maintaining continous progress of the project. The daily tasks include coordinating the group leaders and ensuring that the project is within its budgetary limits. Future CEO, CFO, CMO, CTO Electrical, CTO Mechanical, CCO and group leaders, apply now!',
     positions: [],
   },
 
