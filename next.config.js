@@ -15,7 +15,7 @@ module.exports = {
       '/joinus': { page: '/joinus' },
     };
 
-    const res = await fetch('http://shifthyperloop01.it.ntnu.no:1337/posts');
+    const res = await fetch('http://shifthyperloop02.it.ntnu.no:1337/posts');
     const data = await res.json();
     data.forEach(({ id: pid }) => {
       paths['/post/' + pid] = { page: '/post/[pid]', query: { pid } };
@@ -24,6 +24,6 @@ module.exports = {
     return paths;
   },
   images: {
-    domains: ['shifthyperloop01.it.ntnu.no'],
+    domains: ['shifthyperloop02.it.ntnu.no'],
   },
 };
