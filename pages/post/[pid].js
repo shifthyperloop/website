@@ -47,7 +47,7 @@ const PostPage = ({ title, front_page, files }) => {
 PostPage.getInitialProps = async function (context) {
   const { pid } = context.query;
   const res = await fetch(
-    'https://shifthyperloop01.it.ntnu.no/strapi/posts/' + pid
+    'https://shifthyperloop02.it.ntnu.no/strapi/posts/' + pid
   ).catch();
   const post = await res.json();
 
@@ -62,7 +62,7 @@ PostPage.getInitialProps = async function (context) {
     files: post.files[0].url || {},
     is_pdf: post.is_pdf || false,
     content: (post.content || '').replace(
-      'https://shifthyperloop01.it.ntnu.no/strapi',
+      'https://shifthyperloop02.it.ntnu.no/strapi',
       'https://shifthyperloop.com'
     ),
   };
